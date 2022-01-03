@@ -1,0 +1,42 @@
+<!--
+title: KDE Partition Manager
+description: KDE Partition Manager is a utility program to help you manage the disk devices, partitions and file systems on your computer. It allows you to easily create, copy, move, delete, resize without losing data, backup and restore partitions.
+published: true
+date: 2021-09-29T12:15:39.810Z
+tags: 
+editor: ckeditor
+dateCreated: 2021-09-29T12:07:55.870Z
+-->
+
+<h1>Installing KDE Partition Manager</h1>
+<p>You can install KDE partition manager in a few ways</p>
+<p>Works on all systems</p>
+<pre><code class="language-plaintext">sudo pacman -S partitionmanager</code></pre>
+<p>Pamac</p>
+<pre><code class="language-plaintext">sudo pamac install partitionmanager</code></pre>
+<h1>How to use KDE Partition Manager</h1>
+<p>Start the partition manager from your menu</p>
+<p>When you open the partition manager, you will be greeted with a prompt asking you to authenticate your identity. Input your password and press enter. The partition manager will then start scanning your disk so that it has a record of all the disk devices present in your system.</p>
+<figure class="image"><img src="https://linuxhint.com/wp-content/uploads/2020/09/word-image-494.png"></figure>
+<figure class="image"><img src="https://linuxhint.com/wp-content/uploads/2020/09/word-image-495.png" srcset="https://linuxhint.com/wp-content/uploads/2020/09/word-image-495.png 954w, https://linuxhint.com/wp-content/uploads/2020/09/word-image-495-300x147.png 300w, https://linuxhint.com/wp-content/uploads/2020/09/word-image-495-768x377.png 768w, https://linuxhint.com/wp-content/uploads/2020/09/word-image-495-810x397.png 810w" sizes="100vw" width="954"></figure>
+<p>After scanning, the app will then present you with a complete outline of your disk drives, giving details including the type of partition, the total size of the partition, the amount of space used up, and so on. The main components of the KDE Partition Manager include the <strong>devices </strong>panel, which lists all the devices that can be found on your system; the <strong>graphical</strong> and <strong>tree view</strong>, which both show a different representation of the partitions; <strong>pending operations</strong>,which contain all the operations waiting to be executed; and a few other panels.</p>
+<figure class="image"><img src="https://linuxhint.com/wp-content/uploads/2020/09/word-image-496.png" srcset="https://linuxhint.com/wp-content/uploads/2020/09/word-image-496.png 634w, https://linuxhint.com/wp-content/uploads/2020/09/word-image-496-300x106.png 300w" sizes="100vw" width="634"></figure>
+<p>You can add more panels by going to the <strong>Settings</strong> menu item and then checking the panels you want to appear in the<strong> Panels Shown</strong> section.</p>
+<p>To resize or delete any partition, first, select the correct device from the devices panel and then right-click on the partition to which you would like to apply the desired action. Click <strong>unmount</strong>. This is done because you can only apply actions to an unmounted partition.</p>
+<figure class="image"><img src="https://linuxhint.com/wp-content/uploads/2020/09/word-image-497.png" srcset="https://linuxhint.com/wp-content/uploads/2020/09/word-image-497.png 270w, https://linuxhint.com/wp-content/uploads/2020/09/word-image-497-240x300.png 240w" sizes="100vw" width="270"></figure>
+<p>To resize the partition, either once again right-click and select the <strong>resize/move</strong> option or hit the keys <strong>Ctrl + R</strong>, which will open the following dialog:</p>
+<figure class="image"><img src="https://linuxhint.com/wp-content/uploads/2020/09/word-image-498.png" srcset="https://linuxhint.com/wp-content/uploads/2020/09/word-image-498.png 515w, https://linuxhint.com/wp-content/uploads/2020/09/word-image-498-300x216.png 300w" sizes="100vw" width="515"></figure>
+<p>You can play around with the memory size. Once you are satisfied with the values, press <strong>OK</strong>, which will add a new operation to the pending operations list, along with updating the graphical and tree views.</p>
+<figure class="image"><img src="https://linuxhint.com/wp-content/uploads/2020/09/word-image-54.jpeg"></figure>
+<p>After resizing and applying the other corresponding actions, you need to apply these changes to make them permanent. This can be done by going to the <strong>Edit</strong> menu item and selecting <strong>Apply</strong>. This will open a dialog box to confirm whether you want to apply all the pending operations. Click <strong>OK</strong> and the process will start. Once all pending operations have been applied, you will receive a success message, along with a report containing all the details of the entire process.</p>
+<figure class="image"><img src="https://linuxhint.com/wp-content/uploads/2020/09/word-image-499.png" srcset="https://linuxhint.com/wp-content/uploads/2020/09/word-image-499.png 692w, https://linuxhint.com/wp-content/uploads/2020/09/word-image-499-300x70.png 300w" sizes="100vw" width="692"></figure>
+<p>KDE Partition Manager can also be used to <strong>format</strong> your partitions. To do this, once again, <strong>unmount</strong> your partition, and then either right-click and select the <strong>delete</strong> option or hit the <strong>delete</strong> button, after which your partition should look something like this:</p>
+<figure class="image"><img src="https://linuxhint.com/wp-content/uploads/2020/09/word-image-500.png" srcset="https://linuxhint.com/wp-content/uploads/2020/09/word-image-500.png 602w, https://linuxhint.com/wp-content/uploads/2020/09/word-image-500-300x73.png 300w" sizes="100vw" width="602"></figure>
+<p>Next, right-click and select the <strong>New</strong> option or hit <strong>Ctrl + n</strong>, which will open the following prompt:</p>
+<figure class="image"><img src="https://linuxhint.com/wp-content/uploads/2020/09/word-image-501.png" srcset="https://linuxhint.com/wp-content/uploads/2020/09/word-image-501.png 331w, https://linuxhint.com/wp-content/uploads/2020/09/word-image-501-300x242.png 300w" sizes="100vw" width="331"></figure>
+<figure class="image"><img src="https://linuxhint.com/wp-content/uploads/2020/09/word-image-502.png" srcset="https://linuxhint.com/wp-content/uploads/2020/09/word-image-502.png 587w, https://linuxhint.com/wp-content/uploads/2020/09/word-image-502-300x73.png 300w" sizes="100vw" width="587"></figure>
+<p>Set the options that you want your partition to have and then hit <strong>OK</strong> (be sure to select what type of <strong>file system</strong> you want your new partition to be). The following image shows the result that you should get after performing this action:</p>
+<p>Now, click the <strong>Apply</strong> button from the <strong>Edit</strong> menu item, click <strong>OK</strong> on the pending operations dialog, and then wait till the process finishes, after which you will see something like this:</p>
+<figure class="image"><img src="https://linuxhint.com/wp-content/uploads/2020/09/word-image-503.png" srcset="https://linuxhint.com/wp-content/uploads/2020/09/word-image-503.png 518w, https://linuxhint.com/wp-content/uploads/2020/09/word-image-503-300x119.png 300w" sizes="100vw" width="518"></figure>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

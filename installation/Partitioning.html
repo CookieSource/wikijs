@@ -1,0 +1,29 @@
+<!--
+title: Partitioning
+description: Instructions on setting up manual & custom partitions
+published: true
+date: 2021-10-01T11:48:39.266Z
+tags: installation, partitioning
+editor: ckeditor
+dateCreated: 2021-09-23T13:02:40.962Z
+-->
+
+<h1><strong>How to manually partitioning a hdd at Install</strong></h1>
+<p>You want to divide up your hard disks yourself so that you can determine the data structure.After you have set up your system, keyboard and time zone,<br>the data must be written to the hard disk, so you must select "Choose exactly where RebornOS should be installed" on the following screen.</p>
+<figure class="image"><img src="https://i.imgur.com/nC01uhQ.png" alt="nC01uhQ.png"></figure>
+<p>Press the right arrow<br><br>In the next screen you will see the hard disk (here a <a href="https://osdn.net/projects/rebornos/wiki/VirtualBox">VirtualBox</a> virtual hard disk).</p>
+<figure class="image"><img src="https://i.imgur.com/l4aBEBs.png" alt="l4aBEBs.png"></figure>
+<p><br>If you have a new hard disk you must now create a partition table where you must decide whether to use msdos MBR or the new GPT.</p>
+<figure class="image"><img src="https://i.imgur.com/ntrqx7D.png" alt="ntrqx7D.png"></figure>
+<p>&nbsp;</p>
+<figure class="image"><img src="https://i.imgur.com/qMc7Jx9.png" alt="qMc7Jx9.png"></figure>
+<p>&nbsp;</p>
+<figure class="image"><img src="https://i.imgur.com/eY8sxQH.png" alt="eY8sxQH.png"></figure>
+<p>Here I use msdos MBR and create a /boot/efi partition with a size of 100 MB. In this partition, the boot loader GRUB is installed,<br><br>which starts the system.</p>
+<figure class="image"><img src="https://i.imgur.com/EY9Khjw.png" alt="EY9Khjw.png"></figure>
+<p>Now we have to create the data partition/partitions, we actually only need the / partition (the so-called root partition) that contains the system.</p>
+<figure class="image"><img src="https://i.imgur.com/q3NqBFG.png" alt="q3NqBFG.png"></figure>
+<p>There are a number of ways to design the system, here are the possibilities shown in the menu.</p>
+<figure class="image"><img src="https://i.imgur.com/Orhqbr2.png" alt="Orhqbr2.png"></figure>
+<p>/boot/efi and / are enough for me, I continue with the right arrow key in the installation.</p>
+<figure class="image"><img src="https://i.imgur.com/wTSjIDC.png" alt="wTSjIDC.png"></figure>

@@ -1,0 +1,40 @@
+<!--
+title: GParted
+description: GParted is a GTK front-end to GNU Parted and an official GNOME partition-editing application. GParted is used for creating, deleting, resizing, moving, checking, and copying disk partitions and their file systems.
+published: true
+date: 2021-09-30T13:50:18.900Z
+tags: partitioning, apps, gparted, disk management
+editor: ckeditor
+dateCreated: 2021-09-30T13:43:31.277Z
+-->
+
+<h1>How to install GParted</h1>
+<p>You can install Gparted in a couple of ways</p>
+<p>Works on all systems</p>
+<pre><code class="language-plaintext">sudo pacman -S gparted</code></pre>
+<p>Pamac</p>
+<pre><code class="language-plaintext">sudo pamac install gparted </code></pre>
+<h1>How to use GParted</h1>
+<p>Start Gparted from your Menu remember that in a booted system not all partitioning can be edited, Due to being in use by the system.</p>
+<p>Having said that, we begin with the actual operation of GParted. In the interface we see <strong>the menu at the top</strong>, toolbar with quick buttons and a partition or storage device selector, just below there will be a bar divided or not in colored boxes that are the partitions in the chosen storage unit and on the back we will see a breakdown with some details of said partitions or unformatted spaces ... You will also be able to see the pending operations that GParted will perform right at the bottom edge of the window and that will be applied just when you click the "Apply" button once you have it clear.</p>
+<figure class="image"><img src="https://www.linuxadictos.com/wp-content/uploads/gparted-gui.jpg" alt="GParted GUI" srcset="https://www.linuxadictos.com/wp-content/uploads/gparted-gui.jpg 830w, https://www.linuxadictos.com/wp-content/uploads/gparted-gui-300x189.jpg 300w, https://www.linuxadictos.com/wp-content/uploads/gparted-gui-768x485.jpg 768w, https://www.linuxadictos.com/wp-content/uploads/gparted-gui-400x253.jpg 400w, https://www.linuxadictos.com/wp-content/uploads/gparted-gui-475x300.jpg 475w" sizes="100vw" width="830"></figure>
+<p>Well, <strong>to act with GParted is very simple</strong>:</p>
+<ol>
+  <li><strong>Select the unit in the selector</strong> where you want to work (hard drive, USB stick, memory card, etc). It should appear in the drop-down selector menu, if it is connected to the computer.</li>
+  <li>Now <strong>the partitions will be displayed</strong>, if any, from that storage unit. If there are no partitions, the space still empty will be shown for formatting and use. Whether it is a partition or empty space, if you select it with the mouse you will see that some buttons that were inactive on the toolbar become accessible to work with the selected space.</li>
+  <li>You can also <strong>use the right mouse button on the slice or space</strong> on which you want to work and a menu with options will be displayed. You can see that details of each partition are shown, if it has a key icon it is that it is locked or in use and you cannot work with it. You will also see an arrow that when you click on it, it will show subdivisions of a partition if there are any, as well as the anchor point, file system used, size, etc.</li>
+  <li>Now we may have selected a partition or a raw space. In any case <strong>the options</strong> that we are allowed are:<ol>
+      <li><strong>New:</strong> It is used to create a new partition in unallocated or raw space. It is for when you have bought a new storage unit and it comes unformatted, to be able to give you one and that the system recognizes it to be able to work with it. You can create a single partition on a storage unit or several, depending on your needs.</li>
+      <li><strong>Remove:</strong> removes a created partition, ideal for when you want to free up that portion of the disk to join this raw space to another existing partition for expansion or simply to reformat it.</li>
+      <li><strong>Copy / Paste a partition:</strong> as its name suggests it allows you to copy and paste a partition in a given location. This will make the pasted partition have the same UUID, format and label as the copied one, which could generate a conflict, therefore, if you are not an expert, be careful.</li>
+      <li><strong>Resize / move:</strong> It is used to move partitions from one place on the hard disk to another (interesting in case of damage to a sector of the hard disk or memory to move the partition to another good sector) or resize them. For example, if we want to expand or reduce the size of a partition because it has become too small or simply to free up some space by reducing it and then adding it to another.</li>
+      <li><strong>Format like:</strong> format the storage unit or partition to give it a filesystem or FS from among those supported by GParted. GParted supports file systems or formats such as ext2, ext3, ext4, SWAP, FAT16, FAT32, etc. If the partition in question is going to be used as a swap space, you can choose SWAP. If it is destined for other uses on GNU / Linux systems, I recommend ext in its most modern version, ext4. But if what you need is a drive compatible with other operating systems to be shared, or even to be read / written by other devices such as a TV, printers, etc., then you must use FAT32.</li>
+      <li><strong>Disassemble / Assemble:</strong> unmount / mount the / dev / xxx device from its mount point to be able to work with it if it doesn't let you or simply to unmount it if necessary. In addition, once done, it refreshes the distribution to show the updated content on the screen.</li>
+      <li><strong>Check:</strong> it checks the partition, it will find and try to repair problems that it finds in a partition if it is damaged or corrupted.</li>
+      <li><strong>UUID:</strong> Allows you to change the Universal Unique Identifier of the device in question. This is best left untouched if we don't have a lot of experience.</li>
+      <li><strong>Label:</strong> names or labels the volume.</li>
+      <li><strong>Information:</strong> displays detailed partition or volume information.</li>
+    </ol>
+  </li>
+  <li>Once we have selected the work we want to do, <strong>it will be enough to give the icon that is like a green tick or V</strong> In the toolbox and GParted you will be able to work to do what you need ... Wait for it to finish and be careful that the computer does not turn off or the battery runs out in the middle of a process or the partitions may be damaged and lose data. So if you use a laptop, always have it connected to the network during the process.</li>
+</ol>

@@ -1,0 +1,89 @@
+<!--
+title: Kernel Comparison
+description: Compare the different kernels we offer
+published: true
+date: 2021-10-10T16:27:28.946Z
+tags: installation, customization, kernels
+editor: ckeditor
+dateCreated: 2021-10-05T10:10:23.521Z
+-->
+
+<h1>Officially supported kernels&nbsp;</h1>
+<p>RebornOS officially supports the following kernels.</p>
+<ol>
+  <li>Stable</li>
+  <li>LTS</li>
+  <li>Zen</li>
+  <li>Hardened</li>
+</ol>
+<h1>Kernel comparisons&nbsp;</h1>
+<p>Below we provide info on the supported and other popular 3rd party kernels. However it should be noted that the stable and LTS kernels are generally what we recommend to use.</p>
+<p>As they are well tested and will generally work on most hardware.</p>
+<h2>Stable</h2>
+<p>Vanilla Linux kernel and modules, with a few patches applied.</p>
+<h3>How to install Stable</h3>
+<p>Stable should be installed by default.</p>
+<p>pacman</p>
+<pre><code class="language-plaintext">sudo pacman -S linux</code></pre>
+<p>pamac</p>
+<pre><code class="language-plaintext">sudo pamac install linux</code></pre>
+<p>Afterwards be sure to boot from it during startup!</p>
+<h2>LTS</h2>
+<p>Long-term support (LTS) Linux kernel and modules.</p>
+<h3>How to install LTS</h3>
+<p>Installing the LTS kernel is simple&nbsp;</p>
+<p>pacman</p>
+<pre><code class="language-plaintext">sudo pacman -S linux-lts</code></pre>
+<p>pamac</p>
+<pre><code class="language-plaintext">sudo pamac install linux-lts</code></pre>
+<p>Afterwards be sure to boot from it during startup!</p>
+<h2>Zen Kernel</h2>
+<p>Result of a collaborative effort of kernel hackers to provide the best Linux kernel possible for everyday systems.</p>
+<h3>How to install Zen</h3>
+<p>Installing the Zen kernel is simple&nbsp;</p>
+<p>pacman</p>
+<pre><code class="language-plaintext">sudo pacman -S linux-zen</code></pre>
+<p>pamac</p>
+<pre><code class="language-plaintext">sudo pamac install linux-zen</code></pre>
+<p>Afterwards be sure to boot from it during startup!</p>
+<h2>Hardened kernel</h2>
+<p>A security-focused Linux kernel applying a set of hardening patches to mitigate kernel and userspace exploits. It also enables more upstream kernel hardening features than linux.</p>
+<h3>How to install Hardened kernel</h3>
+<p>Installing the <a href="https://archlinux.org/packages/?name=linux-hardened">linux-hardened</a> is simple&nbsp;</p>
+<p>pacman</p>
+<pre><code class="language-plaintext">sudo pacman -S linux-hardened</code></pre>
+<p>pamac</p>
+<pre><code class="language-plaintext">sudo pamac install linux-hardened</code></pre>
+<p>Afterwards be sure to boot from it during startup!</p>
+<h2>Clear</h2>
+<p>The ClearLinux kernel provides Patches from Intel's Clear Linux project. Which improves the performance and security of Intel CPU'S in most cases.</p>
+<h3>How to install Clear</h3>
+<p>The Clear kernel is only available in the AUR</p>
+<p>Use your preffered AUR helper we use yay in the example below</p>
+<pre><code class="language-plaintext">yay -S linux-clear</code></pre>
+<p>Afterwards be sure to boot from it during startup!</p>
+<h2>TKG</h2>
+<p>A highly customizable kernel build system that provides a selection of patches and tweaks aiming for better desktop and gaming performance</p>
+<h3>How to install TKG</h3>
+<p>The TKG kernel is only available in the AUR</p>
+<p>We need to build TKG from their repository.</p>
+<pre><code class="language-plaintext">git clone https://github.com/Frogging-Family/linux-tkg.git
+cd linux-tkg
+makepkg -si</code></pre>
+<p>Afterwards be sure to boot from it during startup!</p>
+<h2>Xanmod</h2>
+<p>Aiming to take full advantage in high-performance workstations, gaming desktops, media centers and others and built to provide a more rock-solid, responsive and smooth desktop experience</p>
+<h3>How to install Xanmod</h3>
+<p>The Xanmod kernel is only available in the AUR</p>
+<p>Use your preffered AUR helper we use yay in the example below</p>
+<pre><code class="language-plaintext">yay -S linux-xanmod</code></pre>
+<p>Afterwards be sure to boot from it during startup!</p>
+<h2>Cacule</h2>
+<p>Is a kernel that tries to enhance system performance, responsiveness and latency.</p>
+<h3>How to install Cacule</h3>
+<p>The Cacule kernel is only available in the AUR</p>
+<p>Use your preffered AUR helper we use yay in the example below</p>
+<pre><code class="language-plaintext">yay -S linux-cacule</code></pre>
+<p>Afterwards be sure to boot from it during startup!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

@@ -1,0 +1,43 @@
+<!--
+title: Rate-Mirrors
+description: Rank mirrors to speed up downloads from the repositories
+published: true
+date: 2021-10-29T10:45:11.016Z
+tags: rate-mirrors, mirrors, pacman, refresh-mirrors-rebornos, refresh
+editor: ckeditor
+dateCreated: 2021-09-28T07:07:21.227Z
+-->
+
+<h1>How to install Rate-Mirrors</h1>
+<p>You can install Rate-Mirrors in a few ways</p>
+<p>Works on all systems</p>
+<pre><code class="language-plaintext">sudo pacman -S refresh-mirrors-rebornos</code></pre>
+<p>Pamac&nbsp;</p>
+<pre><code class="language-plaintext">sudo pamac install refresh-mirrors-rebornos</code></pre>
+<h1>How to use Rate-Mirrors</h1>
+<p>Here's several of the ways you can use Rate-Mirrors on RebornOS</p>
+<h2>Desktop entry</h2>
+<p>Open the <i>application menu</i> or <i>application grid</i>, <i>launcher</i>, or <i>runner</i>, and find <strong>Refresh Mirrors</strong> and launch it by clicking, or hitting <code>Enter</code>. The text and icon may look like the below image:</p>
+<figure class="image"><img src="https://aws1.discourse-cdn.com/free1/uploads/rebornos/original/1X/8ba24aa1c698f00d79bf68d521c4979fcb84efa6.png" alt="Screenshot from 2021-08-05 23-05-20"></figure>
+<p>Enter your password at the prompt and the <a href="https://github.com/westandskif/rate-mirrors">rate-mirrors </a>tool will run on a terminal with pre-selected options. In the end, it will refresh your <strong>Arch Linux</strong> and <strong>RebornOS</strong> mirrors to provide you the fastest update/install speed you can get.</p>
+<h2>RebornOS Welcome</h2>
+<p>Launch the <i>RebornOS Welcome</i> application, Click on the <code>Utilities</code> tab on the bottom-left, and click on the <code>Refresh Pacman Mirrors</code> button as shown below:</p>
+<figure class="image"><img src="https://aws1.discourse-cdn.com/free1/uploads/rebornos/optimized/1X/634e1b524e321c3ebe27debee919389319da5c73_2_585x500.png" alt="Screenshot from 2021-08-06 00-00-40"></figure>
+<p>Enter your password at the prompt and the <a href="https://github.com/westandskif/rate-mirrors">rate-mirrors 5</a> tool will run on a terminal with pre-selected options. In the end, it will refresh your <strong>Arch Linux</strong> and <strong>RebornOS</strong> mirrors to provide you the fastest update/install speed you can get.</p>
+<h2>SystemD service</h2>
+<p>Just like how <code>reflector</code> does, we offer a <code>systemd</code> service if you would like to run <code>rate-mirrors</code> every time you boot. Run the below command to enable it:</p>
+<pre><code class="language-plaintext">sudo systemctl enable refresh-mirrors-rebornos.service</code></pre>
+<p>If you would also like to run the tool once now while also enabling it to run at boot, run the below command:</p>
+<pre><code class="language-plaintext">sudo systemctl enable --now refresh-mirrors-rebornos.service</code></pre>
+<p>Enabling the systemd service using the above commands will run the <a href="https://github.com/westandskif/rate-mirrors">rate-mirrors </a>tool every time you boot, with pre-selected options. In the end, it will refresh your <strong>Arch Linux</strong> and <strong>RebornOS</strong> mirrors to provide you the fastest update/install speed you can get.</p>
+<h2>From the terminal</h2>
+<ol>
+  <li>Run the <code>rate-mirrors</code> command to refresh <strong>RebornOS</strong> mirrors. Below is an example:</li>
+</ol>
+<pre><code class="language-plaintext">sudo rate-mirrors --concurrency=16 --per-mirror-timeout=3000 --allow-root --save=/etc/pacman.d/reborn-mirrorlist rebornos
+</code></pre>
+<ol>
+  <li>Run the <code>rate-mirrors</code> command to refresh <strong>Arch Linux</strong> mirrors. Below is an example:</li>
+</ol>
+<pre><code class="language-plaintext">sudo rate-mirrors --protocol=https --allow-root --save=/etc/pacman.d/mirrorlist arch</code></pre>
+<p>&nbsp;</p>

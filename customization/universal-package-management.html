@@ -1,0 +1,47 @@
+<!--
+title: Universal package management 
+description: Universal package solution on RebornOS, Snap, Flatpak & Appimage
+published: true
+date: 2021-10-27T08:28:25.620Z
+tags: customization, snap, flatpak, appimage, universal package management
+editor: ckeditor
+dateCreated: 2021-10-16T12:40:24.070Z
+-->
+
+<h1>Universal package management.</h1>
+<p>RebornOS has support for all the major package solutions on Linux.</p>
+<h2>Snap</h2>
+<p>Canonical universal package solution</p>
+<h3>How to install Snap</h3>
+<p>Install the <code>snapd </code>package via the command line or use a graphical store like <a href="/en/howto/pamac">Pamac</a></p>
+<pre><code class="language-plaintext">sudo pacman -S snapd snapd-glib</code></pre>
+<p>enable the snap service.</p>
+<pre><code class="language-plaintext">sudo systemctl enable --now snapd</code></pre>
+<h3>How to use Snap</h3>
+<p>From the terminal or via a graphical store like <a href="/en/howto/pamac">Pamac</a></p>
+<pre><code class="language-plaintext">sudo snap install appname</code></pre>
+<h2>Flatpak</h2>
+<h3>How to install Flatpak</h3>
+<p>Install the <code>flatpak </code>package via the command line or use a graphical store like <a href="/en/howto/pamac">Pamac</a></p>
+<pre><code class="language-plaintext">sudo pacman -S flatpak</code></pre>
+<p>It may be necessary to reboot after installing Flatpak</p>
+<h3>How to use Flatpak</h3>
+<p><strong>By using </strong><a href="https://flathub.org/"><strong>flathub</strong></a></p>
+<p>Navigate on Flathub to an app you want and click install.</p>
+<p>It may be required to click the downloaded file.</p>
+<p><strong>From the terminal installing an app</strong></p>
+<pre><code class="language-plaintext">sudo flatpak install appname</code></pre>
+<p><strong>Deleting an app from the terminal</strong></p>
+<pre><code class="language-plaintext">sudo flatpak uninstall appname</code></pre>
+<p>or use a graphical store like <a href="/en/howto/pamac">Pamac</a></p>
+<h2>Appimage</h2>
+<h3>How to install Appimage</h3>
+<p>install the <code>appimagelauncher </code>via the command line or use a graphical store like <a href="/en/howto/pamac">Pamac</a></p>
+<pre><code class="language-plaintext">sudo pacman -S appimagelauncher</code></pre>
+<p>Download <a href="https://appimage.github.io/AppImageUpdate/">https://appimage.github.io/AppImageUpdate/</a></p>
+<p>Double click it and select integrate and run.</p>
+<h3>How to use Appimage</h3>
+<p>Download an Appimage of your choice and double click it</p>
+<figure class="image"><img src="/screenshot.png"></figure>
+<p>Choose whether you want to integrate the app into your system or use it once.</p>
+<p>&nbsp;</p>
