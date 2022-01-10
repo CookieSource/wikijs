@@ -2,16 +2,16 @@
 title: Requirements
 description: Requirements for installing
 published: true
-date: 2022-01-10T04:42:29.996Z
+date: 2022-01-10T06:06:31.997Z
 tags: requirements
 editor: ckeditor
 dateCreated: 2021-09-23T12:39:54.260Z
 -->
 
-<h1 class="toc-header" id="requirements"> Requirements</h1><div>
-</div><p>Here you can find the requirements for RebornOS</p><div>
-</div><p><strong>Required specification table</strong></p><div>
-</div><figure class="table">
+<h1>Requirements</h1>
+<p>Here you can find the requirements for RebornOS</p>
+<p><strong>Required specification table</strong></p>
+<figure class="table">
   <table style="border-bottom:solid;border-left:solid;border-right:solid;border-top:solid;">
     <tbody>
       <tr>
@@ -26,18 +26,18 @@ dateCreated: 2021-09-23T12:39:54.260Z
       </tr>
       <tr>
         <th>RAM</th>
-        <td>2 Gigabyte &nbsp;(GB)</td>
-        <td>4 Gigabyte (GB)</td>
+        <td>2 GB</td>
+        <td>4 GB</td>
       </tr>
       <tr>
         <th>Storage</th>
-        <td>20 Gigabyte (GB)</td>
-        <td>40 Gigabyte (GB) or more</td>
+        <td>20 GB</td>
+        <td>40 GB or more</td>
       </tr>
       <tr>
         <th>Installation medium</th>
-        <td>CD/DVD or USB 4 gigabyte (GB)</td>
-        <td>CD/DVD or USB 4 gigabyte (GB) or more</td>
+        <td>CD/DVD or USB 4 GB</td>
+        <td>CD/DVD or USB 4 GB or more</td>
       </tr>
       <tr>
         <th>Internet connection</th>
@@ -46,57 +46,56 @@ dateCreated: 2021-09-23T12:39:54.260Z
       </tr>
     </tbody>
   </table>
-</figure><div>
-</div><h1 class="toc-header" id="preparing-an-install-medium"> Preparing an install medium</h1><div>
-</div><p>Download the latest RebornOS ISO <a class="is-external-link" href="https://www.rebornos.org/downloads">link</a></p><div>
-</div><p>Download the latest version of Balena Etcher for your Operating system <a class="is-external-link" href="https://www.balena.io/etcher/">link</a></p><div>
-</div><p>If you want to burn to burn to a CD/DVD you cannot use Balena Etcher. Please use a program to burn DVD's in order to accomplish that!</p><div>
-</div><h2 class="toc-header" id="windows"> Windows</h2><div>
-</div><ol>
-  <li>Install Balena Etcher (If you need extra help we also have a <a class="is-external-link" href="https://youtu.be/xyKsJ-5MkKw">Youtube</a> video available <a class="is-external-link" href="https://youtu.be/xyKsJ-5MkKw">here</a></li>
-  <li>Start Balena Etcher from your start menu</li>
+</figure>
+<h1>Preparing an install medium</h1>
+<p><a href="https://rebornos.org/downloads">Download</a> the latest RebornOS ISO</p>
+<p>Download the latest version of <a href="https://balena.io/etcher/">Balena Etcher</a> for your Operating system</p>
+<p>If you want to burn to burn to a CD/DVD you cannot use Balena Etcher. Please use another program to burn DVD's in order to accomplish that!</p>
+<h2>Windows</h2>
+<ol>
+  <li>Install Balena Etcher (If you need extra help we also have a <a href="https://youtu.be/xyKsJ-5MkKw">YouTube video</a> available<a href="https://youtu.be/xyKsJ-5MkKw">)</a></li>
+  <li>Open Balena Etcher from your start menu</li>
   <li>Select the RebornOS ISO you downloaded</li>
   <li>Select the USB drive you inserted</li>
   <li>Flash!</li>
-</ol><div>
-</div><h2 class="toc-header" id="macos"> MacOS</h2><div>
-</div><ol>
+</ol>
+<h2>macOS</h2>
+<ol>
   <li>Install Balena Etcher</li>
-  <li>Run Balena Etcher from finder</li>
+  <li>Open the Balena Etcher app</li>
   <li>Select the RebornOS ISO you downloaded</li>
   <li>Select the USB drive you inserted</li>
   <li>Flash!</li>
-</ol><div>
-</div><h2 class="toc-header" id="linux"> Linux</h2><div>
-</div><ol>
-  <li>Make the Balena Etcher Appimage executable and then run it</li>
+</ol>
+<h2>Linux</h2>
+<ol>
+  <li>Make the Balena Etcher AppImage executable and then run it</li>
   <li>Select the RebornOS ISO that you downloaded</li>
   <li>Select the inserted USB</li>
   <li>Flash!</li>
-</ol><div>
-</div><h1 class="toc-header" id="booting-from-install-medium"> Booting from install medium</h1><div>
-</div><h2 class="toc-header" id="windows-1"> Windows&nbsp;</h2><div>
-</div><ol>
-  <li>we need to enter the BIOS/UEFI of your system to change a few settings. Most BIOS/UEFI systems use a special key that lets you choose the boot medium, and that lets you choose the BIOS configuration screen (where you can select the boot order). Depending on the BIOS, these keys are: Escape, F1, F2, F8, F10, F11, F12, or Delete. Usually, this information is briefly displayed during boot</li>
+</ol>
+<h1>Booting from install medium</h1>
+<h2>Windows&nbsp;</h2>
+<ol>
+  <li>We need to enter the BIOS/UEFI of your system to change a few settings. Most BIOS/UEFI systems use a special key that lets you choose the boot medium, and that lets you choose the BIOS configuration screen (where you can select the boot order). Depending on the BIOS, these keys are: Escape, F1, F2, F8, F10, F11, F12, or Delete. Usually, this information is briefly displayed during boot</li>
   <li>Once you're in the BIOS/UEFI screen you need to find secure boot and turn it off.</li>
   <li>You need to set your USB key as the first option to boot from</li>
   <li>Reboot</li>
   <li>If everything went correctly you should see the RebornOS boot screen</li>
   <li>Select NVIDIA if you have an NVIDIA graphics card or select boot install medium if you don't!</li>
-</ol><div>
-</div><p>&nbsp;</p><div>
-</div><h2 class="toc-header" id="macos-1"> macOS</h2><div>
-</div><p>Note this guide is for old Macs if you got a mac newer than 2014. Please look up a tutorial for your model by using a searcher like <a class="is-external-link" href="https://www.google.com">Google</a>! or <a class="is-external-link" href="https://www.duck.com">DDG</a></p><div>
-</div><ol>
-  <li>Hold you alt or option key after hearing the boot-up sound</li>
-  <li>Select the USB you inserted from the menu that appears</li>
+</ol>
+<h2>macOS</h2>
+<ol>
+  <li>Reboot.</li>
+  <li>Press and hold the Alt or Option key before hearing the startup sound.</li>
+  <li>Select the USB you inserted from the menu that appears.&nbsp;</li>
   <li>Select NVIDIA if you have an NVIDIA graphics card or select boot install medium if you don't!</li>
-</ol><div>
-</div><h2 class="toc-header" id="linux-1"> Linux</h2><div>
-</div><ol>
-  <li>Boot from the USB stick</li>
+</ol>
+<h2>Linux</h2>
+<ol>
+  <li>Boot from the USB stick.</li>
   <li>Select NVIDIA if you have an NVIDIA graphics card or select boot install medium if you don't!</li>
-</ol><div>
-</div><p><a class="is-internal-link is-valid-page" href="/en/installation/cnchi">Click this link to go to the installation guide /en/installation/cnchi</a></p><div>
-</div><p>&nbsp;</p><div>
-</div>
+</ol>
+<p>&nbsp;</p>
+<p>Installation guide: <a href="/en/installation/cnchi">installation/cnchi</a></p>
+<p>&nbsp;</p>
