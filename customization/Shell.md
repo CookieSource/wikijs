@@ -2,7 +2,7 @@
 title: Shell
 description: Guides on changing the look & feel of your terminal
 published: true
-date: 2021-12-28T14:24:55.477Z
+date: 2022-02-08T14:00:31.803Z
 tags: customization, themes, shell, zsh, fish, bash
 editor: markdown
 dateCreated: 2021-09-23T13:35:30.759Z
