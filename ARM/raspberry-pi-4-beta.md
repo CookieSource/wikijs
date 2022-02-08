@@ -2,7 +2,7 @@
 title: RebornOS for Raspberry Pi 4 4 GB beta for Test by arnulf
 description: RebornOS for Raspberry Pi 4 4 GB beta
 published: true
-date: 2021-09-29T00:23:08.750Z
+date: 2022-02-08T14:00:11.297Z
 tags: arm, raspberry
 editor: markdown
 dateCreated: 2021-09-29T00:22:34.176Z
