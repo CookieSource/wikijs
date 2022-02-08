@@ -2,23 +2,22 @@
 title: Filelight
 description: Filelight is a KDE graphical disk usage analyzer
 published: true
-date: 2021-09-29T08:24:36.564Z
+date: 2022-02-08T03:46:54.274Z
 tags: apps, disk usage, disk, filelight
 editor: ckeditor
 dateCreated: 2021-09-29T08:21:38.322Z
 -->
 
 <h1>How to install Filelight</h1>
-<p>There's a few options to install Filelight</p>
-<p>Works on all systems</p>
+<p>Filelight can be installed with pacman:</p>
 <pre><code class="language-plaintext">sudo pacman -S filelight</code></pre>
-<p>pamac</p>
+<p>Or pamac</p>
 <pre><code class="language-plaintext">sudo pamac install filelight</code></pre>
 <h1>How to use Filelight</h1>
-<p>Once installed, launch Filelight from Menu or application launcher.</p>
+<p>Once installed, launch Filelight from the menu or application launcher.</p>
 <p>Filelight graphically represents your filesystem as a set of concentric segmented-rings.</p>
 <figure class="image"><img src="https://ostechnix.com/wp-content/uploads/2018/09/filelight-1-1.png" alt="Visualize Disk Usage With Filelight On Linux" srcset="https://ostechnix.com/wp-content/uploads/2018/09/filelight-1-1.png 1366w, https://ostechnix.com/wp-content/uploads/2018/09/filelight-1-1-300x156.png 300w, https://ostechnix.com/wp-content/uploads/2018/09/filelight-1-1-768x400.png 768w, https://ostechnix.com/wp-content/uploads/2018/09/filelight-1-1-1024x533.png 1024w, https://ostechnix.com/wp-content/uploads/2018/09/filelight-1-1-520x271.png 520w" sizes="100vw" width="1366"></figure>
-<p>as you can see, Filelight displays the disk usage of the <strong>/</strong> and <strong>/boot</strong> filesystems by default.</p>
+<p>as you can see, Filelight displays the disk usage of the <code>/</code> and <code>/boot</code> filesystems by default.</p>
 <p>You can also scan the individual folders of your choice to view the disk usage of that particular folder. To do so, go to <strong>Filelight -&gt; Scan -&gt; Scan Folder</strong> and choose the folder you want to scan.</p>
 <p>Filelight excludes the following directories from scanning:</p>
 <ul>
@@ -35,4 +34,4 @@ dateCreated: 2021-09-29T08:21:38.322Z
 <p>Each segment in the radial layout is represented with different colors. The following image represents the entire radial layout of <strong>/</strong> filesystem. To view the full information of files and folders, just hover the mouse pointer over them.</p>
 <figure class="image"><img src="https://ostechnix.com/wp-content/uploads/2018/09/filelight-2.png" alt="filelight disk usage detailed view" srcset="https://ostechnix.com/wp-content/uploads/2018/09/filelight-2.png 1056w, https://ostechnix.com/wp-content/uploads/2018/09/filelight-2-300x158.png 300w, https://ostechnix.com/wp-content/uploads/2018/09/filelight-2-768x404.png 768w, https://ostechnix.com/wp-content/uploads/2018/09/filelight-2-1024x538.png 1024w, https://ostechnix.com/wp-content/uploads/2018/09/filelight-2-520x273.png 520w" sizes="100vw" width="1056"></figure>
 <p>You can navigate around the the filesystem by simply clicking on the respective segment. To view the disk usage of any file or folder, just click on them and you will get the complete disk usage details of that particular folder/file.</p>
-<p>Not just local filesystem, Filelight can able to scan your local, remote and removable disks. If you're using any KDE-based Linux distribution, it can be integrated into file managers like Konqueror, Dolphin and Krusader.</p>
+<p>Not just local filesystem, Filelight can able to scan your local, remote and removable disks. If you're using KDE, it can be integrated into file managers like Konqueror, Dolphin and Krusader.</p>
