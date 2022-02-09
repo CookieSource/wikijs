@@ -2,7 +2,7 @@
 title: How to free some space
 description: In this how to you are going to learn how to free up some storage.
 published: true
-date: 2022-01-02T12:03:13.872Z
+date: 2022-02-09T21:01:33.364Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-27T21:33:42.145Z
@@ -44,6 +44,19 @@ Target = *
 Description = Cleaning pacman cache with paccache …
 When = PostTransaction
 Exec = /usr/bin/paccache -r
+```
+# Clean old log files
+Every Linux distribution has a logging mechanism that help you investigate what’s going on your system. You’ll have kernel logging data, system log messages, standard output and errors for various services in RebornOS. The problem is that over the time, these logs take a considerable amount of disk space. You can check the log size with this command:
+
+```
+journalctl --disk-usage
+```
+
+
+Now, there are ways to clean systemd journal logs. The easiest for you is to clear the logs that are older than a certain days.
+
+```
+sudo journalctl --vacuum-time=3d
 ```
 # Use Bleachbit
 Learn how to use bleach bit [here](https://wiki.rebornos.org/en/apps/Bleachbit)
