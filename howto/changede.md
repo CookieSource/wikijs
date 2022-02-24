@@ -2,7 +2,7 @@
 title: How to install/change/remove desktop environment.
 description: How to change install or remove desktop environment.
 published: true
-date: 2022-01-05T17:30:09.831Z
+date: 2022-02-24T07:38:57.597Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-31T13:12:44.612Z
@@ -11,13 +11,11 @@ dateCreated: 2021-12-31T13:12:44.612Z
 # Introduction
 
 List of available desktop environments (as of 5/1/2022)
- 
 
 -   Budgie (rebornos-cosmic-budgie)
 -   Cinnamon (rebornos-cosmic-cinnamon)
 -   Cutefish (rebornos-cosmic-cutefish)
 -   Deepin (rebornos-cosmic-deepin)
--   Enlightenment (rebornos-cosmic-enlightenment)
 -   Gnome (rebornos-cosmic-gnome)
 -   i3 (rebornos-cosmic-i3)
 -   KDE (rebornos-cosmic-kde)
@@ -33,7 +31,7 @@ List of available desktop environments (as of 5/1/2022)
 
 # Installing a DE
 
-There are two ways of installing a DE on RebornOS - in Terminal or with our app [RebornOS Fire](https://wiki.rebornos.org/en/apps/RebornOSFire).  
+There are two ways of installing a DE on RebornOS - in Terminal or with our app [RebornOS Fire](https://wiki.rebornos.org/en/apps/rebornosfire).  
 Installing a desktop environment manually can be done with: (Look at [Introduction](https://wiki.rebornos.org/en/howto/changede#introduction) to see the package name)
 
 ```
