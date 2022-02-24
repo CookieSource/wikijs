@@ -1,14 +1,12 @@
 ---
 title: How to use pamac
-description: pamac
+description: 
 published: true
-date: 2021-09-23T23:46:36.757Z
+date: 2022-02-24T14:28:39.263Z
 tags: pamac
 editor: markdown
 dateCreated: 2021-09-23T23:46:33.452Z
 ---
-
-# How to use pamac
 
 Pamac is the package manager used in RebornOS, and created by Manjaro. In the version used by RebornOS, it has AUR and Flatpak support, and this application takes care of the installation, uninstallation, and system update tasks.
 
@@ -20,13 +18,13 @@ The main screen that will be displayed once this application is executed is the 
 
 In the upper left corner, you can access the search for pamac by clicking on the magnifying glass icon.
 
-By default, it starts on the ***Browse*** screen, which allows us to view all the software available in the repositories used by the distribution (which are the Arch repositories, and RebornOS 'own repository).
+By default, it starts on the **Browse** screen, which allows us to view all the software available in the repositories used by the distribution (which are the Arch repositories, and RebornOS 'own repository).
 
-Clicking on ***Installed*** above, we will see a list with all the software currently installed.
+Clicking on **Installed** above, we will see a list with all the software currently installed.
 
-By clicking ***Updates*** at the top, pamac will check to see if there are any updates for your system.
+By clicking **Updates** at the top, pamac will check to see if there are any updates for your system.
 
-In the ***Sort by*** button, pamac will display the information by: relevance, name, repository, size, or date, as selected.
+In the **Sort by** button, pamac will display the information by: relevance, name, repository, size, or date, as selected.
 
 In the menu on the left (under the magnifying glass) it is possible to access the list of applications by category, groups, and existing repositories in the distribution.
 
@@ -56,17 +54,17 @@ Accessing the menu on the top right, we can access Software Mode, Refresh databa
 <img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/pamac/-/raw/master/pamac-menu.png">
 </p>
 
-By selecting ***Software Mode***, pamac will automatically select the existing Categories menu on the left.
+By selecting **Software Mode**, pamac will automatically select the existing Categories menu on the left.
 
-***Refresh databases*** as its name implies, updates the database of all existing repositories.
+**Refresh databases** as its name implies, updates the database of all existing repositories.
 
-***View History***, opens a terminal window, showing the activities carried out by pamac.
+**View History**, opens a terminal window, showing the activities carried out by pamac.
 
-***Install Local Packages***, it will open a file selection window, where you can search for a package locally that you want to install.
+**Install Local Package**, it will open a file selection window, where you can search for a package locally that you want to install.
 
-***Preferences*** allows you to configure different pamac options.
+**Preferences** allows you to configure different pamac options.
 
-***About*** indicates the version in use of pamac, and some other information related to the application.
+**About** indicates the version in use of pamac, and some other information related to the application.
 
 
 # Pamac configuration
@@ -77,15 +75,15 @@ When accessing the Preferences menu, the following screen is displayed (the user
 <img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/pamac/-/raw/master/pamac-config-general.png">
 </p>
 
-***Check for updates*** is, as its name implies, where the option for pamac to check for system updates is enabled or disabled.
+**Check for updates** is, as its name implies, where the option for pamac to check for system updates is enabled or disabled.
 
 ***Updates check frequency*** is where you can set the elapsed time between each check performed by pamac to see if there are new updates. The options are: every 3 hours, every 6 hours, every 12 hours, once a week, and once a month.
 
 ***Automatically download updates*** is, as its name implies, what allows pamac to automatically download any updates that may exist.
 
-Under ***Downloads***, there is ***Parallel downloads***.  Is the number of parallel downloads with which pamac will be able to work. This value can be: 1, 2, 4, 6, 8, and 10.
+Under **Downloads**, there is ***Parallel downloads***.  Is the number of parallel downloads with which pamac will be able to work. This value can be: 1, 2, 4, 6, 8, and 10.
 
-Under ***Cache***, there is ***Number of versions of each package to keep***, and it is where you can set the number of versions that may exist of the same package in the cache. this value can be: 0, 1, 2, 3, 4, and 5.
+Under **Cache**, there is ***Number of versions of each package to keep***, and it is where you can set the number of versions that may exist of the same package in the cache. this value can be: 0, 1, 2, 3, 4, and 5.
 
 ***Remove only the uninstalled packages***, is the option that will allow pamac to remove from its cache the packages that have been removed from its system.
 
@@ -155,7 +153,7 @@ google-chrome                                                                   
 
 **Installing Packages**
 
-***pamac install***. In this example, google chrome is installed from terminal:
+`pamac install <package>`. In this example, google chrome is installed from terminal:
 
 ```
 pamac install google-chrome
@@ -163,7 +161,7 @@ pamac install google-chrome
 
 ***IMPORTANT:*** pamac, unlike pacman, will only install those packages that are not on your system. This means that if you already have google-chrome installed, pamac will not install it again.
 
-If you want to install some AUR, you will need to use the ***pamac build*** command. Suppose the installation of ***clockify-desktop***:
+If you want to install some AUR, you will need to use the `pamac build` command. Suppose the installation of ***clockify-desktop***:
 
 ```
 pamac build clockify-desktop
@@ -171,7 +169,7 @@ pamac build clockify-desktop
 
 **Removing Packages**
 
-The ***pamac remove*** command is used interchangeably to remove a package from the repositories, or from the AUR. To remove for example google-chrome:
+The `pamac remove` command is used interchangeably to remove a package from the repositories, or from the AUR. For example:
 
 ```
 pamac remove google-chrome
@@ -182,7 +180,7 @@ pamac remove google-chrome
 
 **List all packages installed on your system**
 
-Use ***pamac list*** to list all packages installed on your system:
+Use `pamac list` to list all packages installed on your system:
 
 ```
 pacman list -i
@@ -190,7 +188,7 @@ pacman list -i
 
 **Show detailed information of a package**
 
-Use ***pamac info*** to see, for example, the detailed information of google-chrome:
+Use `pamac info` to see, for example, the detailed information of google-chrome:
 
 ```
 pamac info google-chrome
@@ -219,13 +217,13 @@ Signed                         : Yes`
 
 **Updating the System**
 
-Use ***pamac checkupdates*** to check for updates:
+Use `pamac checkupdates` to check for updates:
 
 ```
 pamac checkupdates -a
 ```
 
-Use ***pamac upgrade*** to update your system, including any AUR packages that may exist:
+Use `pamac upgrade` to update your system, including any AUR packages that may exist:
 
 ```
 pamac upgrade -a
