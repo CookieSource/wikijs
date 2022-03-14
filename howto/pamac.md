@@ -2,8 +2,8 @@
 title: How to use pamac
 description: 
 published: true
-date: 2022-02-24T14:28:39.263Z
-tags: pamac
+date: 2022-03-14T11:59:21.758Z
+tags: pamac, package-manager
 editor: markdown
 dateCreated: 2021-09-23T23:46:33.452Z
 ---
