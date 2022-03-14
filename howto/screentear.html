@@ -2,7 +2,7 @@
 title: How to fix Screen Tearing
 description: 
 published: true
-date: 2022-03-14T11:32:33.410Z
+date: 2022-03-14T11:38:46.872Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-03-14T11:16:52.205Z
@@ -30,7 +30,15 @@ sudo touch /etc/X11/xorg.conf.d/20-amdgpu.conf</code></pre>
         Option          "TearFree" "true"
 EndSection</code></pre>
 <h3>RADEON driver</h3>
-<p>&nbsp;</p>
+<p>If it says RADEON we need to create a custom configuration file:</p>
+<pre><code class="language-plaintext">sudo mkdir -p /etc/X11/xorg.conf.d
+sudo touch /etc/X11/xorg.conf.d/20-radeon.conf</code></pre>
+<p>Open this file in a text editor (with sudo) with <code>sudo nano /etc/X11/xorg.conf.d/20-radeon.conf</code> and add the following text:</p>
+<pre><code class="language-plaintext">Section "Device"
+        Identifier      "AMD Graphics"
+        Driver          "radeon"
+        Option          "TearFree" "true"
+EndSection</code></pre>
 <h2>Fix screen tearing (INTEL gpu)</h2>
 <p>We need to create a custom configuration file:</p>
 <pre><code class="language-plaintext">sudo mkdir -p /etc/X11/xorg.conf.d
