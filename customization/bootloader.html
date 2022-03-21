@@ -1,8 +1,8 @@
 <!--
 title: Bootloader
-description: Instructions on changing grub themes, changing bootloaders & setting up Plymouth
+description: Instructions on changing Grub themes, changing bootloaders & setting up Plymouth
 published: true
-date: 2022-02-22T13:06:19.597Z
+date: 2022-03-21T13:06:48.024Z
 tags: grub, bootloader, customization, plymouth, themes
 editor: ckeditor
 dateCreated: 2021-09-23T13:34:03.097Z
@@ -29,13 +29,11 @@ dateCreated: 2021-09-23T13:34:03.097Z
 <p>to install it use your preferred AUR helper. In this example we use yay</p>
 <pre><code class="language-plaintext">yay -S plymouth-git</code></pre>
 <p>Add the Plymouth hook</p>
-<p>Add <code>plymouth</code> to the <code>HOOKS</code> array in <a href="https://wiki.archlinux.org/title/Mkinitcpio.conf">mkinitcpio.conf</a>. It <strong>must</strong> be added <strong>after</strong> <code>base</code> and <code>udev</code> for it to work:</p>
-<pre><code class="language-plaintext">/etc/mkinitcpio.conf 
-HOOKS=(base udev plymouth ...)</code></pre>
+<p>Add <code>plymouth</code> to the <code>HOOKS</code> array in <a href="https://wiki.archlinux.org/title/Mkinitcpio.conf">mkinitcpio.conf</a> (<code>/etc/mkinitcpio.conf</code>). It <strong>must</strong> be added <strong>after</strong> <code>base</code> and <code>udev</code> for it to work:</p>
+<pre><code class="language-plaintext">HOOKS=(base udev plymouth ...)</code></pre>
 <h2>Install new Plymouth themes&nbsp;</h2>
 <p>New Plymouth themes can be found <a href="https://www.gnome-look.org/browse?cat=108&amp;ord=latest">here</a> or <a href="https://store.kde.org/browse?cat=108&amp;ord=latest">here</a>&nbsp;</p>
-<p>Copy the theme folders you downloaded to&nbsp;</p>
-<pre><code class="language-plaintext">/usr/share/plymouth/themes</code></pre>
+<p>Copy the theme folders you downloaded to <code>/usr/share/plymouth/themes</code></p>
 <h2>Change Plymouth themes</h2>
 <p>list all Plymouth themes installed.</p>
 <pre><code class="language-plaintext">plymouth-set-default-theme -l</code></pre>
