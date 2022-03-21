@@ -1,21 +1,18 @@
 <!--
 title: GParted
-description: GParted is a GTK front-end to GNU Parted and an official GNOME partition-editing application. GParted is used for creating, deleting, resizing, moving, checking, and copying disk partitions and their file systems.
+description: GParted is used for creating, deleting, resizing, moving, checking, and copying disk partitions and their file systems.
 published: true
-date: 2022-02-08T14:09:04.432Z
+date: 2022-03-21T10:57:49.456Z
 tags: partitioning, apps, gparted, disk management
 editor: ckeditor
 dateCreated: 2021-09-30T13:43:31.277Z
 -->
 
 <h1>How to install GParted</h1>
-<p>You can install Gparted in a couple of ways</p>
-<p>Works on all systems</p>
+<p>GParted can be installed with</p>
 <pre><code class="language-plaintext">sudo pacman -S gparted</code></pre>
-<p>Pamac</p>
-<pre><code class="language-plaintext">sudo pamac install gparted </code></pre>
 <h1>How to use GParted</h1>
-<p>Start Gparted from your Menu remember that in a booted system not all partitioning can be edited, Due to being in use by the system.</p>
+<p>Open GParted and remember that in a booted system not all partitioning can be edited, Due to being in use by the system.</p>
 <p>Having said that, we begin with the actual operation of GParted. In the interface we see <strong>the menu at the top</strong>, toolbar with quick buttons and a partition or storage device selector, just below there will be a bar divided or not in colored boxes that are the partitions in the chosen storage unit and on the back we will see a breakdown with some details of said partitions or unformatted spaces ... You will also be able to see the pending operations that GParted will perform right at the bottom edge of the window and that will be applied just when you click the "Apply" button once you have it clear.</p>
 <figure class="image"><img src="https://www.linuxadictos.com/wp-content/uploads/gparted-gui.jpg" alt="GParted GUI" srcset="https://www.linuxadictos.com/wp-content/uploads/gparted-gui.jpg 830w, https://www.linuxadictos.com/wp-content/uploads/gparted-gui-300x189.jpg 300w, https://www.linuxadictos.com/wp-content/uploads/gparted-gui-768x485.jpg 768w, https://www.linuxadictos.com/wp-content/uploads/gparted-gui-400x253.jpg 400w, https://www.linuxadictos.com/wp-content/uploads/gparted-gui-475x300.jpg 475w" sizes="100vw" width="830"></figure>
 <p>Well, <strong>to act with GParted is very simple</strong>:</p>
@@ -29,7 +26,7 @@ dateCreated: 2021-09-30T13:43:31.277Z
       <li><strong>Copy / Paste a partition:</strong> as its name suggests it allows you to copy and paste a partition in a given location. This will make the pasted partition have the same UUID, format and label as the copied one, which could generate a conflict, therefore, if you are not an expert, be careful.</li>
       <li><strong>Resize / move:</strong> It is used to move partitions from one place on the hard disk to another (interesting in case of damage to a sector of the hard disk or memory to move the partition to another good sector) or resize them. For example, if we want to expand or reduce the size of a partition because it has become too small or simply to free up some space by reducing it and then adding it to another.</li>
       <li><strong>Format like:</strong> format the storage unit or partition to give it a filesystem or FS from among those supported by GParted. GParted supports file systems or formats such as ext2, ext3, ext4, SWAP, FAT16, FAT32, etc. If the partition in question is going to be used as a swap space, you can choose SWAP. If it is destined for other uses on GNU / Linux systems, I recommend ext in its most modern version, ext4. But if what you need is a drive compatible with other operating systems to be shared, or even to be read / written by other devices such as a TV, printers, etc., then you must use FAT32.</li>
-      <li><strong>Disassemble / Assemble:</strong> unmount / mount the / dev / xxx device from its mount point to be able to work with it if it doesn't let you or simply to unmount it if necessary. In addition, once done, it refreshes the distribution to show the updated content on the screen.</li>
+      <li><strong>Disassemble / Assemble:</strong> unmount or mount the <code>/dev/xxx</code> device from its mount point to be able to work with it if it doesn't let you or simply to unmount it if necessary. In addition, once done, it refreshes the distribution to show the updated content on the screen.</li>
       <li><strong>Check:</strong> it checks the partition, it will find and try to repair problems that it finds in a partition if it is damaged or corrupted.</li>
       <li><strong>UUID:</strong> Allows you to change the Universal Unique Identifier of the device in question. This is best left untouched if we don't have a lot of experience.</li>
       <li><strong>Label:</strong> names or labels the volume.</li>
