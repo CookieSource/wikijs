@@ -1,16 +1,14 @@
 ---
-title: How to configure jackett in qbittorrent
-description: jackett-in-qbittorrent
+title: How to configure jackett in qBittorrent
+description: 
 published: true
-date: 2021-09-24T00:14:22.940Z
+date: 2022-03-21T12:29:22.692Z
 tags: jackett qbittorrent
 editor: markdown
 dateCreated: 2021-09-24T00:14:19.854Z
 ---
 
-# How to configure jackett in qbittorrent
-
-jackett (jackett-bin in RebornOS) will allow qbittorrent to use more file search options. Let's see how to configure it.
+jackett (`jackett-bin` in RebornOS) will allow qbittorrent to use more file search options. Let's see how to configure it.
 
 
 Open qbittorrent:
@@ -19,26 +17,25 @@ Open qbittorrent:
 <img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/how-to-use-jackett-in-qbittorrent/-/raw/main/qbittorent-main.png">
 </p>
 
-Go to: View --> click in ***Search Engine***
-Access the tab marked ***Search***:
+Go to: View --> Search Engine
+Access the tab marked Search:
 
 <p align="center">
 <img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/how-to-use-jackett-in-qbittorrent/-/raw/main/qbittorrent-search-plugins.png">
 </p>
 
-Click on the button ***Search plugins ...***:
+Click on the **Search plugins ...** button:
 
 <p align="center">
 <img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/how-to-use-jackett-in-qbittorrent/-/raw/main/qbittorrent-plugins.png">
 </p>
 
-Click in ***Check for updates***
+Click on **Check for updates**.
+When the update installation is complete, click **OK** and then **Close**.
 
-When the update installation is complete, click ***OK***, and click ***Close***.
+Close qBittorrent.
 
-Close qbittorrent.
-
-Now, install jackett-bin:
+Now, install jackett:
 
 ```
 sudo pacman -S jackett-bin
@@ -62,7 +59,7 @@ You will see a page like the one below:
 <img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/how-to-use-jackett-in-qbittorrent/-/raw/main/jackett-0001.png">
 </p>
 
-Here, click in ***+ Add indexer***:
+Here, click on ***Add indexer***:
 
 <p align="center">
 <img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/how-to-use-jackett-in-qbittorrent/-/raw/main/jackett-0002.png">
@@ -88,7 +85,7 @@ Select one, several, or all of the items, and then at the end, click on ***Add S
 <img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/how-to-use-jackett-in-qbittorrent/-/raw/main/Add_Selected_and_Close.png">
 </p>
 
-Now to add these indexes in qbittorrent, we will have to edit the following file (***without using sudo***):
+Now to add these indexes in qBittorrent, we will have to edit the following file (***without using sudo***):
 
 ```
 nano ~/.local/share/qBittorrent/nova3/engines/jackett.json
@@ -96,7 +93,7 @@ nano ~/.local/share/qBittorrent/nova3/engines/jackett.json
 
 Content:
 
-```
+```json
 {
     "api_key": "YOUR_API_KEY_HERE", 
     "tracker_first": false, 
@@ -104,15 +101,15 @@ Content:
 }
 ```
 
-From Jackett page, copy the ***API Key*** value here:
+Replace `YOUR_API_KEY_HERE` with the **API key** value from the Jackett page:
 
 <p align="center">
 <img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/how-to-use-jackett-in-qbittorrent/-/raw/main/API_Key.png">
 </p>
 
-Copy te API key:
+Copy to API key:
 
-```
+```json
 {
     "api_key": "mynjt47fzbhjw5u3jzf4tcczc3555i72", 
     "tracker_first": false, 
@@ -120,8 +117,8 @@ Copy te API key:
 }
 ```
 
-Save (***Ctrl+o***) and exit (***Ctrl+x***).
+Save (<kbd>Ctrl</kbd> <kbd>S</kbd>) and exit (<kbd>Ctrl</kbd> <kbd>x</kbd>).
 
 Ready.
 
-Now when you open qbittorrent and search for something, more results will be presented.
+Now when you open qBittorrent and search for something, more results will be presented.
