@@ -2,7 +2,7 @@
 title: How to add the RebornOS repository
 description: rebornos repo
 published: true
-date: 2022-03-21T17:34:09.382Z
+date: 2022-03-21T17:36:39.978Z
 tags: repository repo
 editor: markdown
 dateCreated: 2021-09-23T23:55:22.765Z
@@ -17,14 +17,13 @@ First, we will edit the file pacman.conf:
 First, you must edit the **pacman.conf** file to add the RebornOS repository. You can add the RebornOS repository at the end of the file, or place it after the Arch Linux `#[testing]` repository (the testing repository is disabled by default). This last way to install it (after the Arch Linux testing repository) is the default installation that RebornOS performs.
 
 So, edit the file:
-
 ```
 sudo nano /etc/pacman.conf
 ```
 
 Then, add the following lines to the end of the file (**NOTE**: RebornOS installs its repository by default ***BEFORE*** the others.):
 
-```
+```ini
 [Reborn-OS]
 SigLevel = Optional TrustAll
 Include = /etc/pacman.d/reborn-mirrorlist
@@ -32,7 +31,7 @@ Include = /etc/pacman.d/reborn-mirrorlist
 
 **NOTE:** If the RebornOS repository is being added instead of the Antergos repository (if they still have it in your system), there will be an additional step, which will be to comment on the Antergos repository, as follows. Look for the lines:
 
-```
+```ini
 [antergos]
 SigLevel = PackageRequired
 Include = /etc/pacman.d/antergos-mirrorlist
@@ -40,13 +39,13 @@ Include = /etc/pacman.d/antergos-mirrorlist
 
 ... and comment on them:
 
-```
+```ini
 # [antergos]
 # SigLevel = PackageRequired
 # Include = /etc/pacman.d/antergos-mirrorlist
 ```
 
-Save the file (if you use the nano editor, it is recorded with ***Ctrl +o*** (letter **o**) and comes out with ***Ctrl + x***.
+Save the file (<kbd>Ctrl</kbd> <kbd>S</kbd>) and exit (<kbd>Ctrl</kbd> <kbd>X</kbd>).
 
 Now, add the mirrors of RebornOS. To do this, create the file ***reborn-mirrorlist*** as follows:
 
@@ -56,7 +55,7 @@ sudo nano /etc/pacman.d/reborn-mirrorlist
 
 Inside, copy the following lines:
 
-```
+```ini
 # RebornOS repo: repo.rebornos.org
 Server = https://repo.rebornos.org/RebornOS/
 
