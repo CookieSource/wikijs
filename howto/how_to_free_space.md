@@ -2,7 +2,7 @@
 title: How to free some space
 description: In this how to you are going to learn how to free up some storage.
 published: true
-date: 2022-02-09T21:01:33.364Z
+date: 2022-03-21T11:51:51.992Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-27T21:33:42.145Z
@@ -18,7 +18,7 @@ One option is to remove cached packages that are not currently installed:
 sudo pacman -Sc
 ```
 
-Another way to clean the `/var/cache/pacman/pkg/` directory is to **use a script** that automatically deletes all cached versions of installed and uninstalled packages, except for the most recent 3 versions. The script is called `paccache`. You can install it with the [[`pacman-contrib`]](https://archlinux.org/packages/community/x86_64/pacman-contrib) package - 
+Another way to clean the `/var/cache/pacman/pkg/` directory is to **use a script** that automatically deletes all cached versions of installed and uninstalled packages, except for the most recent 3 versions. The script is called `paccache`. You can install it with the [`pacman-contrib`](https://archlinux.org/packages/community/x86_64/pacman-contrib) package - 
 
 ```
 sudo pacman -S pacman-contrib
@@ -30,9 +30,9 @@ You can run `paccache` every time after you run `pacman`. So, you need to [creat
 sudo nano /usr/share/libalpm/hooks/paccache.hook
 ```
 
-Add this content into the file, then press `Control-S` and `Control-X`
+Add this content into the file, then press <kbd>Control</kbd> <kbd>S</kbd> and <kbd>Control</kbd> <kbd>X</kbd>
 
-```plaintext
+```ini
 [Trigger]
 Operation = Upgrade
 Operation = Install
@@ -47,19 +47,17 @@ Exec = /usr/bin/paccache -r
 ```
 # Clean old log files
 Every Linux distribution has a logging mechanism that help you investigate what’s going on your system. You’ll have kernel logging data, system log messages, standard output and errors for various services in RebornOS. The problem is that over the time, these logs take a considerable amount of disk space. You can check the log size with this command:
-
 ```
 journalctl --disk-usage
 ```
 
 
 Now, there are ways to clean systemd journal logs. The easiest for you is to clear the logs that are older than a certain days.
-
 ```
 sudo journalctl --vacuum-time=3d
 ```
-# Use Bleachbit
-Learn how to use bleach bit [here](https://wiki.rebornos.org/en/apps/Bleachbit)
+# Use BleachBit
+Learn how to use BleachBit [here](https://wiki.rebornos.org/en/apps/Bleachbit)
 
 # Clean the cache in your home folder
 
