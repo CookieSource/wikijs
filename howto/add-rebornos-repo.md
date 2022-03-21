@@ -2,7 +2,7 @@
 title: How to add the RebornOS repository
 description: rebornos repo
 published: true
-date: 2021-11-22T12:35:24.829Z
+date: 2022-03-21T17:34:09.382Z
 tags: repository repo
 editor: markdown
 dateCreated: 2021-09-23T23:55:22.765Z
@@ -46,7 +46,7 @@ Include = /etc/pacman.d/antergos-mirrorlist
 # Include = /etc/pacman.d/antergos-mirrorlist
 ```
 
-Save the file (if you use the nano editor, it is recorded with ***Ctrl +o***  (letter **o**) and comes out with ***Ctrl + x***.
+Save the file (if you use the nano editor, it is recorded with ***Ctrl +o*** (letter **o**) and comes out with ***Ctrl + x***.
 
 Now, add the mirrors of RebornOS. To do this, create the file ***reborn-mirrorlist*** as follows:
 
@@ -186,14 +186,12 @@ Then from the terminal:
 sudo chmod 644 /etc/pacman.d/reborn-mirrorlist
 ```
 
-
 Another way to create the mirrorlist file is by copying and pasting the following in the terminal:
 
 ```
 sudo wget https://gitlab.com/rebornos-team/rebornos-special-system-files/mirrors/reborn-mirrorlist/-/raw/master/reborn-mirrorlist /etc/pacman.d/reborn-mirrorlist
 sudo chmod 644 /etc/pacman.d/reborn-mirrorlist
 ```
-
 
 What will have to be done next, is to acquire the public pgp keys from the RebornOS repository. To do this, download the following file:
 
@@ -216,5 +214,3 @@ sudo pacman -Syy
 ```
 
 Once this procedure is finished, we can update our system, or install something existing in the RebornOS repositories.
-
-
