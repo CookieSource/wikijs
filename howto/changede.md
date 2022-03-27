@@ -2,7 +2,7 @@
 title: How to install/change/remove desktop environment.
 description: How to change install or remove desktop environment.
 published: true
-date: 2022-02-24T07:38:57.597Z
+date: 2022-03-27T17:09:30.040Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-31T13:12:44.612Z
@@ -43,5 +43,5 @@ pacman -S <package name>
 Removing a DE can't be done through our app yet but can be done manually with:
 
 ```
-sudo pacman -R <package name>
+sudo pacman -Rncs <package name>
 ```
