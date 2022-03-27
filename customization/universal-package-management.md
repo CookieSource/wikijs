@@ -1,16 +1,12 @@
 ---
-title: Universal package management 
-description: Universal package solution on RebornOS, Snap, Flatpak & Appimage
+title: Universal package management
+description: 
 published: true
-date: 2022-03-27T11:13:59.016Z
+date: 2022-03-27T11:22:56.268Z
 tags: customization, snap, flatpak, appimage, universal package management
 editor: markdown
 dateCreated: 2021-10-16T12:40:24.070Z
 ---
-
-# Universal package management.
-
-RebornOS has support for all the major package solutions on Linux.
 
 ## Snap
 
@@ -18,15 +14,13 @@ Canonical universal package solution
 
 ### How to install Snap
 
-Install the `snapd `package via the command line or use a graphical store like [Pamac](/en/howto/pamac)
-
-```plaintext
+The `snapd` package can be installed with
+```
 sudo pacman -S snapd snapd-glib
 ```
 
-enable the snap service.
-
-```plaintext
+To enable the snap service, run
+```
 sudo systemctl enable --now snapd
 ```
 
@@ -34,57 +28,54 @@ sudo systemctl enable --now snapd
 
 From the terminal or via a graphical store like [Pamac](/en/howto/pamac)
 
-```plaintext
-sudo snap install appname
+```
+sudo snap install <app name>
 ```
 
 ## Flatpak
 
 ### How to install Flatpak
-
-Install the `flatpak `package via the command line or use a graphical store like [Pamac](/en/howto/pamac)
-
-```plaintext
+The `flatpak` package can be installed with
+```
 sudo pacman -S flatpak
 ```
-
-It may be necessary to reboot after installing Flatpak
+It may be necessary to reboot after installing Flatpak.
 
 ### How to use Flatpak
 
-**By using** [**flathub**](https://flathub.org/)
+**By using** [**flathub**](https://flathub.org)
 
-Navigate on Flathub to an app you want and click install.
+Navigate to Flathub to an app you want and click install.
 
-It may be required to click the downloaded file.
+It may be required to open the downloaded file.
 
-**From the terminal installing an app**
+**Installing an app from the terminal**
 
 ```plaintext
-sudo flatpak install appname
+sudo flatpak install <app name>
 ```
 
 **Deleting an app from the terminal**
 
 ```plaintext
-sudo flatpak uninstall appname
+sudo flatpak uninstall <app name>
 ```
 
 or use a graphical store like [Pamac](/en/howto/pamac)
 
 ## Appimage
 
-### How to install Appimage
+### How to install AppImage Launcher
 
-install the `appimagelauncher `via the command line or use a graphical store like [Pamac](/en/howto/pamac)
+The `appimagelauncher` package can be installed with
 
 ```plaintext
 sudo pacman -S appimagelauncher
 ```
 
-Download [https://appimage.github.io/AppImageUpdate/](https://appimage.github.io/AppImageUpdate/)
+Download https://appimage.github.io/AppImageUpdate
 
-Double click it and select integrate and run.
+Open it, select **Integrate and run**.
 
 ### How to use Appimage
 
