@@ -2,7 +2,7 @@
 title: Shell
 description: Guides on changing the look & feel of your terminal
 published: true
-date: 2022-02-08T14:00:31.803Z
+date: 2022-03-28T12:16:17.042Z
 tags: customization, themes, shell, zsh, fish, bash
 editor: markdown
 dateCreated: 2021-09-23T13:35:30.759Z
@@ -16,7 +16,7 @@ Here you can find a comparison of shell features compared to other shells.
 
 To install bash, run the command:
 
-```plaintext
+```
 sudo pacman -S bash
 ```
 
@@ -24,23 +24,23 @@ sudo pacman -S bash
 
 To list all installed shells, run:
 
-```plaintext
+```
 chsh -l
 ```
 
 And to set one as default for your user do:
 
-```plaintext
-chsh -s full-path-to-shell
+```
+chsh -s <full-path-to-shell>
 ```
 
 If you are using [systemd-homed](https://wiki.archlinux.org/title/Systemd-homed), run: 
 
-```plaintext
-homectl update --shell= full-path-to-shell user
+```
+homectl update --shell=<full-path-to-shell> user
 ```
 
-where *full-path-to-shell* is the full path as given by `chsh -l`.
+where *\<full-path-to-shell\>* is the full path as given by `chsh -l`.
 
 If you now log out and log in again, you will be greeted by the other shell.
 [**Oh My bash**](https://ohmybash.nntoan.com/)
@@ -87,16 +87,16 @@ chsh -l
 And to set one as default for your user do:
 
 ```plaintext
-chsh -s full-path-to-shell
+chsh -s <full-path-to-shell>
 ```
 
 If you are using [systemd-homed](https://wiki.archlinux.org/title/Systemd-homed), run: 
 
 ```plaintext
-homectl update --shell= full-path-to-shell user
+homectl update --shell=<full-path-to-shell> user
 ```
 
-where *full-path-to-shell* is the full path as given by `chsh -l`.
+where *\<full-path-to-shell\>* is the full path as given by `chsh -l`.
 
 If you now log out and log in again, you will be greeted by the other shell.
 
@@ -106,13 +106,13 @@ If you now log out and log in again, you will be greeted by the other shell.
 
 To install fish, run the command:
 
-```plaintext
+```
 sudo pacman -s fish
 ```
 
 ## Features
 
-Fish has multiple features that makes it stand out from bash out of the box such as.
+Fish has multiple features that makes it stand out from bash out of the box such as:
 
 **Autosuggestions**  
 Autosuggestion suggests commands as you type based on history and completion, like many web browsers.
@@ -137,22 +137,22 @@ Fish has features like tab completions and syntax highlighting, with nothing new
 
 To list all installed shells, run:
 
-```plaintext
+```
 chsh -l
 ```
 
 And to set one as default for your user do:
 
-```plaintext
-chsh -s full-path-to-shell
+```
+chsh -s <full-path-to-shell>
 ```
 
 If you are using [systemd-homed](https://wiki.archlinux.org/title/Systemd-homed), run: 
 
-```plaintext
-homectl update --shell= full-path-to-shell user
+```
+homectl update --shell=<full-path-to-shell> user
 ```
 
-where *full-path-to-shell* is the full path as given by `chsh -l`.
+where *\<full-path-to-shell\>* is the full path as given by `chsh -l`.
 
 If you now log out and log in again, you will be greeted by the other shell.
