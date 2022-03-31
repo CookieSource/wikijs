@@ -2,8 +2,8 @@
 title: Bootloader
 description: Instructions on changing Grub themes, changing bootloaders & setting up Plymouth
 published: true
-date: 2022-03-31T15:36:52.095Z
-tags: grub, customization, plymouth, themes, bootloader
+date: 2022-03-31T16:22:45.845Z
+tags: grub, bootloader, customization, plymouth, themes
 editor: markdown
 dateCreated: 2021-09-23T13:34:03.097Z
 ---
@@ -14,7 +14,7 @@ Grub is the default Linux bootloader that works on most systems.
 
 ## Grub theming
 
-You can find new Grub themes [here](https://www.gnome-look.org/browse?cat=109&ord=latest) & [here](https://store.kde.org/browse?cat=109&ord=latest)
+You can find new Grub themes [here](https://gnome-look.org/browse?cat=109&ord=latest) & [here](https://store.kde.org/browse?cat=109&ord=latest)
 
 To install a new Grub theme open Grub Customizer and go to the appearance tab.
 
@@ -54,13 +54,13 @@ Add the Plymouth hook
 
 Add `plymouth` to the `HOOKS` array in [mkinitcpio.conf](https://wiki.archlinux.org/title/Mkinitcpio.conf) (`/etc/mkinitcpio.conf`). It **must** be added **after** `base` and `udev` for it to work:
 
-```plaintext
+```
 HOOKS=(base udev plymouth ...)
 ```
 
 ## Install new Plymouth themes 
 
-New Plymouth themes can be found [here](https://www.gnome-look.org/browse?cat=108&ord=latest) or [here](https://store.kde.org/browse?cat=108&ord=latest) 
+New Plymouth themes can be found [here](https://gnome-look.org/browse?cat=108&ord=latest) or [here](https://store.kde.org/browse?cat=108&ord=latest) 
 
 Copy the theme folders you downloaded to `/usr/share/plymouth/themes`
 
@@ -68,13 +68,13 @@ Copy the theme folders you downloaded to `/usr/share/plymouth/themes`
 
 list all Plymouth themes installed.
 
-```plaintext
+```
 plymouth-set-default-theme -l
 ```
 
 set Plymouth theme as default. `theme` is an example name in this.
 
-```plaintext
+```
 plymouth-set-default-theme -R theme
 ```
 
@@ -90,7 +90,7 @@ To install the systemd-boot EFI boot manager, first make sure the system has boo
 
 With the ESP mounted to `esp`, use `bootctl` to install *systemd-boot* into the EFI system partition by running:
 
-```plaintext
+```
 bootctl install
 ```
 
@@ -108,7 +108,7 @@ Whenever there is a new version of systemd-boot, the boot manager can be optiona
 
 Use *bootctl* to update *systemd-boot*:
 
-```plaintext
+```
 bootctl update
 ```
 
@@ -118,8 +118,10 @@ If the location of the ESP is non-standard (i.e., it is not `/efi`, `/boot`, or 
 
 The package [systemd-boot-pacman-hook](https://aur.archlinux.org/packages/systemd-boot-pacman-hook/)^AUR^ provides a [Pacman hook](https://wiki.archlinux.org/title/Pacman_hook) to automate the update process. [Installing](https://wiki.archlinux.org/title/Install) the package will add a hook which will be executed every time the [systemd](https://archlinux.org/packages/?name=systemd) package is upgraded. Alternatively, to replicate what the *systemd-boot-pacman-hook* package does without installing it, place the following pacman hook in the `/etc/pacman.d/hooks/` directory:
 
-```plaintext
-/etc/pacman.d/hooks/100-systemd-boot.hook [Trigger]
+```ini
+/etc/pacman.d/hooks/100-systemd-boot.hook 
+
+[Trigger]
 Type = Package
 Operation = Upgrade
 Target = systemd
@@ -132,13 +134,13 @@ Exec = /usr/bin/bootctl update
 
 # Syslinux
 
-[Syslinux](https://en.wikipedia.org/wiki/SYSLINUX) is a collection of boot loaders capable of booting from drives, CDs, and over the network via [PXE](https://wiki.archlinux.org/title/PXE). Some of the supported [file systems](https://wiki.archlinux.org/title/File_systems) are [FAT](https://wiki.archlinux.org/title/FAT), [NTFS](https://wiki.archlinux.org/title/NTFS), [ext2](https://en.wikipedia.org/wiki/ext2), [ext3](https://wiki.archlinux.org/title/Ext3), [ext4](https://wiki.archlinux.org/title/Ext4), [XFS](https://wiki.archlinux.org/title/XFS), [UFS/FFS](https://en.wikipedia.org/wiki/Unix_File_System), and uncompressed single-device [Btrfs](https://wiki.archlinux.org/title/Btrfs).
+[Syslinux](https://en.wikipedia.org/wiki/SYSLINUX) is a collection of boot loaders capable of booting from drives, CDs, and over the network via [PXE](https://wiki.archlinux.org/title/PXE). Some of the supported [file systems](https://wiki.archlinux.org/title/File_systems) are [FAT](https://wiki.archlinux.org/title/FAT), [NTFS](https://wiki.archlinux.org/title/NTFS), [Ext2](https://en.wikipedia.org/wiki/ext2), [Ext3](https://wiki.archlinux.org/title/Ext3), [Ext4](https://wiki.archlinux.org/title/Ext4), [XFS](https://wiki.archlinux.org/title/XFS), [UFS/FFS](https://en.wikipedia.org/wiki/Unix_File_System), and uncompressed single-device [Btrfs](https://wiki.archlinux.org/title/Btrfs).
 
 ## Installation on BIOS
 
 Install the [syslinux](https://archlinux.org/packages/?name=syslinux) package using:
 
-```plaintext
+```
 sudo pacman -S syslinux
 ```
 
@@ -152,31 +154,31 @@ Run `syslinux-install_update` with flags: `-i` - install the files, `-a` - mark 
 syslinux-install_update -i -a -m
 ```
 
-Now is the time to edit `/boot/syslinux/syslinux.cfg` refer to [Configuration](https://wiki.rebornos.org/en/customization/bootloader#configuration)
+Now is the time to edit `/boot/syslinux/syslinux.cfg` refer to [Configuration](#configuration)
 
 ### Manual install
 
 Your boot partition, on which you plan to install Syslinux, must contain a FAT, ext2, ext3, ext4, or Btrfs file system. You do not have to install it on the root directory of a file system, e.g., with device `/dev/sda1` mounted on `/boot`. For example, you can install Syslinux in the `syslinux` subdirectory:
 
-```plaintext
+```
 sudo mkdir /boot/syslinux
 ```
 
 Copy all `.c32` files from `/usr/lib/syslinux/bios/` to `/boot/syslinux/` if you desire to use any menus or configurations other than a basic boot prompt. **Do not symlink them.**
 
-```plaintext
+```
 sudo cp /usr/lib/syslinux/bios/*.c32 /boot/syslinux/
 ```
 
-Now install the bootloader. For FAT, ext2/3/4, or btrfs boot partition use *extlinux*, where the device has been mounted:
+Now install the bootloader. For FAT, Ext2/3/4, or Btrfs boot partition use *extlinux*, where the device has been mounted:
 
-```plaintext
+```
 sudo extlinux --install /boot/syslinux
 ```
 
 Alternatively, for a FAT boot partition use *syslinux*, where the device is **unmounted**:
 
-```plaintext
+```
 sudo syslinux --directory syslinux --install /dev/sdXY
 ```
 
@@ -209,14 +211,14 @@ Install the [syslinux](https://archlinux.org/packages/?name=syslinux) and [efibo
 
 Copy Syslinux files to ESP:
 
-```plaintext
+```
 sudo mkdir -p esp/EFI/syslinux
 sudo cp -r /usr/lib/syslinux/efi64/* esp/EFI/syslinux
 ```
 
 Setup boot entry for Syslinux using [efibootmgr](https://wiki.archlinux.org/title/Efibootmgr):
 
-```plaintext
+```
 sudo efibootmgr --create --disk /dev/sdX --part Y --loader /EFI/syslinux/syslinux.efi --label "Syslinux" --verbose
 ```
 
@@ -231,14 +233,14 @@ Create or edit `*esp*/EFI/syslinux/syslinux.cfg` by following [Configuration](ht
 
 ## Configuration
 
-```plaintext
+```
 sudo nano /boot/syslinux/syslinux.cfg
 ```
 
 Your config should look like this, make sure `/dev/sdXY` points to your root partition  
 `TIMEOUT` refers to the time it takes to boot the default OS
 
-```plaintext
+```
 UI menu.c32
 PROMPT 1
 TIMEOUT 10
@@ -257,7 +259,7 @@ LABEL RebornOSfallback
 
 Additionally if you want to add Windows to the boot menu add this where `hd0 3` refers to the disk then partition
 
-```plaintext
+```
 LABEL windows
 	MENU LABEL Windows
 	COM32 chain.c32
