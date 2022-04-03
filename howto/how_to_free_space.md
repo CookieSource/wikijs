@@ -2,7 +2,7 @@
 title: How to free some space
 description: In this how to you are going to learn how to free up some storage.
 published: true
-date: 2022-04-03T09:50:32.802Z
+date: 2022-04-03T09:53:26.739Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-27T21:33:42.145Z
@@ -79,7 +79,7 @@ And that is it.
 
 You can check what the largest files in your system are and maybe you do not need them. To accomplish this task, you can use some command line tools or graphical programs.
 
-If you are using **GNOME** you can install/use [`baobab`](https://archlinux.org/packages/extra/x86_64/baobab). There are some other tools listed on the [Arch Wiki](https://wiki.archlinux.org/title/List_of_applications/Utilities#Disk_usage_display):
+If you are using **GNOME** you can use [`baobab`](https://archlinux.org/packages/extra/x86_64/baobab). There are some other tools listed on the [Arch Wiki](https://wiki.archlinux.org/title/List_of_applications/Utilities#Disk_usage_display):
 
 > ##### Console
 > 
