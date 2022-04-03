@@ -2,7 +2,7 @@
 title: How to change GDM or SDDM to LightDM
 description: 
 published: true
-date: 2022-03-31T10:51:22.328Z
+date: 2022-04-03T10:08:34.492Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-25T15:43:25.528Z
@@ -14,7 +14,7 @@ First, we will install everything necessary to have lightdm in our system. To do
 sudo pacman -S lightdm lightdm-gtk-greeter rebornos-lightdm-gtk-greeter-images lightdm-gtk-greeter-settings
 ```
 
-Then edit `lightdm-gtk-greeter.conf`
+Then edit `lightdm-gtk-greeter.conf`:
 ```
 sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
 ```
@@ -48,32 +48,32 @@ Theme=None
 
 Save (<kbd>Ctrl</kbd> <kbd>S</kbd>) and exit (<kbd>Ctrl</kbd> <kbd>X</kbd>).
 <br>
-## Change GDM to LightDM on GNOME
+## On GNOME
 
-We will have to disable gdm, and enable lightdm. To do this, from the terminal:
+We will have to disable `gdm`, and enable `lightdm`. To do this, from the terminal:
 
 ```
 sudo systemctl disable gdm
 sudo systemctl enable lightdm
 ```
 
-If we want to disable lightdm, and re-enable gdm to use GNOME as it comes by default, then from the terminal:
+If we want to disable LightDM, and re-enable GDM to use GNOME as it comes by default, then from the terminal:
 
 ```
 sudo systemctl disable lightdm
 sudo systemctl enable gdm
 ```
 
-## Change SDDM to LightDM on KDE:
+## On KDE
 
-We will have to disable sddm, and enable lightdm. To do this, from the terminal:
+We will have to disable `sddm`, and enable `lightdm`. To do this, from the terminal:
 
 ```
 sudo systemctl disable sddm
 sudo systemctl enable lightdm
 ```
 
-If we want to disable lightdm, and re-enable sddm to use KDE as it comes by default, then from the terminal:
+If we want to disable LightDM, and re-enable SSDM to use KDE as it comes by default, then from the terminal:
 
 ```
 sudo systemctl disable lightdm
@@ -81,4 +81,3 @@ sudo systemctl enable sddm
 ```
 
 **NOTE:** When KDE is started with lightdm, the KDE panel is unconfigured. To correct it, we can remove the panel, and add a default panel.
-
