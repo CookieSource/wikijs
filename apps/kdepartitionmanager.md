@@ -2,7 +2,7 @@
 title: KDE Partition Manager
 description: KDE Partition Manager is a utility program to help you manage the disk devices, partitions and file systems on your computer. It allows you to easily create, copy, move, delete, resize without losing data, backup and restore partitions.
 published: true
-date: 2022-04-07T10:47:08.640Z
+date: 2022-04-07T11:48:00.442Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-29T12:07:55.870Z
@@ -10,7 +10,7 @@ dateCreated: 2021-09-29T12:07:55.870Z
 
 # Installing KDE Partition Manager
 
-You can install KDE Partition Manager with the command
+To install KDE Partition Manager, run
 
 ```plaintext
 sudo pacman -S partitionmanager
@@ -48,11 +48,11 @@ After resizing and applying the other corresponding actions, you need to apply t
 
 ![](https://linuxhint.com/wp-content/uploads/2020/09/word-image-499.png)
 
-KDE Partition Manager can also be used to **format** your partitions. To do this, once again, **unmount** your partition, and then either right-click and select the **delete** option or hit the **delete** button, after which your partition should look something like this:
+KDE Partition Manager can also be used to **format** your partitions. To do this, once again, **unmount** your partition, and press the <kbd>delete</kbd> button or right-click and select the **delete** option, after which your partition should look something like this:
 
 ![](https://linuxhint.com/wp-content/uploads/2020/09/word-image-500.png)
 
-Next, right-click and select the **New** option or hit **Ctrl + n**, which will open the following prompt:
+Next, right-click and select the **New** option or <kbd>Ctrl</kbd> <kbd>N</kbd>, which will open the following prompt:
 
 ![](https://linuxhint.com/wp-content/uploads/2020/09/word-image-501.png)
 
