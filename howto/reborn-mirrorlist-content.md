@@ -2,17 +2,15 @@
 title: How to know the content of the reborn-mirrorlist file
 description: reborn-mirrorlist content
 published: true
-date: 2021-09-24T00:03:14.862Z
+date: 2022-04-07T11:44:48.806Z
 tags: reborn-mirrorlist
 editor: markdown
 dateCreated: 2021-09-24T00:03:11.902Z
 ---
 
-# How to know the content of the reborn-mirrorlist file
-
 The idea of this post is to indicate the contents of the reborn-mirrorlist file, and to indicate any problems that may exist in that file.
 
-We indicate the change to be made in the reborn-mirrorlist file, so that the system works without problems.
+We indicate the change to be made in the `reborn-mirrorlist file`, so that the system works without problems.
 
 **There are currently 37 active mirrors from the RebornOS repository.**
 
@@ -143,5 +141,5 @@ Server = http://mirror.arctic.lol/RebornMirror/
 Server = https://mirror.clarkson.edu/RebornOS/
 ```
 
-Save with ***Ctrl+o***, and exit with ***Ctrl+x***.
+Save with <kbd>Ctrl</kbd> <kbd>O</kbd> and exit with <kbd>Ctrl</kbd> <kbd>X</kbd>.
 
