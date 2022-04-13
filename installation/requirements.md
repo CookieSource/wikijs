@@ -2,7 +2,7 @@
 title: Requirements
 description: Here you can find the requirements for RebornOS
 published: true
-date: 2022-03-27T10:59:37.810Z
+date: 2022-04-13T06:13:24.371Z
 tags: requirements
 editor: markdown
 dateCreated: 2021-09-23T12:39:54.260Z
