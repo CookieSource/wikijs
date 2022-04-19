@@ -2,21 +2,19 @@
 title: How to install XAMPP manually
 description: XAMPP manually
 published: true
-date: 2021-09-25T01:57:00.112Z
+date: 2022-04-19T12:07:19.030Z
 tags: xampp
 editor: markdown
 dateCreated: 2021-09-25T01:15:44.368Z
 ---
 
-# How to install XAMPP manually
-
 XAMPP is a LAMP development environment, ideal for use locally. It can be downloaded from:
 
-<a href="https://www.apachefriends.org/index.html" target="_blank">XAMPP</a>
+[https://apachefriends.org](https://apachefriends.org)
 
 The recommended version is **xampp-linux-x64-7.4.6-0-installer.run** (**NOTE:** the version of this file has surely changed since the time this guide was created), as it is the most compatible for the most common WordPress or Prestashop developments, to name a few. Once downloaded, we give execute permission to the downloaded file. To do this, from the terminal:
 
-```
+```plaintext
 chmod 755 xampp-linux-x64-7.4.6-0-installer.run
 ```
 
@@ -24,69 +22,53 @@ Now comes the time for installation. Two different cases are presented: One, is 
 
 We begin to install it from the terminal (and inside the folder where the file is located). In this example, the file is located in the user's folder:
 
-```
+```plaintext
 sudo ./xampp-linux-x64-7.4.6-0-installer.run
 ```
 
 We will see the following screen:
 
-<p align="center">
-<img src="https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0001.png">
-</p>
+![](https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0001.png)
 
 We begin the installation with a click on **Next**:
 
-<p align="center">
-<img src="https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0002.png">
-</p>
+![](https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0002.png)
 
 On this screen we are asked to select the components that we want to install. Leave everything as it is, and click on **Next**:
 
-<p align="center">
-<img src="https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0003.png">
-</p>
+![](https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0003.png)
 
 Here, it indicates that the destination of the installation will be **/opt/lampp**, click on **Next** again:
 
-<p align="center">
-<img src="https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0004.png">
-</p>
+![](https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0004.png)
 
 On this screen it gives us the option to inform us about XAMPP. Remove the mark, and click again on **Next**:
 
-<p align="center">
-<img src="https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0005.png">
-</p>
+![](https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0005.png)
 
 We are one step away from starting the installation. To do this, click on **Next**:
 
-<p align="center">
-<img src="https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0006.png">
-</p>
+![](https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0006.png)
 
 Now, just click **Next** and the installation will begin:
 
-<p align="center">
-<img src="https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0007.png">
-</p>
+![](https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0007.png)
 
 Wait until it finishes (**the installation will take a while**, so don't be impatient), which will happen when you see the following screen:
 
-<p align="center">
-<img src="https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0008.png">
-</p>
+![](https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0008.png)
 
 At this point, uncheck **Launch XAMPP** to prevent it from running, and then click **Finish**.
 
-We could use **pkexec** to create the shortcut to run XAMPP graphically.  This procedure is applicable to any other Linux distribution. First of all, we must have a user **daemon** belonging to the group **daemon**. This is true in RebornOS. How can we verify this? Viewing the file **passwd**, for example:
+We could use **pkexec** to create the shortcut to run XAMPP graphically. This procedure is applicable to any other Linux distribution. First of all, we must have a user **daemon** belonging to the group **daemon**. This is true in RebornOS. How can we verify this? Viewing the file **passwd**, for example:
 
-```
+```plaintext
 cat /etc/passwd
 ```
 
 We would see something like this:
 
-```
+```plaintext
 root:x:0:0::/root:/bin/bash
 bin:x:1:1::/:/usr/bin/nologin
 daemon:x:2:2::/:/usr/bin/nologin
@@ -124,31 +106,31 @@ mysql:x:967:1001::/home/mysql:/bin/bash
 
 Here what we have is a list of the users of the system. And **daemon** is present. Right. In order to run the **manager-linux-x64.run** file (which is in charge of the graphical handling of **XAMPP**) using **pkexec**, we must first create a rule, which we will save in **/usr/share/polkit-1/actions/**. It is generated in the following way:
 
-```
+```plaintext
 sudo nano /usr/share/polkit-1/actions/com.ubuntu.pkexec.xampp.policy
 ```
 
 Inside copy (all this is a single line):
 
-```
+```plaintext
 <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd"> <policyconfig> <action id="com.ubuntu.pkexec.xampp.policy"> <message>Authentication is required to run XAMP Control Panel</message> <icon_name>xampp</icon_name> <defaults> <allow_any>auth_admin</allow_any> <allow_inactive>auth_admin</allow_inactive> <allow_active>auth_admin</allow_active> </defaults> <annotate key="org.freedesktop.policykit.exec.path">/opt/lampp/manager-linux-x64.run</annotate> <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate> </action> </policyconfig>
 ```
 
 Save, and exit (**Ctrl + o** to save, **CTRL + x** to exit). The file can be run as administrator, using the following line:
 
-```
+```plaintext
 pkexec /opt/lampp/manager-linux-x64.run
 ```
 
 But: Why do this if we can create a shortcut that makes things easier for us? To do this, from the terminal:
 
-```
+```plaintext
 sudo nano /usr/share/applications/XAMPP.desktop
 ```
 
 Inside copy:
 
-```
+```plaintext
 [Desktop Entry]
 Version=1.0
 Name=XAMPP
@@ -227,35 +209,26 @@ MimeType=
 
 Te line:
 
-```
+```plaintext
 Icon=xampp_icon_flat_circle.png
 ```
 
-use the **xampp_icon_flat_circle.png icon**.  Does not have it? We leave it to you below (click in **XAMPP-ICON** to download it).
+use the **xampp\_icon\_flat\_circle.png icon**. Does not have it? We leave it to you below.  
 **NOTE**: The browser will show you the icon image (it will be large). Right click, download the image, and go back to this publication with the browser.
 
-To download the icon, click in:
-
-<a href="https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/xampp_icon_flat_circle.png" target="_blank">XAMPP-ICON</a>
+[Download XAMPP icon](https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/xampp_icon_flat_circle.png)
 
 When executing it by using this created shortcut (it will ask us for the administrator password first), we will see the following screen:
 
-<p align="center">
-<img src="https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0009.png">
-</p>
+![](https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0009.png)
 
 Click on the tab that says **Manage Servers**:
 
-<p align="center">
-<img src="https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0010.png">
-</p>
-
+![](https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0010.png)
 
 In this case, we see that the three services (**MySQL**, **ProFTPD**, and **Apache Web Server**, are stopped. In case any of them were active (instead of the circle in red, we would see some in green), you have to stop that service (mark it with the mouse and click on **Stop**, or simply press the **Stop All** button) Then start all services by clicking on the **Start All** button:
 
-<p align="center">
-<img src="https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0011.png">
-</p>
+![](https://gitlab.com/reborn-os-team/rebornos-images-for-wiki/how-to-install-xampp/-/raw/master/0011.png)
 
 Once everything is activated, XAMPP security will have to be configured. XAMPP initially has the following default values:
 
@@ -269,28 +242,26 @@ Once everything is activated, XAMPP security will have to be configured. XAMPP i
 
 **(5).** The examples are accessible via the network.
 
-<br>
-
 # XAMPP security settings
 
 Execute from the terminal:
 
-```
+```plaintext
 sudo /opt/lampp/lampp security
 ```
 
 The following message will be displayed:
 
-```
+```plaintext
 XAMPP:  Quick security check...
 XAMPP:  MySQL is accessable via network. 
 XAMPP: Normaly that's not recommended. Do you want me to turn it off? [yes]
 ```
 
-It indicates that MySQL can be accessed over the network. This is not recommended. What you have to do is disable it, which is done by answering yes with **y** or **Enter**.
+It indicates that MySQL can be accessed over the network. This is not recommended. What you have to do is disable it, which is done by answering yes with **y** or **Enter**.  
 Then, the following message will be displayed:
 
-```
+```plaintext
 XAMPP:  Turned off.
 XAMPP: Stopping MySQL...ok.
 XAMPP: Starting MySQL...ok.
@@ -300,7 +271,7 @@ XAMPP: Do you want to set a password? [yes]
 
 In this case, after disabling MySQL access by network, it tells us that it does not have a password for its user **pma**. We will create one for you then, answering yes with **y** or **Enter**. We will be asked to enter the password twice, to confirm it:
 
-```
+```plaintext
 XAMPP: Password: 
 XAMPP: Password (again): 
 XAMPP:  Setting new MySQL pma password.
@@ -309,9 +280,9 @@ XAMPP:  MySQL has no root passwort set!!!
 XAMPP: Do you want to set a password? [yes]
 ```
 
-Here we are told that the MySQL user **pma** has a new password, but that the administrator user does not. We will then create one for him, answering yes with **y** or '''Enter**, (same procedure as the previous case):
+Here we are told that the MySQL user **pma** has a new password, but that the administrator user does not. We will then create one for him, answering yes with **y** or '''Enter\*\*, (same procedure as the previous case):
 
-```
+```plaintext
 XAMPP:  Write the password somewhere down to make sure you won't forget it!!! 
 XAMPP: Password: 
 XAMPP: Password (again): 
@@ -323,14 +294,14 @@ XAMPP: Do you want to change the password? [yes]
 
 It tells us that the password for the MySQL administrator user has been created, and that ProFTPD can be run, with the user **daemon** and the password **xampp**. It tells us if we want to change this password, and we answer yes with **y** or **Enter**:
 
-```
+```plaintext
 XAMPP:  The FTP password for user 'daemon' is still set to 'xampp'. 
 XAMPP: Do you want to change the password? [yes]
 ```
 
 Here it tells us if we want to change the default password for FTP (user **daemon** and password **xampp**), we recommend changing it. Respond with **Enter** and type the new one:
 
-```
+```plaintext
 XAMPP: Password: 
 XAMPP: Password (again): 
 XAMPP: Reload ProFTPD...ok.
@@ -341,37 +312,38 @@ All ready. Security is ready. All passwords must be kept in a safe place. Next, 
 
 Edit the php.ini:
 
-```
+```plaintext
 sudo nano /opt/lampp/etc/php.ini
 ```
 
 At the end of the file, add the following line:
 
-```
+```plaintext
 max_input_vars = 17000
 ```
 
 In the same file:
 
-**(1).** Look for **max_size** it will have a value of **40M** change it to **800M**
+**(1).** Look for **max\_size** it will have a value of **40M** change it to **800M**
 
-**(2).** Look for **upload_max_filesize** it will have a value of **40M** change it to **800M**
+**(2).** Look for **upload\_max\_filesize** it will have a value of **40M** change it to **800M**
 
-**(3).** Look for **memory_limit** it will have a value of **512M** change it to **800M**
+**(3).** Look for **memory\_limit** it will have a value of **512M** change it to **800M**
 
-**(4).** Look for **max_execution_time** it will have a value of **120** change it to **1700**
+**(4).** Look for **max\_execution\_time** it will have a value of **120** change it to **1700**
 
-**(5).** Look for **max_input_time** it will have a value of **60** change it to **1700**
-<br>
+**(5).** Look for **max\_input\_time** it will have a value of **60** change it to **1700**  
+  
+  
 Save the changes. Now edit the phpmyadmin configuration file:
 
-```
+```plaintext
 sudo nano /opt/lampp/phpmyadmin/config.inc.php
 ```
 
-For security, it would be convenient to modify the blowfish secret of the file, which by default is xampp ( line: $cfg['blowfish_secret'] = 'xampp'; /* YOU SHOULD CHANGE THIS FOR A MORE SECURE COOKIE AUTH!):
+For security, it would be convenient to modify the blowfish secret of the file, which by default is xampp ( line: $cfg\['blowfish\_secret'\] = 'xampp'; /\* YOU SHOULD CHANGE THIS FOR A MORE SECURE COOKIE AUTH!):
 
-```
+```plaintext
 /**
  * This is needed for cookie based authentication to encrypt password in
  * cookie. Needs to be 32 chars long.
@@ -379,13 +351,11 @@ For security, it would be convenient to modify the blowfish secret of the file, 
 $cfg['blowfish_secret'] = 'xampp'; /* YOU SHOULD CHANGE THIS FOR A MORE SECURE COOKIE AUTH! */
 ```
 
-To obtain a more secure password, it is best to enter one of the following site:
-
-<a href="https://phpsolved.com/phpmyadmin-blowfish-secret-generator/?g=5b19a05b16361" target="_blank">Blowfish-secret-generator</a>
+To obtain a more secure password, it is best to use [Blowfish secret generator](https://phpsolved.com/phpmyadmin-blowfish-secret-generator/?g=5b19a05b16361).
 
 Where at each access you get a new randomly generated password; copy it to replace xampp (pay attention to leave the quotation mark of beginning and end: ' ), for example:
 
-```
+```plaintext
 * This is needed for cookie based authentication to encrypt password in
  * cookie. Needs to be 32 chars long.
  */
@@ -394,7 +364,7 @@ $cfg['blowfish_secret'] = '@R3h3~*VZYYzTl{]zaphSdE3+*uUzS+%jHqoP^fng$_Y|v'; /* Y
 
 Then remove the comment from the last 8 lines (i.e. remove the **//**):
 
-```
+```plaintext
 /* Storage database and tables */
 $cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';
 $cfg['Servers'][$i]['bookmarktable'] = 'pma__bookmark';
@@ -431,7 +401,7 @@ $cfg['Servers'][$i]['favorite'] = 'pma__favorite';
 
 So, it will look like this:
 
-```
+```plaintext
 /* Storage database and tables */
 $cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';
 $cfg['Servers'][$i]['bookmarktable'] = 'pma__bookmark';
@@ -468,42 +438,46 @@ $cfg['Servers'][$i]['export_templates'] = 'pma__export_templates';
 
 Save the file and exit. Restart all services by clicking the **Restart All** button. Start **phpmyadmin** from the browser, specifying the address:
 
-```
+```plaintext
 http://localhost/phpmyadmin
 ```
 
-Access with the user **root** and the password that you have indicated.
-<br>
+Access with the user **root** and the password that you have indicated.  
+  
+ 
+
 # USE OF XAMPP
 
 To use XAMPP, the user must be in the **daemon** group. The default directory for local installations is **/opt/lampp/htdocs**. You could create a folder inside it, named **webs** for example, to have everything more organized:
 
-```
+```plaintext
 sudo mkdir /opt/lampp/htdocs/webs
 ```
 
 Assuming that the name of our user was **user**, we would assign to that folder the group **daemon** and write permissions for our user with:
 
-```
+```plaintext
 sudo chown -R pepe:daemon /opt/lampp/htdocs/webs/
 chmod -R 777 /opt/lampp/htdocs/webs/
 ```
 
-Remember to change **user** for your username. When we work with our developments, when we want to make a backup, it is recommended to repeat the previous commands to avoid problems when copying them to another location.
-<br>
+Remember to change **user** for your username. When we work with our developments, when we want to make a backup, it is recommended to repeat the previous commands to avoid problems when copying them to another location.  
+  
+ 
+
 # More info
 
 **(1).** Autostart on boot
 
 In order to start Xampp at boot, create a systemd service for it (**/etc/systemd/system/xampp.service**):
 
-```
+```plaintext
 sudo nano /etc/systemd/system/xampp.service
 ```
 
 Inside we copy:
 
-```
+```plaintext
 [Unit]
 Description=XAMPP
 
@@ -518,7 +492,7 @@ WantedBy=multi-user.target
 
 Then activate **xampp.service**:
 
-```
+```plaintext
 sudo systemctl enable xampp.service
 ```
 
@@ -527,23 +501,26 @@ sudo systemctl enable xampp.service
 Use the following commands to control XAMPP (this would be the method to use XAMPP under Wayland):
 
 To start XAMPP:
-```
+
+```plaintext
 sudo /opt/lampp/lampp start
 ```
 
 To stop XAMPP:
-```
+
+```plaintext
 sudo /opt/lampp/lampp stop
 ```
 
 To restart XAMPP:
-```
+
+```plaintext
 sudo /opt/lampp/lampp restart
 ```
 
 If the following error is observed when trying to run XAMPP:
 
-```
+```plaintext
 Starting XAMPP for Linux 1.7.7...
 /opt/lampp/lampp: line 21: netstat: command not found
 /opt/lampp/lampp: line 21: netstat: command not found
@@ -557,8 +534,4 @@ XAMPP: Starting ProFTPD...
 XAMPP for Linux started.
 ```
 
-Then install **net-tools** and **inetutils** from the official repositories.
-
-
-
-
+Then install `net-tools` and `inetutils` from the official repositories.
