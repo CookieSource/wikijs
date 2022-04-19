@@ -1,8 +1,8 @@
 ---
 title: How to install XAMPP manually
-description: XAMPP manually
+description: 
 published: true
-date: 2022-04-19T12:07:19.030Z
+date: 2022-04-19T12:20:34.015Z
 tags: xampp
 editor: markdown
 dateCreated: 2021-09-25T01:15:44.368Z
@@ -116,21 +116,21 @@ Inside copy (all this is a single line):
 <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd"> <policyconfig> <action id="com.ubuntu.pkexec.xampp.policy"> <message>Authentication is required to run XAMP Control Panel</message> <icon_name>xampp</icon_name> <defaults> <allow_any>auth_admin</allow_any> <allow_inactive>auth_admin</allow_inactive> <allow_active>auth_admin</allow_active> </defaults> <annotate key="org.freedesktop.policykit.exec.path">/opt/lampp/manager-linux-x64.run</annotate> <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate> </action> </policyconfig>
 ```
 
-Save, and exit (**Ctrl + o** to save, **CTRL + x** to exit). The file can be run as administrator, using the following line:
+Save (<kbd>Ctrl</kbd> <kbd>S</kbd>), and exit(<kbd>Ctrl</kbd> <kbd>X</kbd>). The file can be run as administrator, using the following line:
 
 ```plaintext
 pkexec /opt/lampp/manager-linux-x64.run
 ```
 
-But: Why do this if we can create a shortcut that makes things easier for us? To do this, from the terminal:
+To create a desktop shortcut,
 
 ```plaintext
 sudo nano /usr/share/applications/XAMPP.desktop
 ```
 
-Inside copy:
+Inside paste:
 
-```plaintext
+```ini
 [Desktop Entry]
 Version=1.0
 Name=XAMPP
@@ -335,7 +335,7 @@ In the same file:
 **(5).** Look for **max\_input\_time** it will have a value of **60** change it to **1700**  
   
   
-Save the changes. Now edit the phpmyadmin configuration file:
+Save the changes (<kbd>Ctrl</kbd> <kbd>O</kbd> & <kbd>Ctrl</kbd> <kbd>X</kbd>). Now edit the phpmyadmin configuration file:
 
 ```plaintext
 sudo nano /opt/lampp/phpmyadmin/config.inc.php
@@ -436,7 +436,7 @@ $cfg['Servers'][$i]['export_templates'] = 'pma__export_templates';
 /**
 ```
 
-Save the file and exit. Restart all services by clicking the **Restart All** button. Start **phpmyadmin** from the browser, specifying the address:
+Save and exit (<kbd>Ctrl</kbd> <kbd>O</kbd> & <kbd>Ctrl</kbd> <kbd>X</kbd>). Restart all services by clicking the **Restart All** button. Start **phpmyadmin** from the browser, specifying the address:
 
 ```plaintext
 http://localhost/phpmyadmin
@@ -448,7 +448,7 @@ Access with the user **root** and the password that you have indicated.
 
 # USE OF XAMPP
 
-To use XAMPP, the user must be in the **daemon** group. The default directory for local installations is **/opt/lampp/htdocs**. You could create a folder inside it, named **webs** for example, to have everything more organized:
+To use XAMPP, the user must be in the **daemon** group. The default directory for local installations is `/opt/lampp/htdocs`. You could create a folder inside it, named **webs** for example, to have everything more organized:
 
 ```plaintext
 sudo mkdir /opt/lampp/htdocs/webs
@@ -469,15 +469,15 @@ Remember to change **user** for your username. When we work with our development
 
 **(1).** Autostart on boot
 
-In order to start Xampp at boot, create a systemd service for it (**/etc/systemd/system/xampp.service**):
+In order to start Xampp at boot, create a systemd service for it (`/etc/systemd/system/xampp.service`):
 
 ```plaintext
 sudo nano /etc/systemd/system/xampp.service
 ```
 
-Inside we copy:
+Inside we paste:
 
-```plaintext
+```ini
 [Unit]
 Description=XAMPP
 
