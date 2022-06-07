@@ -1,8 +1,8 @@
 ---
-title: How to install/remove desktop environments
+title: How to install/remove Desktop Environments
 description: 
 published: true
-date: 2022-06-07T17:25:52.568Z
+date: 2022-06-07T17:32:21.841Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-31T13:12:44.612Z
