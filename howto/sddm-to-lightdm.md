@@ -2,7 +2,7 @@
 title: How to change GDM or SDDM to LightDM
 description: 
 published: true
-date: 2022-04-03T10:08:34.492Z
+date: 2022-04-03T10:08:37.477Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-25T15:43:25.528Z

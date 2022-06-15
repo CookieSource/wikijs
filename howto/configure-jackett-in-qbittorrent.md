@@ -2,7 +2,7 @@
 title: How to configure jackett in qBittorrent
 description: 
 published: true
-date: 2022-03-21T12:29:22.692Z
+date: 2022-03-21T12:29:25.722Z
 tags: jackett qbittorrent
 editor: markdown
 dateCreated: 2021-09-24T00:14:19.854Z

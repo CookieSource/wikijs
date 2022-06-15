@@ -2,7 +2,7 @@
 title: How to add the RebornOS repository
 description: rebornos repo
 published: true
-date: 2022-03-21T17:36:39.978Z
+date: 2022-03-21T17:36:43.080Z
 tags: repository repo
 editor: markdown
 dateCreated: 2021-09-23T23:55:22.765Z

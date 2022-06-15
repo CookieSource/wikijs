@@ -2,7 +2,7 @@
 title: How to install XAMPP manually
 description: 
 published: true
-date: 2022-04-19T12:20:34.015Z
+date: 2022-04-19T12:20:37.516Z
 tags: xampp
 editor: markdown
 dateCreated: 2021-09-25T01:15:44.368Z

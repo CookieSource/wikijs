@@ -2,8 +2,8 @@
 title: Bootloader
 description: Instructions on changing Grub themes, changing bootloaders & setting up Plymouth
 published: true
-date: 2022-03-31T16:22:45.845Z
-tags: grub, bootloader, customization, plymouth, themes
+date: 2022-03-31T16:22:49.368Z
+tags: grub, customization, plymouth, themes, bootloader
 editor: markdown
 dateCreated: 2021-09-23T13:34:03.097Z
 ---

@@ -2,7 +2,7 @@
 title: KDE Partition Manager
 description: KDE Partition Manager is a utility program to help you manage the disk devices, partitions and file systems on your computer. It allows you to easily create, copy, move, delete, resize without losing data, backup and restore partitions.
 published: true
-date: 2022-04-07T11:48:00.442Z
+date: 2022-04-07T11:48:03.651Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-29T12:07:55.870Z

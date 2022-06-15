@@ -2,7 +2,7 @@
 title: Universal package management
 description: 
 published: true
-date: 2022-03-27T11:22:56.268Z
+date: 2022-03-27T11:22:59.392Z
 tags: customization, snap, flatpak, appimage, universal package management
 editor: markdown
 dateCreated: 2021-10-16T12:40:24.070Z
