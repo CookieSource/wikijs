@@ -2,19 +2,17 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2022-07-19T11:27:57.163Z
+date: 2022-07-19T11:35:11.824Z
 tags: installation, features, options
 editor: markdown
 dateCreated: 2021-09-23T12:50:55.847Z
 ---
 
-# Features
-
 We offer a lot of features during installation they'll be listed by category.
 
 ## Desktops
 
-Currently we offer the following desktops. [click here for a quick overview](/customization/desktops).
+Currently we offer the following desktops. [click here for a quick overview](/en/customization/desktops).
 
 1.  Budgie
 2.  Cinnamon
@@ -62,7 +60,7 @@ We offer the following optional software & features.
 -   Broadcom Driver Support
 -   Thunderbird
 -   Firefox Developer Edition
--   Free Office
+-   FreeOffice
 -   LibreOffice
 -   Nautilus
 -   Nemo
@@ -75,9 +73,9 @@ We offer the following optional software & features.
 
 We support the following universal solutions.
 
--   [Snap](https://snapcraft.io/about)
--   [Flatpak](https://flatpak.org/)
--   [Appimage](https://appimage.org/)
+-   [Snap](https://snapcraft.io)
+-   [Flatpak](https://flatpak.org)
+-   [Appimage](https://appimage.org)
 
 [/customization/universal-package-management](/en/customization/universal-package-management)
 
@@ -91,9 +89,9 @@ More info coming soon
 
 We offer the option to select your preferred shell.
 
--   [Bash](https://www.gnu.org/software/bash/) (default)
--   [Zsh](https://www.zsh.org/)
--   [Fish](https://fishshell.com/)
+-   [Bash](https://www.gnu.org/software/bash) (default)
+-   [Zsh](https://zsh.org)
+-   [Fish](https://fishshell.com)
 
 [/customization/shell](/en/customization/shell)
 
@@ -101,10 +99,10 @@ We offer the option to select your preferred shell.
 
 We allow you to select your preferred kernel during installation. To learn more about the difference of kernels [click here](/en/customization/kernelcomparison)
 
-1.  [Linux kernel](https://www.kernel.org/) (The default kernel)
-2.  [LTS kernel](https://www.kernel.org/) (Long time support release of the default kernel)
+1.  [Linux kernel](https://kernel.org) (The default kernel)
+2.  [LTS kernel](https://kernel.org) (Long time support release of the default kernel)
 3.  [Zen kernel](https://github.com/zen-kernel/zen-kernel) (Kernel for extra performance)
-4.  [hardened kernel](https://github.com/anthraxx/linux-hardened) (Kernel with extra security features)
+4.  [Hardened kernel](https://github.com/anthraxx/linux-hardened) (Kernel with extra security features)
 
 ## File system
 
