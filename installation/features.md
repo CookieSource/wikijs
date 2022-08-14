@@ -2,7 +2,7 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2022-07-19T11:35:11.824Z
+date: 2022-08-14T09:24:58.569Z
 tags: installation, features, options
 editor: markdown
 dateCreated: 2021-09-23T12:50:55.847Z
@@ -79,7 +79,7 @@ We support the following universal solutions.
 
 [/customization/universal-package-management](/en/customization/universal-package-management)
 
-## Theming
+<!---## Theming
 
 We offer optionally theming during installation.
 
@@ -94,7 +94,7 @@ We offer the option to select your preferred shell.
 -   [Fish](https://fishshell.com)
 
 [/customization/shell](/en/customization/shell)
-
+--> 
 ## Kernel selection
 
 We allow you to select your preferred kernel during installation. To learn more about the difference of kernels [click here](/en/customization/kernelcomparison)
