@@ -2,7 +2,7 @@
 title: Shell
 description: Guides on changing the look & feel of your terminal
 published: true
-date: 2022-04-25T14:25:42.456Z
+date: 2022-08-16T10:32:38.198Z
 tags: customization, themes, shell, zsh, fish, bash
 editor: markdown
 dateCreated: 2021-09-23T13:35:30.759Z
@@ -42,9 +42,10 @@ where *\<full-path-to-shell\>* is the full path as given by `chsh -l`.
 
 If you now log out and log in again, you will be greeted by the other shell.
 [**Oh My Bash**](https://ohmybash.nntoan.com/)
+
 # Zsh
 
-[Zsh](https://zsh.org) is a shell similar to `ksh` with useful features of Bash, ksh, and TCSH and many original features.
+[Zsh](https://zsh.org) is a shell similar to ksh with useful features of Bash, ksh, and TCSH and many original features.
 
 To install zsh, run the command:
 
@@ -151,6 +152,39 @@ If you are using [systemd-homed](https://wiki.archlinux.org/title/Systemd-homed)
 homectl update --shell=<full-path-to-shell> user
 ```
 
+where *\<full-path-to-shell\>* is the full path as given by `chsh -l`.
+
+If you now log out and log in again, you will be greeted by the other shell.
+
+# Nushell
+[Nushell](https://www.nushell.sh) is a shell that looks at each input as something with structure rather than thinking of files and services as raw streams of text.
+To install Nushell, run the command
+```
+sudo pacman -S nushell
+```
+
+## Features
+### Everything is data
+Nu pipelines use structured data so you can safely select, filter, and sort the same way every time. Stop parsing strings and start solving problems.
+### Powerful plugins
+It's easy to extend Nu using a powerful plugin system.
+
+### Great error messages
+Nu operates on typed data, so it catches bugs that other shells don't. And when things break, Nu tells you exactly where and why.
+
+## Set Nu as the default shell
+To list all installed shells, run:
+```
+chsh -l
+```
+And to set one as default for your user do:
+```
+chsh -s <full-path-to-shell>
+```
+If you are using [systemd-homed](https://wiki.archlinux.org/title/Systemd-homed), run: 
+```
+homectl update --shell=<full-path-to-shell> user
+```
 where *\<full-path-to-shell\>* is the full path as given by `chsh -l`.
 
 If you now log out and log in again, you will be greeted by the other shell.
