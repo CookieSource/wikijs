@@ -1,8 +1,8 @@
 ---
-title: How to free some space
+title: How to free space
 description: In this how to you are going to learn how to free up some storage.
 published: true
-date: 2022-04-03T09:53:30.019Z
+date: 2022-08-21T11:21:11.823Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-27T21:33:42.145Z
