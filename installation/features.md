@@ -2,7 +2,7 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2022-08-14T09:24:58.569Z
+date: 2022-08-23T07:58:12.234Z
 tags: installation, features, options
 editor: markdown
 dateCreated: 2021-09-23T12:50:55.847Z
@@ -27,6 +27,7 @@ Currently we offer the following desktops. [click here for a quick overview](/en
 11.  Regolith
 12.  Cutefish
 13.  Trinity
+14. Enlightenment
 
 ## Window managers
 
