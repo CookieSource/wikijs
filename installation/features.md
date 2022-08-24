@@ -2,7 +2,7 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2022-08-23T07:58:12.234Z
+date: 2022-08-23T07:58:15.686Z
 tags: installation, features, options
 editor: markdown
 dateCreated: 2021-09-23T12:50:55.847Z
