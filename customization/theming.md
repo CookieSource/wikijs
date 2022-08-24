@@ -2,7 +2,7 @@
 title: Theming
 description: Guides on theming different desktops & window managers
 published: true
-date: 2022-08-24T09:48:11.068Z
+date: 2022-08-24T09:48:23.414Z
 tags: customization, theming, desktop, window manager, wm
 editor: markdown
 dateCreated: 2021-09-23T13:32:54.415Z
@@ -14,7 +14,7 @@ dateCreated: 2021-09-23T13:32:54.415Z
 
 Window managers are for advanced users please refer to their guides on customization.
 
-## I3
+## i3
 
 [https://i3wm.org/docs/userguide.html](https://i3wm.org/docs/userguide.html)
 
