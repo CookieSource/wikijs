@@ -2,7 +2,7 @@
 title: Theming
 description: Guides on theming different desktops & window managers
 published: true
-date: 2022-08-24T09:48:23.414Z
+date: 2022-08-24T09:48:26.503Z
 tags: customization, theming, desktop, window manager, wm
 editor: markdown
 dateCreated: 2021-09-23T13:32:54.415Z

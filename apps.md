@@ -2,7 +2,7 @@
 title: Apps
 description: A collection of all useful apps on RebornOS with instructions
 published: true
-date: 2022-08-24T09:52:44.867Z
+date: 2022-08-24T09:52:47.879Z
 tags: category, home
 editor: markdown
 dateCreated: 2021-09-17T16:26:54.206Z
