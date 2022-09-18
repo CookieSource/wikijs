@@ -2,7 +2,7 @@
 title: Requirements for RebornOS ARM
 description: 
 published: true
-date: 2022-09-18T09:49:03.031Z
+date: 2022-09-18T09:49:39.703Z
 tags: arm
 editor: markdown
 dateCreated: 2022-09-17T19:19:05.113Z
@@ -35,4 +35,4 @@ dateCreated: 2022-09-17T19:19:05.113Z
 ![](https://repo.liketraps.com/pics/imagersellected.png)
 7.  Write!
 
-Follow the installation guide on [here](https://wiki.rebornos.org/en/arm/install)!
+Follow the installation guide on [here](/en/arm/install)!
