@@ -2,7 +2,7 @@
 title: Requirements for RebornOS ARM
 description: 
 published: true
-date: 2022-09-18T09:49:39.703Z
+date: 2022-09-25T07:47:45.439Z
 tags: arm
 editor: markdown
 dateCreated: 2022-09-17T19:19:05.113Z
@@ -16,7 +16,7 @@ dateCreated: 2022-09-17T19:19:05.113Z
 | --- | --- | --- |
 | **Requirements** | **Minimum specification** | **Recommended specification** |
 | RAM | 2 GB | 4 GB |
-| **Storage** | 8 GB sdcard/usb/emmc | 64GB or more |
+| **Storage** | 8 GB | 64GB or more |
 | **Internet connection** | Recommended, Not required | Recommended, Not required |
 
 # Flashing the image onto the storage medium from a PC
@@ -25,14 +25,14 @@ dateCreated: 2022-09-17T19:19:05.113Z
 
 1.  Download Raspberry PI Imager for your OS
 2.  Open the app
-![](https://repo.liketraps.com/pics/imagermain.png)
+![](https://de.mirror.rebornos.org/pics/imagermain.png)
 3.  Click “Choose OS”
-![](https://repo.liketraps.com/pics/imageros.png)
+![](https://de.mirror.rebornos.org/pics/imageros.png)
 4.  Scroll down, click “Use custom”
 5.  Select the RebornOS Image you downloaded
-![](https://repo.liketraps.com/pics/imagerimg.png)
+![](https://de.mirror.rebornos.org/pics/imagerimg.png)
 6.  Select the inserted USB
-![](https://repo.liketraps.com/pics/imagersellected.png)
+![](https://de.mirror.rebornos.org/pics/imagersellected.png)
 7.  Write!
 
 Follow the installation guide on [here](/en/arm/install)!
