@@ -2,8 +2,8 @@
 title: [Guide] [Online Installation] An Introduction to the Calamares-based RebornOS ISO and Installer
 description: 
 published: true
-date: 2022-09-26T22:11:55.995Z
-tags: calamares, online, installer, install
+date: 2022-09-26T22:19:17.936Z
+tags: installer, calamares, online, install
 editor: markdown
 dateCreated: 2022-09-26T22:11:55.995Z
 ---
