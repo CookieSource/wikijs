@@ -2,17 +2,17 @@
 title: Bootloader
 description: Instructions on changing Grub themes, changing bootloaders & setting up Plymouth
 published: true
-date: 2022-03-31T16:22:49.368Z
-tags: grub, customization, plymouth, themes, bootloader
+date: 2022-10-05T07:46:18.410Z
+tags: grub, bootloader, customization, plymouth, themes
 editor: markdown
 dateCreated: 2021-09-23T13:34:03.097Z
 ---
 
-# Grub
+# GRUB
 
-Grub is the default Linux bootloader that works on most systems.
+GRUB is the default Linux bootloader that works on most systems.
 
-## Grub theming
+## Theming
 
 You can find new Grub themes [here](https://gnome-look.org/browse?cat=109&ord=latest) & [here](https://store.kde.org/browse?cat=109&ord=latest)
 
@@ -40,7 +40,7 @@ click the dropdown menu next to predefined to change your first boot option. or 
 
 Plymouth is the fancy startup animations that you see in videos & distros. (please note Plymouth can be buggy on some systems)
 
-## Install Plymouth
+## Installation
 
 Plymouth can only be installed from the AUR 
 
@@ -58,7 +58,7 @@ Add `plymouth` to the `HOOKS` array in [mkinitcpio.conf](https://wiki.archlinux.
 HOOKS=(base udev plymouth ...)
 ```
 
-## Install new Plymouth themes 
+## Theming
 
 New Plymouth themes can be found [here](https://gnome-look.org/browse?cat=108&ord=latest) or [here](https://store.kde.org/browse?cat=108&ord=latest) 
 
@@ -96,7 +96,9 @@ bootctl install
 
 This will copy the systemd-boot boot loader to the EFI partition: on a x64 architecture system `/usr/lib/systemd/boot/efi/systemd-bootx64.efi` will be copied to `*esp*/EFI/systemd/systemd-bootx64.efi` and `*esp*/EFI/BOOT/BOOTX64.EFI`. It will then set *systemd-boot* as the default EFI application (default boot entry) loaded by the EFI Boot Manager.
 
-**Note:** Installing systemd-boot will overwrite any existing `/efi/boot/bootx64.efi`, for example Microsoft's version of this file.
+> Installing systemd-boot will overwrite any existing `/efi/boot/bootx64.efi`, for example Microsoft's version of this file.
+{.is-warning}
+
 
 ## Update
 
@@ -106,7 +108,7 @@ Whenever there is a new version of systemd-boot, the boot manager can be optiona
 
 #### Manual update
 
-Use *bootctl* to update *systemd-boot*:
+Use `bootctl` to update systemd-boot:
 
 ```
 bootctl update
@@ -134,7 +136,7 @@ Exec = /usr/bin/bootctl update
 
 # Syslinux
 
-[Syslinux](https://en.wikipedia.org/wiki/SYSLINUX) is a collection of boot loaders capable of booting from drives, CDs, and over the network via [PXE](https://wiki.archlinux.org/title/PXE). Some of the supported [file systems](https://wiki.archlinux.org/title/File_systems) are [FAT](https://wiki.archlinux.org/title/FAT), [NTFS](https://wiki.archlinux.org/title/NTFS), [Ext2](https://en.wikipedia.org/wiki/ext2), [Ext3](https://wiki.archlinux.org/title/Ext3), [Ext4](https://wiki.archlinux.org/title/Ext4), [XFS](https://wiki.archlinux.org/title/XFS), [UFS/FFS](https://en.wikipedia.org/wiki/Unix_File_System), and uncompressed single-device [Btrfs](https://wiki.archlinux.org/title/Btrfs).
+[Syslinux](https://syslinux.org) is a collection of boot loaders capable of booting from drives, CDs, and over the network via [PXE](https://wiki.archlinux.org/title/PXE). Some of the supported [file systems](https://wiki.archlinux.org/title/File_systems) are [FAT](https://wiki.archlinux.org/title/FAT), [NTFS](https://wiki.archlinux.org/title/NTFS), [Ext2](https://en.wikipedia.org/wiki/ext2), [Ext3](https://wiki.archlinux.org/title/Ext3), [Ext4](https://wiki.archlinux.org/title/Ext4), [XFS](https://wiki.archlinux.org/title/XFS), [UFS/FFS](https://en.wikipedia.org/wiki/Unix_File_System), and uncompressed single-device [Btrfs](https://wiki.archlinux.org/title/Btrfs).
 
 ## Installation on BIOS
 
@@ -259,7 +261,7 @@ LABEL RebornOSfallback
 
 Additionally if you want to add Windows to the boot menu add this where `hd0 3` refers to the disk then partition
 
-```
+```cfg
 LABEL windows
 	MENU LABEL Windows
 	COM32 chain.c32
