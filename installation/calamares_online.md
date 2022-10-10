@@ -2,7 +2,7 @@
 title: [Guide] [Online Installation] An Introduction to the Calamares-based RebornOS ISO and Installer
 description: 
 published: true
-date: 2022-09-26T22:19:17.936Z
+date: 2022-10-10T13:27:06.867Z
 tags: installer, calamares, online, install
 editor: markdown
 dateCreated: 2022-09-26T22:11:55.995Z
@@ -10,7 +10,7 @@ dateCreated: 2022-09-26T22:11:55.995Z
 
 > **Note**: This guide is for **Online Installation**. For the *Offline Installation* guide, [click here](https://wiki.rebornos.org/en/installation/calamares_offline). 
 
-> **Note**: This guide assumes that you have already downloaded the Calamares-based RebornOS ISO, prepared a bootable live USB/DVD, and enabled booting from that USB/DVD in your boot priority settings (BIOS).
+> This guide assumes that you have already downloaded the Calamares-based RebornOS ISO, prepared a bootable live USB/DVD, and enabled booting from that USB/DVD in your boot priority settings (BIOS).
 
 When you first boot from the live ISO, you will see a menu of various boot modes:
 ![grub](upload://coO9uspYZ1vBUzsSHJTcnddY10O.png)
@@ -54,7 +54,9 @@ Here you can select any desktops or window managers that you would like to insta
 ![009](upload://gbvUDRNeYx7IxtgOYJXtaSYE8M0.png)
 
 Multiple selection requires you to hold down the `Ctrl` or `Shift` keys after selecting the first option:
-> **Warning**: Selecting multiple desktops is *not* recommended. Desktops tend to overwrite themes and other files from one another, causing visual artifacts that break the appearance. Select multiple desktops **only** if you know what you are doing. 
+>  **Warning**: Selecting multiple desktops is *not* recommended. Desktops tend to overwrite themes and other files from one another, causing visual artifacts that break the appearance. Select multiple desktops **only** if you know what you are doing. 
+{.is-warning}
+
 
 ![010](upload://pHuDH9UhzYCPiurKEwa6dy8461E.png)
 
@@ -68,6 +70,7 @@ The *Advanced* page consists of a heirarchy of categories and packages. The appe
 > **Note**: Please *do not* be tempted to check entire categories for installation. This will result in bloating of your install and will end up using a lot of your storage. It is always a good idea to expand each category to select the smallest subset of packages that you want to install. 
 
 > **Warning**: We recommend beginners to not change anything in the *Minimal Base* category. It contains basic applications required for your RebornOS to function properly. Removing packages from here may result in a poorly functioning installation. 
+{.is-warning}
 
 Desktop related packages are always at the end. You can expand the desktop category to see a *Curated* list, and sometimes *Exhaustive* and *Miscellaneous* lists: 
 ![012](upload://hmkbPvw0GzuzmYjzumSQH6DZAyt.png)
