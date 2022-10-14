@@ -2,7 +2,7 @@
 title: How to
 description: A collection of links to our Guides & Tutorials
 published: true
-date: 2022-10-14T02:23:05.126Z
+date: 2022-10-14T05:26:50.790Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-23T13:47:45.654Z
@@ -25,4 +25,4 @@ Here you can find a list of guides & tutorials. You can also try to search for t
 -   [**View content of the reborn-mirrorlist file**](/howto/reborn-mirrorlist-content)
 -   [**Dual-boot Windows with RebornOS**](/howto/bootloader)
 -   [**Add the RebornOS repository**](/howto/add-rebornos-repo)
--   [**How to use Zram instead of Zswap**](/howto/how_to_use_Zram)
+-   [**Use Zram instead of Zswap**](/howto/how_to_use_Zram)
