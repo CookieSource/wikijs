@@ -2,7 +2,7 @@
 title: [Guide] [Online Installation] An Introduction to the Calamares-based RebornOS ISO and Installer
 description: 
 published: true
-date: 2022-10-10T13:27:06.867Z
+date: 2022-10-14T07:13:08.748Z
 tags: installer, calamares, online, install
 editor: markdown
 dateCreated: 2022-09-26T22:11:55.995Z
@@ -13,7 +13,7 @@ dateCreated: 2022-09-26T22:11:55.995Z
 > This guide assumes that you have already downloaded the Calamares-based RebornOS ISO, prepared a bootable live USB/DVD, and enabled booting from that USB/DVD in your boot priority settings (BIOS).
 
 When you first boot from the live ISO, you will see a menu of various boot modes:
-![grub](upload://coO9uspYZ1vBUzsSHJTcnddY10O.png)
+![grub][firstboot.jpg](/firstboot.jpg)
 Choose the first option (which is the default). If it fails to boot, choose the second option. And if that fails too, choose the third option. 
 
 When you boot successfully, you will be greeted with the ISO Welcome app: 
