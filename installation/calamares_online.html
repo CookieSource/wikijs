@@ -1,0 +1,104 @@
+<!--
+title: [Guide] [Online Installation] An Introduction to the Calamares-based RebornOS ISO and Installer
+description: 
+published: true
+date: 2022-10-14T07:21:19.724Z
+tags: installer, calamares, online, install
+editor: ckeditor
+dateCreated: 2022-09-26T22:11:55.995Z
+-->
+
+<blockquote>
+<p><strong>Note</strong>: This guide is for <strong>Online Installation</strong>. For the <em>Offline Installation</em> guide, <a class="is-internal-link is-valid-page" href="/en/installation/calamares_offline">click here</a>.</p>
+</blockquote>
+<blockquote>
+<p>This guide assumes that you have already downloaded the Calamares-based RebornOS ISO, prepared a bootable live USB/DVD, and enabled booting from that USB/DVD in your boot priority settings (BIOS).</p>
+</blockquote>
+<p>When you first boot from the live ISO, you will see a menu of various boot modes:<br>
+![grub]<a class="is-asset-link" href="/firstboot.jpg">firstboot.jpg</a><br>
+Choose the first option (which is the default). If it fails to boot, choose the second option. And if that fails too, choose the third option.</p>
+<p>When you boot successfully, you will be greeted with the ISO Welcome app:<br>
+<img alt="001"></p>
+<p>Ensure that you connected to the internet (WiFi or ethernet). Look for the appropriate settings in one of the buttons near the bottom right corner of your screen.</p>
+<blockquote>
+<p><strong>Note</strong>: Leave the <em>Update</em> toggle as it is (which is <em>on</em> by default), to update to the latest version of the installer before launching.</p>
+</blockquote>
+<p>Click on the big <em>Install Online</em> button with the image of a blue icon:<br>
+<img alt="002"><br>
+The busy indicator turns red to indicate that the app is busy checking updates and/or updating the installer<br>
+<img alt="003"><br>
+When the update process completes, the indicator turns to green color. You can either click on <em>Console</em>, or resize the window at any time to see details about what the app is doing. The below indicates that the update is complete and the installer is launched:<br>
+<img alt="004"></p>
+<blockquote>
+<p><strong>Note</strong>: Due to the <em>partition</em> module taking time to load, the installer may take anywhere from a few seconds to a few minutes to show up. Please be patient while this is happening. You can run <code>tail -f ~/install.log</code> on a terminal to see more details about the launch if you suspect it is taking too long, or that something is wrong.</p>
+</blockquote>
+<h2 class="toc-header" id="h-1-welcome"> 1. Welcome</h2>
+<p>When the installer finally shows up, you will be greeted with a Welcome page where you can select your language:<br>
+<img alt="005"><br>
+If you want to change the language, click on <em>American English</em> for the list of languages to show up:<br>
+<img alt="006"><br>
+Choose your language and click Next.</p>
+<h2 class="toc-header" id="h-2-location"> 2. Location</h2>
+<p>On the location page, you can either click on the world map to choose your time zone, or select it manually by clicking on the menus for <em>Region</em> and <em>Zone</em>:<br>
+<img alt="007"><br>
+You can also select the system language and local from the buttons on the right side. When you are done, click Next.</p>
+<h2 class="toc-header" id="h-3-keyboard"> 3. Keyboard</h2>
+<p>If you have a non-US keyboard layout, you can select it here:<br>
+<img alt="008"></p>
+<h2 class="toc-header" id="h-4-desktopswms"> 4. Desktops/WMs</h2>
+<p>Here you can select any desktops or window managers that you would like to install with RebornOS. For a single selection, you can just click on the option you want to choose and it gets selected:<br>
+<img alt="009"></p>
+<p>Multiple selection requires you to hold down the <code>Ctrl</code> or <code>Shift</code> keys after selecting the first option:</p>
+<blockquote class="is-warning">
+<p><strong>Warning</strong>: Selecting multiple desktops is <em>not</em> recommended. Desktops tend to overwrite themes and other files from one another, causing visual artifacts that break the appearance. Select multiple desktops <strong>only</strong> if you know what you are doing.</p>
+</blockquote>
+<p><img alt="010"></p>
+<h2 class="toc-header" id="h-5-advanced"> 5. Advanced</h2>
+<blockquote>
+<p><strong>Note</strong>: You can skip the Advanced page safely and go to the next partition page. Read this section if you want more control on what packages are installed or not installed.</p>
+</blockquote>
+<p>The <em>Advanced</em> page consists of a heirarchy of categories and packages. The appear collapsed by default:<br>
+<img alt="011"></p>
+<blockquote>
+<p><strong>Note</strong>: Please <em>do not</em> be tempted to check entire categories for installation. This will result in bloating of your install and will end up using a lot of your storage. It is always a good idea to expand each category to select the smallest subset of packages that you want to install.</p>
+</blockquote>
+<blockquote class="is-warning">
+<p><strong>Warning</strong>: We recommend beginners to not change anything in the <em>Minimal Base</em> category. It contains basic applications required for your RebornOS to function properly. Removing packages from here may result in a poorly functioning installation.</p>
+</blockquote>
+<p>Desktop related packages are always at the end. You can expand the desktop category to see a <em>Curated</em> list, and sometimes <em>Exhaustive</em> and <em>Miscellaneous</em> lists:<br>
+<img alt="012"><br>
+The curated package list for each desktop contains the recommended packages which are a good fit for most people. The exhaustive list usually contains all possible desktop related packages mentioned in the <em>Arch Wiki</em> if you want to add more things to your desktop.</p>
+<p>If you do not want certain packages to be installed with the desktop of your choice, expand the <em>Curated</em> category and uncheck to remove any packages from the list:<br>
+<img alt="013"></p>
+<p>You can choose which parts of RebornOS base and apps to install. However, we recommend to only change the <em>RebornOS Apps</em> if you want to, and leave the <em>RebornOS Base</em> category unchanged.<br>
+<img alt="014"></p>
+<p>Third party drivers (like Nvidia proprietary drivers) can be found under the <em>Backend System</em> category as shown:<br>
+<img alt="015"></p>
+<h2 class="toc-header" id="h-6-partitions"> 6. Partitions</h2>
+<p>The partitions page allows you to select whether and how to change your storage to install RebornOS. Depending on the current state of your storage medium, the options you get may differ from the screenshot below<br>
+<img alt="016"></p>
+<p>If you choose to modify your partitions, you will see options to select a filesystem of your choice.</p>
+<h2 class="toc-header" id="h-7-users"> 7. Users</h2>
+<p>Here you can select a <em>username</em> and <em>password</em> for use on your RebornOS. You can also choose to reuse the same password for the <code>root</code> account:<br>
+<img alt="022"></p>
+<h2 class="toc-header" id="h-8-summary"> 8. Summary</h2>
+<p>Here, you should verify that the changes shown by the installer do not inadvertently delete or erase your important data. You can also check that the installer is only making the changes that you intended:<br>
+<img alt="023"><br>
+Proceed only when you are sure that your data and partitions are going to be safe.</p>
+<h2 class="toc-header" id="h-9-install"> 9. Install</h2>
+<p>When the installation starts, you will be greeted with a slideshow:<br>
+<img alt="024"><br>
+On the right side of the progressbar, is a small button that you can click to show the logs instead of the slideshow:<br>
+<img alt="030"></p>
+<p>If the installer unfortunately fails, you will be shown a dialog window describing what the problem is, and it asks whether you want to upload the logs to an online paste server. We recommend you to upload the logs so that you can share the URL with support for diagnosing your issue.<br>
+<img alt="031"><br>
+If you chose to upload the logs you will be shown a URL that you can share with anyone who offers support in order to doagnose the error:<br>
+<img alt="032"></p>
+<h2 class="toc-header" id="h-10-finish"> 10. Finish</h2>
+<p>When the installer finishes, you can either close the installer to stay on the live ISO, or click on Restart System to reboot immedietly:<br>
+<img alt="033"></p>
+<h2 class="toc-header" id="optional-upload-logs"> (Optional) Upload Logs</h2>
+<p>Sometimes, it is a good idea to save logs even when the installation shows as successful. This is usually done for testing purposes. Ensure that the internet is on and working, and then run <code>upload-logs</code> on a terminal at any time (even after the installation completed) before rebooting, to upload the logs to a paste server and obtain the URL that you may share with anyone offering support:<br>
+<img alt="034"></p>
+<p>The log file is present at <code>~/install.log</code> if you would like to read it without uploading:<br>
+<img alt="035"></p>
