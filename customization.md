@@ -2,15 +2,18 @@
 title: Customization
 description: Find instructions on how to customize different parts of your linux experience
 published: true
-date: 2022-10-16T11:59:15.515Z
+date: 2022-10-16T12:00:07.419Z
 tags: customization
 editor: markdown
 dateCreated: 2022-02-08T14:43:00.246Z
 ---
 
-## [Shell](./shell)
+## Shell
 
 The Linux shell is what interfaces with you when you use the terminal the default is Bash, alternatives may have more features or be easier to use.
+
+[/customization/shell](/customization/shell)
+
 
 ## File System
 
