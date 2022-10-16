@@ -2,13 +2,11 @@
 title: How to use Zram instead of Zswap
 description: This will show you how to disable the default Zswap and use Zram instead.
 published: true
-date: 2022-10-16T12:13:25.656Z
+date: 2022-10-16T12:13:55.656Z
 tags: zswap zram swap
 editor: markdown
 dateCreated: 2022-10-14T04:19:39.265Z
 ---
-
-**How I setup and use Zram instead of using the default Zswap in RebornOS.**
 
 There is much information about configuring Zram, but some might be a little confusing, especially for someone who hasn't been using Linux and it can be challenging to say the least. I also realized Zram and Zwap is already included with the kernel, so there is no need to install any additional package.  I found a few guides and picked one and followed the instructions. Even when following instruction steps, you can still have some things that might not go well.  This is what happened, I followed the guidance of Daniel Wayne Armstrong's [blog]( https://www.dwarmstrong.org/zram-swap/), but found I had to tweak or adjust it so that it would work. For some experienced Linux users, they might not have any troubles and I'm sure there's other methods that will also work, but this is what I did and i'm just sharing my experience and setup.
 
