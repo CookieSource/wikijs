@@ -1,8 +1,8 @@
 ---
 title: How to use Zram instead of Zswap
-description: This will show you how to disable the default Zswap and use Zram instead.
+description: 
 published: true
-date: 2022-10-16T12:13:55.656Z
+date: 2022-10-16T12:14:09.134Z
 tags: zswap zram swap
 editor: markdown
 dateCreated: 2022-10-14T04:19:39.265Z
