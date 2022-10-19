@@ -2,18 +2,29 @@
 title: Theming
 description: Guides on theming different desktops & window managers
 published: true
-date: 2022-10-19T04:18:21.577Z
+date: 2022-10-19T04:57:06.620Z
 tags: customization, theming, desktop, window manager, wm
 editor: ckeditor
 dateCreated: 2021-09-23T13:32:54.415Z
 -->
 
-<h1 class="toc-header" id="desktops"> Desktops</h1>
-<h1 class="toc-header" id="window-managers"> Window managers</h1>
+<h1>Desktops</h1>
+<h1>Window managers</h1>
 <p>Window managers are for advanced users please refer to their guides on customization.</p>
-<h2 class="toc-header" id="i3"> i3</h2>
-<p><a class="is-external-link" href="https://i3wm.org/docs/userguide.html">https://i3wm.org/docs/userguide.html</a></p>
-<h2 class="toc-header" id="openbox"> Openbox</h2>
-<p><a class="is-external-link" href="http://openbox.org/wiki/Help:Contents">http://openbox.org/wiki/Help:Contents</a></p>
-<h1 class="toc-header" id="other-applications"> Other - Applications</h1>
+<h2>i3</h2>
+<p><a href="https://i3wm.org/docs/userguide.html">https://i3wm.org/docs/userguide.html</a></p>
+<h2>Openbox</h2>
+<p><a href="http://openbox.org/wiki/Help:Contents">http://openbox.org/wiki/Help:Contents</a></p>
+<h1>Other - Applications</h1>
 <p>Customizing your desktop or other application customization.</p>
+<h2>KDE Plasma with Pamac</h2>
+<p>KDE Plasma DE and Pamac do not always have the same color theme. &nbsp;This is because Pamac is a GTK application. &nbsp;If you are using a Dark KDE Theme you might notice that Pamac does not adopt the same Dark theme. &nbsp;You might also not have the Pamac Tray Icon, depending on your installation choices for the KDE Plasma Desktop Enivironment. &nbsp;The following will show how to enable Pamac Tray Icon so that you can get notifications about updated packages as well as having the ability for Pamac to use an alternate theme.</p>
+<ul class="todo-list">
+  <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"><span class="todo-list__label__description">After the installation of the KDE Plasma Desktop Environment, and you change the theme, in this example - Breeze Dark, you will notice that Pamac might not be able to follow theme.</span></label><br><label class="todo-list__label"><span class="todo-list__label__description">Open a terminal and install the two applications - kde-gtk-config and pamac-tray-icon-plasma.&nbsp;</span></label></li>
+</ul>
+<pre><code class="language-plaintext">$ sudo pacman -Sy kde-gtk-config pamac-tray-icon-plasma</code></pre>
+<ul class="todo-list">
+  <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"><span class="todo-list__label__description">Reboot, after logging in, you should now have the Pamac Tray Icon in the system tray.</span></label></li>
+  <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"><span class="todo-list__label__description">Open Pamac you might see that Pamac is using the default theme.</span></label><br><br>&nbsp;</li>
+  <li><br><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+</ul>
