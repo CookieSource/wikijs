@@ -1,0 +1,172 @@
+<!--
+title: How to use pamac
+description: 
+published: true
+date: 2022-10-19T04:12:35.388Z
+tags: pamac, package-manager
+editor: ckeditor
+dateCreated: 2021-09-23T23:46:33.452Z
+-->
+
+<p>Pamac is the package manager used in RebornOS, and created by Manjaro. In the version used by RebornOS, it has AUR and Flatpak support, and this application takes care of the installation, uninstallation, and system update tasks.</p>
+<p>The main screen that will be displayed once this application is executed is the following:</p>
+<p align="center">
+<img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/pamac/-/raw/master/pamac-main.png">
+</p>
+<p>In the upper left corner, you can access the search for pamac by clicking on the magnifying glass icon.</p>
+<p>By default, it starts on the <strong>Browse</strong> screen, which allows us to view all the software available in the repositories used by the distribution (which are the Arch repositories, and RebornOS 'own repository).</p>
+<p>Clicking on <strong>Installed</strong> above, we will see a list with all the software currently installed.</p>
+<p>By clicking <strong>Updates</strong> at the top, pamac will check to see if there are any updates for your system.</p>
+<p>In the <strong>Sort by</strong> button, pamac will display the information by: relevance, name, repository, size, or date, as selected.</p>
+<p>In the menu on the left (under the magnifying glass) it is possible to access the list of applications by category, groups, and existing repositories in the distribution.</p>
+<p>By selecting categories, you can see something similar to what the following screen shows:</p>
+<p align="center">
+<img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/pamac/-/raw/master/pamac-categories-menu.png">
+</p>
+<p>Selecting groups, you can see something similar to what the following screen shows:</p>
+<p align="center">
+<img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/pamac/-/raw/master/pamac-groups-menu.png">
+</p>
+<p>Selecting repositories, you can see something similar to what the following screen shows:</p>
+<p align="center">
+<img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/pamac/-/raw/master/pamac-repositories-menu.png">
+</p>
+<p><em><strong>By default, pamac on RebornOS comes configured with only 1 parallel download, and with AUR and Flatpak support disabled. In addition, when selecting a file to install, pamac will automatically check if there is an update, and will add it to the selected download (this can be modified). Also, check if there is an update every 6 hours.</strong></em></p>
+<p>Accessing the menu on the top right, we can access Software Mode, Refresh database, View History, Install Local Packages, Preferences, and About:</p>
+<p align="center">
+<img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/pamac/-/raw/master/pamac-menu.png">
+</p>
+<p>By selecting <strong>Software Mode</strong>, pamac will automatically select the existing Categories menu on the left.</p>
+<p><strong>Refresh databases</strong> as its name implies, updates the database of all existing repositories.</p>
+<p><strong>View History</strong>, opens a terminal window, showing the activities carried out by pamac.</p>
+<p><strong>Install Local Package</strong>, it will open a file selection window, where you can search for a package locally that you want to install.</p>
+<p><strong>Preferences</strong> allows you to configure different pamac options.</p>
+<p><strong>About</strong> indicates the version in use of pamac, and some other information related to the application.</p>
+<h1 class="toc-header" id="pamac-configuration"> Pamac configuration</h1>
+<p>When accessing the Preferences menu, the following screen is displayed (the user's password will be requested to access this menu):</p>
+<p align="center">
+<img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/pamac/-/raw/master/pamac-config-general.png">
+</p>
+<p><strong>Check for updates</strong> is, as its name implies, where the option for pamac to check for system updates is enabled or disabled.</p>
+<p><em><strong>Updates check frequency</strong></em> is where you can set the elapsed time between each check performed by pamac to see if there are new updates. The options are: every 3 hours, every 6 hours, every 12 hours, once a week, and once a month.</p>
+<p><em><strong>Automatically download updates</strong></em> is, as its name implies, what allows pamac to automatically download any updates that may exist.</p>
+<p>Under <strong>Downloads</strong>, there is <em><strong>Parallel downloads</strong></em>.  Is the number of parallel downloads with which pamac will be able to work. This value can be: 1, 2, 4, 6, 8, and 10.</p>
+<p>Under <strong>Cache</strong>, there is <em><strong>Number of versions of each package to keep</strong></em>, and it is where you can set the number of versions that may exist of the same package in the cache. this value can be: 0, 1, 2, 3, 4, and 5.</p>
+<p><em><strong>Remove only the uninstalled packages</strong></em>, is the option that will allow pamac to remove from its cache the packages that have been removed from its system.</p>
+<p>By clicking on <em><strong>Advanced</strong></em>, this other screen is accessed:</p>
+<p align="center">
+<img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/pamac/-/raw/master/pamac-config-advanced.png">
+</p>
+<p><em><strong>Check available disk space</strong></em> allows you to check if the available disk space is sufficient to carry out the operation in progress.</p>
+<p><em><strong>Remove unrequired dependencies</strong></em> removes the dependencies that are not used by any package.</p>
+<p><em><strong>Do not check for updates when installing</strong></em> prevents that when we install a package, pamac checks and installs any update that may exist, in addition to installing the package selected by the user (this operation is done without asking).</p>
+<p><em><strong>Enable downgrade</strong></em> enables the ability to downgrade a package.</p>
+<p><em><strong>Ignored upgrades</strong></em> allows us to create a list of applications that we do not want to be updated.</p>
+<p>By clicking on <em><strong>Third Party</strong></em>, this other screen is accessed:</p>
+<p align="center">
+<img src="https://gitlab.com/rebornos-team/rebornos-images-for-wiki/pamac/-/raw/master/pamac-config-third-party.png">
+</p>
+<p>On this screen you can enable (or disable) AUR and Flatpak support, as desired.</p>
+<h1 class="toc-header" id="using-pamac-from-the-terminal"> Using pamac from the terminal</h1>
+<p>The available pamac actions when executed from the terminal are the following:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">  pamac --version     
+  pamac --help, -h     [action]
+  pamac search         [options] &lt;package(s)&gt;
+  pamac list           [options] &lt;package(s)&gt;
+  pamac info           [options] &lt;package(s)&gt;
+  pamac install        [options] &lt;package(s)&gt;
+  pamac reinstall      [options] &lt;package(s)&gt;
+  pamac remove         [options] [package(s)]
+  pamac checkupdates   [options]
+  pamac update,upgrade [options]
+  pamac clone          [options] &lt;package(s)&gt;
+  pamac build          [options] [package(s)]
+  pamac clean          [options]
+</code></pre>
+<p><strong>Searching Packages</strong></p>
+<p>To search google-chrome:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">pamac search -a google-chrome
+
+chromedriver-beta                                                                                            89.0.4389.23-1  AUR 
+    Standalone server that implements the W3C WebDriver standard (for google-chrome-beta)
+chromedriver                                                                                                 89.0.4389.23-1  AUR 
+    Standalone server that implements the W3C WebDriver standard (for google-chrome)
+google-chrome-dev                                                                                            91.0.4469.4-2   AUR 
+    The popular and trusted web browser by Google (Dev Channel)
+google-chrome-beta                                                                                           90.0.4430.72-2  AUR 
+    The popular and trusted web browser by Google (Beta Channel)
+google-chrome                                                                           [Installed packages] 90.0.4430.72-2  Reborn-OS 
+    The popular and trusted web browser by Google (Stable Channel)
+</code></pre>
+<p><strong>Installing Packages</strong></p>
+<p><code>pamac install &lt;package&gt;</code>. In this example, google chrome is installed from terminal:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">pamac install google-chrome
+</code></pre>
+<p><em><strong>IMPORTANT:</strong></em> pamac, unlike pacman, will only install those packages that are not on your system. This means that if you already have google-chrome installed, pamac will not install it again.</p>
+<p>If you want to install some AUR, you will need to use the <code>pamac build</code> command. Suppose the installation of <em><strong>clockify-desktop</strong></em>:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">pamac build clockify-desktop
+</code></pre>
+<p><strong>Removing Packages</strong></p>
+<p>The <code>pamac remove</code> command is used interchangeably to remove a package from the repositories, or from the AUR. For example:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">pamac remove google-chrome
+</code></pre>
+<p><strong>IMPORTANT:</strong> It is extremely important that the user knows what they are doing when they delete something. Sometimes it can happen that an attempt is made to remove a package whose function is unknown, but which is perhaps an important part of the system, and as a result, it may end with an installation that no longer works.</p>
+<p><strong>List all packages installed on your system</strong></p>
+<p>Use <code>pamac list</code> to list all packages installed on your system:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">pacman list -i
+</code></pre>
+<p><strong>Show detailed information of a package</strong></p>
+<p>Use <code>pamac info</code> to see, for example, the detailed information of google-chrome:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">pamac info google-chrome
+
+Name                           : google-chrome
+Version                        : 90.0.4430.72-2
+Description                    : The popular and trusted web browser by Google (Stable Channel)
+URL                            : https://www.google.com/chrome
+License                        : custom:chrome
+Repository                     : Reborn-OS
+Installed size                 : 244,8&nbsp;MB
+Depends on                     : alsa-lib gtk3 libcups libxss libxtst nss
+Optional dependencies          : pipewire: WebRTC desktop sharing under Wayland [Installed packages]
+                                 kdialog: for file dialogs in KDE
+                                 gnome-keyring: for storing passwords in GNOME keyring [Installed packages]
+                                 kwallet: for storing passwords in KWallet
+                                 libunity: for download progress on KDE
+                                 ttf-liberation: fix fonts for some PDFs - CRBug #369991 [Installed packages]
+                                 xdg-utils [Installed packages]
+Packer                         : Unknown Packager
+Building date                  : 15/04/21
+Instalation date               : 15/04/21
+Installation reason            : Explicitly installed
+Signed                         : Yes`
+</code></pre>
+<p><strong>Updating the System</strong></p>
+<p>Use <code>pamac checkupdates</code> to check for updates:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">pamac checkupdates -a
+</code></pre>
+<p>Use <code>pamac upgrade</code> to update your system, including any AUR packages that may exist:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">pamac upgrade -a
+</code></pre>
+<p><strong>NOTE:</strong> upgrade and update in pamac are the same, and you can use them interchangeably.</p>
+<p><strong>Working with orphaned packages</strong></p>
+<p>To check for unnecessary packages (known as orphaned packages) on your system:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">pamac list -o
+</code></pre>
+<p>And to remove these packages that are no longer used:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">pamac remove -o
+</code></pre>
+<p><strong>Cleaning the Cache</strong></p>
+<p>pamac, when installing new packages on your system, stores a copy of the files to be replaced, in a place known as cache memory. The number of copies stored here can be configured (see above, in pamac Configuration).</p>
+<p>If you want to delete the contents of this cache:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">pamac clean
+</code></pre>
+<p>There is an option to delete all versions of existing packages in the cache memory, but leaving the three most recent copies of them:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">pamac clean --keep 3
+</code></pre>
+<p><strong>Other Useful Pamac Functions</strong></p>
+<p>To find out if a certain file is owned by an application, you can use:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">pamac search -f unrar
+</code></pre>
+<p>To force reinstall a package that already exists on your system:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">pamac reinstall google-chrome
+</code></pre>
