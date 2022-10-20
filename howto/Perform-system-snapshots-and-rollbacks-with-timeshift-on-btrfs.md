@@ -2,7 +2,7 @@
 title: Perform system snapshots and rollbacks with Timeshift on Btrfs
 description: 
 published: true
-date: 2022-10-20T10:20:07.924Z
+date: 2022-10-20T10:21:08.140Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-20T10:15:59.362Z
@@ -31,7 +31,8 @@ A snapshot is a normal subvolume, but it won't consume extra space as long as th
 to create a Timeshift-compatible home subvolume which lets you exclude the home directory /home from Btrfs system snapshots.
 
 3. I also recommend creating additional subvolumes for all directories that should be excluded from Btrfs system snapshots and thereby preserved during system rollbacks.
-For the following commands to work you'll first need to create a snapshot of the future system subvolume @: sudo btrfs subvolume snapshot /@ /@temp
+For the following commands to work you'll first need to create a snapshot of the future system subvolume @:
+`sudo btrfs subvolume snapshot /@ /@temp`
 
 You can now execute the following commands to replace the relevant directories in the @ subvolume with Btrfs subvolumes of the same name and move the content snapshotted to subvolume @temp back to its place:
 `/var/cache` and `/var/tmp` contain only temporary files, which are either not essential or can be recomputed or redownloaded anytime. Exclude them to keep snapshots small:
