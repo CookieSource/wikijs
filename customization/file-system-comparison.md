@@ -2,7 +2,7 @@
 title: File system comparison
 description: Comparison the different file systems that we offer
 published: true
-date: 2022-10-20T09:29:03.407Z
+date: 2022-10-20T09:30:37.074Z
 tags: installation, customization, file system, filesystem
 editor: markdown
 dateCreated: 2021-10-05T10:11:41.501Z
@@ -56,7 +56,7 @@ Find an overview of the different features each file system offers 
 -   CoW
 
 ## BcacheFS
-Bcachefs is a next-generation CoW filesystem that aims to provide features from Btrfs and ZFS with a cleaner codebase, more stability, greater speed and a GPL-compatible license.
+**Bcachefs** is a next-generation CoW filesystem that aims to provide features from Btrfs and ZFS with a cleaner codebase, more stability, greater speed and a GPL-compatible license.
 
 **Special features**
 -   Copy on write (CoW) - like ZFS or BTRFS
@@ -75,7 +75,7 @@ Bcachefs is a next-generation CoW filesystem that aims to provide features from 
 -   Original design goals: Performance, Robustness, SMP.
 
 ## XFS
-XFS is a high-performance journaling file system created by Silicon Graphics, Inc. It is particularly proficient at parallel IO due to its allocation group based design. This enables extreme scalability of IO threads, filesystem bandwidth, file and filesystem size when spanning multiple storage devices.
+**XFS** is a high-performance journaling file system created by Silicon Graphics, Inc. It is particularly proficient at parallel IO due to its allocation group based design. This enables extreme scalability of IO threads, filesystem bandwidth, file and filesystem size when spanning multiple storage devices.
 
 **Special features**
 -   Capacity
@@ -113,4 +113,4 @@ XFS is a high-performance journaling file system created by Silicon Graphics, In
 **ReiserFS** is a general-purpose, journaling file system without quota support.
 
 **Special features**
--   tail packing
+-   Tail packing
