@@ -1,8 +1,8 @@
 ---
-title: How ro remove the boot partition
+title: How to remove the boot partition
 description: 
 published: true
-date: 2022-10-20T10:03:53.139Z
+date: 2022-10-20T10:05:22.266Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-20T10:00:48.996Z
