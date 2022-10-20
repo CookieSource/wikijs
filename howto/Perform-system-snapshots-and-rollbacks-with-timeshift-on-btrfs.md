@@ -2,7 +2,7 @@
 title: Perform system snapshots and rollbacks with Timeshift on Btrfs
 description: 
 published: true
-date: 2022-10-20T10:38:26.366Z
+date: 2022-10-20T10:39:34.595Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-20T10:15:59.362Z
@@ -105,10 +105,10 @@ You might have to manually activate *cronie.service* by running `sudo systemctl 
 2. Remove everything except system subvolumes and their content from the system partition:
 `sudo find /mnt -mindepth 1 -prune \! -name '@*' \! -name timeshift-btrfs -exec rm -rfv '{}' +`
 
-# Boot into Timeshift Btrfs snapshots from GRUB with grub-btrfs
+# Boot into Timeshift snapshots from GRUB with grub-btrfs
 When properly configured grub-btrfs allows you to easily boot into Timeshift Btrfs system snapshots and perform system rollbacks from there.
 
-After installing grub-btrfs (sudo pacman -S grub-btrfs), GRUB boot entries for existing Timeshift Btrfs snapshots get created every time the GRUB configuration file gets updated (`sudo grub-mkconfig -o /boot/grub/grub.cfg`).
+After installing grub-btrfs (`sudo pacman -S grub-btrfs`), GRUB boot entries for existing Timeshift Btrfs snapshots get created every time the GRUB configuration file gets updated (`sudo grub-mkconfig -o /boot/grub/grub.cfg`).
 
 Grub-btrfs can perform the GRUB update automatically each time a new Timeshift Btrfs snapshot is created.
 
@@ -134,10 +134,10 @@ This step is revertible with `systemctl revert grub-btrfs.path`.
 
 Grub-btrfs can be further configured by editing `/etc/default/grub-btrfs/config`.
 
-# Automatic Timeshift Btrfs system snapshot before package upgrades with timeshift-autosnap
+# Automatic system snapshot before package upgrades with timeshift-autosnap
 You might also want to install timeshift-autosnap, which creates Timeshift snapshots before package upgrades using a pacman hook.
 To prevent the Grub update from being performed twice when timeshift-autsnap creates a snapshot, I recommend changing the line `updateGrub=true` in `/etc/timeshift-autosnap.conf` to `updateGrub=false`.
 
 I hope this guide helped you to successfully set up Btrfs system snapshots with Timeshift.
 <hr>
--damian101 
+-damian101
