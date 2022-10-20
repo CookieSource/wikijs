@@ -2,7 +2,7 @@
 title: Perform system snapshots and rollbacks with Timeshift on Btrfs
 description: 
 published: true
-date: 2022-10-20T10:16:31.267Z
+date: 2022-10-20T10:20:07.924Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-20T10:15:59.362Z
@@ -17,7 +17,7 @@ In this guide I will explain how to move your RebornOS installation to a Timeshi
 # Before you start
 I would advise against using a boot partition (mount point `/boot`) with Btrfs system subvolumes, as that would exclude the /boot directory from system snapshots. A quick way to remove your boot partition is explained [here](/howto/remove-the-boot-partition) to remove your systems boot partition.
 
-Check if your system partition uses Btrfs (`df -Th /`). If not, you can use Btrfs-convert to convert your system partition to Btrfs if it uses the ext2/3/4 or ReiserFS filesystem. The process is explained [here](/hotwo/convert-ext2-ext3-ext4-or-reiserfs-to-btrfs).
+Check if your system partition uses Btrfs (`df -Th /`). If not, you can use Btrfs-convert to convert your system partition to Btrfs if it uses the ext2/3/4 or ReiserFS filesystem. The process is explained [here](/howto/convert-ext2-ext3-ext4-or-reiserfs-to-btrfs).
 
 # Move RebornOS to Btrfs subvolumes
 If you think you messed up a command in any of the following steps in this chapter, just run `sudo btrfs subvolume delete /@`, `sudo btrfs subvolume delete /@home` and `sudo btrfs subvolume delete /@temp` to revert your changes and contine at the beginning of this chapter with step 1.
