@@ -2,13 +2,13 @@
 title: How to
 description: 
 published: true
-date: 2022-10-16T12:01:41.994Z
+date: 2022-10-20T08:54:21.323Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-23T13:47:45.654Z
 ---
 
-Here you can find a list of guides & tutorials. You can also try to search for them by using the **search** function of the wiki or by searching through [**tags**](/t)
+Here you can find a list of guides & tutorials. You can also try to search for them by using the **search** function of the wiki or by searching through [**tags**](/t).
 
 ##### Pages
 -   [**Report bugs**](/howto/bugreports)
@@ -26,3 +26,4 @@ Here you can find a list of guides & tutorials. You can also try to search for t
 -   [**Dual-boot Windows with RebornOS**](/howto/bootloader)
 -   [**Add the RebornOS repository**](/howto/add-rebornos-repo)
 -   [**Use Zram instead of Zswap**](/howto/how_to_use_Zram)
+-   [**Convert ext2, ext3, ext4 or ReiserFS to Btrfs**](convert-ext2-ext3-ext4-or-reiserfs-to-btrfs)
