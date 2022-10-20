@@ -2,7 +2,7 @@
 title: How ro remove the boot partition
 description: 
 published: true
-date: 2022-10-20T10:03:30.225Z
+date: 2022-10-20T10:03:53.139Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-20T10:00:48.996Z
@@ -21,7 +21,7 @@ If your system currently uses a boot partition, but you want your `/boot` path t
 
 4. Move all the content of the boot partition to the now empty /boot directory with `sudo mv -v /mnt/* /boot`.
 
-5. Remove the line in `/etc/fstab` regarding the /boot partition. You can use nano to edit the file: `sudo nano /etc/fstab`
+5. Remove the line in `/etc/fstab` regarding the `/boot` partition. You can use nano to edit the file: `sudo nano /etc/fstab`
 
 6. - If you are on an UEFI installation run `sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi`.
 
