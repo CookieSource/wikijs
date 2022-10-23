@@ -1,0 +1,23 @@
+<!--
+title: How to use android apps on your arm sbc
+description: 
+published: true
+date: 2022-10-23T12:49:03.402Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-10-23T12:49:03.402Z
+-->
+
+<h1>Installation</h1>
+<p>First begin by opening a terminal and installing the necessary packages.</p>
+<pre><code class="language-plaintext">sudo pacman -Sy android-appsupport</code></pre>
+<p>Then add the following to <code>/etc/modules-load.d/anbox.conf</code> using <code>nano</code></p>
+<pre><code class="language-plaintext">sudo nano /etc/modules-load.d/anbox.conf</code></pre>
+<p>Paste the following into this file:</p>
+<pre><code class="language-plaintext">binder_linux
+ashmem_linux</code></pre>
+<p>Then use CTRL + S and CTRL + X to save and exit.</p>
+<p>Enable the service:</p>
+<pre><code class="language-plaintext">sudo systemctl enable --now anbox-container-manager.service</code></pre>
+<p>Reboot!</p>
+<p>Then you can open the anbox app</p>
