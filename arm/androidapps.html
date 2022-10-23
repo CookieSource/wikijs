@@ -2,7 +2,7 @@
 title: How to use android apps on your arm sbc
 description: 
 published: true
-date: 2022-10-23T12:49:03.402Z
+date: 2022-10-23T12:53:51.106Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-10-23T12:49:03.402Z
@@ -21,3 +21,9 @@ ashmem_linux</code></pre>
 <pre><code class="language-plaintext">sudo systemctl enable --now anbox-container-manager.service</code></pre>
 <p>Reboot!</p>
 <p>Then you can open the anbox app</p>
+<h1>Install apps from an .apk file</h1>
+<p>Install <code>android-tools</code> package using your preferred package manager or by using pacman:</p>
+<pre><code class="language-plaintext">sudo pacman -S android-tools</code></pre>
+<p>Then you can install your app using:</p>
+<pre><code class="language-plaintext">adb install ./path/to/app.apk</code></pre>
+<p>&nbsp;</p>
