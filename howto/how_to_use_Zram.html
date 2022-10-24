@@ -1,72 +1,94 @@
 <!--
 title: How to use Zram instead of Zswap
-description: This will show you how to disable the default Zswap and use Zram instead.
+description: 
 published: true
-date: 2022-10-14T06:00:31.305Z
+date: 2022-10-24T21:36:57.901Z
 tags: zswap zram swap
 editor: ckeditor
 dateCreated: 2022-10-14T04:19:39.265Z
 -->
 
-<p><strong>How I setup and use Zram instead of using the default Zswap in RebornOS.</strong></p>
-<p>There is much information about configuring Zram, but some might be a little confusing, especially for someone who hasn't been using Linux and it can be challenging to say the least. &nbsp;I also realized Zram and Zwap is already included with the kernel, so there is no need to install any additional package. &nbsp;I found a few guides and picked one and followed the instructions. Even when following instruction steps, you can still have some things that might not go well. &nbsp;This is what happened, I followed the guidance of Daniel Wayne Armstrong's <a href=" https://www.dwarmstrong.org/zram-swap/ ">blog,</a> but found I had to tweak or adjust it so that it would work. For some experienced Linux users, they might not have any troubles and I'm sure there's other methods that will also work, but this is what I did and i'm just sharing my experience and setup.</p>
-<p>I had some trouble in the beginning, partly because I didn't understand some of the requirements and also ensuring the default Zswap wasn't being used. &nbsp;If Zswap is used, the kernel will use it first before using Zram. Also, I read that you should have a Zram swap that's about 20% (percent) of the actual system RAM, but you can also create several of these to allow for better handling of swap needed by the system. &nbsp;To quote kernel.org <i>“Note: There is little point creating a zram of greater than twice the size of memory since we expect a 2:1 compression ratio. Note that zram uses about 0.1% of the size of the disk when not in use so a huge zram is wasteful.”</i></p>
+<p>There is much information about configuring Zram, but some might be a little confusing, especially for someone who hasn't been using Linux and it can be challenging to say the least.&nbsp;I also realized Zram and Zwap is already included with the kernel, so there is no need to install any additional package. &nbsp;I found a few guides and picked one and followed the instructions. Even when following instruction steps, you can still have some things that might not go well. &nbsp;This is what happened, I followed the guidance of Daniel Wayne Armstrong's <a class="is-external-link" href="https://www.dwarmstrong.org/zram-swap/">blog</a>, but found I had to tweak or adjust it so that it would work. For some experienced Linux users, they might not have any troubles and I'm sure there's other methods that will also work, but this is what I did and i'm just sharing my experience and setup.</p>
+<p>I had some trouble in the beginning, partly because I didn't understand some of the requirements and also ensuring the default Zswap wasn't being used. If Zswap is used, the kernel will use it first before using Zram. Also, I read that you should have a Zram swap that's about 20% (percent) of the actual system RAM, but you can also create several of these to allow for better handling of swap needed by the system.&nbsp;To quote <a class="is-external-link" href="http://kernel.org">kernel.org</a>,</p>
+<blockquote>
+<p>Note: There is little point creating a zram of greater than twice the size of memory since we expect a 2:1 compression ratio. Note that zram uses about 0.1% of the size of the disk when not in use so a huge zram is wasteful.</p>
+</blockquote>
 <p>Once I stopped Zswap, I still saw it was present, but believe is due to it being embedded in the kernel, so I just ignored it, and used the zwap.enabled=0 in the kernel parameters and added it via editing /etc/default/grub, as per the guidance in the Arch Wiki on Zswap. Also, you can always go back to using Zswap just by taking out the kernel parameter from grub.</p>
-<p>Here is where to add the kernel parameter to not allow Zswap to start (which is default ‘on’ in the current kernel). &nbsp;Pick your favorite editor, then modify the line:</p>
-<p><code>$ sudo vim /etc/default/grub</code></p>
-<pre><code class="language-plaintext">GRUB_CMDLINE_LINUX_DEFAULT="zswap.enabled=0"</code></pre>
+<p>Here is where to add the kernel parameter to not allow Zswap to start (which is default ‘on’ in the current kernel). &nbsp;Pick your favorite editor (for example nano),</p>
+<p><code>sudo nano /etc/default/grub</code></p>
+<p>and add the following line:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">GRUB_CMDLINE_LINUX_DEFAULT="zswap.enabled=0"
+</code></pre>
 <p>To make the parameter updated in grub, run:</p>
-<p><code>$ sudo grub-mkconfig -o /boot/grub/grub.cfg</code><br><br>This can also be toggled off with the command, and will need to do this if you didn't already toggle it in the kernel parameters and turn off any swaps: &nbsp;</p>
-<pre><code class="language-plaintext">$ sudo swapoff --all
-$ sudo bash -c "echo 0 &gt; /sys/module/zswap/parameters/enabled"</code></pre>
-<p>Here we see that zswap is not enabled.&nbsp;</p>
-<p><code>$ cat /sys/module/zswap/parameters/enabled&nbsp;</code><br><code>N</code><br><br>Here you can still the zswap process, but they are not running as time is 00:00:00.</p>
-<pre><code class="language-plaintext">$ ps -ef | grep zswap 
+<p><code>sudo grub-mkconfig -o /boot/grub/grub.cfg</code></p>
+<p>This can also be toggled off with the command, and will need to do this if you didn't already toggle it in the kernel parameters and turn off any swaps:</p>
+<p><code>sudo swapoff --all</code><br>
+<code>sudo bash -c "echo 0 &gt; /sys/module/zswap/parameters/enabled"</code></p>
+<p>Here we see that zswap is not enabled.</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">$ cat /sys/module/zswap/parameters/enabled`
+N
+</code></pre>
+<p>Here you can still the zswap process, but they are not running as time is 00:00:00.</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">$ ps -ef | grep zswap 
 root  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;121  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2  0 Oct11 ?  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;00:00:00 [zswap1] 
 root  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;122  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2  0 Oct11 ?  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;00:00:00 [zswap1] 
-root  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;123  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2  0 Oct11 ?  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;00:00:00 [zswap-shrink]</code></pre>
+root  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;123  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2  0 Oct11 ?  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;00:00:00 [zswap-shrink]
+</code></pre>
 <p>After disabling zswap in the kernel parameter you can see that it was executed at boot.</p>
-<pre><code class="language-plaintext">$ cat /proc/cmdline  
-BOOT_IMAGE=/boot/vmlinuz-linux root=UUID=2b4f9d37-c068-45f8-a663-ef34758944f6 rw zswap.enabled=0</code></pre>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">$ cat /proc/cmdline  
+BOOT_IMAGE=/boot/vmlinuz-linux root=UUID=2b4f9d37-c068-45f8-a663-ef34758944f6 rw zswap.enabled=0
+</code></pre>
 <p>Next, I made sure that the Zram configurations were correctly added as per the steps in the guide.</p>
 <p>I would check each file after doing the steps to configure Zram, to ensure no typo or encounter some error during the steps.</p>
-<p>1. Enable the zram kernel module and optionally define the number of devices.&nbsp;</p>
-<p><code>$ sudo modprobe zram num_devices=1</code></p>
-<p>2. &nbsp;Check for, then select the compression algorithm for the zram disk(s).</p>
-<p><code>$ cat /sys/block/zram0/comp_algorithm</code></p>
-<p><code>$ sudo bash -c “echo zstd &gt; /sys/block/zram0/comp_algorithm”</code></p>
-<p>3. &nbsp;Set the size of the Zram disk. &nbsp;You should definitely check this after setting to ensure the correct value is present.</p>
-<p><code>$ sudo bash -c “echo 3G &gt; /sys/block/zram0/disksize”</code> &nbsp;</p>
-<p>This is after executing the commands to select the compression algorithm &amp; define the size of the zram0 disk (mine is using zstd and 3GB).&nbsp;</p>
-<pre><code class="language-plaintext">$ cat /sys/block/zram0/comp_algorithm 
+<p>1.Enable the zram kernel module and optionally define the number of devices.</p>
+<p><code>sudo modprobe zram num_devices=1</code></p>
+<ol start="2">
+<li>Check for, then select the compression algorithm for the zram disk(s).</li>
+</ol>
+<p><code>cat /sys/block/zram0/comp_algorithm</code></p>
+<p><code>sudo bash -c “echo zstd &gt; /sys/block/zram0/comp_algorithm”</code></p>
+<ol start="3">
+<li>Set the size of the Zram disk. &nbsp;You should definitely check this after setting to ensure the correct value is present.</li>
+</ol>
+<p><code>sudo bash -c “echo 3G &gt; /sys/block/zram0/disksize”</code></p>
+<p>This is after executing the commands to select the compression algorithm &amp; define the size of the zram0 disk (mine is using zstd and 3GB).</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">$ cat /sys/block/zram0/comp_algorithm 
 lzo lzo-rle lz4 lz4hc 842 [zstd] 
 $ cat /sys/block/zram0/disksize 
-3221225472</code></pre>
-<p>4. &nbsp;Create and start the zram swap with highest priority. &nbsp;Check it all went well. &nbsp;I would switch to root account and redo it if the zram or parameters did not seem to take.</p>
-<pre><code class="language-plaintext">$ sudo mkswap --label zram0 /dev/zram0
+3221225472
+</code></pre>
+<ol start="4">
+<li>Create and start the zram swap with highest priority. &nbsp;Check it all went well. &nbsp;I would switch to root account and redo it if the zram or parameters did not seem to take.</li>
+</ol>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">$ sudo mkswap --label zram0 /dev/zram0
 $ sudo swapon --priority 32767 /dev/zram0
 $ zramctl 
 NAME  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ALGORITHM DISKSIZE  DATA  COMPR  TOTAL STREAMS MOUNTPOINT 
-/dev/zram0 zstd  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3G  1.2G 154.7M 269.2M  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8 [SWAP]</code></pre>
-<p>5. &nbsp;If it all checks out and it's how you wanted it setup, then create the service and enable it and add the zram_<i>start and zram_</i>stop scripts to /usr/local/bin/ and set the execute bit on them (chmod +x). &nbsp;The scripts will contain the commands to re-create and re-enable the zram as well as stop the zram and reset it. &nbsp;Here's what mine contain and I use vim, you can use whatever editor or method you are comfortable with:</p>
-<p><code>$ sudo vim /usr/local/bin/zram_start</code></p>
-<pre><code class="language-plaintext">#!/bin/bash
+/dev/zram0 zstd  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3G  1.2G 154.7M 269.2M  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8 [SWAP]
+</code></pre>
+<ol start="5">
+<li>If it all checks out and it's how you wanted it setup, then create the service and enable it and add the zram_*start and zram_*stop scripts to /usr/local/bin/ and set the execute bit on them (chmod +x). &nbsp;The scripts will contain the commands to re-create and re-enable the zram as well as stop the zram and reset it. &nbsp;Here's what mine contain and I use vim, you can use whatever editor or method you are comfortable with:</li>
+</ol>
+<p><code>sudo vim /usr/local/bin/zram_start</code></p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">#!/bin/bash
 # Select the compression algorithm
 echo zstd &gt; /sys/block/zram0/comp_algorithm
 # Create the zram0 swap for 3GB size
 echo 3G  &gt; /sys/block/zram0/disksize
 # Enable the zram0 with highest priority
 mkswap --label zram0 /dev/zram0
-swapon --priority 32767 /dev/zram0</code></pre>
-<p><code>$ sudo vim /usr/local/bin/zram_stop</code></p>
-<pre><code class="language-plaintext">#!/bin/bash
+swapon --priority 32767 /dev/zram0
+</code></pre>
+<p><code>sudo vim /usr/local/bin/zram_stop</code></p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">#!/bin/bash
 #Disable swap
 swapoff /dev/zram0
 # Reset the zram0 flushing it
-echo 1 &gt; /sys/block/zram0/reset</code></pre>
-<p><code>$ sudo chmod +x /usr/local/bin/zram_st*</code></p>
-<p><code>$ sudo vim /etc/systemd/system/zram-swap.service</code></p>
-<pre><code class="language-plaintext">[Unit] 
+echo 1 &gt; /sys/block/zram0/reset
+</code></pre>
+<p><code>sudo chmod +x /usr/local/bin/zram_st*</code></p>
+<p><code>sudo vim /etc/systemd/system/zram-swap.service</code></p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-ini">[Unit] 
 Description=Configure zram swap device 
 After=local-fs.target 
 
@@ -77,20 +99,24 @@ ExecStop=/usr/local/bin/zram_stop
 RemainAfterExit=yes 
 
 [Install] 
-WantedBy=multi-user.target</code></pre>
-<p><code>$ sudo systemctl enable zram-swap</code></p>
+WantedBy=multi-user.target
+</code></pre>
+<p><code>sudo systemctl enable zram-swap</code></p>
 <p>To check the status of the zram-swap, make sure there's no error or incorrect setting.</p>
-<p><code>$ sudo systemctl status zram-swap</code></p>
-<p>6. &nbsp;Tuning the performance, I just used the same recommendations given by D.W. Armstrong.</p>
-<p><code>$ sudo vim /etc/sysctl.d/99-sysctl.conf</code></p>
-<pre><code class="language-plaintext">vm.vfs_cache_pressure=500 
+<p><code>sudo systemctl status zram-swap</code></p>
+<ol start="6">
+<li>Tuning the performance, I just used the same recommendations given by D.W. Armstrong.</li>
+</ol>
+<p><code>sudo vim /etc/sysctl.d/99-sysctl.conf</code></p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">vm.vfs_cache_pressure=500 
 vm.swappiness=100 
 vm.dirty_background_ratio=1 
-vm.dirty_ratio=50</code></pre>
+vm.dirty_ratio=50
+</code></pre>
 <p>Repeat steps 2 through 4 for any additional zram disks, be sure to add them to the start and stop scripts as well. &nbsp;With all this done, now you should have a high performance zram swap that's ready to go the next time the system is restarted.</p>
-<p>Reference links:</p>
-<p><a href="https://www.dwarmstrong.org/zram-swap/">https://www.dwarmstrong.org/zram-swap/</a></p>
-<p><a href="https://docs.kernel.org/admin-guide/blockdev/zram.html">https://docs.kernel.org/admin-guide/blockdev/zram.html</a></p>
-<p><a href="https://www.linuxreviews.org/zram">https://linuxreviews.org/zram</a></p>
-<p><a href="https://wiki.archlinux.org/title/Improving_performance#zram_or_zswap">https://wiki.archlinux.org/title/Improving_performance#zram_or_zswap</a></p>
-<p><a href="https://wiki.archlinux.org/title/Sysctl#Virtual_memory">https://wiki.archlinux.org/title/Sysctl#Virtual_memory</a></p>
+<h4 class="toc-header" id="reference-links"> Reference links:</h4>
+<p><a class="is-external-link" href="https://www.dwarmstrong.org/zram-swap/">https://www.dwarmstrong.org/zram-swap/</a></p>
+<p><a class="is-external-link" href="https://docs.kernel.org/admin-guide/blockdev/zram.html">https://docs.kernel.org/admin-guide/blockdev/zram.html</a></p>
+<p><a class="is-external-link" href="https://linuxreviews.org/zram">https://linuxreviews.org/zram</a></p>
+<p><a class="is-external-link" href="https://wiki.archlinux.org/title/Improving_performance#zram_or_zswap">https://wiki.archlinux.org/title/Improving_performance#zram_or_zswap</a></p>
+<p><a class="is-external-link" href="https://wiki.archlinux.org/title/Sysctl#Virtual_memory">https://wiki.archlinux.org/title/Sysctl#Virtual_memory</a></p>
