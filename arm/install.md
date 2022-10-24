@@ -2,7 +2,7 @@
 title: ARM Installation
 description: Short article on how to install RebornOS ARM onto your SBC's
 published: true
-date: 2022-10-24T17:33:44.618Z
+date: 2022-10-24T17:35:29.668Z
 tags: installation, arm
 editor: markdown
 dateCreated: 2022-09-17T18:58:51.418Z
@@ -93,7 +93,7 @@ When the update process completes (if the update toggle was on), the indicator t
 ![Welcome app with console](https://de.mirror.rebornos.org/pics/welcomeconsole.jpg)
 
 
-1. Welcome
+## 1. Welcome
 
 When the installer shows up, you will be greeted with a Welcome page where you can select your language: 
 
@@ -104,7 +104,7 @@ If you want to change the language, click on American English for the list of la
 
 
 
-2. Location
+## 2. Location
 
 On the location page, you can either click on the world map to choose your time zone, or select it manually by clicking on the menus for Region and Zone:
 
@@ -113,7 +113,7 @@ On the location page, you can either click on the world map to choose your time 
 
 You can also select the system language and local from the buttons on the right side. When you are done, click Next.
 
-3. Keyboard
+## 3. Keyboard
 
 If you have a non-US keyboard layout, you can select it here:
 
@@ -123,7 +123,7 @@ If you have a non-US keyboard layout, you can select it here:
 
 
 
-4. Desktops/WMs
+## 4. Desktops/WMs
 
 Here you can select any desktops or window managers that you would like to install with RebornOS. For a single selection, you can just click on the option you want to choose and it gets selected:
 
@@ -137,7 +137,7 @@ Multiple selection requires you to hold down the Ctrl or Shift keys after select
 {.is-warning}
 
 
-5. Advanced
+## 5. Advanced
 
 Note: You can skip the Advanced page safely and go to the next partition page. Read this section if you want more control on what packages are installed or not installed.
 
@@ -161,14 +161,14 @@ The curated package list for each desktop contains the recommended packages whic
 
 You can choose which parts of RebornOS base and apps to install. However, we recommend to only change the RebornOS Apps if you want to, and leave the RebornOS Base category unchanged.
 
-6. Users
+## 6. Users
 
 Here you can select a username and password for use on your RebornOS. You can also choose to reuse the same password for the root account:
 
 
 ![Calamares users page](https://de.mirror.rebornos.org/pics/online/onlineusers.jpg)
 
-7. Summary
+## 7. Summary
 
 Here, you should verify that the changes shown by the installer do not inadvertently delete or erase your important data. You can also check that the installer is only making the changes that you intended:
 
@@ -177,16 +177,16 @@ Here, you should verify that the changes shown by the installer do not inadverte
 
 Proceed only when you are sure that your data and partitions are going to be safe.
 
-8. Install
+## 8. Install
 
 When the installation starts, you will be greeted with a slideshow:
 
 
-Install and copy files
+![Install and copy files](https://de.mirror.rebornos.org/pics/online/onlineslide.jpg)
 
 On the right side of the progressbar, is a small button that you can click to show the logs instead of the slideshow:
 
 
-Install show progress
+![Install show progress](https://de.mirror.rebornos.org/pics/online/onlineconsole.jpg)
 
 If the installer unfortunately fails, you will be shown a dialog window describing what the problem is, and it asks whether you want to upload the logs to an online paste server. We recommend you to upload the logs so that you can share the URL with support for diagnosing your issue.
