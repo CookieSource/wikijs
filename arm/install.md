@@ -2,7 +2,7 @@
 title: ARM Installation
 description: Short article on how to install RebornOS ARM onto your SBC's
 published: true
-date: 2022-10-24T17:37:56.753Z
+date: 2022-10-24T17:48:36.761Z
 tags: installation, arm
 editor: markdown
 dateCreated: 2022-09-17T18:58:51.418Z
@@ -192,3 +192,9 @@ On the right side of the progressbar, is a small button that you can click to sh
 ![Install show progress](https://de.mirror.rebornos.org/pics/online/onlineconsole.jpg)
 
 If the installer unfortunately fails, you will be shown a dialog window describing what the problem is, and it asks whether you want to upload the logs to an online paste server. We recommend you to upload the logs so that you can share the URL with support for diagnosing your issue.
+
+## 10. Finish
+
+When the installer finishes, you can either close the installer to stay on the live ISO, or click on Restart System to reboot immediately:
+
+![Calamares finished page](/arm/finish_online.jpg)
