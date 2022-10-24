@@ -2,7 +2,7 @@
 title: How to use Zram instead of Zswap
 description: 
 published: true
-date: 2022-10-24T22:20:14.898Z
+date: 2022-10-24T22:43:03.997Z
 tags: zswap zram swap
 editor: ckeditor
 dateCreated: 2022-10-14T04:19:39.265Z
@@ -37,7 +37,7 @@ BOOT_IMAGE=/boot/vmlinuz-linux root=UUID=2b4f9d37-c068-45f8-a663-ef34758944f6 rw
 <p>I would check each file after doing the steps to configure Zram, to ensure no typo or encounter some error during the steps.</p>
 <p>1.Enable the zram kernel module and optionally define the number of devices.</p>
 <p><code>sudo modprobe zram num_devices=1</code></p>
-<p>To make it permanent &nbsp;after a reboot, add it to the /etc/modules-load.d:</p>
+<p>In some cases, you may want to make it permanent if zram isn't already included in <a href="https://wiki.archlinux.org/title/Udev">Udev</a>, add it to the /etc/modules-load.d:</p>
 <p><code>echo “zram” | sudo tee /etc/modules-load.d/zram.conf</code></p>
 <ol>
   <li>Check for, then select the compression algorithm for the zram disk(s).</li>
