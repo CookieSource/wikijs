@@ -2,7 +2,7 @@
 title: ARM
 description: comming soon
 published: true
-date: 2022-09-20T16:37:24.057Z
+date: 2022-10-24T17:56:51.575Z
 tags: home, arm
 editor: markdown
 dateCreated: 2022-09-03T04:50:32.924Z
@@ -12,4 +12,7 @@ Here you can find a list of guides & tutorials for arm. You can also try to sear
 
 ##### Pages
 -   [**Requirements for RebornOS arm**](/arm/requirements)
+-   [**How to create a bootable storage medium**](/arm/bootmedia)
 -   [**Install RebornOS arm on a SBC**](/arm/install)
+
+
