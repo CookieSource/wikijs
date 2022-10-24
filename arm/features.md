@@ -2,7 +2,7 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2022-10-24T20:13:16.250Z
+date: 2022-10-24T20:19:03.463Z
 tags: arm
 editor: markdown
 dateCreated: 2022-10-24T20:12:04.926Z
@@ -37,6 +37,23 @@ Click on the window managers  to be taken to their user guides/wiki.
 2.  [Openbox](http://openbox.org/wiki/Help:Contents)
 
 More window managers coming soon
+## Software
+
+### Anbox
+
+With anbox you can run android apps. You can find instructions on how to set it up [here](/arm/androidapps). 
+
+### Visual studio code - OSS
+
+Specially compiled version of Visual studio code - OSS just like the x86 version
+
+<!---###
+### Box64/Box86
+
+With box64 you can run x86 apps on arm. You can find instructions on how to set it up [here](/arm/androidapps). 
+
+-->
+
 ## Universal package management
 
 We support the following universal solutions.
