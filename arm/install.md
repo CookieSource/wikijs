@@ -2,7 +2,7 @@
 title: ARM Installation
 description: Short article on how to install RebornOS ARM onto your SBC's
 published: true
-date: 2022-10-24T17:35:29.668Z
+date: 2022-10-24T17:37:56.753Z
 tags: installation, arm
 editor: markdown
 dateCreated: 2022-09-17T18:58:51.418Z
@@ -138,8 +138,10 @@ Multiple selection requires you to hold down the Ctrl or Shift keys after select
 
 
 ## 5. Advanced
+> 
+> Note: You can skip the Advanced page safely and go to the next partition page. Read this section if you want more control on what packages are installed or not installed.
+{.is-info}
 
-Note: You can skip the Advanced page safely and go to the next partition page. Read this section if you want more control on what packages are installed or not installed.
 
 The Advanced page consists of a heirarchy of categories and packages. The appear collapsed by default:
 
