@@ -2,17 +2,111 @@
 title: ARM Installation
 description: Short article on how to install RebornOS ARM onto your SBC's
 published: true
-date: 2022-09-17T19:29:02.810Z
+date: 2022-10-24T20:01:44.732Z
 tags: installation, arm
 editor: ckeditor
 dateCreated: 2022-09-17T18:58:51.418Z
 -->
 
-<h1>Offline installation on a RPI 3b+/4b/400</h1>
-<p>Create your storage medium using these <a href="https://wiki.rebornos.org/en/arm/requirements#flashing-the-image-onto-the-storage-medium-from-a-pc">steps</a>. After that turn off your device and plug in the HDMI cable, storage medium and the power cable.</p>
-<p>&nbsp;</p>
-<p>When you boot successfully, you will be greeted with the ISO Welcome app:</p>
-<p>&nbsp;</p>
-<p>You <i>do not</i> need to be connected to the internet for offline installation. But there is no problem if the internet is on.</p>
-<p>Click on the big <i>Install Offline</i> button with the image of a green icon:</p>
-<p>&nbsp;</p>
+<h1 class="toc-header" id="offline-installation-on-a-rpi-3b4b400"> Offline installation on a RPI 3b+/4b/400</h1>
+<p><img alt="" src="https://de.mirror.rebornos.org/pics/"><br>
+Create your storage medium using these <a class="is-internal-link is-valid-page" href="/en/arm/requirements#flashing-the-image-onto-the-storage-medium-from-a-pc">steps</a>. After that turn off your device and plug in the HDMI cable, storage medium and the power cable.</p>
+<p>When you boot successfully, you will be greeted with the ISO Welcome app:<br>
+<img alt="Firstboot" src="https://de.mirror.rebornos.org/pics/firstboot.jpg"><br>
+You <em>do not</em> need to be connected to the internet for offline installation. But there is no problem if the internet is on.</p>
+<p>Click on the big <em>Install Offline</em> button with the image of a green icon:<br>
+<img alt="Welcome app" src="https://de.mirror.rebornos.org/pics/welcomeready.jpg"></p>
+<p>The busy indicator turns red to indicate that the app is busy checking updates and/or updating the installer:<br>
+<img alt="Welcome app busy" src="https://de.mirror.rebornos.org/pics/welcomeworking.jpg"></p>
+<p>When the update process completes (if the update toggle was on), the indicator turns back to green color. You can either click on Console, or resize the window at any time to see details about what the app is doing. The below indicates that the update is complete and the installer is launched:<br>
+<img alt="Welcome app with console" src="https://de.mirror.rebornos.org/pics/welcomeconsole.jpg"></p>
+<h2 class="toc-header" id="h-1-welcome"> 1. Welcome</h2>
+<p>When the installer finally shows up, you will be greeted with a Welcome page where you can select your language:<br>
+<img alt="Calamares welcome page" src="https://de.mirror.rebornos.org/pics/calamaresfirst.jpg"></p>
+<p>If you want to change the language, click on American English for the list of languages to show up choose your language and click Next.</p>
+<h2 class="toc-header" id="h-2-location"> 2. Location</h2>
+<p>On the location page, you can either click on the world map to choose your time zone, or select it manually by clicking on the menus for Region and Zone:<br>
+<img alt="Calamares location page" src="https://de.mirror.rebornos.org/pics/calamareslocale.jpg"></p>
+<p>You can also select the system language and local from the buttons on the right side. When you are done, click Next.</p>
+<h2 class="toc-header" id="h-3-keyboard"> 3. Keyboard</h2>
+<p>If you have a non-US keyboard layout, you can select it here:<br>
+<img alt="Calamares keyboard page" src="https://de.mirror.rebornos.org/pics/calamareskey.jpg"></p>
+<h2 class="toc-header" id="h-4-users"> 4. Users</h2>
+<p>Here you can select a username and password for use on your RebornOS. You can also choose to reuse the same password for the root account:<br>
+<img alt="Calamares users page" src="https://de.mirror.rebornos.org/pics/calamaresuser.jpg"></p>
+<h2 class="toc-header" id="h-5-summary"> 5. Summary</h2>
+<p>Here, you should verify that the changes shown by the installer do not inadvertently delete or erase your important data. You can also check that the installer is only making the changes that you intended:<br>
+<img alt="Calamares summary page" src="https://de.mirror.rebornos.org/pics/calamaresfinish.jpg"></p>
+<p>Proceed  when you are sure that the info that you entered is correct.</p>
+<h2 class="toc-header" id="h-6-install"> 6. Install</h2>
+<p>When the installation starts, you will be greeted with a slideshow:<br>
+<img alt="Calamares install slideshow" src="https://de.mirror.rebornos.org/pics/calamaresslide.jpg"></p>
+<p>On the right side of the progress bar, is a small button that you can click to show the logs instead of the slideshow:<br>
+<img alt="Calamares install log" src="https://de.mirror.rebornos.org/pics/calamaresconsole.jpg"></p>
+<p>If the installer unfortunately fails, you will be shown a dialog window describing what the problem is, and it asks whether you want to upload the logs to an online paste server. We recommend you to upload the logs so that you can share the URL with support for diagnosing your issue.<br>
+<img alt="Calamares error" src="https://de.mirror.rebornos.org/pics/calamareserror.jpg"></p>
+<p>If you chose to upload the logs you will be shown a URL that you can share with anyone who offers support in order to diagnose the error.</p>
+<h2 class="toc-header" id="h-7-finish"> 7. Finish</h2>
+<p>When the installer finishes click on Restart System to reboot immediately:<br>
+<img alt="Calamares finished page" src="https://de.mirror.rebornos.org/pics/calamaresfinisha.jpg"></p>
+<h1 class="toc-header" id="online-installation-on-a-rpi-3b4b400"> Online installation on a RPI 3b+/4b/400</h1>
+<p><img alt="" src="https://de.mirror.rebornos.org/pics/"><br>
+Create your storage medium using these <a class="is-internal-link is-valid-page" href="/en/arm/requirements#flashing-the-image-onto-the-storage-medium-from-a-pc">steps</a>. After that turn off your device and plug in the HDMI cable, storage medium and the power cable.</p>
+<p>When you boot successfully, you will be greeted with the ISO Welcome app:<br>
+<img alt="Firstboot" src="https://de.mirror.rebornos.org/pics/firstboot.jpg"><br>
+You <em>do not</em> need to be connected to the internet for offline installation. But there is no problem if the internet is on.</p>
+<p>Click on the big <em>Install online</em> button with the image of a blue icon:<br>
+<img alt="Welcome app" src="https://de.mirror.rebornos.org/pics/welcomeready.jpg"></p>
+<p>The busy indicator turns red to indicate that the app is busy checking updates and/or updating the installer:<br>
+<img alt="Welcome app busy" src="https://de.mirror.rebornos.org/pics/welcomeworking.jpg"></p>
+<p>When the update process completes (if the update toggle was on), the indicator turns back to green color. You can either click on Console, or resize the window at any time to see details about what the app is doing. The below indicates that the update is complete and the installer is launched:<br>
+<img alt="Welcome app with console" src="https://de.mirror.rebornos.org/pics/welcomeconsole.jpg"></p>
+<h2 class="toc-header" id="h-1-welcome-1"> 1. Welcome</h2>
+<p>When the installer shows up, you will be greeted with a Welcome page where you can select your language:</p>
+<p><img alt="Install welcome" src="https://de.mirror.rebornos.org/pics/online/onlinefirst.jpg"></p>
+<p>If you want to change the language, click on American English for the list of languages to show up choose your language and click Next.</p>
+<h2 class="toc-header" id="h-2-location-1"> 2. Location</h2>
+<p>On the location page, you can either click on the world map to choose your time zone, or select it manually by clicking on the menus for Region and Zone:</p>
+<p><img alt="Region and Zone" src="https://de.mirror.rebornos.org/pics/online/onlinelocale.jpg"></p>
+<p>You can also select the system language and local from the buttons on the right side. When you are done, click Next.</p>
+<h2 class="toc-header" id="h-3-keyboard-1"> 3. Keyboard</h2>
+<p>If you have a non-US keyboard layout, you can select it here:</p>
+<p><img alt="Language select" src="https://de.mirror.rebornos.org/pics/online/onlinekey.jpg"></p>
+<h2 class="toc-header" id="h-4-desktopswms"> 4. Desktops/WMs</h2>
+<p>Here you can select any desktops or window managers that you would like to install with RebornOS. For a single selection, you can just click on the option you want to choose and it gets selected:</p>
+<p><img alt="Desktop WM select" src="https://de.mirror.rebornos.org/pics/online/onlineDE.jpg"></p>
+<p>Multiple selection requires you to hold down the Ctrl or Shift keys after selecting the first option.</p>
+<blockquote class="is-warning">
+<p>Warning: Selecting multiple desktops is not recommended. Desktops tend to overwrite themes and other files from one another, causing visual artifacts that break the appearance. Select multiple desktops only if you know what you are doing.</p>
+</blockquote>
+<h2 class="toc-header" id="h-5-advanced"> 5. Advanced</h2>
+<blockquote class="is-info">
+<p>Note: You can skip the Advanced page safely and go to the next partition page. Read this section if you want more control on what packages are installed or not installed.</p>
+</blockquote>
+<p>The Advanced page consists of a heirarchy of categories and packages. The appear collapsed by default:</p>
+<p><img alt="Advanced default collapsed" src="https://de.mirror.rebornos.org/pics/online/onlineextra.jpg"></p>
+<blockquote class="is-info">
+<p>Note: Please do not be tempted to check entire categories for installation. This will result in bloating of your install and will end up using a lot of your storage. It is always a good idea to expand each category to select the smallest subset of packages that you want to install.</p>
+</blockquote>
+<blockquote class="is-warning">
+<p>Warning: We recommend beginners to not change anything in the Minimal Base category. It contains basic applications required for your RebornOS to function properly. Removing packages from here may result in a poorly functioning installation.</p>
+</blockquote>
+<p>Desktop related packages are always at the end. You can expand the desktop category to see a Curated list, and sometimes Exhaustive and Miscellaneous lists.</p>
+<p>The curated package list for each desktop contains the recommended packages which are a good fit for most people. The exhaustive list usually contains all possible desktop related packages mentioned in the Arch Wiki if you want to add more things to your desktop.</p>
+<p>You can choose which parts of RebornOS base and apps to install. However, we recommend to only change the RebornOS Apps if you want to, and leave the RebornOS Base category unchanged.</p>
+<h2 class="toc-header" id="h-6-users"> 6. Users</h2>
+<p>Here you can select a username and password for use on your RebornOS. You can also choose to reuse the same password for the root account:</p>
+<p><img alt="Calamares users page" src="https://de.mirror.rebornos.org/pics/online/onlineusers.jpg"></p>
+<h2 class="toc-header" id="h-7-summary"> 7. Summary</h2>
+<p>Here, you should verify that the changes shown by the installer do not inadvertently delete or erase your important data. You can also check that the installer is only making the changes that you intended:</p>
+<p><img alt="Install summary" src="https://de.mirror.rebornos.org/pics/online/onlinesummary.jpg"></p>
+<p>Proceed only when you are sure that your data and partitions are going to be safe.</p>
+<h2 class="toc-header" id="h-8-install"> 8. Install</h2>
+<p>When the installation starts, you will be greeted with a slideshow:</p>
+<p><img alt="Install and copy files" src="https://de.mirror.rebornos.org/pics/online/onlineslide.jpg"></p>
+<p>On the right side of the progressbar, is a small button that you can click to show the logs instead of the slideshow:</p>
+<p><img alt="Install show progress" src="https://de.mirror.rebornos.org/pics/online/onlineconsole.jpg"></p>
+<p>If the installer unfortunately fails, you will be shown a dialog window describing what the problem is, and it asks whether you want to upload the logs to an online paste server. We recommend you to upload the logs so that you can share the URL with support for diagnosing your issue.</p>
+<h2 class="toc-header" id="h-10-finish"> 10. Finish</h2>
+<p>When the installer finishes, you can either close the installer to stay on the live ISO, or click on Restart System to reboot immediately:</p>
+<p><img alt="Calamares finished page" src="/arm/finish_online.jpg"></p>
