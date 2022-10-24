@@ -2,7 +2,7 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2022-10-24T20:21:32.793Z
+date: 2022-10-24T20:22:04.265Z
 tags: arm
 editor: markdown
 dateCreated: 2022-10-24T20:12:04.926Z
