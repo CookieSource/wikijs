@@ -2,7 +2,7 @@
 title: How to use Zram instead of Zswap
 description: 
 published: true
-date: 2022-10-16T12:14:09.134Z
+date: 2022-10-24T21:36:32.722Z
 tags: zswap zram swap
 editor: markdown
 dateCreated: 2022-10-14T04:19:39.265Z
@@ -20,7 +20,7 @@ Here is where to add the kernel parameter to not allow Zswap to start (which is 
 `sudo nano /etc/default/grub`
 
 and add the following line:
-```bash
+```
 GRUB_CMDLINE_LINUX_DEFAULT="zswap.enabled=0"
 ```
 
