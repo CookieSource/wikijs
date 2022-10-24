@@ -1,8 +1,8 @@
 ---
 title: ARM
-description: comming soon
+description: ARM related guides & tutorials
 published: true
-date: 2022-10-24T17:57:57.601Z
+date: 2022-10-24T19:55:35.183Z
 tags: home, arm
 editor: markdown
 dateCreated: 2022-09-03T04:50:32.924Z
@@ -14,4 +14,4 @@ Here you can find a list of guides & tutorials for arm. You can also try to sear
 -   [**Requirements for RebornOS ARM**](/arm/requirements)
 -   [**How to create a bootable storage medium**](/arm/bootmedia)
 -   [**Install RebornOS arm on a SBC**](/arm/install)
--   [**How to use android apps on your SBC**](/arm/install)
+-   [**How to use android apps on your SBC**](/arm/androidapps)
