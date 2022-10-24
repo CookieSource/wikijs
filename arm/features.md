@@ -2,7 +2,7 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2022-10-24T20:19:03.463Z
+date: 2022-10-24T20:21:32.793Z
 tags: arm
 editor: markdown
 dateCreated: 2022-10-24T20:12:04.926Z
@@ -64,8 +64,17 @@ We support the following universal solutions.
 [Universal package management](/en/customization/universal-package-management)
 
 
-## After install
+<!--## After install
 
 Wanted an option in the installer but you've already installed please see [RebornOS Fire](/en/apps/rebornosfire). To be able to select them post install!
 
 Please note we do not offer a way to switch file systems after installation.
+-->
+## Planned features roadmap
+### X86 emulation support
+Run x86 apps on arm
+### Plasma Big screen
+Turn your pi into a media center pc
+### KODI
+### RebornOS Fire
+### More Hardware Support
