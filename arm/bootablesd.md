@@ -1,8 +1,8 @@
 ---
 title: How to create a bootable storage medium
 description: 
-published: true
-date: 2022-10-24T17:51:04.871Z
+published: false
+date: 2022-10-24T17:54:52.590Z
 tags: arm
 editor: markdown
 dateCreated: 2022-10-23T20:02:58.637Z
