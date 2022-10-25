@@ -2,7 +2,7 @@
 title: How to use Android apps on your ARM SBC
 description: 
 published: true
-date: 2022-10-25T09:01:29.434Z
+date: 2022-10-25T09:02:34.642Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-23T12:49:03.402Z
