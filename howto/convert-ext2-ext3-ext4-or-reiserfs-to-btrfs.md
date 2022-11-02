@@ -2,13 +2,13 @@
 title: Convert ext2, ext3, ext4 or ReiserFS to Btrfs
 description: 
 published: true
-date: 2022-10-20T09:51:02.632Z
+date: 2022-11-02T13:39:09.057Z
 tags: file system
 editor: markdown
 dateCreated: 2022-10-20T08:50:38.119Z
 ---
 
-In case the partition you want to convert is your system partition you will need to perform the steps in this guide from another (GNU/Linux) operating system instance, like the RebornOS live ISO.
+In case the partition you want to convert is your system partition you will need to perform the steps in this guide from another Linux distribution instance, like the RebornOS live ISO.
 
 Do not perform this operation on data you can't afford to lose. There are reports of btrfs-convert failing, leaving behind a damaged partition.
 
