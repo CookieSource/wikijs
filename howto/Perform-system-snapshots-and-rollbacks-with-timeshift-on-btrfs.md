@@ -2,7 +2,7 @@
 title: Perform system snapshots and rollbacks with Timeshift on Btrfs
 description: 
 published: true
-date: 2022-10-20T10:39:34.595Z
+date: 2022-11-02T13:36:52.634Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-20T10:15:59.362Z
