@@ -2,7 +2,7 @@
 title: Install Virtual Machine Manager (virt-manager)
 description: 
 published: true
-date: 2022-11-02T13:46:46.337Z
+date: 2022-11-02T13:47:23.862Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-02T13:46:46.337Z
@@ -18,7 +18,7 @@ Virt-manager installs with:
 ```
 sudo pacman -S virt-manager edk2-ovmf
 ```
-`edk2-ovmf` is the one who provides UEFI support.
+The `edk2-ovmf` package provides UEFI support.
 
 Activation of virt-manager is done with:
 ```
