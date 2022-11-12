@@ -1,8 +1,8 @@
 ---
 title: Home
-description: Homepage
+description: Guides and instructions for RebornOS
 published: true
-date: 2022-02-08T21:28:30.151Z
+date: 2022-11-12T07:35:06.166Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-16T13:13:20.030Z
@@ -12,56 +12,60 @@ dateCreated: 2021-09-16T13:13:20.030Z
 
 Welcome to the RebornOS wiki
 
-This is a complimentary wiki for all things RebornOS. For other guides on Arch, please visit the [Arch Wiki](https://wiki.archlinux.org)
-
-.
+This is a complimentary wiki for all things RebornOS. For other guides on Arch, please visit the [Arch Wiki](https://wiki.archlinux.org).
 
 # Installation
 
 Instructions on installing RebornOS
 
--    [![🌐](/_assets/svg/requirement.svg) Requirements*Requirements needed to install*](/en/installation/requirements)
--    [![🌐](/_assets/svg/computerscreen.png) Installation guide *Instructions on how to install RebornOS*](/en/installation/cnchi)
--    [![👥](/_assets/svg/partitioning.svg) Partitioning *Manual & Custom partitioning instructions*](/en/installation/partitioning)
--    [![📡](/_assets/svg/features.svg) Features *A list of all the features our installer offers*](/en/installation/features)
--    [![🔧](/_assets/svg/twemoji/1f527.svg) Troubleshooting *Solutions to common issues.*](/en/installation/troubleshooting)
+-   [Requirements](/en/installation/requirements) ***Everything required to install RebornOS***
+-   [Online Installation guide (Calamares installer)](/en/installation/calamares_online) ***Instructions on how to install RebornOS online***
+-   [Offline Installation guide (Calamares installer)](/en/installation/calamares_offline) ***Instructions on how to install RebornOS offline***
+-   [Installation guide (Cnchi installer)](/en/installation/cnchi) ***Instructions on how to install RebornOS***
+-   [Partitioning](/en/installation/partitioning) ***Manual & Custom partitioning instructions***
+-   [Features](/en/installation/features) ***A list of all the features our installer offers***
+-   [Troubleshooting](/en/installation/troubleshooting) ***Solutions to common installation issues.***
 
 # Apps
 
 Instructions and manuals for all apps RebornOS optionally provides.
 
--    [![🌐](/fire.svg) RebornOS Fire *Our flagship app allowing you to tweak your system.*](/en/apps/rebornosfire)
--    [![📡](/_assets/svg/guiapps.svg) GUI apps *Instructions for all other GUI apps we optionally offer.*](/en/apps)
--    [![🔧](/_assets/svg/logo.png) Dart *Troubleshooting & repair*](/en/apps/dart)
-
-# Customization
-
-Customize your install with themes, settings, optimizations and, other options of your choice.
-
--   [![🌐](/_assets/svg/themes.svg)Theming*Instructions on how to theme different desktops*](/en/customization/theming)
--    [![👥](/_assets/svg/grub.svg) Bootloader *Instructions on changing bootloaders, bootloaders themes & setting up plymouth*](/en/customization/bootloader)
--    [![👥](/_assets/svg/terminal.svg) Shell *Guides on changing the look & feel of your terminal*](/en/customization/shell)
+-   [RebornOS Fire](/en/apps/rebornosfire) ***Our flagship app allowing you to tweak your system.***
+-   [*Rate-mirrors*](https://wiki.rebornos.org/en/apps/rate-mirrors) ***Rank your mirrors for faster downloads***
+-   [GUI apps](/en/apps) ***Instructions for all third party GUI apps we optionally offer.***
 
 # How to
 
 Tutorials and guides on how to do things on RebornOS.
 
--   [![🌐](/_assets/svg/userguide.svg)How to*Guides & tutorials*](/en/howto)
+-   [How to](/en/howto) ***Guides & tutorials***
+
+# Customization
+
+Customize your install with themes, settings, optimizations and, other options of your choice.
+
+-   [Theming](/en/customization/theming) ***Instructions on how to theme different desktops***
+-   [Shell guides](/en/customization/shell) ***Change the look and feel of your terminal***
+-   [Bootloader](/en/customization/bootloader) ***Instructions on changing bootloaders, bootloader themes & setting up Plymouth***
+
+# **ARM**
+
+Running RebornOS on ARM devices.
+
+-   Things to know about running [RebornOS ARM](https://wiki.rebornos.org/en/arm).
 
 # Contributors
 
 Guides and guidelines on how to contribute to the Wiki and other RebornOS projects!
 
--   [![🌐](/_assets/svg/userguide.svg)How to contribute*Rules Guidelines & tutorials*](/en/howto/contribute)
+-   [How to contribute](/en/howto/contribute) ***Rules, guidelines & tutorials***
 
 # Bug reports
 
 Instructions on how to report bugs to the RebornOS Team.
 
--   [![🌐](/_assets/svg/userguide.svg)Bug reports*How to report bugs*](/en/howto/bugreports)
+-   [Bug reports](/en/howto/bugreports) ***How to report bugs***
 
 # Archive
 
-These are old, archived pages from old RebornOS instructions & configurations.
-
--   [![🌐](/_assets/svg/archive.svg)archive*Old archived guides & pages!*](/en/archive)
+-   [Archive](/en/archive) ***Old, archived guides and pages from old RebornOS configurations***
