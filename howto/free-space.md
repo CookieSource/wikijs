@@ -2,7 +2,7 @@
 title: How to free space
 description: In this how to you are going to learn how to free up some storage.
 published: true
-date: 2022-08-21T11:23:50.935Z
+date: 2022-11-13T11:32:38.727Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-27T21:33:42.145Z
@@ -57,7 +57,7 @@ Now, there are ways to clean systemd journal logs. The easiest for you is to cle
 sudo journalctl --vacuum-time=3d
 ```
 # Use BleachBit
-Learn how to use BleachBit [here](/apps/bleachbit)
+*Learn how to use BleachBit [here](/apps/bleachbit).*
 
 # Clean the cache in your home folder
 
