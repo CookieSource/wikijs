@@ -2,7 +2,7 @@
 title: Home
 description: Guides and instructions for RebornOS
 published: true
-date: 2022-11-13T14:01:49.613Z
+date: 2022-11-13T14:03:53.824Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-16T13:13:20.030Z
@@ -18,8 +18,8 @@ This is a complimentary wiki for all things RebornOS. For other guides on Arch, 
 Instructions on installing RebornOS
 
 -   [Requirements](/en/installation/requirements) ***Everything required to install RebornOS***
--   [Online Installation guide (Calamares installer)](/en/installation/calamares_online) ***Instructions on how to install RebornOS online***
--   [Offline Installation guide (Calamares installer)](/en/installation/calamares_offline) ***Instructions on how to install RebornOS offline***
+-   [Online Installation guide (Calamares installer)](/en/installation/calamares-online) ***Instructions on how to install RebornOS online***
+-   [Offline Installation guide (Calamares installer)](/en/installation/calamares-offline) ***Instructions on how to install RebornOS offline***
 -   [Installation guide (Cnchi installer)](/en/installation/cnchi) ***Instructions on how to install RebornOS***
 -   [Partitioning](/en/installation/partitioning) ***Manual & Custom partitioning instructions***
 -   [Features](/en/installation/features) ***A list of all the features our installer offers***
@@ -29,8 +29,8 @@ Instructions on installing RebornOS
 Instructions and manuals for all apps RebornOS optionally provides.
 
 -   [RebornOS Fire](/en/apps/rebornosfire) ***Our flagship app allowing you to tweak your system.***
--   [*Rate-mirrors*](https://wiki.rebornos.org/en/apps/rate-mirrors) ***Rank your mirrors for faster downloads***
--   [GUI apps](/en/apps) ***Instructions for all third party GUI apps we optionally offer.***
+-   [Rate-mirrors](/en/apps/rate-mirrors) ***Rank your mirrors for faster downloads***
+-   [*Other GUI apps*](/en/apps) ***Instructions for all third party GUI apps we optionally offer.***
 
 # How to
 Tutorials and guides on how to do things on RebornOS.
