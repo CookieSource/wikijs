@@ -2,7 +2,7 @@
 title: Home
 description: Guides and instructions for RebornOS
 published: true
-date: 2022-11-12T07:35:06.166Z
+date: 2022-11-13T14:01:49.613Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-16T13:13:20.030Z
@@ -15,7 +15,6 @@ Welcome to the RebornOS wiki
 This is a complimentary wiki for all things RebornOS. For other guides on Arch, please visit the [Arch Wiki](https://wiki.archlinux.org).
 
 # Installation
-
 Instructions on installing RebornOS
 
 -   [Requirements](/en/installation/requirements) ***Everything required to install RebornOS***
@@ -27,7 +26,6 @@ Instructions on installing RebornOS
 -   [Troubleshooting](/en/installation/troubleshooting) ***Solutions to common installation issues.***
 
 # Apps
-
 Instructions and manuals for all apps RebornOS optionally provides.
 
 -   [RebornOS Fire](/en/apps/rebornosfire) ***Our flagship app allowing you to tweak your system.***
@@ -35,37 +33,31 @@ Instructions and manuals for all apps RebornOS optionally provides.
 -   [GUI apps](/en/apps) ***Instructions for all third party GUI apps we optionally offer.***
 
 # How to
-
 Tutorials and guides on how to do things on RebornOS.
 
 -   [How to](/en/howto) ***Guides & tutorials***
 
 # Customization
-
 Customize your install with themes, settings, optimizations and, other options of your choice.
 
 -   [Theming](/en/customization/theming) ***Instructions on how to theme different desktops***
 -   [Shell guides](/en/customization/shell) ***Change the look and feel of your terminal***
 -   [Bootloader](/en/customization/bootloader) ***Instructions on changing bootloaders, bootloader themes & setting up Plymouth***
 
-# **ARM**
-
+# ARM
 Running RebornOS on ARM devices.
 
 -   Things to know about running [RebornOS ARM](https://wiki.rebornos.org/en/arm).
 
 # Contributors
-
 Guides and guidelines on how to contribute to the Wiki and other RebornOS projects!
 
 -   [How to contribute](/en/howto/contribute) ***Rules, guidelines & tutorials***
 
 # Bug reports
-
 Instructions on how to report bugs to the RebornOS Team.
 
 -   [Bug reports](/en/howto/bugreports) ***How to report bugs***
 
 # Archive
-
 -   [Archive](/en/archive) ***Old, archived guides and pages from old RebornOS configurations***
