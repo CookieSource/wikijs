@@ -2,7 +2,7 @@
 title: How to run RebornOS arm in a VM on an x64-bit pc
 description: Short article on how to run RebornOS ARM on an x86_64 pc using QEMU 
 published: true
-date: 2022-11-14T15:15:37.027Z
+date: 2022-11-14T15:21:40.659Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-14T15:15:37.027Z
@@ -23,4 +23,8 @@ sudo systemctl enable --now libvirtd
 ```
 # create vm
 Open `virtual machine manager` app.
+
+Use images to write a step by step guide
+
+
 
