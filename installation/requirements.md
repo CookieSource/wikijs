@@ -2,7 +2,7 @@
 title: Requirements
 description: Here you can find the requirements for RebornOS
 published: true
-date: 2022-11-15T10:48:09.659Z
+date: 2022-11-15T10:50:21.268Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-23T12:39:54.260Z
@@ -13,7 +13,7 @@ dateCreated: 2021-09-23T12:39:54.260Z
 | --- | --- | --- |
 | **CPU** | 1.2 GHz dual core | 2.1 GHz quad core |
 | **RAM** | 2 GB | 4 GB |
-| **Storage** | 20 GB | 40 GB or more |
+| **Storage** | 20 GB | 64 GB or more |
 | **Installation medium** | CD/DVD or USB 4 GB | CD/DVD or USB 4 GB or more |
 | **Internet connection** | Recommended, not required | Recommended, not required |
 
