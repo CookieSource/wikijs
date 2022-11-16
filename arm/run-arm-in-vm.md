@@ -2,7 +2,7 @@
 title: How to run RebornOS arm in a VM on an x64-bit pc
 description: Short article on how to run RebornOS ARM on an x86_64 pc using QEMU 
 published: true
-date: 2022-11-16T21:58:44.515Z
+date: 2022-11-16T22:10:12.462Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-14T15:15:37.027Z
@@ -50,6 +50,9 @@ Follow step-by-step images to create and configure the ARM VM.
 ![virtman-add-hardware-keyboard-2022-11-14_17-19-29.png](/how-to/run-rebornos-arm/virtman-add-hardware-keyboard-2022-11-14_17-19-29.png)
 1. Finish the configuration.
 1. Launch VM.
+## Additional info
+`virsh` - virsh
+An interactive shell, and batch scriptable tool for performing management tasks on all libvirt managed domains, networks and storage. This is part of the libvirt core distribution.
 
 To start the `default` network for the VM:
 ```$ sudo virsh net-start default```
