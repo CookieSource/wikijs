@@ -2,7 +2,7 @@
 title: How to run RebornOS arm in a VM on an x64-bit pc
 description: Short article on how to run RebornOS ARM on an x86_64 pc using QEMU 
 published: true
-date: 2022-11-16T22:23:14.206Z
+date: 2022-11-17T19:50:58.814Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-14T15:15:37.027Z
@@ -13,6 +13,7 @@ The qcow2 image file is a prebuilt RebornOS ARM QEMU / Virtual Manager image.  H
 # Download image
 https://github.com/RebornOS-Developers/qemu-images/releases/latest
 Choose and download the desired image: `RebornOS-ARM-generic-YYYY-MM-DD.qcow2`
+Credentials for the image is `rebornos` for both login and pw.
 # Install required qemu virt-manager dependencies
 ```sh
 sudo pacman -S qemu virt-viewer libvirt virt-manager qemu-desktop qemu-system-aarch64 edk2-armvirt
