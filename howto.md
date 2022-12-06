@@ -2,7 +2,7 @@
 title: How to
 description: 
 published: true
-date: 2022-11-13T11:38:53.258Z
+date: 2022-12-06T15:49:10.946Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-23T13:47:45.654Z
@@ -28,3 +28,4 @@ Here you can find a list of guides & tutorials. You can also try to search for t
 -   [**Use Zram instead of Zswap**](/howto/use-zram-instead-of-zswap)
 -   [**Convert ext2, ext3, ext4 or ReiserFS to Btrfs**](convert-ext2-ext3-ext4-or-reiserfs-to-btrfs)
 -   [**Perform system snapshots and rollbacks with Timeshift on Btrfs**](timeshift-system-snapshots-and-rollbacks-on-btrfs)
+-   [**Use the Bauh package manager**](bauh)
