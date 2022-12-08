@@ -2,7 +2,7 @@
 title: Requirements
 description: Here you can find the requirements for RebornOS
 published: true
-date: 2022-12-08T11:24:13.400Z
+date: 2022-12-08T11:25:22.799Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-23T12:39:54.260Z
@@ -54,5 +54,3 @@ We also have a video tutorial to do it on Windows: [RebornOS - How to create ins
 
 1.  Boot from the USB stick.
 2.  Select NVIDIA if you have an NVIDIA graphics card or select boot install medium if you don't!
-
-Installation guide: [installation/cnchi](/en/installation/cnchi)
