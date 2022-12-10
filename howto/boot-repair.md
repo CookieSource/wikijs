@@ -2,7 +2,7 @@
 title: How to perform Boot Repair
 description: Instructions for recovering a system that is unable to boot
 published: true
-date: 2022-12-10T19:49:20.807Z
+date: 2022-12-10T19:49:35.499Z
 tags: grub, bootloader, repair, recovery, boot recovery, boot repair, boot
 editor: markdown
 dateCreated: 2022-12-10T19:23:10.785Z
