@@ -2,7 +2,7 @@
 title: How to
 description: 
 published: true
-date: 2022-12-06T15:50:25.007Z
+date: 2022-12-10T19:39:15.130Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-23T13:47:45.654Z
@@ -11,6 +11,7 @@ dateCreated: 2021-09-23T13:47:45.654Z
 Here you can find a list of guides & tutorials. You can also try to search for them by using the **search** function of the wiki or by searching through [**tags**](/t).
 
 ##### Pages
+-   [**Boot Repair**](boot-repair)
 -   [**Report bugs**](bugreports)
 -   [**Fix screen tearing**](screentear)
 -   [**Pamac**](pamac)
