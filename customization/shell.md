@@ -2,7 +2,7 @@
 title: Shell
 description: Guides on changing the look & feel of your terminal
 published: true
-date: 2022-08-16T10:32:41.456Z
+date: 2022-12-11T05:35:01.428Z
 tags: customization, themes, shell, zsh, fish, bash
 editor: markdown
 dateCreated: 2021-09-23T13:35:30.759Z
@@ -41,7 +41,7 @@ homectl update --shell=<full-path-to-shell> user
 where *\<full-path-to-shell\>* is the full path as given by `chsh -l`.
 
 If you now log out and log in again, you will be greeted by the other shell.
-[**Oh My Bash**](https://ohmybash.nntoan.com/)
+- [**Oh My Bash**](https://ohmybash.nntoan.com/)
 
 # Zsh
 
@@ -55,13 +55,13 @@ sudo pacman -S zsh
 
 ## Features
 
-**Better tab completion**
+#### Better tab completion
 
 In the context of the **cd** command this isn’t particularly useful, as you can only go into directories. Zsh knows this and only shows you the possible valid destinations.
 
 ![](https://code.joejag.com/assets/2014/cd_after.jpg)
 
-**Better history searcher**
+#### Better history searcher
 
 You may be familiar with using **+R** for performing a recursive search to find a previous command you typed in. This is a great way to reuse commands in Bash and Zsh.
 
@@ -73,7 +73,7 @@ It finds the last command we typed starting with ‘ls’. We could continue pre
 
 ![](https://code.joejag.com/assets/2014/history_after.jpg)
 
-[**Oh My Zsh**](https://ohmyz.sh/) is a community-driven framework for managing your Zsh configuration to improve it with themes and plugins for extra functionality.
+- [**Oh My Zsh**](https://ohmyz.sh/) is a community-driven framework for managing your Zsh configuration to improve it with themes and plugins for extra functionality.
 
 ## Set Zsh as default shell
 
@@ -113,18 +113,18 @@ sudo pacman -s fish
 
 Fish has multiple features that makes it stand out from bash out of the box such as:
 
-**Autosuggestions**  
+#### Autosuggestions
 Autosuggestion suggests commands as you type based on history and completion, like many web browsers.
 
 ![Autosuggestion Thumbnail](https://fishshell.com/assets/img/screenshots/autosuggestion_thumb.png)
 
-**Web Based Configuration**
+#### Web-based configuration
 
 You can set your colors, view functions, variables, and history all from a web page.
 
 ![Web Config Thumbnail](https://fishshell.com/assets/img/screenshots/web_config_thumb.png)
 
-**Works Out of the Box**
+#### Works out of the box
 
 Fish has features like tab completions and syntax highlighting, with nothing new to learn or configure.
 
@@ -164,12 +164,13 @@ sudo pacman -S nushell
 ```
 
 ## Features
-### Everything is data
+#### Everything is data
 Nu pipelines use structured data so you can safely select, filter, and sort the same way every time. Stop parsing strings and start solving problems.
-### Powerful plugins
+
+#### Powerful plugins
 It's easy to extend Nu using a powerful plugin system.
 
-### Great error messages
+#### Great error messages
 Nu operates on typed data, so it catches bugs that other shells don't. And when things break, Nu tells you exactly where and why.
 
 ## Set Nu as the default shell
