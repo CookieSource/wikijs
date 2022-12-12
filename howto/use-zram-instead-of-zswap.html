@@ -2,7 +2,7 @@
 title: How to use Zram instead of Zswap
 description: 
 published: true
-date: 2022-11-12T09:21:44.791Z
+date: 2022-12-12T07:46:53.465Z
 tags: how to, swap
 editor: ckeditor
 dateCreated: 2022-10-14T04:19:39.265Z
@@ -38,21 +38,22 @@ BOOT_IMAGE=/boot/vmlinuz-linux root=UUID=2b4f9d37-c068-45f8-a663-ef34758944f6 rw
 <p>1.Enable the zram kernel module and optionally define the number of devices.</p>
 <p><code>sudo modprobe zram num_devices=1</code></p>
 <p>In some cases, you may want to make it permanent if zram isn't already included in <a href="https://wiki.archlinux.org/title/Udev">Udev</a>, add it to the /etc/modules-load.d:</p>
-<p><code>echo “zram” | sudo tee /etc/modules-load.d/zram.conf</code></p>
+<p><code>echo "zram" | sudo tee /etc/modules-load.d/zram.conf</code></p>
 <ol>
   <li>Check for, then select the compression algorithm for the zram disk(s).</li>
 </ol>
 <p><code>cat /sys/block/zram0/comp_algorithm</code></p>
-<p><code>sudo bash -c “echo zstd &gt; /sys/block/zram0/comp_algorithm”</code></p>
+<p><code>sudo bash -c "echo zstd &gt; /sys/block/zram0/comp_algorithm"</code></p>
 <ol>
   <li>Set the size of the Zram disk. &nbsp;You should definitely check this after setting to ensure the correct value is present.</li>
 </ol>
-<p><code>sudo bash -c “echo 3G &gt; /sys/block/zram0/disksize”</code></p>
+<p><code>sudo bash -c "echo 3G &gt; /sys/block/zram0/disksize"</code></p>
 <p>This is after executing the commands to select the compression algorithm &amp; define the size of the zram0 disk (mine is using zstd and 3GB).</p>
 <pre><code class="language-plaintext">$ cat /sys/block/zram0/comp_algorithm 
 lzo lzo-rle lz4 lz4hc 842 [zstd] 
 $ cat /sys/block/zram0/disksize 
 3221225472</code></pre>
+<p>&nbsp;</p>
 <ol>
   <li>Create and start the zram swap with highest priority. &nbsp;Check it all went well. &nbsp;I would switch to root account and redo it if the zram or parameters did not seem to take.</li>
 </ol>
