@@ -2,11 +2,67 @@
 title: How to chroot into your RebornOS
 description: 
 published: true
-date: 2022-12-13T18:02:39.485Z
+date: 2022-12-13T18:42:21.993Z
 tags: chroot, chrooting
 editor: ckeditor
 dateCreated: 2022-12-10T19:41:21.679Z
 -->
 
-<h1 class="toc-header" id="chrooting-into-the-installed-system"> Chrooting into the installed system</h1>
-<p>Your content here</p>
+<h1>Chrooting into the installed system</h1>
+<p>Using Arch Linux arch-chroot is very useful to aid in system recovery, for example to correct changes which made the system inaccessible.</p>
+<h2>Requirement</h2>
+<p>Create a <a href="https://wiki.rebornos.org/en/installation/requirements">bootable RebornOS ISO media</a>, then boot from the media (normally pressing the appropriate Function key F1, F2, F8, F10, F12 or ENTER key), select the USB media, then once booted open a terminal or login as root.</p>
+<p>It is helpful to know what method the system was using to boot the OS (Legacy BIOS or UEFI).</p>
+<p><code>$ ls /sys/firmware/efi</code></p>
+<p>If the message <code>ls: cannot access '/sys/firmware/efi': No such file or directory </code>appears then the system is most likely been created using BIOS mode, not UEFI.</p>
+<p>Next in order to begin to correct a non-booting system, or to gain access to the broken file system it's important to know what file systems are on the disk.</p>
+<p>List the file system partitions using <code>lsblk</code> and <code>sudo fdisk -l</code> (provides more detailed info).</p>
+<p>Here we see there is a NVMe SSD disk with 2 partitions, an EFI System partition with the mount point /boot/efi on nvme0n1p1 and the Linux root fs (/) on p2</p>
+<pre><code class="language-plaintext">$ lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+zram0       254:0    0     3G  0 disk [SWAP]
+nvme0n1     259:0    0 953.9G  0 disk
+├─nvme0n1p1 259:1    0   300M  0 part /boot/efi
+└─nvme0n1p2 259:2    0 953.6G  0 part /</code></pre>
+<p>&nbsp;</p>
+<pre><code class="language-plaintext">$ sudo fdisk -l
+[sudo] password for user:
+Disk /dev/nvme0n1: 953.87 GiB, 1024209543168 bytes, 2000409264 sectors
+Disk model: AGAMMIXS70B-1T-CS
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: B3D0286E-F751-C546-A04E-971CEA7E593F
+
+Device          Start        End    Sectors   Size Type
+/dev/nvme0n1p1   4096     618495     614400   300M EFI System
+/dev/nvme0n1p2 618496 2000397734 1999779239 953.6G Linux filesystem
+
+
+Disk /dev/zram0: 3 GiB, 3221225472 bytes, 786432 sectors
+Units: sectors of 1 * 4096 = 4096 bytes
+Sector size (logical/physical): 4096 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes</code></pre>
+<h2>Prepare the mount points and run arch-chroot</h2>
+<p>Setting up the mount points is necessary so that when the <i>arch-chroot</i> command is issued the correct fs (file system) will be accessible as the ‘root’ system account.</p>
+<p>Now that both the system and root fs have been identified, before running arch-chroot, will use the following steps to mount both system and root fs where RebornOS was installed.</p>
+<p>Create the root fs mount point then mount it:</p>
+<pre><code class="language-plaintext">sudo mkdir -p /mnt
+
+sudo mount  /dev/nvme0n1p2  /mnt </code></pre>
+<p>Create a mount point for the system /boot/efi fs and mount it:</p>
+<pre><code class="language-plaintext">sudo mkdir -p /mnt/boot/efi
+
+sudo mount /dev/nvme0n1p1 /mnt/boot/efi</code></pre>
+<p>Check that the efivarfs is also mounted (it should already be) and mount it if is isn't, there should be a warning and can be ignored:</p>
+<pre><code class="language-plaintext">sudo mount -t efivarfs efivarfs /sys/firmware/efi/efivars 
+mount: /sys/firmware/efi/efivars: efivarfs already mounted on /sys/firmware/efi/efivars.</code></pre>
+<p>Run arch-chroot pointed to the /mnt to be able to have root access to the broken system installation:</p>
+<pre><code class="language-plaintext">sudo arch-chroot /mnt</code></pre>
+<p>Re-check that the efivarfs is mounted after arch-chroot (it should be), ignore the warning if already mounted:</p>
+<pre><code class="language-plaintext">sudo mount -t efivarfs efivarfs /sys/firmware/efi/efivars 
+mount: /sys/firmware/efi/efivars: efivarfs already mounted on /sys/firmware/efi/efivars.</code></pre>
+<p>That's it, now you should have root access to correct a problem and/or follow other guided instructions.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
