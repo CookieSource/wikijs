@@ -2,7 +2,7 @@
 title: How to chroot into your RebornOS
 description: 
 published: true
-date: 2022-12-13T20:30:30.618Z
+date: 2022-12-13T20:33:35.231Z
 tags: chroot, chrooting
 editor: ckeditor
 dateCreated: 2022-12-10T19:41:21.679Z
@@ -55,7 +55,7 @@ sudo mount  /dev/nvme0n1p2  /mnt </code></pre>
 <pre><code class="language-plaintext">sudo mkdir -p /mnt/boot/efi
 
 sudo mount /dev/nvme0n1p1 /mnt/boot/efi</code></pre>
-<p>Check that the efivarfs is also mounted (it should already be) and mount it if is isn't, there should be a warning and can be ignored:</p>
+<p>Check that the efivarfs is also mounted (it should already be) and will mount it if it isn't, there should be a warning and can be ignored:</p>
 <pre><code class="language-plaintext">sudo mount -t efivarfs efivarfs /sys/firmware/efi/efivars 
 mount: /sys/firmware/efi/efivars: efivarfs already mounted on /sys/firmware/efi/efivars.</code></pre>
 <p>Run arch-chroot pointed to the /mnt to be able to have root access to the broken system installation:</p>
