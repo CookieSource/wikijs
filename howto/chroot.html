@@ -2,7 +2,7 @@
 title: How to chroot into your RebornOS
 description: 
 published: true
-date: 2022-12-13T18:53:29.797Z
+date: 2022-12-13T20:30:30.618Z
 tags: chroot, chrooting
 editor: ckeditor
 dateCreated: 2022-12-10T19:41:21.679Z
@@ -14,7 +14,7 @@ dateCreated: 2022-12-10T19:41:21.679Z
 <p>Create a <a href="https://wiki.rebornos.org/en/installation/requirements">bootable RebornOS ISO media</a>, then boot from the media (normally pressing the appropriate Function key F1, F2, F8, F10, F12 or ENTER key), select the USB media, then once booted open a terminal or login as root.</p>
 <p>It is helpful to know what method the system was using to boot the OS (Legacy BIOS or UEFI).</p>
 <p><code>$ ls /sys/firmware/efi</code></p>
-<p>If the message <code>ls: cannot access '/sys/firmware/efi': No such file or directory </code>appears then the system is most likely been created using BIOS mode, not UEFI.</p>
+<p>If the message <code>ls: cannot access '/sys/firmware/efi': No such file or directory </code>appears then the system is probably booted using legacy BIOS mode, not UEFI.</p>
 <p>Next in order to begin to correct a non-booting system, or to gain access to the broken file system it's important to know what file systems are on the disk.</p>
 <p>List the file system partitions using <code>lsblk</code> and <code>sudo fdisk -l</code> (provides more detailed info).</p>
 <p>Here we see there is a NVMe SSD disk with 2 partitions, an EFI System partition with the mount point /boot/efi on nvme0n1p1 and the Linux root fs (/) on p2</p>
