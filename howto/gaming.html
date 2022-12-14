@@ -2,17 +2,17 @@
 title: Gaming
 description: Setup your RebornOS for gaming
 published: true
-date: 2022-12-14T09:46:09.728Z
+date: 2022-12-14T22:28:18.140Z
 tags: gaming games
 editor: ckeditor
 dateCreated: 2022-12-14T09:46:09.728Z
 -->
 
 <h1>Gaming</h1>
-<p>The following information is a general guideline to prepare your RebornOS installation to be able to support playing games.</p>
+<p>The following information is a general guideline to prepare your RebornOS installation to be able to support playing games, including games that may only be allowed to run on Windows.</p>
 <h2>Requirements</h2>
-<p>Before you can start playing you should be familiar with your basic system hardware. &nbsp;One way to view the hardware configuration is to use the inxi application to see what the system's hardware capabilities are. &nbsp;Some systems might not have a discreet graphics adapter, and thus your gaming experience might not be as good or enjoyable without having one. &nbsp;But, you should still be able to play some less graphic demanding games or adjust the settings to be able to launch and play with some reasonable enjoyment.</p>
-<p>Run the inxi application to provide you with that basic information. &nbsp;You would want to note the CPU, the CPU chipset or architecture, the amount of system RAM, and the graphics adapter, and lastly your network to be able to verify and check what the minimum or recommended hardware is needed to be able to play that or other similar game. &nbsp;It's also good to know this information if you need to do further troubleshooting, in case you experience a problem running a game.</p>
+<p>Before you can start playing you should be familiar with your basic system hardware. &nbsp;One way to view the hardware configuration is to use the inxi application to see what the system's hardware capabilities are. &nbsp;Some systems might not have a discreet graphics adapter, and thus your gaming experience might not be as good or enjoyable without having one. &nbsp;Remember it is very important to always check minimum and recommended game requirements first, with the game publisher, before attempting game play. &nbsp;If your system doesn't meet minimum system requirements, most likely that game may not run, or it might run, but be very crippled and game play will be impacted. &nbsp;Also, be aware that not all games can run on Linux, mostly due to the game developer's Anti-Cheat implementation, (not due to lack of hardware requirements). &nbsp; But, overall you should still be able to play some less graphic demanding games or adjust the settings to be able to launch and play with some reasonable enjoyment.</p>
+<p>Run the inxi application to provide you with that basic information. &nbsp;You would want to note the CPU, CPU chipset or architecture, the amount of system RAM, and the graphics adapter, and lastly your network to be able to verify and check what the minimum or recommended hardware is needed to be able to play that or other similar game. &nbsp;It's also good to know this information if you need to do further troubleshooting, in case you experience a problem running a game.</p>
 <pre><code class="language-plaintext">inxi -b</code></pre>
 <p>After viewing the information you should at least know the system's hardware specifications and can now start installing the necessary files to allow your RebornOS to be gaming enabled.</p>
 <h2>Updating the system</h2>
@@ -24,7 +24,7 @@ dateCreated: 2022-12-14T09:46:09.728Z
 <p>If you have a # (hashtag) infront of <code>[multilib]</code> then you will need to edit, remove the hashtag and save the pacman.conf file. &nbsp;If it looks like the example, then it's already enabled.</p>
 <p>Run pacman to update the repository:</p>
 <pre><code class="language-plaintext">sudo pacman -Syy</code></pre>
-<p>Update the graphics adapter files, specifically DXVK, (DirectX Vulkan), depending on the result of your inxi -b output choose the appropriate files to update your graphics adapter.</p>
+<p>Update the graphics adapter files, specifically DXVK, (DirectX Vulkan), which are necessary to support Windows games, thus depending on the result of your inxi -b output choose the appropriate files to update your graphics adapter.</p>
 <p>AMD Graphics:</p>
 <pre><code class="language-plaintext">sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader</code></pre>
 <p>For Nvidia, you might need to <a href="https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/">check what driver version</a> your card needs if it is from an older architecture (GTX 900 or older) thus you may need 470.xx or 390.xx driver packages:</p>
@@ -32,7 +32,7 @@ dateCreated: 2022-12-14T09:46:09.728Z
 <p>Intel Graphics, if you have a Skylake CPU or newer the iGPU will be able to use Vulkan, if Haswell, there is minimal Vulkan support and gaming performance may be lacking.</p>
 <pre><code class="language-plaintext">sudo pacman -S lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader</code></pre>
 <p>Next we normally will install Steam, Heroic Games Launcher, Lutris, and Wine to be able to support the majority of the game libraries available as well as support other game utilities or applications under Wine.</p>
-<p>Steam - there is an extensive game library from Valve and they have their Proton libraries to enable Windows game capability:</p>
+<p>Steam - there is an extensive game library from Valve Software and they have their Proton libraries to enable Windows game capability:</p>
 <pre><code class="language-plaintext">sudo pacman -S steam </code></pre>
 <p>Heroic Games Launcher - this is an all-in-one game launcher and has extensive capabilities including, but not limited to Epic Games Launcher, GOG, syncing your accounts, Epic and GOG game stores, support for Legacy (command line which allows some support for EasyAntiCheat, and BattleEye AntiCheat in some titles), Wine Manager (Wine-GE, Proton-GE), ability to install other games as well as link your existing installed Steam library games.<br><br>For Heroic Game Launcher, install via Gnome Software store, AUR, Flatpak, or use the AppImage.</p>
 <p>Example using AUR:</p>
@@ -44,9 +44,13 @@ sudo flatpak install com.heroicgameslauncher.hgl</code></pre>
 <pre><code class="language-plaintext">sudo pacman -S wine-staging wine-gecko wine-mono lutris gamemode lib32-gamemode</code></pre>
 <h2>Start gaming</h2>
 <p>After installation, if not already done, you should create your logins for Steam, Epic Games, GOG, and Lutris. &nbsp;Then launch Steam to verify access to your game library, and do the same for Heroic Games Launcher to link your Epic Games Launcher and GOG libraries. &nbsp;If you have these existing accounts, HGL will populate both libraries and display your games. &nbsp;If you have local games already installed you can add them in HGL or in Lutris.</p>
-<p>If you encounter troubles, or have questions, please post questions or issues in the please visit the RebornOS Discord under gaming or help and support for assistance.&nbsp;</p>
+<p>Remember, check the game requirements with your system information to see if your system meets the minimum.<br>Another good resource is to look at the <a href="https://protondb.com">ProtonDB</a> for more information about game compatibility.&nbsp;</p>
+<p>If you encounter troubles, have questions, or just a comment about your experience, please post in the <a href="https://rebornos.discourse.group">RebornOS Discourse Forum</a>, or for more immediate issues please visit the RebornOS Discord under 'gaming' or ‘help and support’ for assistance.&nbsp;</p>
 <p>The following links were used and referenced to write this:</p>
+<p>https://winehq.org</p>
+<p>https://github.com/doitsujin/dxvk</p>
 <p>https://heroicgameslauncher.com</p>
+<p>https://lutris.net</p>
 <p>https://steamcommunity.com/sharedfiles/filedetails/?l=german&amp;id=1787799592</p>
 <p>https://github.com/lutris/docs</p>
 <p>https://github.com/FeralInteractive/gamemode</p>
