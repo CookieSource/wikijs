@@ -2,7 +2,7 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2022-12-15T11:37:50.451Z
+date: 2022-12-15T11:38:46.264Z
 tags: installation, features, options
 editor: markdown
 dateCreated: 2021-09-23T12:50:55.847Z
@@ -28,7 +28,7 @@ We offer a lot of features during installation they'll be listed by category.
 	14. Enlightenment
 
 	#### Window managers
-	>	Note that window managers are for advanced users and you'll have to configure them yourself
+	>	Window managers are for advanced users and you'll have to configure them yourself.
 	{.is-warning}
 
 	We offer the following window managers:
