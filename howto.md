@@ -2,7 +2,7 @@
 title: How to
 description: 
 published: true
-date: 2022-12-15T11:41:01.052Z
+date: 2022-12-15T22:29:00.240Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-23T13:47:45.654Z
@@ -32,3 +32,4 @@ Here you can find a list of guides & tutorials. You can also try to search for t
 -   [**Convert ext2, ext3, ext4 or ReiserFS to Btrfs**](/howto/convert-ext2-ext3-ext4-or-reiserfs-to-btrfs)
 -   [**Perform system snapshots and rollbacks with Timeshift on Btrfs**](/howto/timeshift-system-snapshots-and-rollbacks-on-btrfs)
 -   [**Use the Bauh package manager**](/howto/bauh)
+- [gaming](/howto/gaming)
