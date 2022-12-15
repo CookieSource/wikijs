@@ -2,7 +2,7 @@
 title: How to
 description: 
 published: true
-date: 2022-12-15T11:39:39.466Z
+date: 2022-12-15T11:41:01.052Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-23T13:47:45.654Z
@@ -13,18 +13,18 @@ Here you can find a list of guides & tutorials. You can also try to search for t
 ##### Pages
 
 -   [**Boot Repair**](/howto/boot-repair)
--   [**arch-chroot**](/howto/chroot)
+-   [**Use Chroot**](/howto/chroot)
 -   [**Report bugs**](/howto/bugreports)
 -   [**Fix screen tearing**](/howto/screentear)
--   [**Pamac**](/howto/pamac)
+-   [**Use Pamac**](/howto/pamac)
 -   [**Install, remove or change desktop environments**](/howto/changede)
 -   [**Install XAMPP manually**](/howto/xampp-manually)
 -   [**Configure Jackett in QBittorrent**](/howto/configure-jackett-in-qbittorrent)
 -   [**Change GDM or SDDM to LightDM**](/howto/sddm-to-lightdm)
 -   [**Generate video thumbnails in Xfce**](/howto/xfce-thumbnails)
 -   [**Free up space**](/howto/free-space)
--   [**Inxi**](/howto/inxi)
--   [**i3**](/howto/use-i3)
+-   [**Use Inxi**](/howto/inxi)
+-   [**Use i3**](/howto/use-i3)
 -   [**View content of the reborn-mirrorlist file**](/howto/reborn-mirrorlist-content)
 -   [**Dual-boot Windows with RebornOS**](/howto/bootloader)
 -   [**Add the RebornOS repository**](/howto/add-rebornos-repo)
