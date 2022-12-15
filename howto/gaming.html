@@ -2,7 +2,7 @@
 title: Gaming
 description: Setup your RebornOS for gaming
 published: true
-date: 2022-12-15T21:26:38.448Z
+date: 2022-12-15T21:58:00.018Z
 tags: gaming games
 editor: ckeditor
 dateCreated: 2022-12-14T09:46:09.728Z
@@ -17,12 +17,6 @@ dateCreated: 2022-12-14T09:46:09.728Z
 <p>After viewing the information you should at least know the system's hardware specifications and can now start installing the necessary files to allow your RebornOS to be gaming enabled.</p>
 <p>Also, if you find your system doesn't meet the minimum graphics card requirement or your favorite games isn't supported due to Anti-Cheat, there might still be a way to play 3D games by streaming them over the network. &nbsp;Solutions such as Steam (has the ability to stream over a network), <a href="https://discord.com/channels/805020018537660416/805020019083313156/1025681457605263381">GeForce NOW</a>, and Parsec are other examples.&nbsp;</p>
 <h2>Updating the system</h2>
-<p>You will need to have the multilib repository enabled, it should already be enabled and is needed for use of 32-bit libraries. Check the /etc/pacman.conf file:</p>
-<pre><code class="language-plaintext">$ cat /etc/pacman.conf | grep multilib
-# enable the multilib repositories as required here.
-#[multilib-testing]
-[multilib]</code></pre>
-<p>If you have a # (hashtag) infront of <code>[multilib]</code> then you will need to edit, remove the hashtag and save the pacman.conf file. &nbsp;If it looks like the example, then it's already enabled.</p>
 <p>Run pacman to update the repository:</p>
 <pre><code class="language-plaintext">sudo pacman -Syy</code></pre>
 <p>Update the graphics adapter files, specifically DXVK, (DirectX Vulkan), which are necessary to support Windows games, thus depending on the result of your inxi -b output choose the appropriate files to update your graphics adapter.</p>
