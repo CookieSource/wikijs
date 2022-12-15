@@ -2,7 +2,7 @@
 title: Gaming
 description: Setup your RebornOS for gaming
 published: true
-date: 2022-12-15T22:10:31.351Z
+date: 2022-12-15T22:17:10.032Z
 tags: gaming, games
 editor: ckeditor
 dateCreated: 2022-12-14T09:46:09.728Z
@@ -11,11 +11,11 @@ dateCreated: 2022-12-14T09:46:09.728Z
 <h1>Gaming</h1>
 <p>The following information is a general guideline to prepare your RebornOS installation to be able to support playing games, including games that may only be allowed to run on Windows.</p>
 <h2>Requirements</h2>
-<p>Before you can start playing 3D games you should be familiar with your basic system hardware. &nbsp;One way to view the hardware configuration is to use the <i>inxi</i> application to see what the system's hardware capabilities are. &nbsp;Some systems might not have a discreet graphics adapter, and thus your gaming experience might not be as good or enjoyable without having one. &nbsp;Remember it is very important to always check minimum and recommended game requirements first, with the game publisher before attempting game play. &nbsp;If your system doesn't meet minimum system requirements, most likely that game may not run, or it might run, but be very crippled and game play will be impacted. &nbsp;Also, be aware that not all games can run on Linux, mostly due to the game developer's <a href="https://areweanticheatyet.com/">Anti-Cheat</a> implementation, (not due to lack of hardware requirements). &nbsp; But, overall you should still be able to play a large variety of games, some less graphic demanding games, or even adjust the settings to be able to launch and play 3D games with some reasonable enjoyment.</p>
+<p>Before you can start playing 3D games you should be familiar with your basic system hardware. &nbsp;One way to view the hardware configuration is to use the <i>inxi</i> application to see what the system's hardware capabilities are. &nbsp;Some systems might not have a <i>discrete graphics adapter,</i> and thus your gaming experience might not be as good or enjoyable without having one. &nbsp;Remember it is very important to always check minimum and recommended game requirements first, with the game publisher before attempting game play. &nbsp;If your system doesn't meet minimum system requirements, most likely that game may not run, or it might run, but be very crippled and game play will be impacted. &nbsp;Also, be aware that not all games can run on Linux, mostly due to the game developer's <a href="https://areweanticheatyet.com/">Anti-Cheat</a> implementation, (not due to lack of hardware requirements). &nbsp; But, overall you should still be able to play a large variety of games, some less graphic demanding games, or even adjust the settings to be able to launch and play 3D games with some reasonable enjoyment.</p>
 <p>Run the <i>inxi</i> application to provide you with that basic information. &nbsp;You would want to note the CPU, CPU chipset or architecture, the amount of system RAM, the graphics adapter, and lastly your network, to be able to verify and check what the minimum or recommended hardware is needed to be able to play that or other similar game. &nbsp;It's also good to know this information if you need to do further troubleshooting, in case you experience a problem running a game.</p>
 <pre><code class="language-plaintext">inxi -b</code></pre>
 <p>After viewing the information you should at least know the system's hardware specifications and can now start installing the necessary files to allow your RebornOS to be gaming enabled.</p>
-<p>Also, if you find your system doesn't meet the minimum graphics card requirement or your favorite games isn't supported due to Anti-Cheat, there might still be a way to play 3D games by streaming them over the network. &nbsp;Solutions such as Steam (has the ability to stream over a network), <a href="https://discord.com/channels/805020018537660416/805020019083313156/1025681457605263381">GeForce NOW</a>, and Parsec are other examples.&nbsp;</p>
+<p>If you find your system doesn't meet the minimum graphics card requirement or your favorite games isn't supported due to Anti-Cheat, there might still be a way to play 3D games by streaming them over the network. &nbsp;Solutions such as Steam (has the ability to stream over a network), <a href="https://discord.com/channels/805020018537660416/805020019083313156/1025681457605263381">GeForce NOW</a>, and Parsec are other examples.&nbsp;</p>
 <h2>Updating the system</h2>
 <p>Run pacman to update the repository:</p>
 <pre><code class="language-plaintext">sudo pacman -Syy</code></pre>
