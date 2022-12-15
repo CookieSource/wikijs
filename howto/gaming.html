@@ -2,7 +2,7 @@
 title: Gaming
 description: Setup your RebornOS for gaming
 published: true
-date: 2022-12-14T22:28:18.140Z
+date: 2022-12-15T21:26:38.448Z
 tags: gaming games
 editor: ckeditor
 dateCreated: 2022-12-14T09:46:09.728Z
@@ -11,10 +11,11 @@ dateCreated: 2022-12-14T09:46:09.728Z
 <h1>Gaming</h1>
 <p>The following information is a general guideline to prepare your RebornOS installation to be able to support playing games, including games that may only be allowed to run on Windows.</p>
 <h2>Requirements</h2>
-<p>Before you can start playing you should be familiar with your basic system hardware. &nbsp;One way to view the hardware configuration is to use the inxi application to see what the system's hardware capabilities are. &nbsp;Some systems might not have a discreet graphics adapter, and thus your gaming experience might not be as good or enjoyable without having one. &nbsp;Remember it is very important to always check minimum and recommended game requirements first, with the game publisher, before attempting game play. &nbsp;If your system doesn't meet minimum system requirements, most likely that game may not run, or it might run, but be very crippled and game play will be impacted. &nbsp;Also, be aware that not all games can run on Linux, mostly due to the game developer's Anti-Cheat implementation, (not due to lack of hardware requirements). &nbsp; But, overall you should still be able to play some less graphic demanding games or adjust the settings to be able to launch and play with some reasonable enjoyment.</p>
-<p>Run the inxi application to provide you with that basic information. &nbsp;You would want to note the CPU, CPU chipset or architecture, the amount of system RAM, and the graphics adapter, and lastly your network to be able to verify and check what the minimum or recommended hardware is needed to be able to play that or other similar game. &nbsp;It's also good to know this information if you need to do further troubleshooting, in case you experience a problem running a game.</p>
+<p>Before you can start playing 3D games you should be familiar with your basic system hardware. &nbsp;One way to view the hardware configuration is to use the <i>inxi</i> application to see what the system's hardware capabilities are. &nbsp;Some systems might not have a discreet graphics adapter, and thus your gaming experience might not be as good or enjoyable without having one. &nbsp;Remember it is very important to always check minimum and recommended game requirements first, with the game publisher before attempting game play. &nbsp;If your system doesn't meet minimum system requirements, most likely that game may not run, or it might run, but be very crippled and game play will be impacted. &nbsp;Also, be aware that not all games can run on Linux, mostly due to the game developer's <a href="https://areweanticheatyet.com/">Anti-Cheat</a> implementation, (not due to lack of hardware requirements). &nbsp; But, overall you should still be able to play a large variety of games, some less graphic demanding games, or even adjust the settings to be able to launch and play 3D games with some reasonable enjoyment.</p>
+<p>Run the <i>inxi</i> application to provide you with that basic information. &nbsp;You would want to note the CPU, CPU chipset or architecture, the amount of system RAM, the graphics adapter, and lastly your network, to be able to verify and check what the minimum or recommended hardware is needed to be able to play that or other similar game. &nbsp;It's also good to know this information if you need to do further troubleshooting, in case you experience a problem running a game.</p>
 <pre><code class="language-plaintext">inxi -b</code></pre>
 <p>After viewing the information you should at least know the system's hardware specifications and can now start installing the necessary files to allow your RebornOS to be gaming enabled.</p>
+<p>Also, if you find your system doesn't meet the minimum graphics card requirement or your favorite games isn't supported due to Anti-Cheat, there might still be a way to play 3D games by streaming them over the network. &nbsp;Solutions such as Steam (has the ability to stream over a network), <a href="https://discord.com/channels/805020018537660416/805020019083313156/1025681457605263381">GeForce NOW</a>, and Parsec are other examples.&nbsp;</p>
 <h2>Updating the system</h2>
 <p>You will need to have the multilib repository enabled, it should already be enabled and is needed for use of 32-bit libraries. Check the /etc/pacman.conf file:</p>
 <pre><code class="language-plaintext">$ cat /etc/pacman.conf | grep multilib
@@ -32,7 +33,7 @@ dateCreated: 2022-12-14T09:46:09.728Z
 <p>Intel Graphics, if you have a Skylake CPU or newer the iGPU will be able to use Vulkan, if Haswell, there is minimal Vulkan support and gaming performance may be lacking.</p>
 <pre><code class="language-plaintext">sudo pacman -S lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader</code></pre>
 <p>Next we normally will install Steam, Heroic Games Launcher, Lutris, and Wine to be able to support the majority of the game libraries available as well as support other game utilities or applications under Wine.</p>
-<p>Steam - there is an extensive game library from Valve Software and they have their Proton libraries to enable Windows game capability:</p>
+<p>Steam - there is an extensive game library from Valve Software and they have their Proton libraries to enable Windows game capability, including game streaming. &nbsp;You should check that your system meets the <a href="https://github.com/ValveSoftware/steam-for-linux#readme">minimum system requirements</a><a href="https://github.com/ValveSoftware/steam-for-linux">.</a></p>
 <pre><code class="language-plaintext">sudo pacman -S steam </code></pre>
 <p>Heroic Games Launcher - this is an all-in-one game launcher and has extensive capabilities including, but not limited to Epic Games Launcher, GOG, syncing your accounts, Epic and GOG game stores, support for Legacy (command line which allows some support for EasyAntiCheat, and BattleEye AntiCheat in some titles), Wine Manager (Wine-GE, Proton-GE), ability to install other games as well as link your existing installed Steam library games.<br><br>For Heroic Game Launcher, install via Gnome Software store, AUR, Flatpak, or use the AppImage.</p>
 <p>Example using AUR:</p>
@@ -47,11 +48,12 @@ sudo flatpak install com.heroicgameslauncher.hgl</code></pre>
 <p>Remember, check the game requirements with your system information to see if your system meets the minimum.<br>Another good resource is to look at the <a href="https://protondb.com">ProtonDB</a> for more information about game compatibility.&nbsp;</p>
 <p>If you encounter troubles, have questions, or just a comment about your experience, please post in the <a href="https://rebornos.discourse.group">RebornOS Discourse Forum</a>, or for more immediate issues please visit the RebornOS Discord under 'gaming' or ‘help and support’ for assistance.&nbsp;</p>
 <p>The following links were used and referenced to write this:</p>
-<p>https://winehq.org</p>
-<p>https://github.com/doitsujin/dxvk</p>
-<p>https://heroicgameslauncher.com</p>
-<p>https://lutris.net</p>
-<p>https://steamcommunity.com/sharedfiles/filedetails/?l=german&amp;id=1787799592</p>
-<p>https://github.com/lutris/docs</p>
-<p>https://github.com/FeralInteractive/gamemode</p>
+<p><a href="https://winehq.org">https://winehq.org</a></p>
+<p><a href="https://github.com/ValveSoftware/steam-for-linux">https://github.com/ValveSoftware/steam-for-linux</a></p>
+<p><a href="https://github.com/doitsujin/dxvk">https://github.com/doitsujin/dxvk</a></p>
+<p><a href="https://heroicgameslauncher.com">https://heroicgameslauncher.com</a></p>
+<p><a href="https://lutris.net">https://lutris.net</a></p>
+<p><a href="https://steamcommunity.com/sharedfiles/filedetails/?l=german&amp;id=1787799592">https://steamcommunity.com/sharedfiles/filedetails/?l=german&amp;id=1787799592</a></p>
+<p><a href="https://github.com/lutris/docs">https://github.com/lutris/docs</a></p>
+<p><a href="https://github.com/FeralInteractive/gamemode">https://github.com/FeralInteractive/gamemode</a></p>
 <p>&nbsp;</p>
