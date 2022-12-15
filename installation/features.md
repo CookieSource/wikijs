@@ -2,7 +2,7 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2022-08-23T07:58:15.686Z
+date: 2022-12-15T11:37:50.451Z
 tags: installation, features, options
 editor: markdown
 dateCreated: 2021-09-23T12:50:55.847Z
@@ -10,35 +10,32 @@ dateCreated: 2021-09-23T12:50:55.847Z
 
 We offer a lot of features during installation they'll be listed by category.
 
-## Desktops
+- [**Desktops**](/customization/desktops)
+	*Currently we offer the following desktops:*
+	1.  Budgie
+	2.  Cinnamon
+	3.  Deepin
+	4.  GNOME
+	5.  KDE Plasma
+	6.  LXDE
+	7.  LXQt
+	8.  MATE
+	9.  UKUI
+	10.  Xfce
+	11.  Regolith
+	12.  Cutefish
+	13.  Trinity
+	14. Enlightenment
 
-Currently we offer the following desktops. [click here for a quick overview](/en/customization/desktops).
+	#### Window managers
+	>	Note that window managers are for advanced users and you'll have to configure them yourself
+	{.is-warning}
 
-1.  Budgie
-2.  Cinnamon
-3.  Deepin
-4.  GNOME
-5.  KDE Plasma
-6.  LXDE
-7.  LXQt
-8.  MATE
-9.  UKUI
-10.  Xfce
-11.  Regolith
-12.  Cutefish
-13.  Trinity
-14. Enlightenment
+	We offer the following window managers:
+	1.  [i3](https://i3wm.org/docs/userguide)
+	2.  [Openbox](http://openbox.org/wiki/Help:Contents)
 
-## Window managers
-
-We offer the following window managers. (Note that window managers are for advanced users and you'll have to configure them yourself)
-
-Click on the window managers  to be taken to their user guides/wiki.
-
-1.  [i3](https://i3wm.org/docs/userguide)
-2.  [Openbox](http://openbox.org/wiki/Help:Contents)
-
-More window managers coming soon
+	More window managers are coming soon.
 
 ## Software
 
@@ -71,6 +68,7 @@ We offer the following optional software & features.
 -   Vivaldi
 
 ## Universal package management
+*Main page: [customization/universal-package-management](/customization/universal-package-management)*
 
 We support the following universal solutions.
 
@@ -78,7 +76,6 @@ We support the following universal solutions.
 -   [Flatpak](https://flatpak.org)
 -   [Appimage](https://appimage.org)
 
-[/customization/universal-package-management](/en/customization/universal-package-management)
 
 <!---## Theming
 
@@ -97,16 +94,16 @@ We offer the option to select your preferred shell.
 [/customization/shell](/en/customization/shell)
 --> 
 ## Kernel selection
+*Main page: [customization/kernelcomparison](/en/customization/kernelcomparison)*
 
-We allow you to select your preferred kernel during installation. To learn more about the difference of kernels [click here](/en/customization/kernelcomparison)
-
+We allow you to select your preferred kernel during installation.
 1.  [Linux kernel](https://kernel.org) (The default kernel)
 2.  [LTS kernel](https://kernel.org) (Long time support release of the default kernel)
 3.  [Zen kernel](https://github.com/zen-kernel/zen-kernel) (Kernel for extra performance)
 4.  [Hardened kernel](https://github.com/anthraxx/linux-hardened) (Kernel with extra security features)
 
 ## File system
-
+*Main page: [customization/file-system-comparison](/customization/file-system-comparison)*
 We offer the following file systems during installation.
 
 1.  Ext4
@@ -114,8 +111,6 @@ We offer the following file systems during installation.
 3.  JFS
 4.  XFS
 5.  F2FS
-
-[/customization/file-system-comparison](/en/customization/file-system-comparison)
 
 ## After install
 
