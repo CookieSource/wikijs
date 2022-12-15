@@ -2,7 +2,7 @@
 title: Gaming
 description: Setup your RebornOS for gaming
 published: true
-date: 2022-12-15T22:04:42.184Z
+date: 2022-12-15T22:07:45.661Z
 tags: gaming, games
 editor: ckeditor
 dateCreated: 2022-12-14T09:46:09.728Z
@@ -27,7 +27,7 @@ dateCreated: 2022-12-14T09:46:09.728Z
 <p>Intel Graphics, if you have a Skylake CPU or newer the iGPU will be able to use Vulkan, if Haswell, there is minimal Vulkan support and gaming performance may be lacking.</p>
 <pre><code class="language-plaintext">sudo pacman -S lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader</code></pre>
 <p>After the graphic updates, perform a system reboot. &nbsp;Next, we normally will install Steam, Heroic Games Launcher, Lutris, and Wine to be able to support the majority of the game libraries available as well as support other game utilities or applications under Wine.</p>
-<p>Steam - there is an extensive game library from Valve Software and they have their Proton libraries to enable Windows game capability, including game streaming. &nbsp;You should check that your system meets the <a href="https://github.com/ValveSoftware/steam-for-linux#readme">minimum system requirements</a><a href="https://github.com/ValveSoftware/steam-for-linux">.</a></p>
+<p>Steam - there is an extensive game library from Valve Software and they have their Proton libraries to enable Windows game capability, including game streaming. &nbsp;You should check that your system meets the <a href="https://github.com/ValveSoftware/steam-for-linux#readme">minimum system requirements.</a></p>
 <pre><code class="language-plaintext">sudo pacman -S steam </code></pre>
 <p>Heroic Games Launcher - this is an all-in-one game launcher and has extensive capabilities including, but not limited to Epic Games Launcher, GOG, syncing your accounts, Epic and GOG game stores, support for Legacy (command line which allows some support for EasyAntiCheat, and BattleEye AntiCheat in some titles), Wine Manager (Wine-GE, Proton-GE), ability to install other games as well as link your existing installed Steam library games.<br><br>For Heroic Game Launcher, install via Gnome Software store, AUR, Flatpak, or use the AppImage.</p>
 <p>Example using AUR:</p>
