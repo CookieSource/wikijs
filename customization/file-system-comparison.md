@@ -2,7 +2,7 @@
 title: File system comparison
 description: Comparison the different file systems that we offer
 published: true
-date: 2022-10-20T09:30:37.074Z
+date: 2022-12-17T13:57:23.647Z
 tags: installation, customization, file system, filesystem
 editor: markdown
 dateCreated: 2021-10-05T10:11:41.501Z
@@ -15,17 +15,17 @@ Ext4, in most cases leads to the best results in terms of compatibility and stab
 
 # Legend
 
-**CoW:** Copy on write, a technique to greatly reduce disk space usage in trade off for performance.
+**CoW**: Copy on write, a technique to greatly reduce disk space usage in trade off for performance.
 
-**Journaling:** A file system that keeps track of changes not yet committed to the file system so that in case of a power failure it gets back online faster and is less likely to suffer from data corruption.
+**Journaling**: A file system that keeps track of changes not yet committed to the file system so that in case of a power failure it gets back online faster and is less likely to suffer from data corruption.
 
-**Compression:** Compresses files on your disk to make them take up less space.
+**Compression**: Compresses files on your disk to make them take up less space.
 
-**Encryption:** Encrypts your disk securing it with an extra safety measure.
+**Encryption**: Encrypts your disk securing it with an extra safety measure.
 
-**Snapshots:** Are a way to roll back your system to an earlier state when something goes wrong. It's not a replacement for a proper backup solution.
+**Snapshots**: Are a way to roll back your system to an earlier state when something goes wrong. It's not a replacement for a proper backup solution.
 
-**Quota:** Set limits on how much disk space users/projects or programs can use.
+**Quota**: Set limits on how much disk space users/projects or programs can use.
 
 # Comparison
 Find an overview of the different features each file system offers 
@@ -71,11 +71,11 @@ Find an overview of the different features each file system offers 
 **JFS** is a stable, feature-rich file system that has not been publicized as much as some of the other Linux file systems. With optimizations, JFS is stable, CPU efficient and fast. In particular, VMWare sessions stand to benefit enormously from a properly optimized and defragmented, underlying JFS file system.
 
 **Special features**
--   Performance tuned for GNU/Linux.
+-   Performance tuned for Linux.
 -   Original design goals: Performance, Robustness, SMP.
 
 ## XFS
-**XFS** is a high-performance journaling file system created by Silicon Graphics, Inc. It is particularly proficient at parallel IO due to its allocation group based design. This enables extreme scalability of IO threads, filesystem bandwidth, file and filesystem size when spanning multiple storage devices.
+**XFS** is a high-performance journaling file system created by *Silicon Graphics, Inc.* It is particularly proficient at parallel IO due to its allocation group based design. This enables extreme scalability of IO threads, filesystem bandwidth, file and filesystem size when spanning multiple storage devices.
 
 **Special features**
 -   Capacity
