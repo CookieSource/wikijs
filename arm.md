@@ -2,7 +2,7 @@
 title: ARM
 description: ARM related guides & tutorials
 published: true
-date: 2022-10-24T20:14:33.797Z
+date: 2022-12-17T14:26:44.308Z
 tags: home, arm
 editor: markdown
 dateCreated: 2022-09-03T04:50:32.924Z
@@ -10,9 +10,11 @@ dateCreated: 2022-09-03T04:50:32.924Z
 
 Here you can find a list of guides & tutorials for arm. You can also try to search for them by using the **search** function of the wiki or by searching through [**tags**](/t)
 
-## Pages
+## Things to know about RebornOS ARM
+
+-   [**Features of RebornOS ARM**](/arm/features)
 -   [**Requirements for RebornOS ARM**](/arm/requirements)
 -   [**How to create a bootable storage medium**](/arm/bootmedia)
--   [**Features of RebornOS ARM**](/arm/features)
 -   [**Install RebornOS ARM on a SBC**](/arm/install)
 -   [**How to use android apps on your SBC**](/arm/androidapps)
+-   [**How to run RebornOS ARM in a VM on a x64-bit PC using QEMU/Virt-Manager**](https://wiki.rebornos.org/en/arm/run-arm-in-vm)
