@@ -2,7 +2,7 @@
 title: Home
 description: Guides and instructions for RebornOS
 published: true
-date: 2022-12-17T14:25:05.404Z
+date: 2022-12-17T14:25:27.894Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-16T13:13:20.030Z
@@ -19,8 +19,8 @@ This is a complimentary wiki for all things RebornOS. For other guides on Arch, 
 Instructions on installing RebornOS
 
 -   [Requirements](/en/installation/requirements) ***Everything required to install RebornOS***
--   [_Online Installation guide (Calamares installer)_](/en/installation/calamares-online) ***Instructions on how to install RebornOS online***
--   [_Offline Installation guide (Calamares installer)_](/en/installation/calamares-offline) ***Instructions on how to install RebornOS offline***
+-   [_Online Installation guide (Calamares installer)_](/en/installation/online) ***Instructions on how to install RebornOS online***
+-   [_Offline Installation guide (Calamares installer)_](/en/installation/offline) ***Instructions on how to install RebornOS offline***
 -   [Partitioning](/en/installation/partitioning) ***Manual & Custom partitioning instructions***
 -   [Features](/en/installation/features) ***A list of all the features our installer offers***
 -   [Troubleshooting](/en/installation/troubleshooting) ***Solutions to common installation issues.***
