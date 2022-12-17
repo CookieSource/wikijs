@@ -2,31 +2,32 @@
 title: Install RebornOS online
 description: 
 published: true
-date: 2022-12-08T11:37:59.939Z
+date: 2022-12-17T14:22:51.514Z
 tags: installer, calamares, online, install
 editor: markdown
 dateCreated: 2022-09-26T22:11:55.995Z
 ---
 
-> **Note**: This guide is for **Online Installation**. For the *Offline Installation* guide, [click here](/en/installation/calamares-offline).
+>  This guide is for **Online Installation**. For the *Offline Installation* guide, [click here](/en/installation/calamares-offline).
 
 > This guide assumes that you have already downloaded the Calamares-based RebornOS ISO, prepared a bootable live USB/DVD, and enabled booting from that USB/DVD in your boot priority settings (BIOS).
+{.is-info}
 
 When you first boot from the live ISO, you will see a menu of various boot modes:
 
 ![](/installer/online/calamares-grub-menu.png)
 
-Choose the first option (which is the default). If it fails to boot, choose the second option. And if that fails too, choose the third option.
+Choose the first option (which is the default). If it fails to boot, choose the second option, and if that fails too, choose the third option.
 
-When you boot successfully, you will be greeted with the ISO Welcome app: 
+When you boot successfully, you will be greeted by the Welcome app: 
 
 ![](/installer/online/calamares-welcome-1.jpeg)
 
-Ensure that you connected to the internet (WiFi or ethernet). Look for the appropriate settings in one of the buttons near the bottom right corner of your screen.
+Ensure that you connected to the internet (Wi-Fi or ethernet). Look for the appropriate settings in one of the buttons near the bottom right corner of your screen.
 
-> **Note**: Leave the *Update* toggle as it is (which is *on* by default), to update to the latest version of the installer before launching.
+> Leave the **Update** toggle as it is (which is *on* by default), to update to the latest version of the installer before launching.
 
-Click on the big *Install Online* button with the image of a blue icon:  
+Click on the big **Install Online** button with the image of a blue icon:  
 
 ![](/installer/online/calamares-install-online.png)
 
@@ -39,7 +40,7 @@ When the update process completes, the indicator turns to green color. You can e
 
 ![](/installer/online/calamares-install-update-complete.png)
 
-> **Note**: Due to the *partition* module taking time to load, the installer may take anywhere from a few seconds to a few minutes to show up. Please be patient while this is happening. You can run `tail -f ~/install.log` on a terminal to see more details about the launch if you suspect it is taking too long, or that something is wrong.
+> Due to the **partition** module taking time to load, the installer may take anywhere from a few seconds to a few minutes to show up. Please be patient while this is happening. You can run `tail -f ~/install.log` on a terminal to see more details about the launch if you suspect it is taking too long, or that something is wrong.
 
 ## 1\. Welcome
 
@@ -73,7 +74,7 @@ Here you can select any desktops or window managers that you would like to insta
 
 ![](/installer/online/calamares-install-desktop-select.png)
 
-Multiple selection requires you to hold down the `Ctrl` or `Shift` keys after selecting the first option:
+Multiple selection requires you to hold down the <kbd>Ctrl</kbd> or <kbd>Shift</kbd> keys after selecting the first option:
 
 > **Warning**: Selecting multiple desktops is *not* recommended. Desktops tend to overwrite themes and other files from one another, causing visual artifacts that break the appearance. Select multiple desktops **only** if you know what you are doing.
 > ![](/installer/online/calamares-install-multi-desktop-select.png)
@@ -90,9 +91,9 @@ The *Advanced* page consists of a heirarchy of categories and packages. The appe
 
 Advanced default collapsed
 
-> **Note**: Please *do not* be tempted to check entire categories for installation. This will result in bloating of your install and will end up using a lot of your storage. It is always a good idea to expand each category to select the smallest subset of packages that you want to install.
+> Please *do not* be tempted to check entire categories for installation. This will result in bloating of your install and will end up using a lot of your storage. It is always a good idea to expand each category to select the smallest subset of packages that you want to install.
 
-> **Warning**: We recommend beginners to not change anything in the *Minimal Base* category. It contains basic applications required for your RebornOS to function properly. Removing packages from here may result in a poorly functioning installation.
+> We recommend beginners to not change anything in the *Minimal Base* category. It contains basic applications required for your RebornOS to function properly. Removing packages from here may result in a poorly functioning installation.
 {.is-warning}
 
 Desktop related packages are always at the end. You can expand the desktop category to see a *Curated* list, and sometimes *Exhaustive* and *Miscellaneous* lists:
@@ -121,7 +122,7 @@ If you choose to modify your partitions, you will see options to select a filesy
 
 ## 7\. Users
 
-Here you can select a *username* and *password* for use on your RebornOS. You can also choose to reuse the same password for the `root` account:
+Here you can select a username and password for use on your RebornOS install. You can also choose to reuse the same password for the `root` account:
 
 ![](/installer/online/calamares-install-users.png)
 
