@@ -2,19 +2,18 @@
 title: Contributors guidelines
 description: Guides and guideliens for contributors to the Wiki and other RebornOS projects.
 published: true
-date: 2022-12-17T14:13:29.519Z
+date: 2022-12-17T14:15:13.790Z
 tags: how to, guides, contribution, contributor, guidelines
 editor: markdown
 dateCreated: 2021-12-31T14:27:25.360Z
 ---
 
 # How to contribute to the wiki
-
 Want to contribute to the Wiki? Here you can find the guidelines.
 
 The wiki provides several ways to edit.  
 Including a visual editor, markdown and source code.  
-You can find instructions on how to use the visual editor on the [WikiJS' own wiki.](https://docs.requarks.io/#user-guide)
+You can find instructions on how to use the visual editor on [WikiJS' own wiki](https://docs.requarks.io/#user-guide).
 
 # Formatting
 
@@ -26,39 +25,31 @@ You can find instructions on how to use the visual editor on the [WikiJS' own wi
 
 The wiki is divided into different categories if you write a new page you need to place it in the correct category.
 
-Below a breakdown of each category and what should be placed in it.
+Below is a breakdown of each category and what should be placed in it.
 
 ## Installation
-
-All guides relating to Installation should go in this category.
+All guides relating to installation should go in this category.
 
 ## Apps
-
 Here you can place tutorials and guides about different apps.
 
 ## How to
-
 How to use different Linux tools. Application tutorials should be placed in apps.
 
 ## Customization
-
-Here you should post tutorials on customizing various aspects of the Linux system such as.
-
--   Theming of desktops.
--   Configuration of window managers.
--   Changing of boot loaders.
--   Changing the default shell.
+Here you should post tutorials on customizing various aspects of the Linux system such as:
+-   Theming of desktops
+-   Configuration of window managers
+-   Changing of boot loaders
+-   Changing the default shell
 
 ## Desktops & Window managers
-
 This category contains one page for every Desktop & Window manager. 
 
 ## ARM
-
 The ARM category is for writing any content that relates to ARM specifically.
 
 ## Archive
-
 If a page is up for deletion because it's no longer relevant it should be moved to archive.
 
 The archive category holds all pages that no longer have any relevance. They're archived in case they become relevant again.
