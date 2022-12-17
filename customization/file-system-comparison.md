@@ -1,8 +1,8 @@
 ---
 title: File system comparison
-description: Comparison the different file systems that we offer
+description: Comparison of the different file systems that we offer
 published: true
-date: 2022-12-17T13:57:23.647Z
+date: 2022-12-17T14:10:32.981Z
 tags: installation, customization, file system, filesystem
 editor: markdown
 dateCreated: 2021-10-05T10:11:41.501Z
