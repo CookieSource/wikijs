@@ -2,7 +2,7 @@
 title: How to
 description: 
 published: true
-date: 2022-12-15T22:30:09.251Z
+date: 2022-12-18T07:27:29.401Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-23T13:47:45.654Z
@@ -26,7 +26,7 @@ Here you can find a list of guides & tutorials. You can also try to search for t
 -   [**Use Inxi**](/howto/inxi)
 -   [**Use i3**](/howto/use-i3)
 -   [**View content of the reborn-mirrorlist file**](/howto/reborn-mirrorlist-content)
--   [**Dual-boot Windows with RebornOS**](/howto/bootloader)
+-   [**Dual-boot Windows with RebornOS**](/howto/dual-boot-windows)
 -   [**Add the RebornOS repository**](/howto/add-rebornos-repo)
 -   [**Use Zram instead of Zswap**](/howto/use-zram-instead-of-zswap)
 -   [**Convert ext2, ext3, ext4 or ReiserFS to Btrfs**](/howto/convert-ext2-ext3-ext4-or-reiserfs-to-btrfs)
