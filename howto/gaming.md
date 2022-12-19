@@ -2,7 +2,7 @@
 title: Gaming
 description: Setup your RebornOS for gaming
 published: true
-date: 2022-12-17T13:59:03.793Z
+date: 2022-12-19T05:37:24.449Z
 tags: gaming, games
 editor: markdown
 dateCreated: 2022-12-14T09:46:09.728Z
@@ -24,7 +24,7 @@ inxi -b
 
 After viewing the information you should at least know the system's hardware specifications and can now start installing the necessary files to allow your RebornOS to be gaming enabled.
 
-If you find your system doesn't meet the minimum graphics card requirement or your favorite games aren't supported due to Anti-Cheat, there might still be a way to play 3D games by streaming them over the network.  Solutions such as Steam (has the ability to stream over a network), [GeForce NOW](https://discord.com/channels/805020018537660416/805020019083313156/1025681457605263381), and Parsec are other examples. 
+If you find your system doesn't meet the minimum graphics card requirement or your favorite games aren't supported due to Anti-Cheat, there might still be a way to play 3D games by streaming them over the network.  Solutions such as Steam (has the ability to stream over a network), [GeForce NOW](https://wiki.rebornos.org/en/howto/gaming/geforcenow), and Parsec are other examples. 
 
 ## Updating the system
 
