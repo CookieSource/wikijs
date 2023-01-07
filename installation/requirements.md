@@ -2,7 +2,7 @@
 title: Requirements
 description: Here you can find the requirements for RebornOS
 published: true
-date: 2022-12-08T11:28:45.950Z
+date: 2023-01-07T09:14:29.694Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-23T12:39:54.260Z
@@ -56,4 +56,4 @@ We also have a video tutorial to do it on Windows: [RebornOS - How to create ins
 2.  Select NVIDIA if you have an NVIDIA graphics card or select boot install medium if you don't!
 
 ---
-Now continue with installing [online](/installation/calamares-online) or [offline](/installation/calamares-offline).
+Now continue with installing [online](https://wiki.rebornos.org/en/installation/online) or [offline](https://wiki.rebornos.org/en/installation/offline).
