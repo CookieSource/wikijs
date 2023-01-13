@@ -2,63 +2,62 @@
 title: Gaming
 description: Setup your RebornOS for gaming
 published: true
-date: 2023-01-13T20:43:47.900Z
+date: 2023-01-13T20:44:32.416Z
 tags: gaming, games
 editor: ckeditor
 dateCreated: 2022-12-14T09:46:09.728Z
 -->
 
-<h1 class="toc-header" id="gaming"> Gaming</h1>
+<h1>Gaming</h1>
 <p>The following information is a general guideline to prepare your RebornOS installation to be able to support playing games, including games that may only be allowed to run on Windows.</p>
-<h2 class="toc-header" id="requirements"> Requirements</h2>
-<p>Before you can start playing 3D games you should be familiar with your basic system hardware. &nbsp;One way to view the hardware configuration is to use the <em>inxi</em> application to see what the system's hardware capabilities are. &nbsp;Some systems might not have a <em>discrete graphics adapter,</em> and thus your gaming experience might not be as good or enjoyable without having one. &nbsp;Remember it is very important to always check minimum and recommended game requirements first, with the game publisher before attempting game play. &nbsp;If your system doesn't meet minimum system requirements, most likely that game may not run, or it might run, but be very crippled and game play will be impacted. &nbsp;Also, be aware that not all games can run on Linux, mostly due to the game developer's <a class="is-external-link" href="https://areweanticheatyet.com/">Anti-Cheat</a> implementation, (not due to lack of hardware requirements). &nbsp; But, overall you should still be able to play a large variety of games, some less graphic demanding games, or even adjust the settings to be able to launch and play 3D games with some reasonable enjoyment.</p>
-<p>Run the <em>inxi</em> application to provide you with that basic information. &nbsp;You would want to note the CPU, CPU chipset or architecture, the amount of system RAM, the graphics adapter, and lastly your network, to be able to verify and check what the minimum or recommended hardware is needed to be able to play that or other similar game. &nbsp;It's also good to know this information if you need to do further troubleshooting, in case you experience a problem running a game.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">inxi -b
+<h2>Requirements</h2>
+<p>Before you can start playing 3D games you should be familiar with your basic system hardware. &nbsp;One way to view the hardware configuration is to use the <i>inxi</i> application to see what the system's hardware capabilities are. &nbsp;Some systems might not have a <i>discrete graphics adapter,</i> and thus your gaming experience might not be as good or enjoyable without having one. &nbsp;Remember it is very important to always check minimum and recommended game requirements first, with the game publisher before attempting game play. &nbsp;If your system doesn't meet minimum system requirements, most likely that game may not run, or it might run, but be very crippled and game play will be impacted. &nbsp;Also, be aware that not all games can run on Linux, mostly due to the game developer's <a href="https://areweanticheatyet.com/">Anti-Cheat</a> implementation, (not due to lack of hardware requirements). &nbsp; But, overall you should still be able to play a large variety of games, some less graphic demanding games, or even adjust the settings to be able to launch and play 3D games with some reasonable enjoyment.</p>
+<p>Run the <i>inxi</i> application to provide you with that basic information. &nbsp;You would want to note the CPU, CPU chipset or architecture, the amount of system RAM, the graphics adapter, and lastly your network, to be able to verify and check what the minimum or recommended hardware is needed to be able to play that or other similar game. &nbsp;It's also good to know this information if you need to do further troubleshooting, in case you experience a problem running a game.</p>
+<pre><code class="language-plaintext">inxi -b
 </code></pre>
 <p>After viewing the information you should at least know the system's hardware specifications and can now start installing the necessary files to allow your RebornOS to be gaming enabled.</p>
-<p>If you find your system doesn't meet the minimum graphics card requirement or your favorite games aren't supported due to Anti-Cheat, there might still be a way to play 3D games by streaming them over the network. &nbsp;Solutions such as Steam (has the ability to stream over a network), <a class="is-internal-link is-valid-page" href="/en/howto/gaming/geforcenow">GeForce NOW</a>, and Parsec are other examples.</p>
-<h2 class="toc-header" id="updating-the-system"> Updating the system</h2>
+<p>If you find your system doesn't meet the minimum graphics card requirement or your favorite games aren't supported due to Anti-Cheat, there might still be a way to play 3D games by streaming them over the network. &nbsp;Solutions such as Steam (has the ability to stream over a network), <a href="/en/howto/gaming/geforcenow">GeForce NOW</a>, and Parsec are other examples.</p>
+<h2>Updating the system</h2>
 <p>Run pacman to update the repository:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo pacman -Syy
+<pre><code class="language-plaintext">sudo pacman -Syy
 </code></pre>
 <p>Update the graphics adapter files, specifically DXVK, (DirectX Vulkan), which are necessary to support Windows games, thus depending on the result of your inxi -b output choose the appropriate files to update your graphics adapter.</p>
 <p>AMD Graphics:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
+<pre><code class="language-plaintext">sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
 </code></pre>
-<p>For Nvidia, you might need to <a class="is-external-link" href="https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/">check what driver version</a> your card needs if it is from an older architecture (GTX 900 or older) thus you may need 470.xx or 390.xx driver packages:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
+<p>For Nvidia, you might need to <a href="https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/">check what driver version</a> your card needs if it is from an older architecture (GTX 900 or older) thus you may need 470.xx or 390.xx driver packages:</p>
+<pre><code class="language-plaintext">sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
 </code></pre>
 <p>Intel Graphics, if you have a Skylake CPU or newer the iGPU will be able to use Vulkan, if Haswell, there is minimal Vulkan support and gaming performance may be lacking.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo pacman -S lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader
+<pre><code class="language-plaintext">sudo pacman -S lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader
 </code></pre>
 <p>After the graphic updates, perform a system reboot. &nbsp;Next, we normally will install Steam, Heroic Games Launcher, Lutris, and Wine to be able to support the majority of the game libraries available as well as support other game utilities or applications under Wine.</p>
-<p>Steam - there is an extensive game library from Valve Software and they have their Proton libraries to enable Windows game capability, including game streaming. &nbsp;You should check that your system meets the <a class="is-external-link" href="https://github.com/ValveSoftware/steam-for-linux#readme">minimum system requirements.</a></p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo pacman -S steam 
+<p>Steam - there is an extensive game library from Valve Software and they have their Proton libraries to enable Windows game capability, including game streaming. &nbsp;You should check that your system meets the <a href="https://github.com/ValveSoftware/steam-for-linux#readme">minimum system requirements.</a></p>
+<pre><code class="language-plaintext">sudo pacman -S steam 
 </code></pre>
 <p>Heroic Games Launcher - this is an all-in-one game launcher and has extensive capabilities including, but not limited to Epic Games Launcher, GOG, syncing your accounts, Epic and GOG game stores, support for Legacy (command line which allows some support for EasyAntiCheat, and BattleEye AntiCheat in some titles), Wine Manager (Wine-GE, Proton-GE), ability to install other games as well as link your existing installed Steam library games.</p>
 <p>For Heroic Game Launcher, install via Gnome Software store, AUR, Flatpak, or use the AppImage.</p>
 <p>Example using AUR:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">yay -S heroic-games-launcher-bin
+<pre><code class="language-plaintext">yay -S heroic-games-launcher-bin
 </code></pre>
 <p>Flatpak:</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo pacman -S flatpak
+<pre><code class="language-plaintext">sudo pacman -S flatpak
 sudo flatpak install com.heroicgameslauncher.hgl
 </code></pre>
 <p>Lastly, it's recommended to have Wine, Lutris and Gamemode (Feral Interactive) to round out the full capability for gaming on Linux.</p>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo pacman -S wine-staging wine-gecko wine-mono lutris gamemode lib32-gamemode
+<pre><code class="language-plaintext">sudo pacman -S wine-staging wine-gecko wine-mono lutris gamemode lib32-gamemode
 </code></pre>
-<h2 class="toc-header" id="start-gaming"> Start gaming</h2>
+<h2>Start gaming</h2>
 <p>After installation, if not already done, you should create your logins for Steam, Epic Games, GOG, and Lutris. &nbsp;Then launch Steam to verify access to your game library, and do the same for Heroic Games Launcher to link your Epic Games Launcher and GOG libraries. &nbsp;If you have these existing accounts, HGL will populate both libraries and display your games. &nbsp;If you have local games already installed you can add them in HGL or in Lutris.</p>
-<p>Remember, check the game requirements with your system information to see if your system meets the minimum.<br>
-Another good resource is to look at the <a class="is-external-link" href="https://protondb.com">ProtonDB</a> for more information about game compatibility.</p>
-<p>If you encounter troubles, have questions, or just a comment about your experience, please post in the <a class="is-external-link" href="https://rebornos.discourse.group">RebornOS Discourse Forum</a>, or for more immediate issues please visit the RebornOS Discord under 'gaming' or ‘help and support’ for assistance.</p>
+<p>Remember, check the game requirements with your system information to see if your system meets the minimum.<br>Another good resource is to look at the <a href="https://protondb.com">ProtonDB</a> for more information about game compatibility.</p>
+<p>If you encounter troubles, have questions, or just a comment about your experience, please post in the <a href="https://rebornos.discourse.group">RebornOS Discourse Forum</a>, or for more immediate issues please visit the RebornOS Discord under 'gaming' or ‘help and support’ for assistance.</p>
 <p>Happy gaming!</p>
 <p>The following links were used and referenced to write this:</p>
-<p><a class="is-external-link" href="https://winehq.org">https://winehq.org</a></p>
-<p><a class="is-external-link" href="https://github.com/ValveSoftware/steam-for-linux">https://github.com/ValveSoftware/steam-for-linux</a></p>
-<p><a class="is-external-link" href="https://github.com/doitsujin/dxvk">https://github.com/doitsujin/dxvk</a></p>
-<p><a class="is-external-link" href="https://heroicgameslauncher.com">https://heroicgameslauncher.com</a></p>
-<p><a class="is-external-link" href="https://lutris.net">https://lutris.net</a></p>
-<p><a class="is-external-link" href="https://steamcommunity.com/sharedfiles/filedetails/?l=german&amp;id=1787799592">https://steamcommunity.com/sharedfiles/filedetails/?l=german&amp;id=1787799592</a></p>
-<p><a class="is-external-link" href="https://github.com/lutris/docs">https://github.com/lutris/docs</a></p>
-<p><a class="is-external-link" href="https://github.com/FeralInteractive/gamemode">https://github.com/FeralInteractive/gamemode</a></p>
+<p><a href="https://winehq.org">https://winehq.org</a><br><br><a href="https://wiki.archlinux.org/title/Vulkan">https://wiki.archlinux.org/title/Vulkan</a></p>
+<p><a href="https://github.com/ValveSoftware/steam-for-linux">https://github.com/ValveSoftware/steam-for-linux</a></p>
+<p><a href="https://github.com/doitsujin/dxvk">https://github.com/doitsujin/dxvk</a></p>
+<p><a href="https://heroicgameslauncher.com">https://heroicgameslauncher.com</a></p>
+<p><a href="https://lutris.net">https://lutris.net</a></p>
+<p><a href="https://steamcommunity.com/sharedfiles/filedetails/?l=german&amp;id=1787799592">https://steamcommunity.com/sharedfiles/filedetails/?l=german&amp;id=1787799592</a></p>
+<p><a href="https://github.com/lutris/docs">https://github.com/lutris/docs</a></p>
+<p><a href="https://github.com/FeralInteractive/gamemode">https://github.com/FeralInteractive/gamemode</a></p>
