@@ -2,7 +2,7 @@
 title: How to run RebornOS ARM in a VM
 description: Short article on how to run RebornOS ARM on an x86_64 pc using QEMU 
 published: true
-date: 2022-12-17T14:37:30.839Z
+date: 2023-02-04T23:17:45.595Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-14T15:15:37.027Z
@@ -69,6 +69,7 @@ sudo virsh net-autostart default
 This guide is only the minimal for getting the ARM VM up and running in virt manager.  In order to tweak the settings or further configure the VM, additional information is available from the following links.
 
 - [QEMU](https://wiki.archlinux.org/title/QEMU) — ArchWiki
+- [QEMU Wiki](https://wiki.qemu.org/Documentation/Platforms/ARM) - QEMU ARM
 - [Virt manager website](https://virt-manager.org)
 - [Libvirt website](https://www.libvirt.org/)
 <br>
