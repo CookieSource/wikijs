@@ -2,20 +2,22 @@
 title: How to update the SPI flash on Rock 5a or 5b
 description: How to update the SPI flash on Rock 5a or 5b
 published: true
-date: 2023-02-04T21:57:55.013Z
+date: 2023-02-04T22:35:48.737Z
 tags: arm, rock 5
 editor: ckeditor
 dateCreated: 2023-02-04T21:06:25.948Z
 -->
 
 <h1>Update SPI flash on Radxa Rock 5B</h1>
-<p>In order to prepare the Rock5B a few initial steps need to be performed. &nbsp;These steps are needed in order to ensure a clean image write to the target, and ensure the device is able to use the image file.</p>
+<p>In order to prepare the Rock5B to be able to boot from the NVMe SSD a few initial steps need to be performed.<br>&nbsp;</p>
 <ul>
-  <li>Obtain the boot image file from the Radxa link below.<br><code>wget https://dl.radxa.com/rock5/sw/images/others/zero.img.gz</code></li>
-  <li>Extract the boot image.<br><code>gzip -d zero.img.gz</code></li>
-  <li>Write the boot image to the Flash memory or storage medium using the linux <code>dd</code> command.<br><code>sudo dd if=zero.img of=/dev/mtdblock0</code><br>&nbsp;</li>
+  <li>Obtain the zero SPI image file from the Radxa link below.<br><code>wget https://dl.radxa.com/rock5/sw/images/others/zero.img.gz</code></li>
+  <li>Extract the zero SPI image.<br><code>gzip -d zero.img.gz</code></li>
+  <li>Write the zero SPI image to the target device using the linux <code>dd</code> command.<br><code>sudo dd if=zero.img of=/dev/mtdblock0</code></li>
+  <li>Wait ~5 minutes for the command to complete, then check for the correct md5 validation checksum.<br><code>sudo md5sum /dev/mtdblock0</code><br><code>2c7ab85a893283e98c931e9511add182</code></li>
+  <li>Obtain the Rock 5b SPI image and write it to the target device.<br><code>wget https://dl.radxa.com/rock5/sw/images/loader/rock-5b/release/rock-5b-spi-image-g49da44e116d.img</code><br><code>sudo dd if=rock-5b-spi-image-g49da44e116d.img of=/dev/mtdblock0</code></li>
+  <li>Again, wait ~5 minutes for the command to complete, then check for the correct md5 validation checksum.<br><code>sudo md5sum /dev/mtdblock0</code><br><code>46de85de37b8e670883e6f6a8bb95776</code></li>
+  <li>Once verified.<br><code>sync</code><br><code>reboot</code><br><br>&nbsp;</li>
 </ul>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <h1>Update SPI flash on Radxa Rock 5A</h1>
 <p><strong>Coming soon</strong></p>
