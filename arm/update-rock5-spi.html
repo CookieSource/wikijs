@@ -2,20 +2,20 @@
 title: How to update the SPI flash on Rock 5a or 5b
 description: How to update the SPI flash on Rock 5a or 5b
 published: true
-date: 2023-02-04T22:45:35.684Z
+date: 2023-02-05T20:59:24.496Z
 tags: arm, rock 5
 editor: ckeditor
 dateCreated: 2023-02-04T21:06:25.948Z
 -->
 
 <h1>Update SPI flash on Radxa Rock 5B</h1>
-<p>In order to prepare the Rock5B to be able to boot from the NVMe SSD several steps need to be performed.<br>&nbsp;</p>
+<p>In order to prepare the Rock5B to be able to boot from the NVMe SSD several steps need to be performed.<br>These steps are to be performed when the Rock 5B is booted into Linux (i.e. from eMMC or SD card) with network connectivity.<br>If you don't have network connectivity then just copy the image files to other external media (i.e. USB stick) to be able to access them.</p>
 <ul>
-  <li>Obtain the zero SPI image file from the Radxa link below.<br><code>wget https://dl.radxa.com/rock5/sw/images/others/zero.img.gz</code></li>
+  <li>Obtain both, the Rock 5 zero SPI and the 5b SPI image files from the Radxa links below.<br><code>wget https://dl.radxa.com/rock5/sw/images/others/zero.img.gz</code><br><code>wget https://dl.radxa.com/rock5/sw/images/loader/rock-5b/release/rock-5b-spi-image-g49da44e116d.img</code></li>
   <li>Extract the zero SPI image.<br><code>gzip -d zero.img.gz</code></li>
   <li>Write the zero SPI image to the target device using the linux <code>dd</code> command.<br><code>sudo dd if=zero.img of=/dev/mtdblock0</code></li>
   <li>Wait ~5 minutes for the command to complete, then check for the correct md5 validation checksum.<br><code>sudo md5sum /dev/mtdblock0</code><br><code>2c7ab85a893283e98c931e9511add182</code></li>
-  <li>Obtain the Rock 5b SPI image and write it to the target device.<br><code>wget https://dl.radxa.com/rock5/sw/images/loader/rock-5b/release/rock-5b-spi-image-g49da44e116d.img</code><br><code>sudo dd if=rock-5b-spi-image-g49da44e116d.img of=/dev/mtdblock0</code></li>
+  <li>Next, use the Rock 5b SPI image and write it to the target device.<br><code>sudo dd if=rock-5b-spi-image-g49da44e116d.img of=/dev/mtdblock0</code></li>
   <li>Again, wait ~5 minutes for the command to complete, then check for the correct md5 validation checksum.<br><code>sudo md5sum /dev/mtdblock0</code><br><code>46de85de37b8e670883e6f6a8bb95776</code></li>
   <li>Once verified.<br><code>sync</code><br><code>reboot</code><br><br>&nbsp;</li>
 </ul>
