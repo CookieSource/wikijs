@@ -2,14 +2,14 @@
 title: How to update the SPI flash on Rock 5a or 5b
 description: How to update the SPI flash on Rock 5a or 5b
 published: true
-date: 2023-02-05T21:22:21.298Z
+date: 2023-02-05T21:29:44.797Z
 tags: arm, rock 5
 editor: ckeditor
 dateCreated: 2023-02-04T21:06:25.948Z
 -->
 
 <h1>Update SPI flash on Radxa Rock 5B</h1>
-<p>In order to prepare the Rock5B to be able to boot from the NVMe SSD several steps need to be performed.<br>These steps are to be performed when the Rock 5B is booted into Linux (i.e. from eMMC or SD card) with network connectivity.<br>If you don't have network connectivity then just copy the image files to other external media (i.e. USB stick) to be able to access them.</p>
+<p>In order to prepare the Rock5B to be able to boot from the NVMe SSD several steps need to be performed.<br>These steps are to be performed when the Rock 5B is booted into Linux (i.e. from eMMC or microSD card) with network connectivity.<br>If you don't have network connectivity then just copy the image files to other external media (i.e. USB stick) to be able to access them.</p>
 <ul>
   <li>Obtain both the Rock 5 zero and the 5b SPI image files from the Radxa links below.<br><code>wget https://dl.radxa.com/rock5/sw/images/others/zero.img.gz</code><br><code>wget https://dl.radxa.com/rock5/sw/images/loader/rock-5b/release/rock-5b-spi-image-g49da44e116d.img</code></li>
   <li>Extract the zero SPI image.<br><code>gzip -d zero.img.gz</code></li>
