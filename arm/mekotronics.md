@@ -2,21 +2,18 @@
 title: How to Install RebornOS onto a Mekotronics device.
 description: How to Install RebornOS onto a Mekotronics device.
 published: true
-date: 2023-02-18T19:46:46.205Z
+date: 2023-02-18T19:47:48.883Z
 tags: arm
 editor: markdown
 dateCreated: 2023-02-18T18:40:03.325Z
 ---
 
-# Prep
-Download the latest image for your device from [here](https://rebornos.org/download-arm).
-Then extract it so that you are left with a .img file
-
-
-
 
 # Write image to eMMC
 Instructions on how to write the image to eMMC
+## Prep
+Download the latest image for your device from [here](https://rebornos.org/download-arm).
+Then extract it so that you are left with a .img file
 
 Before beginning put your device in maskrom mode.
 Connect USB-C cable to your PC to the device then with a toothpick hold the RECOVERY button then press the RESET button
