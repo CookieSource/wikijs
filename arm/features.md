@@ -2,13 +2,25 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2023-02-18T17:05:25.163Z
+date: 2023-02-18T18:25:37.380Z
 tags: arm
 editor: markdown
 dateCreated: 2023-02-18T16:53:17.460Z
 ---
 
 We offer a lot of features during installation they'll be listed by category.
+
+## Devices
+Currently we offer images for:
+- Orange Pi 5
+- Radxa Rock 5B
+- Raspberry Pi 4/400
+
+Coming soon:
+- Khadas vim 4
+- Mekotronics R58X
+- Pinebook Pro
+
 
 ## Desktops
 
