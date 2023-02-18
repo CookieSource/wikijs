@@ -2,7 +2,7 @@
 title: How to Install RebornOS onto Mekotronics device
 description: How to Install RebornOS onto Mekotronics r58x
 published: true
-date: 2023-02-18T19:06:49.077Z
+date: 2023-02-18T19:19:50.309Z
 tags: arm
 editor: markdown
 dateCreated: 2023-02-18T18:40:03.325Z
@@ -22,8 +22,10 @@ Before beggining put your device in maskrom mode.
 Connect USB-C cable to your PC to the device then with a toothpick hold the RECOVERY button then press the RESET button
 On R58X
 ![r58x.png](/arm/r58x.png)
-On R58X-4Gu
+On R58X-4G
+![r58x-4g.png](/arm/r58x-4g.png)
 On R58S (mini pc)
+![r58s.png](/arm/r58s.png)
 
 ## From windows
 **TODO**
