@@ -2,23 +2,22 @@
 title: Rate-Mirrors
 description: Rank mirrors to speed up downloads from the repositories
 published: true
-date: 2023-02-18T17:19:26.172Z
+date: 2023-02-18T17:20:52.634Z
 tags: rate-mirrors, mirrors, pacman, refresh-mirrors-rebornos, refresh
 editor: markdown
 dateCreated: 2023-02-18T16:52:49.596Z
 ---
 
-# How to install Rate-Mirrors
+# How to install Rate Mirrors
+You can install Rate Mirrors with
 
-You can install Rate-Mirrors with
-
-```plaintext
+```
 sudo pacman -S refresh-mirrors
 ```
 
-# How to use Rate-Mirrors
+# How to use Rate Mirrors
 
-Here's several of the ways you can use Rate-Mirrors on RebornOS
+Here are several of the ways you can use Rate Mirrors on RebornOS.
 
 ## Desktop entry
 
