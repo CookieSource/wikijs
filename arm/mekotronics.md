@@ -1,8 +1,8 @@
 ---
-title: How to Install RebornOS onto Mekotronics device
-description: How to Install RebornOS onto Mekotronics r58x
+title: How to Install RebornOS onto a Mekotronics device.
+description: How to Install RebornOS onto a Mekotronics device.
 published: true
-date: 2023-02-18T19:32:35.349Z
+date: 2023-02-18T19:41:04.037Z
 tags: arm
 editor: markdown
 dateCreated: 2023-02-18T18:40:03.325Z
@@ -18,7 +18,7 @@ Then extract it so that you are left with a .img file
 # Write image to eMMC
 Instructions on how to write the image to eMMC
 
-Before beggining put your device in maskrom mode.
+Before beginning put your device in maskrom mode.
 Connect USB-C cable to your PC to the device then with a toothpick hold the RECOVERY button then press the RESET button
 On R58X
 ![r58x.png](/arm/r58x.png)
@@ -27,9 +27,9 @@ On R58X-4G
 On R58S (mini pc)
 ![r58s.png](/arm/r58s.png)
 
-## From windows
+## From Windows
 **TODO**
-## From linux
+## From Linux
 1. After you have put your device check if your pc finds it.
 ```sh
 sudo rkdeveloptool ld
