@@ -2,59 +2,56 @@
 title: How to Install RebornOS onto a Mekotronics device.
 description: How to Install RebornOS onto a Mekotronics device.
 published: true
-date: 2023-02-18T19:48:00.505Z
+date: 2023-02-18T19:48:39.335Z
 tags: arm
 editor: ckeditor
 dateCreated: 2023-02-18T18:40:03.325Z
 -->
 
-<h1 class="toc-header" id="write-image-to-emmc"> Write image to eMMC</h1>
+<h1>Write image to eMMC</h1>
 <p>Instructions on how to write the image to eMMC</p>
-<h2 class="toc-header" id="prep"> Prep</h2>
-<p>Download the latest image for your device from <a class="is-external-link" href="https://rebornos.org/download-arm">here</a>.<br>
-Then extract it so that you are left with a .img file</p>
-<p>Before beginning put your device in maskrom mode.<br>
-Connect USB-C cable to your PC to the device then with a toothpick hold the RECOVERY button then press the RESET button<br>
-On R58X<br>
-<img alt="r58x.png" src="/arm/r58x.png"><br>
-On R58X-4G<br>
-<img alt="r58x-4g.png" src="/arm/r58x-4g.png"><br>
-On R58S (mini pc)<br>
-<img alt="r58s.png" src="/arm/r58s.png"></p>
-<h2 class="toc-header" id="from-windows"> From Windows</h2>
+<h2>Prep</h2>
+<p>Download the latest image for your device from <a href="https://rebornos.org/download-arm">here</a>.<br>Then extract it so that you are left with a .img file</p>
+<p>Before beginning put your device in maskrom mode.<br>Connect USB-C cable to your PC to the device then with a toothpick hold the RECOVERY button then press the RESET button<br>On R58X<br>&nbsp;</p>
+<figure class="image image_resized" style="width:65.39%;"><img src="/arm/r58x.png" alt="r58x.png"></figure>
+<p><br>On R58X-4G<br>&nbsp;</p>
+<figure class="image image_resized" style="width:65.4%;"><img src="/arm/r58x-4g.png" alt="r58x-4g.png"></figure>
+<p><br>On R58S (mini pc)<br>&nbsp;</p>
+<figure class="image image_resized" style="width:64.47%;"><img src="/arm/r58s.png" alt="r58s.png"></figure>
+<h2>From Windows</h2>
 <p><strong>TODO</strong></p>
-<h2 class="toc-header" id="from-linux"> From Linux</h2>
+<h2>From Linux</h2>
 <ol>
-<li>After you have put your device check if your pc finds it.</li>
+  <li>After you have put your device check if your pc finds it.</li>
 </ol>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-sh">sudo rkdeveloptool ld
+<pre><code class="language-plaintext">sudo rkdeveloptool ld
 </code></pre>
 <p>Output should look something similar to this</p>
 <blockquote>
-<p>DevNo=1	Vid=0x2207,Pid=0x350b,LocationID=801	Maskrom</p>
+  <p>DevNo=1 Vid=0x2207,Pid=0x350b,LocationID=801 Maskrom</p>
 </blockquote>
-<ol start="2">
-<li>Download <a class="is-asset-link" href="/arm/rk3588_spl_loader_v1.09.111.bin">rk3588_spl_loader_v1.09.111.bin</a> then run:</li>
+<ol>
+  <li>Download <a href="/arm/rk3588_spl_loader_v1.09.111.bin">rk3588_spl_loader_v1.09.111.bin</a> then run:</li>
 </ol>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-sh">sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin
+<pre><code class="language-plaintext">sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin
 </code></pre>
-<blockquote class="is-danger">
-<p>If you get "The device does not support this operation!" replug the device!</p>
+<blockquote>
+  <p>If you get "The device does not support this operation!" replug the device!</p>
 </blockquote>
-<ol start="3">
-<li>Then write the image you downloaded.</li>
+<ol>
+  <li>Then write the image you downloaded.</li>
 </ol>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-">sudo rkdeveloptool wl 0 ~/Downloads/RebornOS-ARM-r58x-2023-01-14.img
+<pre><code class="language-plaintext">sudo rkdeveloptool wl 0 ~/Downloads/RebornOS-ARM-r58x-2023-01-14.img
 </code></pre>
-<blockquote class="is-info">
-<p>Replace the path and name with the path where the extracted image is.</p>
+<blockquote>
+  <p>Replace the path and name with the path where the extracted image is.</p>
 </blockquote>
-<ol start="4">
-<li>Reboot the device</li>
+<ol>
+  <li>Reboot the device</li>
 </ol>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-sh">sudo rkdeveloptool rd
+<pre><code class="language-plaintext">sudo rkdeveloptool rd
 </code></pre>
-<ol start="5">
-<li>Install your preffered Desktop and Packages</li>
+<ol>
+  <li>Install your preffered Desktop and Packages</li>
 </ol>
-<p>You can follow the install guide <a class="is-internal-link is-valid-page" href="/arm/install">here</a></p>
+<p>You can follow the install guide <a href="/arm/install">here</a></p>
