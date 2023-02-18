@@ -2,40 +2,61 @@
 title: How to add the RebornOS repository
 description: rebornos repo
 published: true
-date: 2022-02-23T10:26:13.082Z
+date: 2023-02-18T17:06:27.377Z
 tags: repository repo
 editor: ckeditor
-dateCreated: 2021-09-23T23:55:22.765Z
+dateCreated: 2023-02-18T16:54:37.202Z
 -->
 
-<h1 class="toc-header" id="how-to-add-the-rebornos-repository"> How to add the RebornOS repository</h1><div>
-</div><p>Let's see how to add the RebornOS repository to a distribution based on Arch linux.</p><div>
-</div><p>First, we will edit the file pacman.conf:</p><div>
-</div><p>First, you must edit the <strong>pacman.conf</strong> file to add the RebornOS repository. You can add the RebornOS repository at the end of the file, or place it after the Arch Linux <code>#[testing]</code> repository (the testing repository is disabled by default). This last way to install it (after the Arch Linux testing repository) is the default installation that RebornOS performs.</p><div>
-</div><p>So, edit the file:</p><div>
-</div><pre v-pre="true" class="prismjs line-numbers"><code class="language-">sudo nano /etc/pacman.conf
-</code></pre><div>
-</div><p>Then, add the following lines to the end of the file (<strong>NOTE</strong>: RebornOS installs its repository by default <em><strong>BEFORE</strong></em> the others.):</p><div>
-</div><pre v-pre="true" class="prismjs line-numbers"><code class="language-">[Reborn-OS]
+# How to add the RebornOS repository
+
+Let's see how to add the RebornOS repository to a distribution based on Arch linux.
+
+First, we will edit the file pacman.conf:
+
+First, you must edit the **pacman.conf** file to add the RebornOS repository. You can add the RebornOS repository at the end of the file, or place it after the Arch Linux `#[testing]` repository (the testing repository is disabled by default). This last way to install it (after the Arch Linux testing repository) is the default installation that RebornOS performs.
+
+So, edit the file:
+```
+sudo nano /etc/pacman.conf
+```
+
+Then, add the following lines to the end of the file (**NOTE**: RebornOS installs its repository by default ***BEFORE*** the others.):
+
+```ini
+[Reborn-OS]
 SigLevel = Optional TrustAll
 Include = /etc/pacman.d/reborn-mirrorlist
-</code></pre><div>
-</div><p><strong>NOTE:</strong> If the RebornOS repository is being added instead of the Antergos repository (if they still have it in your system), there will be an additional step, which will be to comment on the Antergos repository, as follows. Look for the lines:</p><div>
-</div><pre v-pre="true" class="prismjs line-numbers"><code class="language-">[antergos]
+```
+
+**NOTE:** If the RebornOS repository is being added instead of the Antergos repository (if they still have it in your system), there will be an additional step, which will be to comment on the Antergos repository, as follows. Look for the lines:
+
+```ini
+[antergos]
 SigLevel = PackageRequired
 Include = /etc/pacman.d/antergos-mirrorlist
-</code></pre><div>
-</div><p>... and comment on them:</p><div>
-</div><pre v-pre="true" class="prismjs line-numbers"><code class="language-"># [antergos]
+```
+
+... and comment on them:
+
+```ini
+# [antergos]
 # SigLevel = PackageRequired
 # Include = /etc/pacman.d/antergos-mirrorlist
-</code></pre><div>
-</div><p>Save the file (if you use the nano editor, it is recorded with <em><strong>Ctrl +o</strong></em>  (letter <strong>o</strong>) and comes out with <em><strong>Ctrl + x</strong></em>.</p><div>
-</div><p>Now, add the mirrors of RebornOS. To do this, create the file <em><strong>reborn-mirrorlist</strong></em> as follows:</p><div>
-</div><pre v-pre="true" class="prismjs line-numbers"><code class="language-">sudo nano /etc/pacman.d/reborn-mirrorlist
-</code></pre><div>
-</div><p>Inside, copy the following lines:</p><div>
-</div><pre v-pre="true" class="prismjs line-numbers"><code class="language-"># RebornOS repo: repo.rebornos.org
+```
+
+Save the file (<kbd>Ctrl</kbd> <kbd>S</kbd>) and exit (<kbd>Ctrl</kbd> <kbd>X</kbd>).
+
+Now, add the mirrors of RebornOS. To do this, create the file ***reborn-mirrorlist*** as follows:
+
+```
+sudo nano /etc/pacman.d/reborn-mirrorlist
+```
+
+Inside, copy the following lines:
+
+```ini
+# RebornOS repo: repo.rebornos.org
 Server = https://repo.rebornos.org/RebornOS/
 
 
@@ -154,24 +175,41 @@ Server = http://mirror.arctic.lol/RebornMirror/
 
 # RebornOS mirror.clarkson.edu
 Server = https://mirror.clarkson.edu/RebornOS/
-</code></pre><div>
-</div><p>Save the file (<em><strong>Ctrl + o</strong></em>), and exit (<em><strong>Ctrl + x</strong></em>).</p><div>
-</div><p>Then from the terminal:</p><div>
-</div><pre v-pre="true" class="prismjs line-numbers"><code class="language-">sudo chmod 644 /etc/pacman.d/reborn-mirrorlist
-</code></pre><div>
-</div><p>Another way to create the mirrorlist file is by copying and pasting the following in the terminal:</p><div>
-</div><pre v-pre="true" class="prismjs line-numbers"><code class="language-">sudo wget https://gitlab.com/rebornos-team/rebornos-special-system-files/mirrors/reborn-mirrorlist/-/raw/master/reborn-mirrorlist /etc/pacman.d/reborn-mirrorlist
+```
+
+Save the file (***Ctrl + o***), and exit (***Ctrl + x***).
+
+Then from the terminal:
+
+```
 sudo chmod 644 /etc/pacman.d/reborn-mirrorlist
-</code></pre><div>
-</div><p>What will have to be done next, is to acquire the public pgp keys from the RebornOS repository. To do this, download the following file:</p><div>
-</div><pre v-pre="true" class="prismjs line-numbers"><code class="language-">wget https://repo.rebornos.org/RebornOS/rebornos-keyring-20210512-1.2-any.pkg.tar.zst
-</code></pre><div>
-</div><p>Then, manually install the downloaded file. This is done with:</p><div>
-</div><pre v-pre="true" class="prismjs line-numbers"><code class="language-">sudo pacman -U rebornos-keyring-20210512-1.2-any.pkg.tar.zst
-</code></pre><div>
-</div><p>Why is this procedure necessary? This is because all the files in the RebornOS repository are signed with one of the keys in this file (which correspond to the users in charge of maintaining the repository).</p><div>
-</div><p>Then update the repositories:</p><div>
-</div><pre v-pre="true" class="prismjs line-numbers"><code class="language-">sudo pacman -Syy
-</code></pre><div>
-</div><p>Once this procedure is finished, we can update our system, or install something existing in the RebornOS repositories.</p><div>
-</div>
+```
+
+Another way to create the mirrorlist file is by copying and pasting the following in the terminal:
+
+```
+sudo wget https://gitlab.com/rebornos-team/rebornos-special-system-files/mirrors/reborn-mirrorlist/-/raw/master/reborn-mirrorlist /etc/pacman.d/reborn-mirrorlist
+sudo chmod 644 /etc/pacman.d/reborn-mirrorlist
+```
+
+What will have to be done next, is to acquire the public pgp keys from the RebornOS repository. To do this, download the following file:
+
+```
+wget https://repo.rebornos.org/RebornOS/rebornos-keyring-20210512-1.2-any.pkg.tar.zst
+```
+
+Then, manually install the downloaded file. This is done with:
+
+```
+sudo pacman -U rebornos-keyring-20210512-1.2-any.pkg.tar.zst
+```
+
+Why is this procedure necessary? This is because all the files in the RebornOS repository are signed with one of the keys in this file (which correspond to the users in charge of maintaining the repository).
+
+Then update the repositories:
+
+```
+sudo pacman -Syy
+```
+
+Once this procedure is finished, we can update our system, or install something existing in the RebornOS repositories.

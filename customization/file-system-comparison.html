@@ -1,165 +1,116 @@
 <!--
 title: File system comparison
-description: Comparison the different file systems that we offer
+description: Comparison of the different file systems that we offer
 published: true
-date: 2022-05-25T10:47:00.345Z
-tags: installation, customization, file system, filesystem
+date: 2023-02-18T17:06:02.379Z
+tags: customization, installation, file system, filesystem
 editor: ckeditor
-dateCreated: 2021-10-05T10:11:41.501Z
+dateCreated: 2023-02-18T16:54:02.804Z
 -->
 
-<h1>Introduction</h1>
-<p>Linux offers many different file systems. A file system determines how files are read/accessed on your disk. The Linux default is EXT4.</p>
-<p>Which is most cases leads to the best results in terms of compatibility and stability. But misses modern features like snapshot support &amp; compression.</p>
-<h1>Legend</h1>
-<p><strong>COW: </strong>Copy on write is a technique to greatly reduce disk space usage in trade off for performance</p>
-<p><strong>Journaling: </strong>A journaling file system is a file system that keeps track of changes not yet committed to the file system's so that in case of a power failure it gets back online faster and is less likely to suffer from data corruption.</p>
-<p><strong>Compression: </strong>Compression compresses files on your disk to make them take up less space</p>
-<p><strong>Encryption: </strong>Encryption encrypts your disk securing it with an extra safety measure</p>
-<p><strong>Snapshots: </strong>Are a way to roll back your system to an earlier state when something goes wrong. It's not a replacement for a proper backup solution.</p>
-<p><strong>Quota: &nbsp;</strong>Set limits on how much disk space users/projects or programs can use.</p>
-<h1>Comparison</h1>
-<p>Find an overview of the different features each file system offers&nbsp;</p>
-<figure class="table">
-  <table>
-    <thead>
-      <tr>
-        <th>Features</th>
-        <th>EXT4</th>
-        <th>BcacheFS</th>
-        <th>BTRFS</th>
-        <th>JFS</th>
-        <th>XFS</th>
-        <th>ReiserFS</th>
-        <th>F2FS</th>
-        <th>ZFS</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Snapshot</td>
-        <td>❌</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>❌</td>
-        <td>❌</td>
-        <td>❌</td>
-        <td>❌</td>
-        <td>✅</td>
-      </tr>
-      <tr>
-        <td>Compression</td>
-        <td>❌</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>❌</td>
-        <td>❌</td>
-        <td>✅</td>
-        <td>✅</td>
-      </tr>
-      <tr>
-        <td>Journaling</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>❌</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>❌</td>
-        <td>❌</td>
-        <td>❌</td>
-      </tr>
-      <tr>
-        <td>Encryption</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>✅</td>
-        <td>✅</td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
-<h2>EXT4</h2>
-<p>EXT4 is the default Linux file system, It has high compatibility &amp; stability due to being the most used options. (If you use Dropbox EXT4 is the only file system on Linux officially supported)</p>
-<p><strong>Special features</strong></p>
-<ul>
-  <li>Unlimited subdirectories</li>
-  <li>Backwards combability with EXT3</li>
-  <li>Metadata checksumming</li>
-  <li>Encryption</li>
-  <li>Quotas</li>
-</ul>
-<p>&nbsp;</p>
-<h2>BTRFS</h2>
-<p>Btrfs is a modern copy on write (CoW) filesystem for Linux aimed at implementing advanced features while also focusing on fault tolerance, repair and easy administration.</p>
-<p><strong>Special features</strong></p>
-<ul>
-  <li>Raid support</li>
-  <li>Compression</li>
-  <li>COW</li>
-</ul>
-<h2>BcacheFS</h2>
-<p>Bcachefs is a next-generation CoW filesystem that aims to provide features from Btrfs and ZFS with a cleaner codebase, more stability, greater speed and a GPL-compatible license.</p>
-<p><strong>Special features</strong></p>
-<ul>
-  <li>Copy on write (COW) - like ZFS or BTRFS</li>
-  <li>Full data and metadata check summing</li>
-  <li>Multiple devices, including replication and other types of RAID</li>
-  <li>Caching</li>
-  <li>Compression</li>
-  <li>Encryption</li>
-  <li>Snapshots</li>
-</ul>
-<h2>JFS</h2>
-<p>JFS is a stable, feature-rich file system that has not been publicized as much as some of the other Linux file systems. With optimizations, JFS is stable, CPU efficient and fast. In particular, VMWare sessions stand to benefit enormously from a properly optimized and defragmented, underlying JFS file system.</p>
-<p><strong>Special features</strong></p>
-<ul>
-  <li>Performance tuned for GNU/Linux.</li>
-  <li>Original design goals: Performance, Robustness, SMP.</li>
-</ul>
-<h2>XFS</h2>
-<p>XFS is a high-performance journaling file system created by Silicon Graphics, Inc. XFS is particularly proficient at parallel IO due to its allocation group based design. This enables extreme scalability of IO threads, filesystem bandwidth, file and filesystem size when spanning multiple storage devices.</p>
-<p><strong>Special features</strong></p>
-<ul>
-  <li>Capacity.</li>
-  <li>Journaling.</li>
-  <li>Allocation groups.</li>
-  <li>Striped allocation.</li>
-  <li>Extent-based allocation.</li>
-  <li>Variable block sizes.</li>
-  <li>Delayed allocation.</li>
-  <li>Sparse files.</li>
-</ul>
-<h2><strong>ZFS</strong></h2>
-<p>OpenZFS is an open-source storage platform. It includes the functionality of both traditional file systems and volume managers.&nbsp;</p>
-<p><strong>Special features</strong></p>
-<ul>
-  <li>Protection against data corruption. Integrity checking for both data and metadata.</li>
-  <li>Continuous integrity verification and automatic “self-healing” repair</li>
-  <li>Data redundancy with mirroring, RAID-Z1/2/3 [and DRAID]</li>
-  <li>Space-saving with transparent compression using LZ4, GZIP or ZSTD</li>
-  <li>Hardware-accelerated native encryption</li>
-  <li>Efficient storage with snapshots and copy-on-write clones</li>
-  <li>Efficient local or remote replication — send only changed blocks with ZFS send and receive</li>
-</ul>
-<h2>F2FS</h2>
-<p>F2FS (Flash-Friendly File System) is a flash file system initially developed by Samsung Electronics for the Linux kernel.</p>
-<p><strong>Special features</strong></p>
-<ul>
-  <li>Roll-back and roll-forward recovery</li>
-  <li>Transparent file compression using LZO or LZ4 (with Linux 5.6), or zstd (with Linux 5.7)</li>
-  <li>Offline resizing (shrinking not supported.)</li>
-  <li>Filesystem-level encryption</li>
-</ul>
-<h2>ReiserFS</h2>
-<p><strong>ReiserFS</strong> is a general-purpose, <u>journaling file system without quota support&nbsp;</u></p>
-<p><strong>Special features</strong></p>
-<ul>
-  <li>tail packing</li>
-</ul>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+# Introduction
+Linux offers many different file systems. A file system determines how files are read/accessed on your disk. The default is ext4.
+
+Ext4, in most cases leads to the best results in terms of compatibility and stability but misses modern features like snapshot support and compression.
+
+# Legend
+
+**CoW**: Copy on write, a technique to greatly reduce disk space usage in trade off for performance.
+
+**Journaling**: A file system that keeps track of changes not yet committed to the file system so that in case of a power failure it gets back online faster and is less likely to suffer from data corruption.
+
+**Compression**: Compresses files on your disk to make them take up less space.
+
+**Encryption**: Encrypts your disk securing it with an extra safety measure.
+
+**Snapshots**: Are a way to roll back your system to an earlier state when something goes wrong. It's not a replacement for a proper backup solution.
+
+**Quota**: Set limits on how much disk space users/projects or programs can use.
+
+# Comparison
+Find an overview of the different features each file system offers 
+
+| Features | Ext4 | BcacheFS | BTRFS | JFS | XFS | ReiserFS | F2FS | ZFS |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Snapshot | ❌   | ✅   | ✅   | ❌   | ❌   | ❌   | ❌   | ✅   |
+| Compression | ❌   | ✅   | ✅   | ✅   | ❌   | ❌   | ✅   | ✅   |
+| Journaling | ✅   | ✅   | ❌   | ✅   | ✅   | ❌   | ❌   | ❌   |
+| Encryption | ✅   | ✅   | ✅   | ✅   | ✅   | ✅   | ✅   | ✅   |
+
+## Ext4
+**Ext4** is the default Linux file system. It has high compatibility & stability due to being the most used options. (If you use Dropbox, Ext4 is the only file system on Linux officially supported)
+
+**Special features**
+-   Unlimited subdirectories
+-   Backwards combability with ext3
+-   Metadata checksumming
+-   Encryption
+-   Quotas
+
+## BTRFS
+**Btrfs** is a CoW filesystem for Linux aimed at implementing advanced features while also focusing on fault tolerance, repair and easy administration.
+
+**Special features**
+-   Raid support
+-   Compression
+-   CoW
+
+## BcacheFS
+**Bcachefs** is a next-generation CoW filesystem that aims to provide features from Btrfs and ZFS with a cleaner codebase, more stability, greater speed and a GPL-compatible license.
+
+**Special features**
+-   Copy on write (CoW) - like ZFS or BTRFS
+-   Full data and metadata check summing
+-   Multiple devices, including replication and other types of RAID
+-   Caching
+-   Compression
+-   Encryption
+-   Snapshots
+
+## JFS
+**JFS** is a stable, feature-rich file system that has not been publicized as much as some of the other Linux file systems. With optimizations, JFS is stable, CPU efficient and fast. In particular, VMWare sessions stand to benefit enormously from a properly optimized and defragmented, underlying JFS file system.
+
+**Special features**
+-   Performance tuned for Linux.
+-   Original design goals: Performance, Robustness, SMP.
+
+## XFS
+**XFS** is a high-performance journaling file system created by *Silicon Graphics, Inc.* It is particularly proficient at parallel IO due to its allocation group based design. This enables extreme scalability of IO threads, filesystem bandwidth, file and filesystem size when spanning multiple storage devices.
+
+**Special features**
+-   Capacity
+-   Journaling
+-   Allocation groups
+-   Striped allocation
+-   Extent-based allocation
+-   Variable block sizes
+-   Delayed allocation
+-   Sparse files
+
+## ZFS
+**ZFS** is an open-source storage platform. It includes the functionality of both traditional file systems and volume managers. 
+
+**Special features**
+-   Protection against data corruption. Integrity checking for both data and metadata.
+-   Continuous integrity verification and automatic “self-healing” repair
+-   Data redundancy with mirroring, RAID-Z1/2/3 and DRAID
+-   Space-saving with transparent compression using LZ4, GZIP or ZSTD
+-   Hardware-accelerated native encryption
+-   Efficient storage with snapshots and copy-on-write clones
+-   Efficient local or remote replication — send only changed blocks with ZFS send and receive
+
+## F2FS
+**F2FS** (Flash-Friendly File System) is a flash file system initially developed by Samsung Electronics for the Linux kernel.
+
+**Special features**
+-   Roll-back and roll-forward recovery
+-   Transparent file compression using LZO or LZ4 (with Linux 5.6), or zstd (with Linux 5.7)
+-   Offline resizing (shrinking not supported.)
+-   Filesystem-level encryption
+
+## ReiserFS
+
+**ReiserFS** is a general-purpose, journaling file system without quota support.
+
+**Special features**
+-   Tail packing

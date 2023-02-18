@@ -2,10 +2,10 @@
 title: How to change GDM or SDDM to LightDM
 description: 
 published: true
-date: 2022-04-03T10:08:37.477Z
+date: 2023-02-18T17:05:56.351Z
 tags: 
 editor: markdown
-dateCreated: 2021-09-25T15:43:25.528Z
+dateCreated: 2023-02-18T16:56:36.859Z
 ---
 
 First, we will install everything necessary to have lightdm in our system. To do this, from the terminal:

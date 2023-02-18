@@ -2,10 +2,10 @@
 title: How to remove the boot partition
 description: 
 published: true
-date: 2022-10-20T10:05:22.266Z
+date: 2023-02-18T17:05:50.987Z
 tags: 
 editor: markdown
-dateCreated: 2022-10-20T10:00:48.996Z
+dateCreated: 2023-02-18T16:56:27.589Z
 ---
 
 If your system currently uses a boot partition, but you want your `/boot` path to remain on your root partition instead of being separated out to a discrete partition, follow this guide.

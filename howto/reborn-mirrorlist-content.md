@@ -2,10 +2,10 @@
 title: How to know the content of the reborn-mirrorlist file
 description: reborn-mirrorlist content
 published: true
-date: 2022-04-07T11:44:51.829Z
+date: 2023-02-18T17:05:48.202Z
 tags: reborn-mirrorlist
 editor: markdown
-dateCreated: 2021-09-24T00:03:11.902Z
+dateCreated: 2023-02-18T16:56:22.933Z
 ---
 
 The idea of this post is to indicate the contents of the reborn-mirrorlist file, and to indicate any problems that may exist in that file.

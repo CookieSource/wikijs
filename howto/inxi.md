@@ -2,10 +2,10 @@
 title: How to use inxi
 description: inxi
 published: true
-date: 2021-09-24T00:21:53.318Z
+date: 2023-02-18T17:05:39.896Z
 tags: inxi
 editor: markdown
-dateCreated: 2021-09-24T00:21:50.143Z
+dateCreated: 2023-02-18T16:56:08.954Z
 ---
 
 # How to use inxi

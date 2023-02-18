@@ -2,10 +2,10 @@
 title: How to create a bootable storage medium
 description: 
 published: true
-date: 2022-10-24T17:54:34.543Z
+date: 2023-02-18T17:05:22.343Z
 tags: arm
 editor: markdown
-dateCreated: 2022-10-24T17:54:34.543Z
+dateCreated: 2023-02-18T16:53:13.408Z
 ---
 
 # Flashing the image onto the storage medium from a PC

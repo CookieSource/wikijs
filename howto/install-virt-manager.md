@@ -2,10 +2,10 @@
 title: Install Virtual Machine Manager (virt-manager)
 description: 
 published: true
-date: 2022-11-02T13:47:23.862Z
+date: 2023-02-18T17:05:36.937Z
 tags: 
 editor: markdown
-dateCreated: 2022-11-02T13:46:46.337Z
+dateCreated: 2023-02-18T16:56:03.858Z
 ---
 
 If you are using GNOME and have GNOME Boxes installed, you have the necessary Virt-manager dependencies.

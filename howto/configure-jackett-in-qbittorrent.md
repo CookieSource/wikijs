@@ -2,10 +2,10 @@
 title: How to configure jackett in qBittorrent
 description: 
 published: true
-date: 2022-03-21T12:29:25.722Z
+date: 2023-02-18T17:05:09.324Z
 tags: jackett qbittorrent
 editor: markdown
-dateCreated: 2021-09-24T00:14:19.854Z
+dateCreated: 2023-02-18T16:55:19.639Z
 ---
 
 jackett (`jackett-bin` in RebornOS) will allow qbittorrent to use more file search options. Let's see how to configure it.

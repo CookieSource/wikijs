@@ -2,20 +2,38 @@
 title: Troubleshooting
 description: Solutions to common problems during installation
 published: true
-date: 2022-02-08T13:55:49.483Z
+date: 2023-02-18T17:05:00.738Z
 tags: troubleshooting
 editor: ckeditor
-dateCreated: 2021-09-23T12:57:05.025Z
+dateCreated: 2023-02-18T16:58:19.423Z
 -->
 
-<h1>Common Issues</h1>
-<p>Here you can find a list of issues that can arise during installation</p>
-<h2>No network connectivity during install (while connected to the internet)</h2>
-<p><strong>Problem:</strong><br>The installer cannot find you’re connected to the internet.<br><strong>Solution</strong></p>
-<pre><code class="language-plaintext">sudo sed -i 's/1.1.1.1/1.0.0.127/g' /usr/share/cnchi/src/misc/extra.py</code></pre>
-<h2>Installer won't start</h2>
-<p>Make sure you're connected to the internet and then open a terminal and type this command.</p>
-<pre><code class="language-plaintext">bash refresh-keys.sh</code></pre>
-<h2>Undefined installation failures</h2>
-<p>Please run the installer from the terminal with this command.</p>
-<pre><code class="language-plaintext">sudo cnchi-installer</code></pre>
+# Common Issues
+
+Here you can find a list of issues that can arise during installation
+
+## No network connectivity during install (while connected to the internet)
+
+**Problem:**  
+The installer cannot find you’re connected to the internet.  
+**Solution**
+
+```plaintext
+sudo sed -i 's/1.1.1.1/1.0.0.127/g' /usr/share/cnchi/src/misc/extra.py
+```
+
+## Installer won't start
+
+Make sure you're connected to the internet and then open a terminal and type this command.
+
+```plaintext
+bash refresh-keys.sh
+```
+
+## Undefined installation failures
+
+Please run the installer from the terminal with this command.
+
+```plaintext
+sudo cnchi-installer
+```

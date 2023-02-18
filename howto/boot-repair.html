@@ -2,38 +2,47 @@
 title: How to perform Boot Repair
 description: Recover a system unable to boot
 published: true
-date: 2022-12-13T18:50:34.988Z
-tags: grub, bootloader, repair, recovery, boot recovery, boot repair, boot
+date: 2023-02-18T17:04:49.603Z
+tags: bootloader, repair, grub, recovery, boot recovery, boot repair, boot
 editor: ckeditor
-dateCreated: 2022-12-10T19:23:10.785Z
+dateCreated: 2023-02-18T16:54:50.621Z
 -->
 
-<h1>Boot Repair for GRUB</h1>
-<p>If you are unable to boot into RebornOS, this guide will show you how to repair your bootloader using a live ISO.</p>
-<h2>1. Check if you are booted in <i>UEFI</i> or <i>Legacy</i> mode</h2>
-<p>If you are booted in <i>UEFI</i> mode, when you run the command <code>ls -ld /sys/firmware/efi</code>, you will see an output like</p>
-<pre><code class="language-plaintext">$ ls -ld /sys/firmware/efi
+# Boot Repair for GRUB
+If you are unable to boot into RebornOS, this guide will show you how to repair your bootloader using a live ISO.
+
+## 1. Check if you are booted in *UEFI* or *Legacy* mode
+If you are booted in *UEFI* mode, when you run the command `ls -ld /sys/firmware/efi`, you will see an output like
+```sh
+$ ls -ld /sys/firmware/efi
 drwxr-xr-x 5 root root 0 Dec 10 09:52 /sys/firmware/efi/
-</code></pre>
-<p>If you are booted in <i>Legacy</i> mode, when you run the command above, you will see an output like</p>
-<pre><code class="language-plaintext">$ ls -ld /sys/firmware/efi
+```
+If you are booted in *Legacy* mode, when you run the command above, you will see an output like
+```sh
+$ ls -ld /sys/firmware/efi
 ls: cannot access /sys/firmware/efi: No such file or directory
-</code></pre>
-<h2>2. Chroot into your installed RebornOS</h2>
-<p>Follow the instructions on <a href="https://wiki.rebornos.org/e/en/howto/chroot">this page</a> to <i>chroot</i> into your locally installed RebornOS.</p>
-<blockquote>
-  <p>After <i>chroot</i>ing, please keep the same terminal window open to perform the below steps.</p>
-</blockquote>
-<h2>3. Re-install GRUB</h2>
-<p>Based on whether you are booted in UEFI or Legacy mode, you can run the below commands:</p>
-<h3>UEFI mode</h3>
-<pre><code class="language-plaintext">sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=RebornOS --recheck
-</code></pre>
-<h3>Legacy mode</h3>
-<pre><code class="language-plaintext">sudo grub-install --target=i386-pc --bootloader-id=RebornOS --recheck
-</code></pre>
-<h2>4. Recreate GRUB configuration</h2>
-<pre><code class="language-plaintext">sudo grub-mkconfig -o /boot/grub/grub.cfg
-</code></pre>
-<h2>5. Assess reboot safety</h2>
-<p>If the above <code>grub-install</code> and <code>grub-mkconfig</code> steps run successfully, it is safe to reboot!</p>
+```
+
+## 2. Chroot into your installed RebornOS
+Follow the instructions on [this page](chroot) to *chroot* into your locally installed RebornOS. 
+> After *chroot*ing, please keep the same terminal window open to perform the below steps.
+{.is-info}
+
+
+## 3. Re-install GRUB
+Based on whether you are booted in UEFI or Legacy mode, you can run the below commands:
+### UEFI mode
+```sh
+sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=RebornOS --recheck
+```
+### Legacy mode
+```sh
+sudo grub-install --target=i386-pc --bootloader-id=RebornOS --recheck
+```
+## 4. Recreate GRUB configuration
+```sh
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+## 5. Assess reboot safety
+If the above `grub-install` and `grub-mkconfig` steps run successfully, it is safe to reboot!

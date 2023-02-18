@@ -2,10 +2,10 @@
 title: How to use i3
 description: Using i3
 published: true
-date: 2021-09-26T12:06:20.747Z
+date: 2023-02-18T17:06:02.095Z
 tags: i3
 editor: markdown
-dateCreated: 2021-09-26T12:06:17.812Z
+dateCreated: 2023-02-18T16:56:46.431Z
 ---
 
 # How to use i3

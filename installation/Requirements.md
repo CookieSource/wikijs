@@ -2,10 +2,10 @@
 title: Requirements
 description: Requirements for installing
 published: true
-date: 2022-01-10T04:42:09.348Z
+date: 2023-02-18T17:06:16.411Z
 tags: requirements
 editor: markdown
-dateCreated: 2021-09-23T12:39:54.260Z
+dateCreated: 2023-02-18T16:57:12.820Z
 ---
 
 # Requirements

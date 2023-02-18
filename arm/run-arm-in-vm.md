@@ -1,11 +1,11 @@
 ---
 title: How to run RebornOS ARM in a VM
-description: Short article on how to run RebornOS ARM on an x86_64 pc using QEMU 
+description: Short article on how to run RebornOS ARM on an x86_64 pc using QEMU
 published: true
-date: 2023-02-04T23:17:45.595Z
+date: 2023-02-18T17:05:41.319Z
 tags: 
 editor: markdown
-dateCreated: 2022-11-14T15:15:37.027Z
+dateCreated: 2023-02-18T16:53:39.144Z
 ---
 
 The qcow2 image file is a prebuilt RebornOS ARM QEMU/Virtual Manager image.  Having the ability to RebornOS ARM VM will allow more flexibility for development, testing and running ARM apps.

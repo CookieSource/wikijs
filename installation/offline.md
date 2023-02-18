@@ -2,10 +2,10 @@
 title: Install RebornOS offline
 description: 
 published: true
-date: 2023-01-06T15:31:01.042Z
-tags: installer, calamares, install, offline
+date: 2023-02-18T17:04:43.384Z
+tags: installer, install, calamares, offline
 editor: markdown
-dateCreated: 2022-09-26T22:13:59.892Z
+dateCreated: 2023-02-18T16:57:53.178Z
 ---
 
 >  This guide is for **Offline Installation**. For the *Online Installation* guide, [click here](https://wiki.rebornos.org/en/installation/online).

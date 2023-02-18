@@ -2,10 +2,10 @@
 title: How to generate thumbnails for videos in Xfce
 description: 
 published: true
-date: 2022-03-21T11:57:28.591Z
+date: 2023-02-18T17:06:13.500Z
 tags: xfce
 editor: markdown
-dateCreated: 2021-09-25T15:36:48.380Z
+dateCreated: 2023-02-18T16:57:05.994Z
 ---
 
 # How to generate thumbnails for videos in Xfce

@@ -2,10 +2,10 @@
 title: Dual-boot Windows with RebornOS
 description: Instructions for restoring the Windows entry in Grub while dual-booting Windows with RebornOS
 published: true
-date: 2022-12-18T07:23:56.535Z
-tags: grub, bootloader, dual-boot, windows
+date: 2023-02-18T17:05:20.304Z
+tags: bootloader, grub, dual-boot, windows
 editor: markdown
-dateCreated: 2021-09-17T08:28:59.266Z
+dateCreated: 2023-02-18T16:55:37.024Z
 ---
 
 Once you have installed RebornOS, you may see that there is no Windows entry present in Grub. You can restore it by following the below steps:
