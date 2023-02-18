@@ -2,10 +2,170 @@
 title: Bootloader
 description: Instructions on changing Grub themes, changing bootloaders & setting up Plymouth
 published: true
-date: 2023-02-18T17:55:15.222Z
+date: 2023-02-18T17:55:22.554Z
 tags: customization, bootloader, grub, plymouth, themes
 editor: markdown
 dateCreated: 2023-02-18T16:53:49.677Z
 ---
 
-\# GRUB GRUB is the default Linux bootloader that works on most systems. ## Theming You can find new Grub themes \[here\](https://gnome-look.org/browse?cat=109&ord=latest) & \[here\](https://store.kde.org/browse?cat=109&ord=latest) To install a new Grub theme open Grub Customizer and go to the appearance tab. !\[\](/grubcustomizer.png) Click the plus symbol next to the theme option and select the archive of the theme you download. ## Changing Grub themes To change the grub theme click on the dropdown menu next to theme and select the theme you want. Then click save to save your new theme. ## Change first boot option You can change your first boot option from Grub Customizer. !\[\](/grubcustomizergeneralsettings.png) click the dropdown menu next to predefined to change your first boot option. or change the order of boot options on the list configuration page. # Plymouth Plymouth is the fancy startup animations that you see in videos & distros. (please note Plymouth can be buggy on some systems) ## Installation Plymouth can only be installed from the AUR  to install it use your preferred AUR helper. In this example we use yay \`\`\`plaintext yay -S plymouth-git \`\`\` Add the Plymouth hook Add \`plymouth\` to the \`HOOKS\` array in \[mkinitcpio.conf\](https://wiki.archlinux.org/title/Mkinitcpio.conf) (\`/etc/mkinitcpio.conf\`). It \*\*must\*\* be added \*\*after\*\* \`base\` and \`udev\` for it to work: \`\`\` HOOKS=(base udev plymouth ...) \`\`\` ## Theming New Plymouth themes can be found \[here\](https://gnome-look.org/browse?cat=108&ord=latest) or \[here\](https://store.kde.org/browse?cat=108&ord=latest)  Copy the theme folders you downloaded to \`/usr/share/plymouth/themes\` ## Change Plymouth themes list all Plymouth themes installed. \`\`\` plymouth-set-default-theme -l \`\`\` set Plymouth theme as default. \`theme\` is an example name in this. \`\`\` plymouth-set-default-theme -R theme \`\`\` # Systemd-boot Systemd-boot is a simple UEFI boot manager. It is simple to configure but it can only start EFI executables such as the Linux kernel \[EFISTUB\](https://wiki.archlinux.org/title/EFISTUB), \[UEFI shell\](https://wiki.archlinux.org/title/UEFI\_shell), GRUB, or the Windows Boot Manager. ## Installation To install the systemd-boot EFI boot manager, first make sure the system has booted in UEFI mode and that \[UEFI variables\](https://wiki.archlinux.org/title/Unified\_Extensible\_Firmware\_Interface#UEFI\_variables) are accessible. This can be checked by running the command \`efivar --list\` or, if \[efivar\](https://archlinux.org/packages/?name=efivar) is not installed, do \`ls /sys/firmware/efi/efivars\` (if the directory exists, the system is booted in UEFI mode). \`esp\` will be used throughout this page to denote the \[ESP mountpoint\](https://wiki.archlinux.org/title/EFI\_system\_partition#Typical\_mount\_points), e.g. \`/boot\` or \`/efi\`. This assumes that you have \`chroot\`ed to your system's mount point. With the ESP mounted to \`esp\`, use \`bootctl\` to install \*systemd-boot\* into the EFI system partition by running: \`\`\` bootctl install \`\`\` This will copy the systemd-boot boot loader to the EFI partition: on a x64 architecture system \`/usr/lib/systemd/boot/efi/systemd-bootx64.efi\` will be copied to \`\*esp\*/EFI/systemd/systemd-bootx64.efi\` and \`\*esp\*/EFI/BOOT/BOOTX64.EFI\`. It will then set \*systemd-boot\* as the default EFI application (default boot entry) loaded by the EFI Boot Manager. > Installing systemd-boot will overwrite any existing \`/efi/boot/bootx64.efi\`, for example Microsoft's version of this file. {.is-warning} ## Update Whenever there is a new version of systemd-boot, the boot manager can be optionally reinstalled by the user. This can be performed manually, or the update can be automatically triggered using pacman hooks. The two approaches are described thereafter. \*\*Note:\*\* The boot manager is a standalone EFI executable and any version can be used to boot the system (partial updates do not apply, since pacman only installs the systemd-boot installer, not systemd-boot itself). However, new versions may add new features or fix bugs, so it is probably a good idea to update it anyway. #### Manual update Use \`bootctl\` to update systemd-boot: \`\`\` bootctl update \`\`\` If the location of the ESP is non-standard (i.e., it is not \`/efi\`, \`/boot\`, or \`/boot/efi\`), you need to explicitly provide it using the \`--esp-path\` parameter. #### Automatic update The package \[systemd-boot-pacman-hook\](https://aur.archlinux.org/packages/systemd-boot-pacman-hook/)^AUR^ provides a \[Pacman hook\](https://wiki.archlinux.org/title/Pacman\_hook) to automate the update process. \[Installing\](https://wiki.archlinux.org/title/Install) the package will add a hook which will be executed every time the \[systemd\](https://archlinux.org/packages/?name=systemd) package is upgraded. Alternatively, to replicate what the \*systemd-boot-pacman-hook\* package does without installing it, place the following pacman hook in the \`/etc/pacman.d/hooks/\` directory: \`\`\`ini /etc/pacman.d/hooks/100-systemd-boot.hook \[Trigger\] Type = Package Operation = Upgrade Target = systemd \[Action\] Description = Updating systemd-boot When = PostTransaction Exec = /usr/bin/bootctl update \`\`\` # Syslinux \[Syslinux\](https://syslinux.org) is a collection of boot loaders capable of booting from drives, CDs, and over the network via \[PXE\](https://wiki.archlinux.org/title/PXE). Some of the supported \[file systems\](https://wiki.archlinux.org/title/File\_systems) are \[FAT\](https://wiki.archlinux.org/title/FAT), \[NTFS\](https://wiki.archlinux.org/title/NTFS), \[Ext2\](https://en.wikipedia.org/wiki/ext2), \[Ext3\](https://wiki.archlinux.org/title/Ext3), \[Ext4\](https://wiki.archlinux.org/title/Ext4), \[XFS\](https://wiki.archlinux.org/title/XFS), \[UFS/FFS\](https://en.wikipedia.org/wiki/Unix\_File\_System), and uncompressed single-device \[Btrfs\](https://wiki.archlinux.org/title/Btrfs). ## Installation on BIOS Install the \[syslinux\](https://archlinux.org/packages/?name=syslinux) package using: \`\`\` sudo pacman -S syslinux \`\`\` ### Automatic install If you use a separate boot partition, make sure that it is mounted. Check with \`lsblk\`, if you do not see a \`/boot\` mountpoint, mount it before you go any further. Run \`syslinux-install\_update\` with flags: \`-i\` - install the files, \`-a\` - mark the partition \*active\* with the \*boot\* flag, \`-m\` - install the MBR boot code: \`\`\`plaintext syslinux-install\_update -i -a -m \`\`\` Now is the time to edit \`/boot/syslinux/syslinux.cfg\` refer to \[Configuration\](#configuration) ### Manual install Your boot partition, on which you plan to install Syslinux, must contain a FAT, ext2, ext3, ext4, or Btrfs file system. You do not have to install it on the root directory of a file system, e.g., with device \`/dev/sda1\` mounted on \`/boot\`. For example, you can install Syslinux in the \`syslinux\` subdirectory: \`\`\` sudo mkdir /boot/syslinux \`\`\` Copy all \`.c32\` files from \`/usr/lib/syslinux/bios/\` to \`/boot/syslinux/\` if you desire to use any menus or configurations other than a basic boot prompt. \*\*Do not symlink them.\*\* \`\`\` sudo cp /usr/lib/syslinux/bios/\*.c32 /boot/syslinux/ \`\`\` Now install the bootloader. For FAT, Ext2/3/4, or Btrfs boot partition use \*extlinux\*, where the device has been mounted: \`\`\` sudo extlinux --install /boot/syslinux \`\`\` Alternatively, for a FAT boot partition use \*syslinux\*, where the device is \*\*unmounted\*\*: \`\`\` sudo syslinux --directory syslinux --install /dev/sdXY \`\`\` After this, proceed to install the Syslinux bootstrap code appropriate for the partition table: - \`mbr.bin\` will be installed for an \[MBR partition table\](https://wiki.archlinux.org/title/syslinux#MBR\_partition\_table) - \`gptmbr.bin\` will be installed for a \[GUID partition table\](https://wiki.archlinux.org/title/syslinux#GUID\_partition\_table) ## Installation on UEFI \*\*Note:\*\* - \`efi64\` denotes x86\\\_64 UEFI systems. For IA32 (32-bit) EFI, replace \`efi64\` with \`efi32\` in the below commands. - For Syslinux, the kernel and initramfs files need to be in the \[EFI system partition\](https://wiki.archlinux.org/title/EFI\_system\_partition) (aka ESP), as Syslinux does not (currently) have the ability to access files outside its own partition (i.e. outside ESP in this case). For this reason, it is recommended to mount ESP at \`/boot\`. - The automatic install script \`/usr/bin/syslinux-install\_update\` does not support UEFI install. - The configuration syntax of \`syslinux.cfg\` for UEFI is same as that of BIOS. ### Limitations of UEFI Syslinux - Using TAB to edit kernel parameters in UEFI Syslinux menu might lead to garbaged display (text on top of one another). - UEFI Syslinux does not support chainloading other EFI applications like UEFI Shell or Windows Boot Manager. - In some cases, UEFI Syslinux might not boot in some Virtual Machines like \[QEMU\](https://wiki.archlinux.org/title/QEMU)/OVMF or \[VirtualBox\](https://wiki.archlinux.org/title/VirtualBox) or some \[VMware\](https://wiki.archlinux.org/title/VMware) products/versions and in some UEFI emulation environments like DUET. A Syslinux contributor has confirmed no such issues present on VMware Workstation 10.0.2 and Syslinux-6.02 or later. - Memdisk is not available for UEFI. ### Manual install \*\*Note:\*\* In the commands related to UEFI, \`esp\` denotes the mountpoint of the \[EFI system partition\](https://wiki.archlinux.org/title/EFI\_system\_partition) aka ESP. Install the \[syslinux\](https://archlinux.org/packages/?name=syslinux) and \[efibootmgr\](https://archlinux.org/packages/?name=efibootmgr) packages from the \[official repositories\](https://wiki.archlinux.org/title/Official\_repositories). Then setup Syslinux in the ESP as follows: Copy Syslinux files to ESP: \`\`\` sudo mkdir -p esp/EFI/syslinux sudo cp -r /usr/lib/syslinux/efi64/\* esp/EFI/syslinux \`\`\` Setup boot entry for Syslinux using \[efibootmgr\](https://wiki.archlinux.org/title/Efibootmgr): \`\`\` sudo efibootmgr --create --disk /dev/sdX --part Y --loader /EFI/syslinux/syslinux.efi --label "Syslinux" --verbose \`\`\` where \`/dev/sdXY\` is the partition containing the bootloader. Create or edit \`\*esp\*/EFI/syslinux/syslinux.cfg\` by following \[Configuration\](https://wiki.rebornos.org/en/customization/bootloader#configuration). \*\*Note:\*\* - The config file for UEFI is \`\*esp\*/EFI/syslinux/syslinux.cfg\`, not \`/boot/syslinux/syslinux.cfg\`. Files in \`/boot/syslinux/\` are BIOS specific and not related to UEFI Syslinux. - When booted in BIOS mode, \[efibootmgr\](https://archlinux.org/packages/?name=efibootmgr) will not be able to set EFI nvram entry for \`/EFI/syslinux/syslinux.efi\`. To work around, place resources at the default EFI location: \`\*esp\*/EFI/syslinux/\* -> \*esp\*/EFI/BOOT/\*\` and \`\*esp\*/EFI/syslinux/syslinux.efi -> \*esp\*/EFI/BOOT/bootx64.efi\` ## Configuration \`\`\` sudo nano /boot/syslinux/syslinux.cfg \`\`\` Your config should look like this, make sure \`/dev/sdXY\` points to your root partition \`TIMEOUT\` refers to the time it takes to boot the default OS \`\`\` UI menu.c32 PROMPT 1 TIMEOUT 10 DEFAULT RebornOS LABEL RebornOS LINUX ../vmlinuz-linux APPEND root=/dev/sdXY rw INITRD ../initramfs-linux.img LABEL RebornOSfallback LINUX ../vmlinuz-linux APPEND root=/dev/sdXY rw INITRD ../initramfs-linux-fallback.img \`\`\` Additionally if you want to add Windows to the boot menu add this where \`hd0 3\` refers to the disk then partition \`\`\`cfg LABEL windows MENU LABEL Windows COM32 chain.c32 APPEND hd0 3 \`\`\`
+# GRUB
+GRUB is the default Linux bootloader that works on most systems.
+## Theming
+You can find new Grub themes [here](https://gnome-look.org/browse?cat=109&ord=latest) & [here](https://store.kde.org/browse?cat=109&ord=latest)
+To install a new Grub theme open Grub Customizer and go to the appearance tab.
+![](/grubcustomizer.png)
+Click the plus symbol next to the theme option and select the archive of the theme you download.
+## Changing Grub themes
+To change the grub theme click on the dropdown menu next to theme and select the theme you want.
+Then click save to save your new theme.
+## Change first boot option
+You can change your first boot option from Grub Customizer.
+![](/grubcustomizergeneralsettings.png)
+click the dropdown menu next to predefined to change your first boot option. or change the order of boot options on the list configuration page.
+# Plymouth
+Plymouth is the fancy startup animations that you see in videos & distros. (please note Plymouth can be buggy on some systems)
+## Installation
+Plymouth can only be installed from the AUR 
+to install it use your preferred AUR helper. In this example we use yay
+```plaintext
+yay -S plymouth-git
+```
+Add the Plymouth hook
+Add `plymouth` to the `HOOKS` array in [mkinitcpio.conf](https://wiki.archlinux.org/title/Mkinitcpio.conf) (`/etc/mkinitcpio.conf`). It **must** be added **after** `base` and `udev` for it to work:
+```
+HOOKS=(base udev plymouth ...)
+```
+## Theming
+New Plymouth themes can be found [here](https://gnome-look.org/browse?cat=108&ord=latest) or [here](https://store.kde.org/browse?cat=108&ord=latest) 
+Copy the theme folders you downloaded to `/usr/share/plymouth/themes`
+## Change Plymouth themes
+list all Plymouth themes installed.
+```
+plymouth-set-default-theme -l
+```
+set Plymouth theme as default. `theme` is an example name in this.
+```
+plymouth-set-default-theme -R theme
+```
+# Systemd-boot
+Systemd-boot is a simple UEFI boot manager. It is simple to configure but it can only start EFI executables such as the Linux kernel [EFISTUB](https://wiki.archlinux.org/title/EFISTUB), [UEFI shell](https://wiki.archlinux.org/title/UEFI_shell), GRUB, or the Windows Boot Manager.
+## Installation
+To install the systemd-boot EFI boot manager, first make sure the system has booted in UEFI mode and that [UEFI variables](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface#UEFI_variables) are accessible. This can be checked by running the command `efivar --list` or, if [efivar](https://archlinux.org/packages/?name=efivar) is not installed, do `ls /sys/firmware/efi/efivars` (if the directory exists, the system is booted in UEFI mode).
+`esp` will be used throughout this page to denote the [ESP mountpoint](https://wiki.archlinux.org/title/EFI_system_partition#Typical_mount_points), e.g. `/boot` or `/efi`. This assumes that you have `chroot`ed to your system's mount point.
+With the ESP mounted to `esp`, use `bootctl` to install *systemd-boot* into the EFI system partition by running:
+```
+bootctl install
+```
+This will copy the systemd-boot boot loader to the EFI partition: on a x64 architecture system `/usr/lib/systemd/boot/efi/systemd-bootx64.efi` will be copied to `*esp*/EFI/systemd/systemd-bootx64.efi` and `*esp*/EFI/BOOT/BOOTX64.EFI`. It will then set *systemd-boot* as the default EFI application (default boot entry) loaded by the EFI Boot Manager.
+> Installing systemd-boot will overwrite any existing `/efi/boot/bootx64.efi`, for example Microsoft's version of this file.
+{.is-warning}
+## Update
+Whenever there is a new version of systemd-boot, the boot manager can be optionally reinstalled by the user. This can be performed manually, or the update can be automatically triggered using pacman hooks. The two approaches are described thereafter.
+**Note:** The boot manager is a standalone EFI executable and any version can be used to boot the system (partial updates do not apply, since pacman only installs the systemd-boot installer, not systemd-boot itself). However, new versions may add new features or fix bugs, so it is probably a good idea to update it anyway.
+#### Manual update
+Use `bootctl` to update systemd-boot:
+```
+bootctl update
+```
+If the location of the ESP is non-standard (i.e., it is not `/efi`, `/boot`, or `/boot/efi`), you need to explicitly provide it using the `--esp-path` parameter.
+#### Automatic update
+The package [systemd-boot-pacman-hook](https://aur.archlinux.org/packages/systemd-boot-pacman-hook/)^AUR^ provides a [Pacman hook](https://wiki.archlinux.org/title/Pacman_hook) to automate the update process. [Installing](https://wiki.archlinux.org/title/Install) the package will add a hook which will be executed every time the [systemd](https://archlinux.org/packages/?name=systemd) package is upgraded. Alternatively, to replicate what the *systemd-boot-pacman-hook* package does without installing it, place the following pacman hook in the `/etc/pacman.d/hooks/` directory:
+```ini
+/etc/pacman.d/hooks/100-systemd-boot.hook
+[Trigger]
+Type = Package
+Operation = Upgrade
+Target = systemd
+[Action]
+Description = Updating systemd-boot
+When = PostTransaction
+Exec = /usr/bin/bootctl update
+```
+# Syslinux
+[Syslinux](https://syslinux.org) is a collection of boot loaders capable of booting from drives, CDs, and over the network via [PXE](https://wiki.archlinux.org/title/PXE). Some of the supported [file systems](https://wiki.archlinux.org/title/File_systems) are [FAT](https://wiki.archlinux.org/title/FAT), [NTFS](https://wiki.archlinux.org/title/NTFS), [Ext2](https://en.wikipedia.org/wiki/ext2), [Ext3](https://wiki.archlinux.org/title/Ext3), [Ext4](https://wiki.archlinux.org/title/Ext4), [XFS](https://wiki.archlinux.org/title/XFS), [UFS/FFS](https://en.wikipedia.org/wiki/Unix_File_System), and uncompressed single-device [Btrfs](https://wiki.archlinux.org/title/Btrfs).
+## Installation on BIOS
+Install the [syslinux](https://archlinux.org/packages/?name=syslinux) package using:
+```
+sudo pacman -S syslinux
+```
+### Automatic install
+If you use a separate boot partition, make sure that it is mounted. Check with `lsblk`, if you do not see a `/boot` mountpoint, mount it before you go any further.
+Run `syslinux-install_update` with flags: `-i` - install the files, `-a` - mark the partition *active* with the *boot* flag, `-m` - install the MBR boot code:
+```plaintext
+syslinux-install_update -i -a -m
+```
+Now is the time to edit `/boot/syslinux/syslinux.cfg` refer to [Configuration](#configuration)
+### Manual install
+Your boot partition, on which you plan to install Syslinux, must contain a FAT, ext2, ext3, ext4, or Btrfs file system. You do not have to install it on the root directory of a file system, e.g., with device `/dev/sda1` mounted on `/boot`. For example, you can install Syslinux in the `syslinux` subdirectory:
+```
+sudo mkdir /boot/syslinux
+```
+Copy all `.c32` files from `/usr/lib/syslinux/bios/` to `/boot/syslinux/` if you desire to use any menus or configurations other than a basic boot prompt. **Do not symlink them.**
+```
+sudo cp /usr/lib/syslinux/bios/*.c32 /boot/syslinux/
+```
+Now install the bootloader. For FAT, Ext2/3/4, or Btrfs boot partition use *extlinux*, where the device has been mounted:
+```
+sudo extlinux --install /boot/syslinux
+```
+Alternatively, for a FAT boot partition use *syslinux*, where the device is **unmounted**:
+```
+sudo syslinux --directory syslinux --install /dev/sdXY
+```
+After this, proceed to install the Syslinux bootstrap code appropriate for the partition table:
+- `mbr.bin` will be installed for an [MBR partition table](https://wiki.archlinux.org/title/syslinux#MBR_partition_table)
+- `gptmbr.bin` will be installed for a [GUID partition table](https://wiki.archlinux.org/title/syslinux#GUID_partition_table)
+## Installation on UEFI
+**Note:**
+- `efi64` denotes x86\_64 UEFI systems. For IA32 (32-bit) EFI, replace `efi64` with `efi32` in the below commands.
+- For Syslinux, the kernel and initramfs files need to be in the [EFI system partition](https://wiki.archlinux.org/title/EFI_system_partition) (aka ESP), as Syslinux does not (currently) have the ability to access files outside its own partition (i.e. outside ESP in this case). For this reason, it is recommended to mount ESP at `/boot`.
+- The automatic install script `/usr/bin/syslinux-install_update` does not support UEFI install.
+- The configuration syntax of `syslinux.cfg` for UEFI is same as that of BIOS.
+### Limitations of UEFI Syslinux
+- Using TAB to edit kernel parameters in UEFI Syslinux menu might lead to garbaged display (text on top of one another).
+- UEFI Syslinux does not support chainloading other EFI applications like UEFI Shell or Windows Boot Manager.
+- In some cases, UEFI Syslinux might not boot in some Virtual Machines like [QEMU](https://wiki.archlinux.org/title/QEMU)/OVMF or [VirtualBox](https://wiki.archlinux.org/title/VirtualBox) or some [VMware](https://wiki.archlinux.org/title/VMware) products/versions and in some UEFI emulation environments like DUET. A Syslinux contributor has confirmed no such issues present on VMware Workstation 10.0.2 and Syslinux-6.02 or later.
+- Memdisk is not available for UEFI.
+### Manual install
+**Note:** In the commands related to UEFI, `esp` denotes the mountpoint of the [EFI system partition](https://wiki.archlinux.org/title/EFI_system_partition) aka ESP.
+Install the [syslinux](https://archlinux.org/packages/?name=syslinux) and [efibootmgr](https://archlinux.org/packages/?name=efibootmgr) packages from the [official repositories](https://wiki.archlinux.org/title/Official_repositories). Then setup Syslinux in the ESP as follows:
+Copy Syslinux files to ESP:
+```
+sudo mkdir -p esp/EFI/syslinux
+sudo cp -r /usr/lib/syslinux/efi64/* esp/EFI/syslinux
+```
+Setup boot entry for Syslinux using [efibootmgr](https://wiki.archlinux.org/title/Efibootmgr):
+```
+sudo efibootmgr --create --disk /dev/sdX --part Y --loader /EFI/syslinux/syslinux.efi --label "Syslinux" --verbose
+```
+where `/dev/sdXY` is the partition containing the bootloader.
+Create or edit `*esp*/EFI/syslinux/syslinux.cfg` by following [Configuration](https://wiki.rebornos.org/en/customization/bootloader#configuration).
+**Note:**
+- The config file for UEFI is `*esp*/EFI/syslinux/syslinux.cfg`, not `/boot/syslinux/syslinux.cfg`. Files in `/boot/syslinux/` are BIOS specific and not related to UEFI Syslinux.
+- When booted in BIOS mode, [efibootmgr](https://archlinux.org/packages/?name=efibootmgr) will not be able to set EFI nvram entry for `/EFI/syslinux/syslinux.efi`. To work around, place resources at the default EFI location: `*esp*/EFI/syslinux/* -> *esp*/EFI/BOOT/*` and `*esp*/EFI/syslinux/syslinux.efi -> *esp*/EFI/BOOT/bootx64.efi`
+## Configuration
+```
+sudo nano /boot/syslinux/syslinux.cfg
+```
+Your config should look like this, make sure `/dev/sdXY` points to your root partition
+`TIMEOUT` refers to the time it takes to boot the default OS
+```
+UI menu.c32
+PROMPT 1
+TIMEOUT 10
+DEFAULT RebornOS
+LABEL RebornOS
+LINUX ../vmlinuz-linux
+APPEND root=/dev/sdXY rw
+INITRD ../initramfs-linux.img
+LABEL RebornOSfallback
+LINUX ../vmlinuz-linux
+APPEND root=/dev/sdXY rw
+INITRD ../initramfs-linux-fallback.img
+```
+Additionally if you want to add Windows to the boot menu add this where `hd0 3` refers to the disk then partition
+```cfg
+LABEL windows
+MENU LABEL Windows
+COM32 chain.c32
+APPEND hd0 3
