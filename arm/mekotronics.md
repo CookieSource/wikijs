@@ -2,7 +2,7 @@
 title: How to Install RebornOS onto Mekotronics device
 description: How to Install RebornOS onto Mekotronics r58x
 published: true
-date: 2023-02-18T19:19:50.309Z
+date: 2023-02-18T19:32:35.349Z
 tags: arm
 editor: markdown
 dateCreated: 2023-02-18T18:40:03.325Z
@@ -30,3 +30,24 @@ On R58S (mini pc)
 ## From windows
 **TODO**
 ## From linux
+1. After you have put your device check if your pc finds it.
+```sh
+sudo rkdeveloptool ld
+```
+Output should look like this
+
+> DevNo=1	Vid=0x2207,Pid=0x350b,LocationID=801	
+
+2. Download [rk3588_spl_loader_v1.09.111.bin](/arm/rk3588_spl_loader_v1.09.111.bin) then run:
+```sh
+sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin
+```
+> If you get "The device does not support this operation!" replug the device!
+{.is-danger}
+
+3. Then write the image you downloaded.
+```
+sudo rkdeveloptool wl 0 ~/Downloads/RebornOS-ARM-r58x-2023-01-14.img
+```
+> Replace the path and name with the path where the extracted image is.
+{.is-info}
