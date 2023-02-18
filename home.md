@@ -2,13 +2,13 @@
 title: Home
 description: Guides and instructions for RebornOS
 published: true
-date: 2023-02-18T18:26:52.630Z
+date: 2023-02-18T18:27:29.605Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-18T16:51:58.670Z
 ---
 
-# Getting started Welcome to the RebornOS wiki This is a complimentary wiki for all things RebornOS. For other guides on Arch, please visit the [Arch Wiki](https://wiki.archlinux.org). 
+## Welcome to the RebornOS wiki This is a complimentary wiki for all things RebornOS. For other guides on Arch, please visit the [Arch Wiki](https://wiki.archlinux.org). 
 # Installation Instructions on installing RebornOS
 - [Requirements](/en/installation/requirements) ***Everything required to install RebornOS*** 
 - [_Online Installation guide (Calamares installer)_](/en/installation/online) ***Instructions on how to install RebornOS online***
