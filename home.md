@@ -2,7 +2,7 @@
 title: Home
 description: Guides and instructions for RebornOS
 published: true
-date: 2023-02-18T18:17:56.938Z
+date: 2023-02-18T18:26:52.630Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-18T16:51:58.670Z
@@ -17,15 +17,20 @@ dateCreated: 2023-02-18T16:51:58.670Z
 - [Features](/en/installation/features) ***A list of all the features our installer offers*** 
 - [Troubleshooting](/en/installation/troubleshooting) ***Solutions to common installation issues.*** 
 # Apps Instructions and manuals for all apps RebornOS optionally provides.
-- [RebornOS Fire](/en/apps/rebornosfire) ***Our flagship app allowing you to tweak your system.*** - [Rate-mirrors](/en/apps/rate-mirrors) ***Rank your mirrors for faster downloads*** 
+- [RebornOS Fire](/en/apps/rebornosfire) ***Our flagship app allowing you to tweak your system.*** 
+- [Rate-mirrors](/en/apps/rate-mirrors) ***Rank your mirrors for faster downloads*** 
 - [*Other GUI apps*](/en/apps) ***Instructions for all third party GUI apps we optionally offer.*** 
 # How to Tutorials and guides on how to do things on RebornOS. 
 - [How to](/en/howto) ***Guides & tutorials*** 
 # Customization Customize your install with themes, settings, optimizations and, other options of your choice. 
 - [Theming](/en/customization/theming) ***Instructions on how to theme different desktops*** 
 - [Shell guides](/en/customization/shell) ***Change the look and feel of your terminal*** 
-- [Bootloader](/en/customization/bootloader) ***Instructions on changing bootloaders, bootloader themes & setting up Plymouth*** # ARM Running RebornOS on ARM devices. 
-- [RebornOS ARM](/en/arm) ***Relevant and other related content*** # Contributors Guides and guidelines on how to contribute to the Wiki and other RebornOS projects! 
-- [How to contribute](/en/howto/contribute) ***Rules, guidelines & tutorials*** # Bug reports Instructions on how to report bugs to the RebornOS Team. 
-- [Bug reports](/en/howto/bugreports) ***How to report bugs*** # Archive
+- [Bootloader](/en/customization/bootloader) ***Instructions on changing bootloaders, bootloader themes & setting up Plymouth*** 
+# ARM Running RebornOS on ARM devices. 
+- [RebornOS ARM](/en/arm) ***Relevant and other related content*** 
+# Contributors Guides and guidelines on how to contribute to the Wiki and other RebornOS projects! 
+- [How to contribute](/en/howto/contribute) ***Rules, guidelines & tutorials*** 
+# Bug reports Instructions on how to report bugs to the RebornOS Team. 
+- [Bug reports](/en/howto/bugreports) ***How to report bugs*** 
+# Archive
 - [Archive](/en/archive) ***Old, archived guides and pages from old RebornOS configurations***
