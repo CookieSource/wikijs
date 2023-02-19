@@ -2,7 +2,7 @@
 title: ARM Installation
 description: Short article on how to install RebornOS ARM onto your SBC's
 published: true
-date: 2023-02-18T18:14:19.531Z
+date: 2023-02-19T18:52:35.725Z
 tags: arm, installation
 editor: markdown
 dateCreated: 2023-02-18T16:53:21.676Z
@@ -76,7 +76,8 @@ If you have a non-US keyboard layout, you can select it here:
 Here you can select any desktops or window managers that you would like to install with RebornOS. For a single selection, you can just click on the option you want to choose and it gets selected:
 ![Desktop WM select](https://de.mirror.rebornos.org/pics/online/onlineDE.jpg)
 Multiple selection requires you to hold down the Ctrl or Shift keys after selecting the first option.
->
+
+
 > Warning: Selecting multiple desktops is not recommended. Desktops tend to overwrite themes and other files from one another, causing visual artifacts that break the appearance. Select multiple desktops only if you know what you are doing.
 {.is-warning}
 ## 5. Advanced
@@ -87,10 +88,14 @@ The Advanced page consists of a heirarchy of categories and packages. The appear
 ![Advanced default collapsed](https://de.mirror.rebornos.org/pics/online/onlineextra.jpg)
 > Note: Please do not be tempted to check entire categories for installation. This will result in bloating of your install and will end up using a lot of your storage. It is always a good idea to expand each category to select the smallest subset of packages that you want to install.
 {.is-info}
+
 > Warning: We recommend beginners to not change anything in the Minimal Base category. It contains basic applications required for your RebornOS to function properly. Removing packages from here may result in a poorly functioning installation.
 {.is-warning}
+
 Desktop related packages are always at the end. You can expand the desktop category to see a Curated list, and sometimes Exhaustive and Miscellaneous lists.
+
 The curated package list for each desktop contains the recommended packages which are a good fit for most people. The exhaustive list usually contains all possible desktop related packages mentioned in the Arch Wiki if you want to add more things to your desktop.
+
 You can choose which parts of RebornOS base and apps to install. However, we recommend to only change the RebornOS Apps if you want to, and leave the RebornOS Base category unchanged.
 ## 6. Users
 Here you can select a username and password for use on your RebornOS. You can also choose to reuse the same password for the root account:
