@@ -2,7 +2,7 @@
 title: Bootloader
 description: Instructions on changing Grub themes, changing bootloaders & setting up Plymouth
 published: true
-date: 2023-02-18T17:55:22.554Z
+date: 2023-02-19T08:02:34.662Z
 tags: customization, bootloader, grub, plymouth, themes
 editor: markdown
 dateCreated: 2023-02-18T16:53:49.677Z
@@ -11,7 +11,7 @@ dateCreated: 2023-02-18T16:53:49.677Z
 # GRUB
 GRUB is the default Linux bootloader that works on most systems.
 ## Theming
-You can find new Grub themes [here](https://gnome-look.org/browse?cat=109&ord=latest) & [here](https://store.kde.org/browse?cat=109&ord=latest)
+You can find new Grub themes in [gnome-look.org](https://gnome-look.org/browse?cat=109&ord=latest) & [store.kde.org](https://store.kde.org/browse?cat=109&ord=latest).
 To install a new Grub theme open Grub Customizer and go to the appearance tab.
 ![](/grubcustomizer.png)
 Click the plus symbol next to the theme option and select the archive of the theme you download.
@@ -25,9 +25,9 @@ click the dropdown menu next to predefined to change your first boot option. or 
 # Plymouth
 Plymouth is the fancy startup animations that you see in videos & distros. (please note Plymouth can be buggy on some systems)
 ## Installation
-Plymouth can only be installed from the AUR 
-to install it use your preferred AUR helper. In this example we use yay
-```plaintext
+Plymouth can only be installed from the AUR.
+To install it use, your preferred AUR helper. In this example, we use yay
+```
 yay -S plymouth-git
 ```
 Add the Plymouth hook
@@ -143,6 +143,7 @@ Create or edit `*esp*/EFI/syslinux/syslinux.cfg` by following [Configuration](ht
 **Note:**
 - The config file for UEFI is `*esp*/EFI/syslinux/syslinux.cfg`, not `/boot/syslinux/syslinux.cfg`. Files in `/boot/syslinux/` are BIOS specific and not related to UEFI Syslinux.
 - When booted in BIOS mode, [efibootmgr](https://archlinux.org/packages/?name=efibootmgr) will not be able to set EFI nvram entry for `/EFI/syslinux/syslinux.efi`. To work around, place resources at the default EFI location: `*esp*/EFI/syslinux/* -> *esp*/EFI/BOOT/*` and `*esp*/EFI/syslinux/syslinux.efi -> *esp*/EFI/BOOT/bootx64.efi`
+
 ## Configuration
 ```
 sudo nano /boot/syslinux/syslinux.cfg
