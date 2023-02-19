@@ -2,7 +2,7 @@
 title: Kernel Comparison
 description: Compare the different kernels we offer
 published: true
-date: 2023-02-19T08:03:59.527Z
+date: 2023-02-19T08:05:21.402Z
 tags: customization, installation, kernels
 editor: markdown
 dateCreated: 2023-02-18T16:54:09.780Z
@@ -81,7 +81,7 @@ Afterwards be sure to boot from it during startup!
 
 ## Clear
 
-The Clear Linux kernel provides Patches from Intel's Clear Linux project which improves the performance and security of Intel CPU'S in most cases.
+The Clear Linux kernel provides Patches from Intel's Clear Linux project which improves the performance and security of Intel CPUs in most cases.
 
 ### How to install Clear
 
@@ -97,7 +97,7 @@ Afterwards be sure to boot from it during startup!
 
 ## TKG
 
-A highly customizable kernel build system that provides a selection of patches and tweaks aiming for better desktop and gaming performance
+A highly customizable kernel build system that provides a selection of patches and tweaks aiming for better desktop and gaming performance.
 
 ### How to install TKG
 
@@ -115,7 +115,7 @@ Afterwards be sure to boot from it during startup!
 
 ## Xanmod
 
-Aiming to take full advantage in high-performance workstations, gaming desktops, media centers and others and built to provide a more rock-solid, responsive and smooth desktop experience
+Aiming to take full advantage in high-performance workstations, gaming desktops, media centers and others and built to provide a more rock-solid, responsive and smooth desktop experience.
 
 ### How to install Xanmod
 
@@ -139,7 +139,7 @@ The Cacule kernel is only available in the AUR
 
 Use your preferred AUR helper. We used yay in the example below
 
-```plaintext
+```
 yay -S linux-cacule
 ```
 
