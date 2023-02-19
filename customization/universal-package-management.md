@@ -2,85 +2,10 @@
 title: Universal package management
 description: 
 published: true
-date: 2022-03-27T11:22:59.392Z
+date: 2023-02-19T08:07:21.029Z
 tags: customization, snap, flatpak, appimage, universal package management
 editor: markdown
-dateCreated: 2021-10-16T12:40:24.070Z
+dateCreated: 2023-02-18T16:54:25.421Z
 ---
 
-## Snap
-
-Canonical universal package solution
-
-### How to install Snap
-
-The `snapd` package can be installed with
-```
-sudo pacman -S snapd snapd-glib
-```
-
-To enable the snap service, run
-```
-sudo systemctl enable --now snapd
-```
-
-### How to use Snap
-
-From the terminal or via a graphical store like [Pamac](/en/howto/pamac)
-
-```
-sudo snap install <app name>
-```
-
-## Flatpak
-
-### How to install Flatpak
-The `flatpak` package can be installed with
-```
-sudo pacman -S flatpak
-```
-It may be necessary to reboot after installing Flatpak.
-
-### How to use Flatpak
-
-**By using** [**flathub**](https://flathub.org)
-
-Navigate to Flathub to an app you want and click install.
-
-It may be required to open the downloaded file.
-
-**Installing an app from the terminal**
-
-```plaintext
-sudo flatpak install <app name>
-```
-
-**Deleting an app from the terminal**
-
-```plaintext
-sudo flatpak uninstall <app name>
-```
-
-or use a graphical store like [Pamac](/en/howto/pamac)
-
-## Appimage
-
-### How to install AppImage Launcher
-
-The `appimagelauncher` package can be installed with
-
-```plaintext
-sudo pacman -S appimagelauncher
-```
-
-Download https://appimage.github.io/AppImageUpdate
-
-Open it, select **Integrate and run**.
-
-### How to use Appimage
-
-Download an Appimage of your choice and double click it
-
-![](/screenshot.png)
-
-Choose whether you want to integrate the app into your system or use it once.
+\## Snap Canonical universal package solution ### How to install Snap The \`snapd\` package can be installed with \`\`\` sudo pacman -S snapd snapd-glib \`\`\` To enable the snap service, run \`\`\` sudo systemctl enable --now snapd \`\`\` ### How to use Snap From the terminal or via a graphical store like \[Pamac\](/en/howto/pamac) \`\`\` sudo snap install \`\`\` ## Flatpak ### How to install Flatpak The \`flatpak\` package can be installed with \`\`\` sudo pacman -S flatpak \`\`\` It may be necessary to reboot after installing Flatpak. ### How to use Flatpak \*\*By using\*\* \[\*\*flathub\*\*\](https://flathub.org) Navigate to Flathub to an app you want and click install. It may be required to open the downloaded file. \*\*Installing an app from the terminal\*\* \`\`\`plaintext sudo flatpak install \`\`\` \*\*Deleting an app from the terminal\*\* \`\`\`plaintext sudo flatpak uninstall \`\`\` or use a graphical store like \[Pamac\](/en/howto/pamac) ## Appimage ### How to install AppImage Launcher The \`appimagelauncher\` package can be installed with \`\`\`plaintext sudo pacman -S appimagelauncher \`\`\` Download https://appimage.github.io/AppImageUpdate Open it, select \*\*Integrate and run\*\*. ### How to use Appimage Download an Appimage of your choice and double click it !\[\](/screenshot.png) Choose whether you want to integrate the app into your system or use it once.
