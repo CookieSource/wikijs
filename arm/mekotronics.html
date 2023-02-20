@@ -2,20 +2,20 @@
 title: How to Install RebornOS onto a Mekotronics device.
 description: How to Install RebornOS onto a Mekotronics device.
 published: true
-date: 2023-02-20T08:52:13.135Z
+date: 2023-02-20T09:24:09.168Z
 tags: arm
 editor: ckeditor
 dateCreated: 2023-02-18T18:40:03.325Z
 -->
 
-<h1>Install RebornOS onto a Mekatronics Device</h1>
+<h1>Install RebornOS onto a Mekotronics Device</h1>
 <p>Currently only the following devices are supported:</p>
 <ul>
   <li>R58X</li>
   <li>R58X-4G</li>
   <li>R58S</li>
 </ul>
-<h2>Preparation</h2>
+<h2>Preparation&nbsp;</h2>
 <p>Download the latest RebornOS image for your ARM device from <a href="https://rebornos.org/download-arm">here</a>.<br>Then extract it so that you are left with a .img file.</p>
 <h3>Put your device in maskrom mode.</h3>
 <p>Connect USB-C cable to your PC to the device then with a toothpick hold the RECOVERY button then press the RESET button<br>On R58X</p>
@@ -39,6 +39,7 @@ dateCreated: 2023-02-18T18:40:03.325Z
   <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"><span class="todo-list__label__description">Download </span></label><a href="/arm/rk3588_spl_loader_v1.09.111.bin"><label class="todo-list__label"><span class="todo-list__label__description">rk3588_spl_loader_v1.09.111.bin</span></label></a><label class="todo-list__label"><span class="todo-list__label__description"> then run:</span></label></li>
 </ul>
 <pre><code class="language-plaintext">sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin</code></pre>
+<p>&nbsp;</p>
 <blockquote>
   <p>If you get "The device does not support this operation!" re-plug the device.</p>
 </blockquote>
@@ -46,6 +47,7 @@ dateCreated: 2023-02-18T18:40:03.325Z
   <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"><span class="todo-list__label__description">Write the image you downloaded.</span></label></li>
 </ul>
 <pre><code class="language-plaintext">sudo rkdeveloptool wl 0 ~/Downloads/RebornOS-ARM-r58x-2023-01-14.img</code></pre>
+<p>&nbsp;</p>
 <blockquote>
   <p>Replace the path and name with the path where the extracted image is.</p>
 </blockquote>
