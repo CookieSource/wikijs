@@ -2,72 +2,58 @@
 title: How to Install RebornOS onto a Mekotronics device.
 description: How to Install RebornOS onto a Mekotronics device.
 published: true
-date: 2023-02-20T08:33:58.754Z
+date: 2023-02-20T08:52:13.135Z
 tags: arm
 editor: ckeditor
 dateCreated: 2023-02-18T18:40:03.325Z
 -->
 
-<h1 class="toc-header" id="install-rebornos-onto-a-mekatronics-device"> Install RebornOS onto a Mekatronics Device</h1>
-<p>Currently only these devices are supported:</p>
+<h1>Install RebornOS onto a Mekatronics Device</h1>
+<p>Currently only the following devices are supported:</p>
 <ul>
-<li>R58X</li>
-<li>R58X-4G</li>
-<li>R58S</li>
+  <li>R58X</li>
+  <li>R58X-4G</li>
+  <li>R58S</li>
 </ul>
-<h2 class="toc-header" id="prep"> Prep</h2>
-<ol>
-<li>
-<p>Download the latest image for your device from <a class="is-external-link" href="https://rebornos.org/download-arm">here</a>.<br>
-Then extract it so that you are left with a .img file</p>
-</li>
-<li>
-<p>Put your device in maskrom mode.<br>
-Connect USB-C cable to your PC to the device then with a toothpick hold the RECOVERY button then press the RESET button<br>
-On R58X</p>
-</li>
-</ol>
-<p><img alt="r58x.png" src="/arm/r58x.png"></p>
+<h2>Preparation</h2>
+<p>Download the latest RebornOS image for your ARM device from <a href="https://rebornos.org/download-arm">here</a>.<br>Then extract it so that you are left with a .img file.</p>
+<h3>Put your device in maskrom mode.</h3>
+<p>Connect USB-C cable to your PC to the device then with a toothpick hold the RECOVERY button then press the RESET button<br>On R58X</p>
+<figure class="image"><img src="/arm/r58x.png" alt="r58x.png"></figure>
 <p>On R58X-4G</p>
-<p><img alt="r58x-4g.png" src="/arm/r58x-4g.png"></p>
+<figure class="image"><img src="/arm/r58x-4g.png" alt="r58x-4g.png"></figure>
 <p>On R58S (mini pc)</p>
-<p><img alt="r58s.png" src="/arm/r58s.png"></p>
-<h2 class="toc-header" id="write-image-to-emmc"> Write image to eMMC</h2>
-<p>Instructions on how to write the image to eMMC</p>
-<h3 class="toc-header" id="from-windows"> From Windows</h3>
+<figure class="image"><img src="/arm/r58s.png" alt="r58s.png"></figure>
+<h2>Write image to eMMC</h2>
+<p>Instructions on how to write the image files to the eMMC:</p>
+<h3>From Linux</h3>
+<ul class="todo-list">
+  <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"><span class="todo-list__label__description">After you have put your device into maskrom mode, verify this from your system.</span></label></li>
+</ul>
+<pre><code class="language-plaintext">sudo rkdeveloptool ld</code></pre>
+<p>Output should look something similar to this:</p>
+<blockquote>
+  <p>DevNo=1 Vid=0x2207,Pid=0x350b,LocationID=801 Maskrom</p>
+</blockquote>
+<ul class="todo-list">
+  <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"><span class="todo-list__label__description">Download </span></label><a href="/arm/rk3588_spl_loader_v1.09.111.bin"><label class="todo-list__label"><span class="todo-list__label__description">rk3588_spl_loader_v1.09.111.bin</span></label></a><label class="todo-list__label"><span class="todo-list__label__description"> then run:</span></label></li>
+</ul>
+<pre><code class="language-plaintext">sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin</code></pre>
+<blockquote>
+  <p>If you get "The device does not support this operation!" re-plug the device.</p>
+</blockquote>
+<ul class="todo-list">
+  <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"><span class="todo-list__label__description">Write the image you downloaded.</span></label></li>
+</ul>
+<pre><code class="language-plaintext">sudo rkdeveloptool wl 0 ~/Downloads/RebornOS-ARM-r58x-2023-01-14.img</code></pre>
+<blockquote>
+  <p>Replace the path and name with the path where the extracted image is.</p>
+</blockquote>
+<ul class="todo-list">
+  <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"><span class="todo-list__label__description">Reboot the device:</span></label></li>
+</ul>
+<pre><code class="language-plaintext">sudo rkdeveloptool rd</code></pre>
+<h3>Install your preferred Desktop and Packages:</h3>
+<p>You can follow the installation guide <a href="/arm/install">here.</a></p>
+<h3><br><br>From Windows</h3>
 <p><strong>TODO</strong></p>
-<h3 class="toc-header" id="from-linux"> From Linux</h3>
-<ol>
-<li>After you have put your device check if your pc finds it.</li>
-</ol>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo rkdeveloptool ld
-</code></pre>
-<p>Output should look something similar to this</p>
-<blockquote>
-<p>DevNo=1 Vid=0x2207,Pid=0x350b,LocationID=801 Maskrom</p>
-</blockquote>
-<ol>
-<li>Download <a class="is-asset-link" href="/arm/rk3588_spl_loader_v1.09.111.bin">rk3588_spl_loader_v1.09.111.bin</a> then run:</li>
-</ol>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin
-</code></pre>
-<blockquote>
-<p>If you get "The device does not support this operation!" replug the device!</p>
-</blockquote>
-<ol>
-<li>Then write the image you downloaded.</li>
-</ol>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo rkdeveloptool wl 0 ~/Downloads/RebornOS-ARM-r58x-2023-01-14.img
-</code></pre>
-<blockquote>
-<p>Replace the path and name with the path where the extracted image is.</p>
-</blockquote>
-<ol>
-<li>Reboot the device</li>
-</ol>
-<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo rkdeveloptool rd
-</code></pre>
-<ol>
-<li>Install your preffered Desktop and Packages</li>
-</ol>
-<p>You can follow the install guide <a class="is-internal-link is-valid-page" href="/arm/install">here</a></p>
