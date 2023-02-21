@@ -2,7 +2,7 @@
 title: How to create a bootable storage medium
 description: 
 published: true
-date: 2023-02-18T17:05:22.343Z
+date: 2023-02-21T18:19:49.879Z
 tags: arm
 editor: markdown
 dateCreated: 2023-02-18T16:53:13.408Z
@@ -24,4 +24,4 @@ dateCreated: 2023-02-18T16:53:13.408Z
 ![](https://de.mirror.rebornos.org/pics/imagersellected.png)
 7.  Write!
 
-Follow the installation guide on [here](/en/arm/install)!
+Follow the [installation guide](/en/arm/install)!
