@@ -2,7 +2,7 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2023-02-21T18:11:33.705Z
+date: 2023-02-21T18:12:51.469Z
 tags: arm
 editor: markdown
 dateCreated: 2023-02-18T16:53:17.460Z
@@ -49,8 +49,8 @@ Click on the window managers  to be taken to their user guides/wiki.
 2.  [Openbox](http://openbox.org/wiki/Help:Contents)
 
 More window managers coming soon
-## Software
 
+## Software
 ### Anbox
 
 With anbox you can run android apps ([Set up](/en/arm/androidapps)). 
@@ -85,9 +85,9 @@ Please note we do not offer a way to switch file systems after installation.
 
 ## Planned features roadmap
  - x86 emulation support
-    - Run x86 apps on arm
+    - Run x86 apps on ARM
  - Plasma Big screen
     - Turn your Pi into a media center PC
  - Kodi
  - RebornOS Fire
- - More Hardware Support
+ - More hardware support
