@@ -2,7 +2,7 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2023-02-18T18:25:37.380Z
+date: 2023-02-21T18:11:33.705Z
 tags: arm
 editor: markdown
 dateCreated: 2023-02-18T16:53:17.460Z
@@ -53,7 +53,7 @@ More window managers coming soon
 
 ### Anbox
 
-With anbox you can run android apps. You can find instructions on how to set it up [here](/arm/androidapps). 
+With anbox you can run android apps ([Set up](/en/arm/androidapps)). 
 
 ### Visual studio code - OSS
 
@@ -82,11 +82,12 @@ Wanted an option in the installer but you've already installed please see [Rebor
 
 Please note we do not offer a way to switch file systems after installation.
 -->
+
 ## Planned features roadmap
-### X86 emulation support
-Run x86 apps on arm
-### Plasma Big screen
-Turn your pi into a media center pc
-### KODI
-### RebornOS Fire
-### More Hardware Support
+ - x86 emulation support
+    - Run x86 apps on arm
+ - Plasma Big screen
+    - Turn your Pi into a media center PC
+ - Kodi
+ - RebornOS Fire
+ - More Hardware Support
