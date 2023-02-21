@@ -2,10 +2,36 @@
 title: Bug reports.
 description: How to report bugs to the RebornOS Developers.
 published: true
-date: 2023-02-21T18:27:12.035Z
+date: 2023-02-21T18:33:19.579Z
 tags: guides, bug reports, bugs, bug
 editor: markdown
 dateCreated: 2023-02-18T16:54:57.092Z
 ---
 
-\# Bug reports Bugs can be reported via a few methods. You can pick your preferred method below. Please note that for support you should visit our Forum, Discord community or other social pages. ## Gitlab If there's an issue with one of the programs we maintain please visit the corresponding project page to make an issue report. - RebornOS Fire - Installer - Welcome Screen - RebornOS News - Rate-Mirrors For other issues please make an issue request under \[issues\](google.com) on Gitlab ## Discord If you're part of our Discord community you can report bugs in the development section the \[bug reports channel\](https://discord.com/channels/805020018537660416/927929717309448212/927936296842854411) It's divided into 3 sections ### Software For bugs with software. Pick this category afterwards in the opened ticket channel. Please fill in the required information. ### Installation For bugs with installation. Pick this category afterwards in the opened ticket channel. Please fill in the required information. ### Website For bugs with our website, forum or other services we host. Pick this category afterwards in the opened ticket channel. Please fill in the required information. ## E-mail A method we don't prefer but you can report bugs via E-mail if all other options are not available to you. Please send us this filled out form.
+# Bug reports
+Bugs can be reported via a few methods.
+You can pick your preferred method below.
+Please note that for support you should visit our Forum, Discord community or other social pages.
+## Gitlab
+If there's an issue with one of the programs we maintain please visit the corresponding project page to make an issue report.
+- RebornOS Fire
+- Installer
+- Welcome Screen
+- RebornOS News
+- Rate-Mirrors
+For other issues please make an issue request under
+[issues](google.com) on Gitlab
+## Discord
+If you're part of our Discord community you can report bugs in the development section the [bug reports channel](https://discord.com/channels/805020018537660416/927929717309448212/927936296842854411)
+It's divided into 3 sections
+### Software
+For bugs with software. Pick this category afterwards in the opened ticket channel. Please fill in the required information.
+### Installation
+For bugs with installation. Pick this category afterwards in the opened ticket channel. Please fill in the required information.
+### Website
+For bugs with our website, forum or other services we host. Pick this category afterwards in the opened ticket channel. Please fill in the required information.
+## E-mail
+A method we don't prefer but you can report bugs via E-mail if all other options are not available to you.
+
+
+Please send us this filled out form.
