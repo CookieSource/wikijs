@@ -1,14 +1,12 @@
 ---
-title: RebornOS for Raspberry Pi 4 4 GB beta for Test by arnulf
-description: RebornOS for Raspberry Pi 4 4 GB beta
+title: RebornOS for Raspberry Pi 4 4 GB (beta)
+description: by Arnulf
 published: true
-date: 2023-02-18T17:05:33.357Z
+date: 2023-02-21T18:22:46.529Z
 tags: arm, raspberry
 editor: markdown
 dateCreated: 2023-02-18T16:53:28.647Z
 ---
-
-# RebornOS for Raspberry Pi 4 4 GB beta for Test by arnulf
 
 Download the file by <a href="https://osdn.net/dl/rebornos/RebornOS-ARM-Installer-2.3.sh" target="_blank">clicking here</a>
 
@@ -36,7 +34,7 @@ In the next step select the SD card you want to install RebornOS on, I use a USB
 <img src="https://i.imgur.com/PyqSzMP.png">
 </p>
 
-After the basic settings are made, the script partitions the SD card and formats it:
+After the basic settings are made, the script partitions the SD card and formats 
 
 <p align="center">
 <img src="https://i.imgur.com/UXGvW68.png">
@@ -64,3 +62,6 @@ The script ends with the folowing message:
 
 The default user is alarm with the password alarm The default root password is root.
 
+----
+
+—arnulf
