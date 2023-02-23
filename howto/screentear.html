@@ -1,23 +1,20 @@
 <!--
-title: How to fix Screen Tearing
+title: How to fix Screen tearing
 description: 
 published: true
-date: 2023-02-18T17:05:53.589Z
+date: 2023-02-23T11:49:45.859Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-02-18T16:56:32.251Z
 -->
 
-<h1>How to fix screen tearing with a few simple steps</h1>
-<h2>Fix screen tearing (AMD gpu)</h2>
+<h2>Fix screen tearing (AMD GPU)</h2>
 <p>First run to check which video driver you are using (AMDGPU or RADEON)</p>
 <pre><code class="language-plaintext">sudo lspci -k | grep -EA3 'VGA|3D|Display'</code></pre>
 <p>The output should look like this</p>
 <blockquote>
   <p>02:00.0 VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI] Curacao PRO [Radeon R7 370 / R9 270/370 OEM]</p>
   <p>Subsystem: Tul Corporation / PowerColor Device 2337</p>
-  <p>Kernel driver in use: <strong>amdgpu</strong></p>
-  <p>Kernel modules: radeon, amdgpu&nbsp;</p>
 </blockquote>
 <h3>AMDGPU driver</h3>
 <p>If it says AMDGPU we need to create a custom configuration file:</p>
@@ -39,11 +36,11 @@ sudo touch /etc/X11/xorg.conf.d/20-radeon.conf</code></pre>
         Driver          "radeon"
         Option          "TearFree" "true"
 EndSection</code></pre>
-<h2>Fix screen tearing (INTEL gpu)</h2>
+<h2>Fix screen tearing (Intel GPU)</h2>
 <p>We need to create a custom configuration file:</p>
 <pre><code class="language-plaintext">sudo mkdir -p /etc/X11/xorg.conf.d
 sudo touch /etc/X11/xorg.conf.d/20-intel.conf</code></pre>
-<p>Open this file in a text editor (with sudo) with <code>sudo nano /etc/X11/xorg.conf.d/20-intel.conf</code> and add the following text:</p>
+<p>Open this file in a text editor (with root access) with <code>sudo nano /etc/X11/xorg.conf.d/20-intel.conf</code>, and add the following text:</p>
 <pre><code class="language-plaintext">Section "Device"
  &nbsp;&nbsp; Identifier "Intel Graphics"
  &nbsp;&nbsp; Driver "i915"
