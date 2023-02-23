@@ -2,15 +2,15 @@
 title: How to use Zram instead of Zswap
 description: 
 published: true
-date: 2023-02-23T11:56:38.187Z
+date: 2023-02-23T11:57:01.704Z
 tags: how to, swap
 editor: markdown
 dateCreated: 2023-02-18T16:56:51.205Z
 ---
 
-There is much information about configuring Zram, but some might be a little confusing, especially for someone who hasn't been using Linux and it can be challenging to say the least. I also realized Zram and Zwap is already included with the kernel, so there is no need to install any additional package.  I found a few guides and picked one and followed the instructions. Even when following instruction steps, you can still have some things that might not go well.  This is what happened, I followed the guidance of Daniel Wayne Armstrong's [blog](https://www.dwarmstrong.org/zram-swap/), but found I had to tweak or adjust it so that it would work. For some experienced Linux users, they might not have any troubles and I'm sure there's other methods that will also work, but this is what I did and i'm just sharing my experience and setup.
+There is much information about configuring Zram, but some might be a little confusing, especially for someone who hasn't been using Linux and it can be challenging to say the least. I also realized Zram and Zwap is already included with the kernel, so there is no need to install any additional package. I found a few guides and picked one and followed the instructions. Even when following instruction steps, you can still have some things that might not go well.  This is what happened, I followed the guidance of Daniel Wayne Armstrong's [blog](https://www.dwarmstrong.org/zram-swap/), but found I had to tweak or adjust it so that it would work. For some experienced Linux users, they might not have any troubles and I'm sure there's other methods that will also work, but this is what I did and i'm just sharing my experience and setup.
 
-I had some trouble in the beginning, partly because I didn't understand some of the requirements and also ensuring the default Zswap wasn't being used. If Zswap is used, the kernel will use it first before using Zram. Also, I read that you should have a Zram swap that's about 20% (percent) of the actual system RAM, but you can also create several of these to allow for better handling of swap needed by the system. To quote [kernel.org:](http://kernel.org)
+I had some trouble in the beginning, partly because I didn't understand some of the requirements and also ensuring the default Zswap wasn't being used. If Zswap is used, the kernel will use it first before using Zram. Also, I read that you should have a Zram swap that's about 20% (percent) of the actual system RAM, but you can also create several of these to allow for better handling of swap needed by the system. To quote [kernel.org](http://kernel.org).
 
 > Note: There is little point creating a zram of greater than twice the size of memory since we expect a 2:1 compression ratio. Note that zram uses about 0.1% of the size of the disk when not in use so a huge zram is wasteful.
 
