@@ -1,14 +1,13 @@
 ---
-title: Bug reports.
+title: Bug reports
 description: How to report bugs to the RebornOS Developers.
 published: true
-date: 2023-02-21T18:35:36.837Z
+date: 2023-02-23T11:35:35.060Z
 tags: guides, bug reports, bugs, bug
 editor: markdown
 dateCreated: 2023-02-18T16:54:57.092Z
 ---
 
-# Bug reports
 Bugs can be reported via a few methods.
 You can pick your preferred method below.
 Please note that for support you should visit our Forum, Discord community or other social pages.
@@ -18,11 +17,12 @@ If there's an issue with one of the programs we maintain please visit the corres
 - Installer
 - Welcome Screen
 - Rate Mirrors
+
 For other issues please make an issue request under
 **issues** on GitHub.
 ## Discord
 If you're part of our Discord community, you can report bugs in the development section the [#bug-reports](https://discord.com/channels/805020018537660416/927929717309448212/927936296842854411) chanel.
-It's divided into 3 sections
+It's divided into 3 sections:
 ### Software
 For bugs with software. Pick this category afterwards in the opened ticket channel. Please fill in the required information.
 ### Installation
