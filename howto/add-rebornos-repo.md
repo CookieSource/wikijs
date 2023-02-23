@@ -2,15 +2,16 @@
 title: How to add the RebornOS repository
 description: rebornos repo
 published: true
-date: 2023-02-23T11:44:22.224Z
+date: 2023-02-23T11:46:05.590Z
 tags: repository repo
 editor: markdown
 dateCreated: 2023-02-18T16:54:37.202Z
 ---
 
-Let's see how to add the RebornOS repository to Arch Linux.
+Let's see how to add the RebornOS repository to Arch or an Arch-based distribution.
+
 First, we will edit the file pacman.conf:
-First, you must edit the **pacman.conf** file to add the RebornOS repository. You can add the RebornOS repository at the end of the file, or place it after the Arch Linux `#[testing]` repository (the testing repository is disabled by default). This last way to install it (after the Arch Linux testing repository) is the default installation that RebornOS performs.
+You must edit the **pacman.conf** file to add the RebornOS repository. You can add the RebornOS repository at the end of the file, or place it after the Arch Linux `#[testing]` repository (which is disabled by default). This last way to install it (after the Arch Linux testing repository) is the default installation that RebornOS performs.
 So, edit the file:
 ```
 sudo nano /etc/pacman.conf
