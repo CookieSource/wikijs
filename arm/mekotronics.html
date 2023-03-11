@@ -2,60 +2,89 @@
 title: How to Install RebornOS onto a Mekotronics device.
 description: How to Install RebornOS onto a Mekotronics device.
 published: true
-date: 2023-02-21T18:13:20.646Z
+date: 2023-03-11T20:10:46.308Z
 tags: arm
 editor: ckeditor
 dateCreated: 2023-02-18T18:40:03.325Z
 -->
 
-<h1>Install RebornOS onto a Mekotronics Device</h1>
-<p>Currently only the following devices are supported:</p>
+<p>Curently only the following devices are supported:</p>
 <ul>
-  <li>R58X</li>
-  <li>R58X-4G</li>
-  <li>R58S</li>
+<li>R58X</li>
+<li>R58X-4G</li>
+<li>R58S</li>
 </ul>
-<h2>Preparation&nbsp;</h2>
-<p>Download the latest RebornOS image for your ARM device from <a href="https://rebornos.org/download-arm">here</a>.<br>Then extract it so that you are left with a .img file.</p>
-<h3>Put your device in maskrom mode.</h3>
-<p>Connect the USB-C cable to your PC and to the device, then with a toothpick hold the RECOVERY button then press the RESET button.<br>On R58X</p>
-<figure class="image"><img src="/arm/r58x.png" alt="r58x.png"></figure>
+<h2 class="toc-header" id="preparation"> Preparation</h2>
+<p><a class="is-external-link" href="https://rebornos.org/download-arm">Download</a> the latest RebornOS image for your ARM device.<br>
+Then extract it so that you are left with a .img file.</p>
+<h3 class="toc-header" id="put-your-device-in-maskrom-mode"> Put your device in maskrom mode</h3>
+<p>Connect the USB-C cable to your PC and to the device, then with a toothpick hold the RECOVERY button then press the RESET button.<br>
+On R58X</p>
+<p><img alt="r58x.png" src="/arm/r58x.png"></p>
 <p>On R58X-4G</p>
-<figure class="image"><img src="/arm/r58x-4g.png" alt="r58x-4g.png"></figure>
+<p><img alt="r58x-4g.png" src="/arm/r58x-4g.png"></p>
 <p>On R58S (mini pc)</p>
-<figure class="image"><img src="/arm/r58s.png" alt="r58s.png"></figure>
-<h2>Write image to eMMC</h2>
+<p><img alt="r58s.png" src="/arm/r58s.png"></p>
+<h2 class="toc-header" id="write-image-to-emmc"> Write image to eMMC</h2>
 <p>Instructions on how to write the image files to the eMMC:</p>
-<h3>From Linux</h3>
-<ul class="todo-list">
-  <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"><span class="todo-list__label__description">After you have put your device into maskrom mode, verify this from your system.</span></label></li>
+<h3 class="toc-header" id="from-linux"> From Linux</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" class="task-list-item-checkbox"> After you have put your device into maskrom mode, verify this from your system.</li>
 </ul>
-<pre><code class="language-plaintext">sudo rkdeveloptool ld</code></pre>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo rkdeveloptool ld
+</code></pre>
 <p>Output should look something similar to this:</p>
 <blockquote>
-  <p>DevNo=1 Vid=0x2207,Pid=0x350b,LocationID=801 Maskrom</p>
+<p>DevNo=1 Vid=0x2207,Pid=0x350b,LocationID=801 Maskrom</p>
 </blockquote>
-<ul class="todo-list">
-  <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"><span class="todo-list__label__description">Download </span></label><a href="/arm/rk3588_spl_loader_v1.09.111.bin"><label class="todo-list__label"><span class="todo-list__label__description">rk3588_spl_loader_v1.09.111.bin</span></label></a><label class="todo-list__label"><span class="todo-list__label__description"> then run:</span></label></li>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" class="task-list-item-checkbox"> Download <a class="is-asset-link" href="/arm/rk3588_spl_loader_v1.09.111.bin">rk3588_spl_loader_v1.09.111.bin</a> then run:</li>
 </ul>
-<pre><code class="language-plaintext">sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin</code></pre>
-<p>&nbsp;</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin
+</code></pre>
 <blockquote>
-  <p>If you get "The device does not support this operation!" re-plug the device.</p>
+<p>If you get "The device does not support this operation!" re-plug the device.</p>
 </blockquote>
-<ul class="todo-list">
-  <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"><span class="todo-list__label__description">Write the image you downloaded.</span></label></li>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" class="task-list-item-checkbox"> Write the image you downloaded.</li>
 </ul>
-<pre><code class="language-plaintext">sudo rkdeveloptool wl 0 ~/Downloads/RebornOS-ARM-r58x-2023-01-14.img</code></pre>
-<p>&nbsp;</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo rkdeveloptool wl 0 ~/Downloads/RebornOS-ARM-r58x-2023-01-14.img
+</code></pre>
 <blockquote>
-  <p>Replace the path and name with the path where the extracted image is.</p>
+<p>Replace the path and name with the path where the extracted image is.</p>
 </blockquote>
-<ul class="todo-list">
-  <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"><span class="todo-list__label__description">Reboot the device:</span></label></li>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" class="task-list-item-checkbox"> Reboot the device:</li>
 </ul>
-<pre><code class="language-plaintext">sudo rkdeveloptool rd</code></pre>
-<h3>Install your preferred Desktop and Packages:</h3>
-<p>You can follow the installation guide <a href="/arm/install">here.</a></p>
-<h3><br><br>From Windows</h3>
-<p><strong>TODO</strong></p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">sudo rkdeveloptool rd
+</code></pre>
+<h4 class="toc-header" id="install-your-preferred-desktop-and-packages"> Install your preferred Desktop and Packages:</h4>
+<p>You can follow the installation guide <a class="is-internal-link is-valid-page" href="/arm/install">here</a>.</p>
+<h3 class="toc-header" id="from-windows"> From Windows</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" class="task-list-item-checkbox"> Download zip<br>
+Extract it</li>
+<li class="task-list-item"><input type="checkbox" disabled="" class="task-list-item-checkbox"> install driver<br>
+Open the DriverAssistant_V5.1.1 folder that was inside the zip<br>
+<img alt="driver.png" src="/arm/mekotronics/driver.png"><br>
+Then run the installer <code>DriverInstall.exe</code><br>
+<img alt="drvinstall.png" src="/arm/mekotronics/drvinstall.png"><br>
+Click <code>Install Driver</code> and wait for it to say <code>Install driver ok.</code><br>
+<img alt="drvinstallok.png" src="/arm/mekotronics/drvinstallok.png"></li>
+<li class="task-list-item"><input type="checkbox" disabled="" class="task-list-item-checkbox"> Write Image to emmc<br>
+Open the <code>RKDevTool_Release_v2.84</code> folder then run <code>RKDevTool.exe</code><br>
+<img alt="rkdevtool.png" src="/arm/mekotronics/rkdevtool.png"><br>
+When opened, the following appears:<br>
+<img alt="start.png" src="/arm/mekotronics/start.png"><br>
+Go to the Advanced Function tab<br>
+<img alt="advsection.png" src="/arm/mekotronics/advsection.png"><br>
+Put <code>0x0</code> as start and <code>0x100</code> as count. Then click EraseLBA<br>
+<img alt="erase.png" src="/arm/mekotronics/erase.png"><br>
+Then go back to the Download Image tab.<br>
+Download <a class="is-asset-link" href="/arm/rk3588_spl_loader_v1.09.111.bin">rk3588_spl_loader_v1.09.111.bin</a> then pick it<br>
+<img alt="sellectloader.png" src="/arm/mekotronics/sellectloader.png"><br>
+Then pick the image that you downloaded<br>
+<img alt="sellectimage.png" src="/arm/mekotronics/sellectimge.png"><br>
+Then press <code>Run</code><br>
+<img alt="writeimg.png" src="/arm/mekotronics/writeimg.png"></li>
+</ul>
