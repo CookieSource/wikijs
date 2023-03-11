@@ -2,7 +2,7 @@
 title: How to Install RebornOS onto a Mekotronics device.
 description: How to Install RebornOS onto a Mekotronics device.
 published: true
-date: 2023-02-21T18:16:26.031Z
+date: 2023-03-11T09:55:24.882Z
 tags: arm
 editor: markdown
 dateCreated: 2023-02-18T18:40:03.325Z
@@ -72,9 +72,33 @@ sudo rkdeveloptool wl 0 ~/Downloads/RebornOS-ARM-r58x-2023-01-14.img
 sudo rkdeveloptool rd
 ```
 
-### Install your preferred Desktop and Packages:
+#### Install your preferred Desktop and Packages:
 
 You can follow the installation guide [here](/arm/install).
 
 ### From Windows
-**TODO**
+- [ ] Download zip 
+Extract it
+- [ ] install driver
+Open the DriverAssistant_V5.1.1 folder that was inside the zip
+![driver.png](/arm/mekotronics/driver.png)
+Then run the installer `DriverInstall.exe`
+![drvinstall.png](/arm/mekotronics/drvinstall.png)
+Click `Install Driver` and wait for it to say `Install driver ok.`
+![drvinstallok.png](/arm/mekotronics/drvinstallok.png)
+- [ ] Write Image to emmc
+Open the `RKDevTool_Release_v2.84` folder then run `RKDevTool.exe`
+![rkdevtool.png](/arm/mekotronics/rkdevtool.png)
+When its open you hsould see this.
+![start.png](/arm/mekotronics/start.png)
+Go to the Advanced Function tab
+![advsection.png](/arm/mekotronics/advsection.png)
+Put `0x0` as start and `0x100` as count. Then click EraseLBA
+![erase.png](/arm/mekotronics/erase.png)
+Then go back to the Download Image tab.
+Download [rk3588\_spl\_loader\_v1.09.111.bin](/arm/rk3588_spl_loader_v1.09.111.bin) then pick it
+![sellectloader.png](/arm/mekotronics/sellectloader.png)
+Then pick the image that you downloaded
+![sellectimage.png](/arm/mekotronics/sellectimge.png)
+Then press `Run`
+![writeimg.png](/arm/mekotronics/writeimg.png)
