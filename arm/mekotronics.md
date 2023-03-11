@@ -2,7 +2,7 @@
 title: How to Install RebornOS onto a Mekotronics device.
 description: How to Install RebornOS onto a Mekotronics device.
 published: true
-date: 2023-03-11T09:55:24.882Z
+date: 2023-03-11T20:09:55.297Z
 tags: arm
 editor: markdown
 dateCreated: 2023-02-18T18:40:03.325Z
@@ -89,7 +89,7 @@ Click `Install Driver` and wait for it to say `Install driver ok.`
 - [ ] Write Image to emmc
 Open the `RKDevTool_Release_v2.84` folder then run `RKDevTool.exe`
 ![rkdevtool.png](/arm/mekotronics/rkdevtool.png)
-When its open you hsould see this.
+When opened, the following appears:
 ![start.png](/arm/mekotronics/start.png)
 Go to the Advanced Function tab
 ![advsection.png](/arm/mekotronics/advsection.png)
