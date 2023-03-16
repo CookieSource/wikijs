@@ -2,7 +2,7 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2023-03-16T10:27:36.940Z
+date: 2023-03-16T10:28:10.578Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-18T16:57:45.440Z
@@ -27,7 +27,7 @@ We offer a lot of features during installation they'll be listed by category.
 14. Enlightenment
 #### Window managers
 >	Window managers are for advanced users and you'll have to configure them yourself.
-{.is-warning}
+
 We offer the following window managers:
 1. [i3](https://i3wm.org/docs/userguide)
 2. [Openbox](http://openbox.org/wiki/Help:Contents)
