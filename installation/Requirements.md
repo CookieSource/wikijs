@@ -2,7 +2,7 @@
 title: Requirements
 description: Requirements for installing
 published: true
-date: 2023-02-18T17:06:16.411Z
+date: 2023-03-16T10:29:56.895Z
 tags: requirements
 editor: markdown
 dateCreated: 2023-02-18T16:57:12.820Z
@@ -78,4 +78,4 @@ Note this guide is for old Macs if you got a mac newer than 2014. Please look up
 1.  Boot from the USB stick
 2.  Select NVIDIA if you have an NVIDIA graphics card or select boot install medium if you don't!
 
-[Click this link to go to the installation guide /en/installation/cnchi](/en/installation/cnchi)
+[Click this link to go to the installation guide](https://wiki.rebornos.org/en/installation)
