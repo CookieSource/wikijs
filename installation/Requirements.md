@@ -2,7 +2,7 @@
 title: Requirements
 description: Requirements for installing
 published: true
-date: 2023-03-16T10:29:56.895Z
+date: 2023-03-16T10:31:18.209Z
 tags: requirements
 editor: markdown
 dateCreated: 2023-02-18T16:57:12.820Z
@@ -30,6 +30,8 @@ Download the latest RebornOS ISO [link](https://www.rebornos.org/downloads)
 Download the latest version of Balena Etcher for your Operating system [link](https://www.balena.io/etcher/)
 
 If you want to burn to burn to a CD/DVD you cannot use Balena Etcher. Please use a program to burn DVD's in order to accomplish that!
+
+If you are using ARM please visit the installation page for your own device on the wiki it can be found [Here](https://wiki.rebornos.org/en/arm)
 
 ## Windows
 
