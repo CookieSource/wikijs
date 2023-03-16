@@ -2,7 +2,7 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2023-02-21T18:12:51.469Z
+date: 2023-03-16T10:24:50.271Z
 tags: arm
 editor: markdown
 dateCreated: 2023-02-18T16:53:17.460Z
@@ -15,10 +15,10 @@ Currently we offer images for:
 - Orange Pi 5
 - Radxa Rock 5B
 - Raspberry Pi 4/400
+- Mekotronics R58X
 
 Coming soon:
 - Khadas vim 4
-- Mekotronics R58X
 - Pinebook Pro
 
 
@@ -47,6 +47,7 @@ Click on the window managers  to be taken to their user guides/wiki.
 
 1.  [i3](https://i3wm.org/docs/userguide)
 2.  [Openbox](http://openbox.org/wiki/Help:Contents)
+3. [Sway](https://github.com/swaywm/sway/wiki)
 
 More window managers coming soon
 
