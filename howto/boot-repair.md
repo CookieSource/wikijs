@@ -2,7 +2,7 @@
 title: How to perform Boot Repair
 description: Recover a system unable to boot
 published: true
-date: 2023-03-16T10:50:24.150Z
+date: 2023-03-16T10:51:20.751Z
 tags: bootloader, repair, grub, recovery, boot recovery, boot repair, boot
 editor: markdown
 dateCreated: 2023-02-18T16:54:50.621Z
@@ -24,12 +24,12 @@ $ ls -ld /sys/firmware/efi
 ls: cannot access /sys/firmware/efi: No such file or directory
 ```
 
-## Chroot into your installed RebornOS
+## 2. Chroot into your installed RebornOS
 Follow the instructions on this page to **chroot** into your locally installed RebornOS.
 
 After chrooting, please keep the same terminal window open to perform the below steps.
 
-## Re-install GRUB
+## 3. Re-install GRUB
 Based on whether you are booted in UEFI or Legacy mode, you can run the below commands:
 
 **UEFI mode**
@@ -40,7 +40,7 @@ sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=
 ```
 sudo grub-install --target=i386-pc --bootloader-id=RebornOS --recheck 
 ```
-## 4 Recreate GRUB configuration
+## 4. Recreate GRUB configuration
 ```
 sudo grub-mkconfig -o /boot/grub/grub.cfg 
 ```
