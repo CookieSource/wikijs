@@ -2,13 +2,13 @@
 title: How to perform Boot Repair
 description: Recover a system unable to boot
 published: true
-date: 2023-02-18T17:04:49.603Z
+date: 2023-03-16T10:38:16.404Z
 tags: bootloader, repair, grub, recovery, boot recovery, boot repair, boot
 editor: ckeditor
 dateCreated: 2023-02-18T16:54:50.621Z
 -->
 
-# Boot Repair for GRUB
+<div># Boot Repair for GRUB
 If you are unable to boot into RebornOS, this guide will show you how to repair your bootloader using a live ISO.
 
 ## 1. Check if you are booted in *UEFI* or *Legacy* mode
@@ -25,7 +25,7 @@ ls: cannot access /sys/firmware/efi: No such file or directory
 
 ## 2. Chroot into your installed RebornOS
 Follow the instructions on [this page](chroot) to *chroot* into your locally installed RebornOS. 
-> After *chroot*ing, please keep the same terminal window open to perform the below steps.
+&gt; After *chroot*ing, please keep the same terminal window open to perform the below steps.
 {.is-info}
 
 
@@ -45,4 +45,4 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## 5. Assess reboot safety
-If the above `grub-install` and `grub-mkconfig` steps run successfully, it is safe to reboot!
+If the above `grub-install` and `grub-mkconfig` steps run successfully, it is safe to reboot!</div>
