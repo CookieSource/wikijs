@@ -2,7 +2,7 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2023-02-18T17:51:59.529Z
+date: 2023-03-16T10:27:36.940Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-18T16:57:45.440Z
@@ -31,6 +31,8 @@ We offer a lot of features during installation they'll be listed by category.
 We offer the following window managers:
 1. [i3](https://i3wm.org/docs/userguide)
 2. [Openbox](http://openbox.org/wiki/Help:Contents)
+3. [Sway](https://github.com/swaywm/sway/wiki)
+
 More window managers are coming soon.
 ## Software
 We offer the following optional software & features.
