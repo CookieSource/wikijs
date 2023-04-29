@@ -2,7 +2,7 @@
 title: Untitled Page
 description: 
 published: true
-date: 2023-04-29T06:43:22.331Z
+date: 2023-04-29T10:46:00.070Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-29T06:42:09.786Z
@@ -19,4 +19,11 @@ graph TD
   C --> D[ Reporting bugs ]
   C --> E[ Sharing ideas ]
   C --> F[ Advocating ]
+```
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
 ```
