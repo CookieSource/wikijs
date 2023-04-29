@@ -2,7 +2,7 @@
 title: Untitled Page
 description: 
 published: true
-date: 2023-04-29T10:46:29.607Z
+date: 2023-04-29T10:46:50.147Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-29T06:42:09.786Z
@@ -21,7 +21,8 @@ graph TD
   C --> F[ Advocating ]
 ```
 mermaid
-```mermaid
+```kroki
+mermaid
   graph TD;
       A-->B;
       A-->C;
