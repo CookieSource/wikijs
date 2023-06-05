@@ -2,7 +2,7 @@
 title: How to create a bootable storage medium
 description: 
 published: true
-date: 2023-02-21T18:19:49.879Z
+date: 2023-06-05T18:22:59.989Z
 tags: arm
 editor: markdown
 dateCreated: 2023-02-18T16:53:13.408Z
@@ -12,16 +12,19 @@ dateCreated: 2023-02-18T16:53:13.408Z
 
 [Download](https://www.rebornos.org/download-arm) the latest RebornOS image appropriate for your device
 
-1.  Download Raspberry PI Imager [from here](https://www.raspberrypi.com/software/) for your OS 
-2.  Open the app
+1.  Download and open [Raspberry Pi Imager](https://www.raspberrypi.com/software/) for your OS.
 ![](https://de.mirror.rebornos.org/pics/imagermain.png)
-3.  Click “Choose OS”
-![](https://de.mirror.rebornos.org/pics/imageros.png)
-4.  Scroll down, click “Use custom”
-5.  Select the RebornOS Image you downloaded
-![](https://de.mirror.rebornos.org/pics/imagerimg.png)
-6.  Select the inserted USB
-![](https://de.mirror.rebornos.org/pics/imagersellected.png)
-7.  Write!
 
-Follow the [installation guide](/en/arm/install)!
+2.  Click “Choose OS”
+![](https://de.mirror.rebornos.org/pics/imageros.png)
+
+3.  Scroll down, click “Use custom”
+
+4.  Select the RebornOS Image you downloaded
+![](https://de.mirror.rebornos.org/pics/imagerimg.png)
+
+5.  Select the inserted USB
+![](https://de.mirror.rebornos.org/pics/imagersellected.png)
+6.  Write!
+
+Now follow the [installation guide](/en/arm/install)!
