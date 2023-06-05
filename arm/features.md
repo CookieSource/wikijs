@@ -2,13 +2,13 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2023-03-16T10:24:50.271Z
+date: 2023-06-05T18:25:45.952Z
 tags: arm
 editor: markdown
 dateCreated: 2023-02-18T16:53:17.460Z
 ---
 
-We offer a lot of features during installation they'll be listed by category.
+We offer a lot of features during installation, they'll be listed by category.
 
 ## Devices
 Currently we offer images for:
@@ -21,9 +21,7 @@ Coming soon:
 - Khadas vim 4
 - Pinebook Pro
 
-
-## Desktops
-
+## Desktop environments
 Currently we offer the following desktops. [click here for a quick overview](/en/customization/desktops).
 
 1.  Budgie
@@ -35,8 +33,8 @@ Currently we offer the following desktops. [click here for a quick overview](/en
 7.  LXQt
 8.  MATE
 9.  UKUI
-10.  Xfce
-11.  Cutefish
+10. Xfce
+11. Cutefish
 12. Enlightenment
 
 ## Window managers
@@ -45,16 +43,15 @@ We offer the following window managers. (Note that window managers are for advan
 
 Click on the window managers  to be taken to their user guides/wiki.
 
-1.  [i3](https://i3wm.org/docs/userguide)
-2.  [Openbox](http://openbox.org/wiki/Help:Contents)
+1. [i3](https://i3wm.org/docs/userguide)
+2. [Openbox](http://openbox.org/wiki/Help:Contents)
 3. [Sway](https://github.com/swaywm/sway/wiki)
 
 More window managers coming soon
 
 ## Software
 ### Anbox
-
-With anbox you can run android apps ([Set up](/en/arm/androidapps)). 
+With Anbox you can run Android apps ([Set up](/en/arm/androidapps)). 
 
 ### Visual studio code - OSS
 
