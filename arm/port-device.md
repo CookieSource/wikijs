@@ -2,7 +2,7 @@
 title: How to port RebornOS ARM to an unsupported device.
 description: 
 published: true
-date: 2023-06-10T09:25:46.974Z
+date: 2023-06-10T09:30:17.051Z
 tags: arm
 editor: markdown
 dateCreated: 2023-03-11T17:22:05.400Z
@@ -41,9 +41,14 @@ https://github.com/RebornOS-Developers/lxqt-rock5b-image
 > There is no 32bit `armv7h` repo of RebornOS so you need to comment the RebornOS repo with `#`
 {.is-warning}
 
+> Changing the device in `profiledef` should only be done if you know what you are doing. <br> It is recommended to use `rock5b` and just replace `idbloader.img` and `u-boot.itb`
+{.is-warning}
 
 
-- profiledef (ch
+
+
+- profiledef (change arch, configtxt, cmdline, and img_name) 
+
 - packages.aarch64 (you need to add the kernel pkg name to the list)
 - pacman.conf.aarch64 (you need to make a local repo that contains the kernel pkg)
 
