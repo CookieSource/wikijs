@@ -2,7 +2,7 @@
 title: How to port RebornOS ARM to an unsupported device.
 description: 
 published: true
-date: 2023-03-11T17:51:30.610Z
+date: 2023-06-10T09:06:43.230Z
 tags: arm
 editor: markdown
 dateCreated: 2023-03-11T17:22:05.400Z
@@ -23,7 +23,7 @@ look at the FDT line it should look like this
 {.is-info}
 
 
-Try looking for a kernel that works with your device
+Try looking for a kernel that works with your device (in the aur or somewhere else)
 
 If you have a device that can run RebornOS already you can do something like this.
 ```
