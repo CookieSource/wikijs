@@ -2,7 +2,7 @@
 title: How to perform Boot Repair
 description: Recover a system unable to boot
 published: true
-date: 2023-03-16T10:51:20.751Z
+date: 2023-07-03T21:52:49.124Z
 tags: bootloader, repair, grub, recovery, boot recovery, boot repair, boot
 editor: markdown
 dateCreated: 2023-02-18T16:54:50.621Z
@@ -25,7 +25,7 @@ ls: cannot access /sys/firmware/efi: No such file or directory
 ```
 
 ## 2. Chroot into your installed RebornOS
-Follow the instructions on this page to **chroot** into your locally installed RebornOS.
+Follow the instructions on this [page](/howto/chroot) to **chroot** into your locally installed RebornOS.
 
 After chrooting, please keep the same terminal window open to perform the below steps.
 
