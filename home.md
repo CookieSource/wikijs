@@ -2,7 +2,7 @@
 title: Home
 description: Guides and instructions for RebornOS
 published: true
-date: 2023-02-19T07:51:01.128Z
+date: 2023-07-15T05:51:50.445Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-18T16:51:58.670Z
@@ -31,8 +31,6 @@ Welcome to the RebornOS wiki. This is a complimentary wiki for all things Reborn
 - [Shell guides](/en/customization/shell) ***Change the look and feel of your terminal*** 
 - [Bootloader](/en/customization/bootloader) ***Instructions on changing bootloaders, bootloader themes & setting up Plymouth*** 
 
-# ARM
-- [RebornOS ARM](/en/arm) ***Relevant and other related content*** 
 # Contributors 
 - [How to contribute](/en/howto/contribute) ***Rules, guidelines & tutorials***
 
