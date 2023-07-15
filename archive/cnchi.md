@@ -2,11 +2,14 @@
 title: How to use Cnchi to install RebornOS
 description: 
 published: true
-date: 2023-07-15T06:09:24.743Z
+date: 2023-07-15T06:10:27.680Z
 tags: cnchi
 editor: markdown
 dateCreated: 2023-02-18T16:57:39.956Z
 ---
+
+> This is an archived page. The information contained here may not be of relevance anymore.
+{.is-danger}
 
 Once the installer has loaded, we will find the following screen:
 
@@ -153,4 +156,4 @@ To troubleshoot your installation, start the installer from your terminal with
 sudo cnchi-start.sh
 ```
 
-or have a look at our [troubleshoot page](/en/installation/troubleshooting) for common issues
+or have a look at our [troubleshooting page](/en/installation/troubleshooting) for common issues
