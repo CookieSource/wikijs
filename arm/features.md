@@ -2,11 +2,17 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2023-06-05T18:25:45.952Z
+date: 2023-07-15T06:11:39.334Z
 tags: arm
 editor: markdown
 dateCreated: 2023-02-18T16:53:17.460Z
 ---
+
+> This is an archived page. The information contained here may not be of relevance anymore.
+{.is-danger}
+
+> RebornOS ARM is now a separate project, led by [BredOS](https://bredos.org). RebornOS focuses on <kbd>x86_64</kbd>, while BredOS specializes in <kbd>ARM</kbd>-based Linux systems. RebornOS ARM users will be upgraded to BredOS with new branding.
+{.is-info}
 
 We offer a lot of features during installation, they'll be listed by category.
 
