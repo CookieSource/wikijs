@@ -2,7 +2,7 @@
 title: How to add the RebornOS repository
 description: rebornos repo
 published: true
-date: 2023-07-16T08:53:04.010Z
+date: 2023-07-16T08:54:18.071Z
 tags: repository repo
 editor: markdown
 dateCreated: 2023-02-18T16:54:37.202Z
@@ -37,7 +37,7 @@ Follow any one of the procedures give below to get a copy of latest mirror list 
 
 ### Downloading a copy from GitHub
 
-RebornOS hosts a copy of the mirror list on GitHub, available in this [repository](https://raw.githubusercontent.com/RebornOS-Developers/rebornos-mirrorlist).
+RebornOS hosts a copy of the mirror list on GitHub, available in this [repository](https://github.com/RebornOS-Developers/rebornos-mirrorlist).
 
 Execute this command to get a copy of the mirror list:
 
