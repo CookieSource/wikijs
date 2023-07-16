@@ -2,7 +2,7 @@
 title: How to add the RebornOS repository
 description: rebornos repo
 published: true
-date: 2023-02-23T11:46:05.590Z
+date: 2023-07-16T08:29:44.505Z
 tags: repository repo
 editor: markdown
 dateCreated: 2023-02-18T16:54:37.202Z
@@ -128,25 +128,25 @@ Server = https://mirror.clarkson.edu/RebornOS/
 ```
 Save the file (<kbd>control</kbd> <kbd>S</kbd>), and exit (<kbd>control</kbd> <kbd>X</kbd>).
 Then from the terminal:
-```
+```sh
 sudo chmod 644 /etc/pacman.d/reborn-mirrorlist
 ```
 Another way to create the mirrorlist file is by copying and pasting the following in the terminal:
-```
-sudo wget https://gitlab.com/rebornos-team/rebornos-special-system-files/mirrors/reborn-mirrorlist/-/raw/master/reborn-mirrorlist /etc/pacman.d/reborn-mirrorlist
+```sh
+sudo wget https://raw.githubusercontent.com/RebornOS-Developers/rebornos-mirrorlist/main/reborn-mirrorlist /etc/pacman.d/reborn-mirrorlist
 sudo chmod 644 /etc/pacman.d/reborn-mirrorlist
 ```
 What will have to be done next, is to acquire the public pgp keys from the RebornOS repository. To do this, download the following file:
-```
-wget https://repo.rebornos.org/RebornOS/rebornos-keyring-20210512-1.2-any.pkg.tar.zst
+```sh
+wget https://repo.rebornos.org/RebornOS/rebornos-keyring.pkg.tar.zst
 ```
 Then, manually install the downloaded file. This is done with:
-```
-sudo pacman -U rebornos-keyring-20210512-1.2-any.pkg.tar.zst
+```sh
+sudo pacman -U rebornos-keyring.pkg.tar.zst
 ```
 Why is this procedure necessary? This is because all the files in the RebornOS repository are signed with one of the keys in this file (which correspond to the users in charge of maintaining the repository).
 Then update the repositories:
-```
-sudo pacman -Syy
+```sh
+sudo pacman -Syyu
 ```
 Once this procedure is finished, we can update our system, or install something existing in the RebornOS repositories.
