@@ -2,7 +2,7 @@
 title: Home
 description: Guides and instructions for RebornOS
 published: true
-date: 2023-07-28T10:06:39.428Z
+date: 2023-07-28T18:24:13.838Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-18T16:51:58.670Z
@@ -18,7 +18,7 @@ Welcome to the RebornOS wiki. This is a complimentary wiki for all things Reborn
 - [Features](/en/installation/features) ***A list of all the features our installer offers*** 
 - [Troubleshooting](/en/installation/troubleshooting) ***Solutions to common installation issues***
 
-# Manuals for apps RebornOS optionally provides
+# RebornOS applications
 - [RebornOS Fire](/en/apps/rebornosfire) ***Our flagship app allowing you to tweak your system*** 
 - [Rate-mirrors](/en/apps/rate-mirrors) ***Rank your mirrors for faster downloads*** 
 - [*Other GUI apps*](/en/apps) ***Instructions for third party GUI apps we offer***
@@ -38,4 +38,4 @@ Welcome to the RebornOS wiki. This is a complimentary wiki for all things Reborn
 - [Bug reports](/en/howto/bugreports) ***How to report bugs***
 
 # Archive
-- [Archive](/en/archive) ***Old, archived guides and pages from old RebornOS configurations***
+- [Archive](/en/archive) ***Archived guides and pages from old RebornOS configurations***
