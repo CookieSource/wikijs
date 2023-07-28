@@ -2,13 +2,13 @@
 title: Requirements
 description: Here you can find the requirements for RebornOS
 published: true
-date: 2023-07-28T09:54:43.799Z
+date: 2023-07-28T15:52:37.115Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-18T16:58:08.899Z
 ---
 
-## Hardware requirements
+# Hardware requirements
 | Requirements | Minimum specification | Recommended |
 | --- | --- | --- |
 | **CPU** | 1.2 GHz dual core | 2.1 GHz quad core |
