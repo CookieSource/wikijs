@@ -2,15 +2,17 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2023-03-16T10:28:10.578Z
+date: 2023-07-28T10:16:09.804Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-18T16:57:45.440Z
 ---
 
-We offer a lot of features during installation they'll be listed by category.
-- [**Desktops**](/customization/desktops)
-*Currently we offer the following desktops:*
+We offer a lot of features during installation; they will be listed by category.
+#### Desktops
+- [**Desktop comparisons**](/customization/desktops)
+
+Currently we offer the following desktops:
 1. Budgie
 2. Cinnamon
 3. Deepin
@@ -79,7 +81,8 @@ We offer the option to select your preferred shell.
 -->
 ## Kernel selection
 *Main page: [customization/kernelcomparison](/en/customization/kernelcomparison)*
-We allow you to select your preferred kernel during installation.
+We soffer the following kernels during installation. 
+If you're not sure what you're doing, the default is fine. It can be switched later.
 1. [Linux kernel](https://kernel.org) (The default kernel)
 2. [LTS kernel](https://kernel.org) (Long time support release of the default kernel)
 3. [Zen kernel](https://github.com/zen-kernel/zen-kernel) (Kernel for extra performance)
@@ -93,5 +96,5 @@ We offer the following file systems during installation.
 4. XFS
 5. F2FS
 ## After install
-Wanted an option in the installer but you've already installed please see [RebornOS Fire](/en/apps/rebornosfire). To be able to select them post install!
-Please note we do not offer a way to switch file systems after installation.
+Wanted an option in the installer but you've already installed? You can use [RebornOS Fire](/en/apps/rebornosfire) to select them post install!
+Please note that RebornOS Fire cannot switch file systems after installation.
