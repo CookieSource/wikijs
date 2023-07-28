@@ -2,13 +2,13 @@
 title: Features
 description: Features & options the installer provides.
 published: true
-date: 2023-07-28T10:16:09.804Z
+date: 2023-07-28T10:59:41.657Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-18T16:57:45.440Z
 ---
 
-We offer a lot of features during installation; they will be listed by category.
+We offer many features during installation; they are listed by category.
 #### Desktops
 - [**Desktop comparisons**](/customization/desktops)
 
@@ -81,7 +81,7 @@ We offer the option to select your preferred shell.
 -->
 ## Kernel selection
 *Main page: [customization/kernelcomparison](/en/customization/kernelcomparison)*
-We soffer the following kernels during installation. 
+We offer the following kernels during installation. 
 If you're not sure what you're doing, the default is fine. It can be switched later.
 1. [Linux kernel](https://kernel.org) (The default kernel)
 2. [LTS kernel](https://kernel.org) (Long time support release of the default kernel)
