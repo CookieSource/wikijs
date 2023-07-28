@@ -2,7 +2,7 @@
 title: Contributors guidelines
 description: Guides and guideliens for contributors to the Wiki and other RebornOS projects.
 published: true
-date: 2023-02-19T10:55:11.263Z
+date: 2023-07-28T09:56:51.177Z
 tags: how to, guides, contribution, contributor, guidelines
 editor: markdown
 dateCreated: 2023-02-18T16:55:24.823Z
@@ -10,15 +10,14 @@ dateCreated: 2023-02-18T16:55:24.823Z
 
 # How to contribute to the wiki
 Want to contribute to the Wiki? Here you can find the guidelines.
-The wiki provides several ways to edit.
-Including a visual editor, markdown and source code.
+The wiki provides several ways to edit including a visual editor, markdown and source code.
 You can find instructions on how to use the visual editor on [WikiJS' own wiki](https://docs.requarks.io/#user-guide).
 # Formatting
 1. All titles should start with a capital letter
 2. All URLs must be lower-case
 3. Don't use underscore `_` in URLs, use a dash `-` instead.
 # Categories
-The wiki is divided into different categories if you write a new page you need to place it in the correct category.
+The wiki is divided into different categories. If you write a new page you need to place it in the correct category.
 Below is a breakdown of each category and what should be placed in it.
 ## Installation
 All guides relating to installation should go in this category.
@@ -35,7 +34,7 @@ Here you should post tutorials on customizing various aspects of the Linux syste
 ## Desktops & Window managers
 This category contains one page for every Desktop & Window manager. 
 ## ARM
-The ARM category is for writing any content that relates to ARM specifically.
+The ARM category is for writing any content that relates to ARM specifically. Note that ARM requires updating, because its development has split off into [BredOS](https://bredos.org/).
 ## Archive
 If a page is up for deletion because it's no longer relevant it should be moved to archive.
 The archive category holds all pages that no longer have any relevance. They're archived in case they become relevant again.
