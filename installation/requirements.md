@@ -2,19 +2,19 @@
 title: Requirements
 description: Here you can find the requirements for RebornOS
 published: true
-date: 2023-02-18T17:49:15.221Z
+date: 2023-07-28T09:54:43.799Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-18T16:58:08.899Z
 ---
 
-## Required specification table
+## Hardware requirements
 | Requirements | Minimum specification | Recommended |
 | --- | --- | --- |
 | **CPU** | 1.2 GHz dual core | 2.1 GHz quad core |
 | **RAM** | 2 GB | 4 GB |
 | **Storage** | 20 GB | 64 GB or more |
-| **Installation medium** | CD/DVD or USB 4 GB | CD/DVD or USB 4 GB or more |
+| **Installation medium** | CD/DVD or USB, 4 GB | CD/DVD or USB, 4 GB or more |
 | **Internet connection** | Recommended, not required | Recommended, not required |
 # Preparing an install medium
 > If you want to burn to burn to a CD/DVD you cannot use Balena Etcher. Please use another program to burn them in order to accomplish that!
