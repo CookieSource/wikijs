@@ -2,7 +2,7 @@
 title: Home
 description: Guides and instructions for RebornOS
 published: true
-date: 2023-07-15T05:51:50.445Z
+date: 2023-07-28T10:06:39.428Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-18T16:51:58.670Z
@@ -16,12 +16,12 @@ Welcome to the RebornOS wiki. This is a complimentary wiki for all things Reborn
 - [_Offline Installation guide (Calamares installer)_](/en/installation/offline) ***Instructions on how to install RebornOS offline*** 
 - [Partitioning](/en/installation/partitioning) ***Manual & Custom partitioning instructions*** 
 - [Features](/en/installation/features) ***A list of all the features our installer offers*** 
-- [Troubleshooting](/en/installation/troubleshooting) ***Solutions to common installation issues.***
+- [Troubleshooting](/en/installation/troubleshooting) ***Solutions to common installation issues***
 
 # Manuals for apps RebornOS optionally provides
-- [RebornOS Fire](/en/apps/rebornosfire) ***Our flagship app allowing you to tweak your system.*** 
+- [RebornOS Fire](/en/apps/rebornosfire) ***Our flagship app allowing you to tweak your system*** 
 - [Rate-mirrors](/en/apps/rate-mirrors) ***Rank your mirrors for faster downloads*** 
-- [*Other GUI apps*](/en/apps) ***Instructions for all third party GUI apps we optionally offer.***
+- [*Other GUI apps*](/en/apps) ***Instructions for third party GUI apps we offer***
 
 # How to
 - [How to](/en/howto) ***Guides & tutorials***
