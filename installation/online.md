@@ -2,7 +2,7 @@
 title: Install RebornOS online
 description: 
 published: true
-date: 2023-02-18T17:04:46.599Z
+date: 2023-07-30T09:54:34.206Z
 tags: installer, install, calamares, online
 editor: markdown
 dateCreated: 2023-02-18T16:57:59.103Z
@@ -10,7 +10,7 @@ dateCreated: 2023-02-18T16:57:59.103Z
 
 >  This guide is for **Online Installation**. For the *Offline Installation* guide, [click here](https://wiki.rebornos.org/en/installation/offline).
 
-> This guide assumes that you have already downloaded the Calamares-based RebornOS ISO, prepared a bootable live USB/DVD, and enabled booting from that USB/DVD in your boot priority settings (BIOS).
+> This guide assumes that you have already downloaded the Calamares-based RebornOS ISO, prepared a bootable live USB/DVD, and enabled booting from that USB/DVD in your boot priority settings (BIOS). If not, please  see the [requirements](/installation/requirements).
 {.is-info}
 
 When you first boot from the live ISO, you will see a menu of various boot modes:
