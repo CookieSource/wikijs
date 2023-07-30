@@ -2,7 +2,7 @@
 title: Install RebornOS offline
 description: 
 published: true
-date: 2023-02-18T17:04:43.384Z
+date: 2023-07-30T09:06:41.928Z
 tags: installer, install, calamares, offline
 editor: markdown
 dateCreated: 2023-02-18T16:57:53.178Z
@@ -12,7 +12,7 @@ dateCreated: 2023-02-18T16:57:53.178Z
 {.is-info}
 
 
-> **Note**: This guide assumes that you have already downloaded the Calamares-based RebornOS ISO, prepared a bootable live USB/DVD, and enabled booting from that USB/DVD in your boot priority settings (BIOS).
+> **Note**: This guide assumes that you have already downloaded the Calamares-based RebornOS ISO, prepared a bootable live USB/DVD, and enabled booting from that USB/DVD in your boot priority settings (BIOS). If not, please  see the [requirements](/installation/requirements).
 
 When you first boot from the live ISO, you will see a menu of various boot modes:
 
@@ -103,6 +103,8 @@ If the installer unfortunately fails, you will be shown a dialog window describi
 If you chose to upload the logs you will be shown a URL that you can share with anyone who offers support in order to diagnose the error:
 
 ![](/installer/offline/calamares-installation-failed-choose-upload.png)
+
+If you are unable to upload online directly, please see the **Upload logs** section below to grab the file and upload manually.
 
 ## 8\. Finish
 
